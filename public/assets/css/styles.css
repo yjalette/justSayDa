@@ -23,7 +23,7 @@
     position: relative;
     padding-bottom: 56.25%; }
     .container-video .video-foreground #myVideo {
-      filter: brightness(20%);
+      filter: brightness(21%);
       position: absolute;
       top: 0;
       left: 0;
@@ -229,6 +229,5 @@ footer {
         text-decoration: none; }
         footer nav ul li a:hover {
           color: #DD132B; }
-
 
 /*# sourceMappingURL=styles.css.map */
