@@ -24,7 +24,9 @@ console.log("Responding")
     res.redirect('./public/main.html');
 })
 
+const PORT = process.env.PORT || 4000
 
-app.listen(4000, () => {
-console.log("running on 4000")
+
+app.listen(PORT, () => {
+console.log("running on " + PORT)
 })
