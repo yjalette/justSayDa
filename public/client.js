@@ -1,4 +1,5 @@
 let activeUserEmail = "";
+let activeUserName = "";
 let activeUserId = "";
 
 $(document).ready(function(){
@@ -9,21 +10,21 @@ $(document).ready(function(){
 $("#signUp-form").submit(function(event){
     event.preventDefault();
 
-    let signUpName = $("#create_name").val();
-    let signUpEmail = $("#create_email").val();
-    let signUpPassword = $("#create_password").val();
-    console.log(signUpName, signUpEmail, signUpPassword);
+    let name = $("#create_name").val();
+    let email = $("#create_email").val();
+    let password = $("#create_password").val();
+//    console.log(signUpName, signUpEmail, signUpPassword);
 
-    if ((!signUpName) || (signUpName.length < 1)) {
+    if ((!name) || (name.length < 1)) {
         alert('Invalid username');
-    } else if ((!signUpEmail) || (signUpEmail.length < 1) || (signUpEmail.indexOf(' ') > 0)) {
+    } else if ((!email) || (email.length < 1) || (email.indexOf(' ') > 0)) {
         alert('Invalid email');
-    } else if ((!signUpPassword) || (signUpPassword.length < 1) || (signUpPassword.indexOf(' ') > 0)) {
+    } else if ((!password) || (password.length < 1) || (password.indexOf(' ') > 0)) {
         alert('Invalid password');
     } else newUserObject = {
-        name: signUpName,
-        email: signUpEmail,
-        password: signUpPassword
+        name: name,
+        email: email,
+        password: password
     };
 
     $.ajax({
@@ -37,6 +38,7 @@ $("#signUp-form").submit(function(event){
     .done ( function(results) {
         console.log(results);
         activeUserEmail = results.email;
+        activeUserName = results.name;
         activeUserId = results.id;
 //        showOrders(activeUserEmail);
         $("#home-page").hide();

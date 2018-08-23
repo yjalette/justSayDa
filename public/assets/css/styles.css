@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Akronim|Averia+Sans+Libre|Finger+Paint|Nosifer|Ramaraja|Sedgwick+Ave+Display");
 * {
   margin: 0px;
   padding: 0px;
@@ -15,7 +15,7 @@
   -webkit-padding-end: 0px; }
 
 .container-video {
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   height: 100%;
   display: inline-grid; }
@@ -41,20 +41,25 @@
     border: 15px ridge #E8E9EB; }
     .container-video .ent .title {
       @unclude h;
-      font: bolder 70px "Playfair Display";
-      color: #DD132B; }
+      letter-spacing: 3px;
+      font-style: normal;
+      font: bolder 70px "Akronim";
+      color: #E8E9EB; }
+    .container-video .ent .title:before {
+      content: "DA";
+      font-family: 'Nosifer', cursive;
+      font-style: italic; }
     .container-video .ent .description {
       font: 200px 20px "Playfair Display";
       color: #E8E9EB;
       text-transform: lowercase; }
 
-#ab-us {
+.tag-lines {
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
   height: 300px;
   width: 100%;
-  margin: 100px 0px;
   padding: 50px;
   position: relative;
   text-align: center;
@@ -63,19 +68,19 @@
   justify-content: center;
   background-color: black; }
   @media (min-width: 768px) and (max-width: 1023px) {
-    #ab-us {
+    .tag-lines {
       height: 500px; } }
   @media (min-width: 481px) and (max-width: 767px) {
-    #ab-us {
+    .tag-lines {
       height: 350px;
       padding: 10px; } }
   @media (min-width: 320px) and (max-width: 480px) {
-    #ab-us {
+    .tag-lines {
       height: 300px;
       padding: 1px; } }
-  #ab-us h2 {
+  .tag-lines span {
     text-align: center;
-    font: bolder 70px "Playfair Display";
+    font: bolder 70px "Akronim";
     padding: 50px;
     color: #E8E9EB;
     font-size: 30px; }
@@ -123,6 +128,29 @@
         /*default opacity*/
         z-index: 10;
         /*place hover image in front the non-hover images*/ }
+  .container-products .tags-line {
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container-products .tags-line {
+        height: 500px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      .container-products .tags-line {
+        height: 350px;
+        padding: 10px; } }
+    @media (min-width: 320px) and (max-width: 480px) {
+      .container-products .tags-line {
+        height: 300px;
+        padding: 1px; } }
   .container-products .container-form {
     background-color: #DD132B;
     margin: 0;
@@ -201,5 +229,6 @@ footer {
         text-decoration: none; }
         footer nav ul li a:hover {
           color: #DD132B; }
+
 
 /*# sourceMappingURL=styles.css.map */

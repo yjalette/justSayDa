@@ -1,7 +1,9 @@
 const express = require("express");
 const mysql = require('mysql')
 const router = express.Router();
+const app = express();
 
+app.use(express.static(__dirname + '/public'));
 
 router.post('/users_create', (req, res) =>{
     console.log("trying to create a new user");
@@ -18,6 +20,7 @@ router.post('/users_create', (req, res) =>{
         }
 
         console.log("added a new user with id:", results.insertId);
+        res.redirect('/main.html');
         res.end()
     });
 
@@ -39,10 +42,7 @@ router.post('/users_login', (req, res) =>{
         } else {
             if (results.length > 0) {
                 if ( results[0].password == password) {
-                    res.send({
-                        "code": 200,
-                        "success": "signed in successfully!"
-                    });
+                    res.redirect('/shop.html');
                 } else {
                     res.send({
                         "code": 204,
