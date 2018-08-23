@@ -111,7 +111,7 @@ const pool = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "",
-    port: 3308,
+    port: 3309,
     database: 'daDB',
     multipleStatements: true
 })

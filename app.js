@@ -20,13 +20,13 @@ app.use(router)
 
 
 app.get("/", (req, res) => {
-console.log("Responding")
-    res.redirect('./public/main.html');
+    console.log("Responding");
+    res.send("Hello");
 })
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4000;
 
 
 app.listen(PORT, () => {
-console.log("running on " + PORT)
+console.log("running on 4000!!")
 })
