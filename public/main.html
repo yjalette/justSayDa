@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#000000">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+        <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
+        <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+        <script src="http://sdks.shopifycdn.com/js-buy-sdk/v1/latest/index.umd.min.js"></script>
+
+        <title>DA</title>
+    </head>
+
+    <body>
+      <main id="homePage">
+        <section class="container-video">
+            <div class="video-foreground">
+                <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?&playlist=nk3iTiSmG68&autoplay=1&start=1&showinfo=0&amp&loop=1&controls=0&amp&mute=1"></iframe>
+            </div>
+            <div class="ent">
+                <h1 class="title">DA - where Design meets Art</h1>
+                <p class="description">Unisex fashion brand for those who go against the grain to express themselves </p>
+            </div>
+        </section>
+
+        <section id="registration">
+
+                <div>
+                   <p>Create an account</p>
+                     <form action="/users_create" method="POST" id="signUp-form">
+
+                         <input placeholder="username" name="create_name" id="create_name" />
+                         <input placeholder="email" name="create_email" id="create_email" />
+                         <input placeholder="password" name="create_password" id="create_password"/>
+
+                         <button type="submit">Submit</button>
+
+                     </form>
+                </div>
+
+                <div>
+                <p>Welcome Back</p>
+                    <form action="/users_login" method="POST" id="signIn-form">
+
+                        <input placeholder="email" name="login_email" />
+                        <input placeholder="password" name="login_password"/>
+
+                        <button type="submit">Submit</button>
+
+                    </form>
+               </div>
+
+          </section>
+        </main>
+
+          <main id="shop">
+          <h1>Welcome to our shop!</h1>
+          </main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="client.js"></script>
+    </body>
+</html>

@@ -1,0 +1,329 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+
+//colors
+$white: #E8E9EB;
+$red: #DD132B;
+$green: #10D1B1;
+$blue: #4749C1;
+$navy: #00203F;
+$gray: #CAD2C5;
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+$font-main: bolder 70px 'Playfair Display';
+$font-med: bold 30px 'Playfair Display';
+$font-small: 200px 20px 'Playfair Display';
+
+//media
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$phone-width: 481px;
+$smDev-width: 320px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin smDev {
+    @media (min-width: #{$smDev-width}) and (max-width: #{$phone-width - 1px}) {
+        @content;
+    }
+}
+
+
+@mixin btw {
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    margin: 100px 0px;
+    padding: 50px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+        height: 500px;
+    }
+    @include phone {
+        height: 350px;
+        padding: 10px;
+    }
+    @include smDev {
+        height: 300px;
+        padding: 1px;
+    }
+}
+
+
+@mixin center {
+    align-content: center;
+    justify-content: center;
+}
+
+@mixin h {
+    text-align: center;
+    font: $font-main;
+    padding: 50px;
+}
+
+@mixin p {
+    font: $font-small;
+}
+
+@mixin a {
+    padding: 5px;
+    line-height: normal;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@mixin translateY($e) {
+    -webkit-transform: translateY($e);
+    -moz-transform: translate($e);
+        transform: translateY($e);
+}
+
+@mixin transition($e) {
+    -webkit-transform: $e;
+    -moz-transform: $e;
+    transform: $e;
+}
+
+@mixin container-form {
+    background-color: $red;
+    margin: 0;
+    top: 50%;
+    padding: 20px;
+    width: 40%;
+    display: inline-block;
+    float: right;
+}
+
+@mixin select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+    .container-video {
+        z-index: 2;
+
+        width: 100%;
+        height: 100%;
+        display: inline-grid;
+        .video-foreground {
+            position: relative;
+            padding-bottom: 56.25%;
+            #myVideo {
+                filter: brightness(20%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+         }
+        .ent {
+            text-align: center;
+            width: 80%;
+            margin: 10% 10%;
+            padding: 100px;
+            height: auto;
+            background-color: #ede3e338;
+            position: absolute;
+            border-radius: 0%;
+            border: 15px ridge $white;
+            .title {
+                @unclude h;
+                font: $font-main;
+                color: $red;
+            }
+            .description {
+                @include p;
+                color: $white;
+                text-transform: lowercase;
+            }
+        }
+    }
+
+#ab-us {
+    @include btw;
+    background-color: black;
+    h2{
+        @include h;
+        color: $white;
+        font-size: 30px;
+    }
+
+}
+
+
+.container-products {
+    display: block;
+    width: 100%;
+
+
+    .container-buy {
+        padding: 20px;
+        width: 60%;
+        display: inline-block;
+        .gallery {
+            text-align: center;
+            width: 50%;
+            margin: 20px auto;
+                img {
+                border: 10px ridge $white;
+                width: 50%;
+                -webkit-transition-duration: 1s; /*Webkit: animation duration*/
+                -moz-transition-duration: 1s; /*Mozilla: animation duration*/
+                -o-transition-duration: 1s; /*Opera: animation duration*/
+                opacity: 0.6; /*initial opacity of the image*/
+                z-index: 1; /*place non-hover images behind the hover image*/
+                position: relative; /*solve the problem with z-index in Chrome*/
+            }
+
+                 img:hover {
+                -webkit-transform: scale( 1.5 ); /*Webkit: increase size to 1.5x*/
+                -moz-transform: scale( 1.5 ); /*Mozilla: scaling*/
+                -o-transform: scale( 1.5 ); /*Opera: scaling*/
+                box-shadow: 0px 0px 25px gray; /*CSS3 shadows: 25px fuzzy shadow around the entire image*/
+                -webkit-box-shadow: 0px 0px 25px gray; /*Webkit: shadows*/
+                -moz-box-shadow: 0px 0px 25px gray; /*Mozilla: shadows*/
+                opacity: 1; /*default opacity*/
+                z-index: 10; /*place hover image in front the non-hover images*/
+            }
+        }
+    }
+
+    //form
+    .container-form {
+        @include container-form;
+        form {
+            height: 100%;
+            label {
+                color: $white;
+                text-align: center;
+                font: $font-small;
+            }
+
+            select {
+                @include select;
+
+                option {
+
+                }
+            }
+
+            input {
+                width: 100%;
+                background-color: $green;
+                color: $white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input:hover {
+                background-color: $white;
+                color: $red;
+            }
+
+        }
+    }
+
+}
+
+//signup
+
+.container-form {
+    @include container-form;
+    form {
+        label {
+            display: block;
+        }
+        input {
+            display: block;
+        }
+        button {
+            display: block;
+        }
+    }
+
+}
+
+
+
+    footer {
+        background-color: $green;
+        color: $white;
+        width: 100%;
+        height: 90px;
+        display: block;
+        position: relative;
+        vertical-align: text-bottom;
+
+    nav {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        @include translateY(-50%);
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
+
+            &.last {
+                margin: 0;
+            }
+
+            a {
+                @include a;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+
+}
+
