@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Akronim|Averia+Sans+Libre|Finger+Paint|Nosifer|Ramaraja|Sedgwick+Ave+Display");
 * {
   margin: 0px;
@@ -43,12 +44,13 @@
       @unclude h;
       letter-spacing: 3px;
       font-style: normal;
-      font: bolder 70px "Akronim";
+      font: bold 70px "Open Sans";
       color: #E8E9EB; }
+      .container-video .ent .title span {
+        font-family: 'Nosifer', cursive; }
     .container-video .ent .title:before {
       content: "DA";
-      font-family: 'Nosifer', cursive;
-      font-style: italic; }
+      font-family: 'Nosifer', cursive; }
     .container-video .ent .description {
       font: 200px 20px "Playfair Display";
       color: #E8E9EB;
@@ -66,7 +68,7 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: black; }
+  background-color: #303634; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .tag-lines {
       height: 500px; } }
@@ -80,126 +82,108 @@
       padding: 1px; } }
   .tag-lines span {
     text-align: center;
-    font: bolder 70px "Akronim";
+    font: bold 70px "Open Sans";
     padding: 50px;
-    color: #E8E9EB;
+    color: #e40004;
     font-size: 30px; }
 
-.container-products {
-  display: block;
-  width: 100%; }
-  .container-products .container-buy {
-    padding: 20px;
-    width: 60%;
-    display: inline-block; }
-    .container-products .container-buy .gallery {
-      text-align: center;
-      width: 50%;
-      margin: 20px auto; }
-      .container-products .container-buy .gallery img {
-        border: 10px ridge #E8E9EB;
-        width: 50%;
-        -webkit-transition-duration: 1s;
-        /*Webkit: animation duration*/
-        -moz-transition-duration: 1s;
-        /*Mozilla: animation duration*/
-        -o-transition-duration: 1s;
-        /*Opera: animation duration*/
-        opacity: 0.6;
-        /*initial opacity of the image*/
-        z-index: 1;
-        /*place non-hover images behind the hover image*/
-        position: relative;
-        /*solve the problem with z-index in Chrome*/ }
-      .container-products .container-buy .gallery img:hover {
-        -webkit-transform: scale(1.5);
-        /*Webkit: increase size to 1.5x*/
-        -moz-transform: scale(1.5);
-        /*Mozilla: scaling*/
-        -o-transform: scale(1.5);
-        /*Opera: scaling*/
-        box-shadow: 0px 0px 25px gray;
-        /*CSS3 shadows: 25px fuzzy shadow around the entire image*/
-        -webkit-box-shadow: 0px 0px 25px gray;
-        /*Webkit: shadows*/
-        -moz-box-shadow: 0px 0px 25px gray;
-        /*Mozilla: shadows*/
-        opacity: 1;
-        /*default opacity*/
-        z-index: 10;
-        /*place hover image in front the non-hover images*/ }
-  .container-products .tags-line {
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: center;
-    height: 300px;
-    width: 100%;
-    padding: 50px;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .container-products .tags-line {
-        height: 500px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      .container-products .tags-line {
-        height: 350px;
-        padding: 10px; } }
-    @media (min-width: 320px) and (max-width: 480px) {
-      .container-products .tags-line {
-        height: 300px;
-        padding: 1px; } }
-  .container-products .container-form {
-    background-color: #DD132B;
-    margin: 0;
-    top: 50%;
-    padding: 20px;
-    width: 40%;
-    display: inline-block;
-    float: right; }
-    .container-products .container-form form {
-      height: 100%; }
-      .container-products .container-form form label {
-        color: #E8E9EB;
-        text-align: center;
-        font: 200px 20px "Playfair Display"; }
-      .container-products .container-form form select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box; }
-      .container-products .container-form form input {
-        width: 100%;
-        background-color: #10D1B1;
-        color: #E8E9EB;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer; }
-      .container-products .container-form form input:hover {
-        background-color: #E8E9EB;
-        color: #DD132B; }
+#designs #portfolio {
+  margin: 1rem 0;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  -webkit-column-width: 33.33333333333333%;
+  -moz-column-width: 33.33333333333333%;
+  column-width: 33.33333333333333%; }
+  #designs #portfolio .tile {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease; }
+    #designs #portfolio .tile img {
+      max-width: 70%;
+      width: 70%;
+      height: auto;
+      margin-bottom: 16px; }
+  #designs #portfolio .scale-anm {
+    transform: scale(1); }
+  #designs #portfolio p {
+    padding: 10px;
+    border-bottom: 1px #ccc dotted;
+    text-decoration: none;
+    font-family: lato;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #333;
+    display: block;
+    float: left; }
+  #designs #portfolio p:hover {
+    cursor: pointer;
+    background: #333;
+    color: #eee; }
+#designs .btn {
+  font-family: Lato;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  padding: .5rem 1rem;
+  margin: 0;
+  height: auto;
+  border: 1px solid;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  color: #555;
+  background-color: rgba(0, 0, 0, 0); }
+#designs .btn:hover {
+  text-decoration: none; }
+#designs .btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3); }
+#designs ::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
-.container-form {
-  background-color: #DD132B;
+#registration .container-form {
+  background-color: #e40004;
   margin: 0;
   top: 50%;
   padding: 20px;
   width: 40%;
   display: inline-block;
   float: right; }
-  .container-form form label {
-    display: block; }
-  .container-form form input {
-    display: block; }
-  .container-form form button {
-    display: block; }
+  #registration .container-form form {
+    height: 100%; }
+    #registration .container-form form label {
+      color: #E8E9EB;
+      text-align: center;
+      font: 200px 20px "Playfair Display"; }
+    #registration .container-form form select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; }
+    #registration .container-form form input {
+      width: 100%;
+      background-color: #10D1B1;
+      color: #E8E9EB;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer; }
+    #registration .container-form form input:hover {
+      background-color: #E8E9EB;
+      color: #e40004; }
 
 footer {
   background-color: #10D1B1;
@@ -228,6 +212,6 @@ footer {
         cursor: pointer;
         text-decoration: none; }
         footer nav ul li a:hover {
-          color: #DD132B; }
+          color: #e40004; }
 
 /*# sourceMappingURL=styles.css.map */

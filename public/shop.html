@@ -11,6 +11,7 @@
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
         <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
         <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
+        <link href="assets/css/shop.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
         <script src="http://sdks.shopifycdn.com/js-buy-sdk/v1/latest/index.umd.min.js"></script>
 
@@ -19,8 +20,59 @@
 
     <body>
 
+
         <main id="shop">
             <h1>Welcome to our shop!</h1>
+                <section id="gallery-cities">
+                       <h2>Explore this world with us!</h2>
+                        <div class="slider-wrapper">
+
+                            <div class="rotatescroll" id="rotatescroll">
+
+                                <div class="viewport">
+
+                                    <ul class="overview">
+                                        <li>
+                                            <a href="#"><img src="./images/newYork.jpg" alt="newYork" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/amsterdam.jpg" alt="amsterdam" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/paris.jpg" alt="paris" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/tokyo.jpg" alt="tokyo" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/vancouver.jpg" alt="vancouver" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/moscow.jpg" alt="moscow" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/seoul.jpg" alt="seoul" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="./images/london.jpg" alt="london" /></a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="dot"></div>
+                                <div class="overlay overlay-interaction" id="overlayInteraction"></div>
+                                <div class="overlay overlay-static"></div>
+                                <div class="overlay overlay-active" id="overlayActive"></div>
+                                <div class="thumb"></div>
+
+                            </div>
+
+                        </div>
+                 </section>
+
             <div id='collection-component-e17f8e09b08'></div>
         </main>
 
@@ -163,5 +215,6 @@
 
         </script>
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="shop.js"></script>
     </body>
 </html>

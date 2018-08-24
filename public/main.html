@@ -11,8 +11,6 @@
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
         <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
-        <script src="http://sdks.shopifycdn.com/js-buy-sdk/v1/latest/index.umd.min.js"></script>
-
         <title>DA</title>
     </head>
 
@@ -23,21 +21,93 @@
                 <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?&playlist=nk3iTiSmG68&autoplay=1&start=1&showinfo=0&amp&loop=1&controls=0&amp&mute=1"></iframe>
             </div>
             <div class="ent">
-                <h1 class="title">- where Design meets Art</h1>
+                <h1 class="title">- where <span>D</span>esign meets <span>A</span>rt</h1>
                 <p class="description">Unisex fashion brand for those who go against the grain to express themselves! </p>
             </div>
           </section>
 
         <section class="tag-lines">
-            <span>meow meow</span>
+            <span>We design bold clothing for those who go against the grain to express themselves while we leave behind
+               the rule-bound world of age, race, and gender codes.
+                Each item in our collection represents a piece of wearable art.
+               The designs are all prints based on hand painted portraits created by an artist.
+            </span>
         </section>
+
+         <section id="designs">
+          <div class="toolbar mb2 mt2">
+
+              <button class="btn fil-cat" href="" data-rel="web">Leather</button>
+              <button class="btn fil-cat" data-rel="flyers">Silk</button>
+              <button class="btn fil-cat" data-rel="bcards">Denim</button>
+              <button class="btn fil-cat"  data-rel="all">All</button>
+          </div>
+
+          <div id="portfolio">
+
+              <div class="tile scale-anm web all">
+                  <img src="./images/silk-almati-front-f.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/denimNycFrontM.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm bcards all">
+                  <img src="./images/leather-paris-front.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/denimNycBackF.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm flyers all">
+                  <img src="./images/leather-paris-back.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm bcards all">
+                  <img src="./images/denimNycSideM.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm flyers all">
+                  <img src="./images/denimNycBackM.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm flyers all">
+                  <img src="./images/denimNycFrontM.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/silk-almati-front-m.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm flyers all">
+                  <img src="./images/silk-almati-back.JPG" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/almaty.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm bcards all">
+                  <img src="./images/dubai.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/rioDeJaneiro.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm bcards all">
+                  <img src="./images/rome.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/london.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm web all">
+                  <img src="./images/denimNycBackF.jpg" alt="" />
+              </div>
+              <div class="tile scale-anm bcards all">
+                  <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+              </div>
+           </div>
+             <div style="clear:both;"></div>
+          </section>
 
 
         <section id="gallery"></section>
 
+        <section class="tag-lines">
+            <span>Ready to purchase?</span>
+        </section>
 
         <section id="registration">
-
                 <div>
                    <p>Create an account</p>
                      <form action="/users_create" method="POST" id="signUp-form">
@@ -65,7 +135,8 @@
 
           </section>
         </main>
+
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<!--        <script src="client.js"></script>-->
-    </body>
+<script src="paint.js"></script>
+        </body>
 </html>
