@@ -108,11 +108,10 @@ router.get('/users/:id', (req, res) => {
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: "localhost",
-    user: "root",
-    password: "",
-    port: 3309,
-    database: 'daDB',
+    host: "us-cdbr-iron-east-01.cleardb.net",
+    user: "b0c02d67793a5c",
+    password: "b32c483b",
+    database: 'heroku_041cfc127a603ef',
     multipleStatements: true
 })
 
