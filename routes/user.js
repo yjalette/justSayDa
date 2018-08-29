@@ -62,10 +62,6 @@ router.post('/users_login', (req, res) =>{
 
 })
 
-router.get('/messages', (req, res) => {
-    console.log("meow mes-s")
-    res.end()
-})
 
 router.get("/users", (req, res) => {
     const connection = getConnection()
@@ -108,11 +104,11 @@ router.get('/users/:id', (req, res) => {
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: "us-cdbr-iron-east-01.cleardb.net",
-    user: "b0c02d67793a5c",
-    password: "b32c483b",
+    host: "localhost",
+    user: "root",
+    password: "",
     port: 3309,
-    database: 'heroku_041cfc127a603ef',
+    database: 'daDB',
     multipleStatements: true
 })
 
@@ -123,3 +119,13 @@ function getConnection() {
 
 
 module.exports = router;
+
+//const pool = mysql.createPool({
+//    connectionLimit: 10,
+//    host: "us-cdbr-iron-east-01.cleardb.net",
+//    user: "b0c02d67793a5c",
+//    password: "b32c483b",
+//    port: 3309,
+//    database: 'heroku_041cfc127a603ef',
+//    multipleStatements: true
+//})

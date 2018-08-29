@@ -22,8 +22,8 @@ app.use(router)
 
 
 app.get("/", (req, res) => {
-    console.log("Responding");
-    res.send("Hello");
+    res.redirect('/main.html');
+    res.end()
 })
 
 const PORT = process.env.PORT || 4000;
