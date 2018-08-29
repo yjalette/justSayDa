@@ -13,10 +13,14 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
 
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
 
 //colors
-$white: #E8E9EB;
+$white: #f0faf7;
 $red: #e40004;
 $green: #10D1B1;
 $army-green: #303634;
@@ -24,7 +28,10 @@ $blue: #4749C1;
 $navy: #00203F;
 $gray: #CAD2C5;
 
+$shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
+
 //fonts
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Akronim|Averia+Sans+Libre|Finger+Paint|Nosifer|Ramaraja|Sedgwick+Ave+Display');
 $font-main: bold 70px 'Open Sans';
@@ -66,7 +73,6 @@ $smDev-width: 320px;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
-    height: 300px;
     width: 100%;
     padding: 50px;
     position: relative;
@@ -87,21 +93,7 @@ $smDev-width: 320px;
     }
 }
 
-@mixin ink {
-    font-family: 'Inika', serif;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6),
-        -1px -1px 1px rgba(255, 255, 255, 0.7);
-    font-size: 56px;
-    letter-spacing: 2px;
-    padding-left: 5px;
-    text-align: center;
-    position: absolute;
-    line-height: 475px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-}
+
 
 @mixin center {
     align-content: center;
@@ -109,13 +101,15 @@ $smDev-width: 320px;
 }
 
 @mixin h {
-    text-align: center;
+    text-align: right;
     font: $font-main;
     padding: 50px;
 }
 
 @mixin p {
     font: $font-small;
+    text-align: center;
+    padding: 20px;
 }
 
 @mixin a {
@@ -137,14 +131,13 @@ $smDev-width: 320px;
     transform: $e;
 }
 
-@mixin container-form {
-    background-color: $red;
-    margin: 0;
-    top: 50%;
-    padding: 20px;
-    width: 40%;
-    display: inline-block;
-    float: right;
+@mixin input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 @mixin select {
@@ -157,96 +150,308 @@ $smDev-width: 320px;
     box-sizing: border-box;
 }
 
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+@mixin transition {
+    -moz-transition:    0.3s ease-in-out all;
+    -o-transition:      0.3s ease-in-out all;
+    -webkit-transition: 0.3s ease-in-out all;
+    transition:         0.3s ease-in-out all;
+}
+
+@mixin filter($filter) {
+    -webkit-filter: $filter;
+    -moz-filter: $filter;
+    -o-filter: $filter;
+}
 
 
-    .container-video {
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        display: inline-grid;
-        .video-foreground {
-            position: relative;
-            padding-bottom: 56.25%;
-            #myVideo {
-                filter: brightness(21%);
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-         }
-        .ent {
-            text-align: center;
-            width: 80%;
-            margin: 10% 10%;
-            padding: 100px;
-            height: auto;
-            background-color: #ede3e338;
+
+.container-video {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    .video-foreground {
+        position: relative;
+        padding-bottom: 56.25%;
+        #myVideo {
+            filter: brightness(21%);
             position: absolute;
-            border-radius: 0%;
-            border: 15px ridge $white;
-            .title {
-                @unclude h;
-                letter-spacing: 3px;
-                font-style: normal;
-                font: $font-main;
-                color: $white;
-                span {
-                    font-family: 'Nosifer', cursive;
-                }
-            }
-            .title:before {
-                content: "DA";
-                font-family: 'Nosifer', cursive;
-            }
-            .description {
-                @include p;
-                color: $white;
-                text-transform: lowercase;
-            }
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
+    .ent {
+        text-align: center;
+        width: 90%;
+        margin: 5% 5%;
+        height: auto;
+        background-color: #ede3e338;
+        position: absolute;
+        border-radius: 0%;
+        .title {
+            @include h;
+            letter-spacing: 3px;
+            font-style: normal;
+            font-size: 400px;
+            color: $white;
+            font-family: 'Cabin Sketch', cursive;
+        }
 
-.tag-lines {
-    @include btw;
-    background-color: $army-green;
-    span{
-        @include h;
-        color: $red;
-        font-size: 30px;
     }
 
 }
 
+
+
+
+
+
+#bold {
+    display: block;
+    width: 95%;
+    height: 400px;
+    background-color: black;
+    @include btw;
+    span {
+        font: $font-med;
+        width: 80%;
+        margin: 10% 10%;
+        color: $white;
+        text-align: center;
+        display: block;
+    }
+}
+
+
+
+#introImages{
+    width: 100%;
+    position: relative;
+    background-color: black;
+    padding: 50px 0px;
+.section {
+    height: 600px !important;
+
+    .left, .middle, .right {
+        width:100%;
+        display: block;
+        color: $white;
+        box-sizing: border-box;
+        left: 0;
+        padding: 30px;
+        text-align:center;
+        overflow:hidden;
+
+        @include transition;
+
+        .content {
+            @media (min-width: $sm) {
+                @include vertical-align();
+            }
+        }
+
+        @media (min-width: $sm) {
+            width: 100%;
+            font-size:0.9em;
+            padding: 10px;
+            left: 0;
+            float: left;
+            position: absolute;
+        }
+
+        @media (min-width: $md) {
+            width: 33.33333%;
+            left: 33.33%;
+            padding: 10px;
+        }
+
+        @media (min-width: $lg) {
+            padding: 30px;
+            font-size: 1em;
+        }
+    }
+
+    &.animate {
+        .left {
+            left:0;
+
+            @media (min-width: $sm) {
+                left: 50%;
+            }
+
+            @media (min-width: $md) {
+                left:0;
+            }
+        }
+
+        .right {
+            left:0;
+
+            @media (min-width: $sm) {
+                left: 50%;
+            }
+
+            @media (min-width: $md) {
+                left:66.66%;
+            }
+        }
+
+
+    }
+
+    .title {
+        background: black;
+
+        h2 {
+            margin-top:0;
+        }
+
+        p {
+            line-height:1.55em;
+            margin-bottom: 0.75em;
+        }
+
+        .btn-primary {
+            color: $white;
+            background: darken(purple, 80%);
+            padding: 10px;
+            text-decoration:none;
+            border-radius: 3px;
+            display:inline-block;
+            @include transition;
+
+            &:hover {
+                background: darken(tomato, 15%);
+            }
+
+        }
+    }
+
+    .tiles {
+        padding:0;
+        clear:both;
+        display:none;
+        float:none;
+
+        img {
+            width:50%;
+            float:left;
+            height:auto;
+            opacity: 0.7;
+            @include transition;
+            @include filter(grayscale(100%));
+
+
+            &:hover {
+                opacity:1;
+                @include filter(grayscale(0%));
+            }
+        }
+
+        @media (min-width: $md) {
+            display:block;
+        }
+    }
+
+    .middle {
+        background: black;
+        z-index: 1;
+        padding:0;
+
+        img {
+            padding: 5px;
+            width: 100%;
+            height: auto;
+            display:block;
+            position: relative;
+            overflow: visible;
+        }
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-20px);}
+    60% {-webkit-transform: translateY(-10px);}
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+}
+
+}
+
+
+
+
+.tag-lines {
+    z-index: 2;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-image: url(../../images/paint-red.png);
+    background-size: 60%;
+    background-color: black;
+        span{
+            @include h;
+            background-color: $white;
+            color: $red;
+            width: 100%;
+            font-size: 30px;
+            margin: 12% 0%;
+        }
+
+}
+
 #designs {
+    padding: 30px 0px;
         #portfolio {
-            margin: 1rem 0;
-            -webkit-column-count: 3;
-            -moz-column-count: 3;
-            column-count: 3;
-            -webkit-column-gap: 1rem;
-            -moz-column-gap: 1rem;
-            column-gap: 1rem;
-            -webkit-column-width: 33.33333333333333%;
-            -moz-column-width: 33.33333333333333%;
-            column-width: 33.33333333333333%;
+            margin: 0% 5%;
+            width: 90%;
+            -webkit-column-count: 5;
+            -moz-column-count: 5;
+            column-count: 5;
+            -webkit-column-gap: 5px;
+            -moz-column-gap: 5px;
+            column-gap: 5px;
+            -webkit-column-width: 20%;
+            -moz-column-width: 20%;
+            column-width: 20%;
 
         .tile {
             -webkit-transform: scale(0);
             transform: scale(0);
-            -webkit-transition: all 350ms ease;
-            transition: all 350ms ease;
+            -webkit-transition: all 150ms ease;
+            transition: all 150ms ease;
+            transition: transform .5s;
                 img {
-                max-width: 70%;
-                width: 70%;
-                height: auto;
-                margin-bottom: 16px;
-
+                    width: 100%;
+                    height: auto;
+                    margin: 10px;
+                    padding: 5px;
             }
+
 
         }
         .tile:hover {
+
+                -ms-transform: scale(2.5); /* IE 9 */
+                -webkit-transform: scale(2.5); /* Safari 3-8 */
+                transform: scale(2.5);
+                display: block;
+                width: 100%;
 
         }
 
@@ -255,7 +460,7 @@ $smDev-width: 320px;
         }
 
 
-        p{
+        p {
             padding:10px;
             border-bottom: 1px #ccc dotted;
             text-decoration: none;
@@ -275,20 +480,18 @@ $smDev-width: 320px;
     }
 
         .btn {
-            font-family: Lato;
-            font-size: 1rem;
+            font-size: 25px;
             font-weight: normal;
             text-decoration: none;
             cursor: pointer;
             display: inline-block;
             line-height: normal;
-            padding: .5rem 1rem;
-            margin: 0;
+            padding: 15px 20px;
+            margin: 5px;
             height: auto;
-            border: 1px solid;
             vertical-align: middle;
             -webkit-appearance: none;
-            color: #555;
+            color: $red;
             background-color: rgba(0, 0, 0, 0);
         }
 
@@ -309,47 +512,49 @@ $smDev-width: 320px;
 }
     //form
 #registration {
-    .container-form {
-        @include container-form;
-        form {
-            height: 100%;
-            label {
-                color: $white;
-                text-align: center;
-                font: $font-small;
-            }
+    display: inline-flex;
+    width: 100%;
+    padding: 50px 0px;
+    background-color: $red;
+    #signUp-form {
+        width: 50%;
+        padding: 100px;
+        p {
+            @include p;
+            color: $white;
+        }
+        input {
+            @include input;
+        }
+        input:hover {
+            background-color: $white;
+            color: $red;
+        }
+    }
+    #signIn-form {
+        width: 50%;
+        padding: 100px;
+        p {
+            @include p;
+            color: $white;
+        }
+        input {
+            @include input;
+        }
+        input::placeholder{
 
-            select {
-                @include select;
-
-                option {
-
-                }
-            }
-
-            input {
-                width: 100%;
-                background-color: $green;
-                color: $white;
-                padding: 14px 20px;
-                margin: 8px 0;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-            input:hover {
-                background-color: $white;
-                color: $red;
-            }
-
+        }
+        input:hover {
+            background-color: $white;
+            color: $red;
         }
     }
 
 }
 
-    footer {
-        background-color: $green;
-        color: $white;
+    f#ooter {
+        background-color: $white;
+        color: $red;
         width: 100%;
         height: 90px;
         display: block;
@@ -373,9 +578,13 @@ $smDev-width: 320px;
 
             a {
                 @include a;
-                &:hover {
+                i {
+                    padding: 5px;
                     color: $red;
                 }
+            }
+            &:hover {
+                color: $red;
             }
         }
     }
