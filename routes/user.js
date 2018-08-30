@@ -101,14 +101,13 @@ router.get('/users/:id', (req, res) => {
         res.json(users)
     })
 })
-
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: "localhost",
-    user: "root",
-    password: "",
+    host: "us-cdbr-iron-east-01.cleardb.net",
+    user: "b0b228f5825a1c",
+    password: "7ae88a81",
     port: 3309,
-    database: 'daDB',
+    database: 'heroku_8da4bd6506e30bf',
     multipleStatements: true
 })
 
@@ -122,10 +121,12 @@ module.exports = router;
 
 //const pool = mysql.createPool({
 //    connectionLimit: 10,
-//    host: "us-cdbr-iron-east-01.cleardb.net",
-//    user: "b0c02d67793a5c",
-//    password: "b32c483b",
+//    host: "localhost",
+//    user: "root",
+//    password: "",
 //    port: 3309,
-//    database: 'heroku_041cfc127a603ef',
+//    database: 'daDB',
 //    multipleStatements: true
 //})
+
+//mysql://b0b228f5825a1c:7ae88a81@us-cdbr-iron-east-01.cleardb.net/heroku_8da4bd6506e30bf?reconnect=true
