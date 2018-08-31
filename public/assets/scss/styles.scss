@@ -14,6 +14,8 @@
     -webkit-padding-end: 0px;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody');
 
 $sm: 480px;
 $md: 768px;
@@ -31,11 +33,9 @@ $gray: #CAD2C5;
 $shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
 
 //fonts
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Akronim|Averia+Sans+Libre|Finger+Paint|Nosifer|Ramaraja|Sedgwick+Ave+Display');
+$font-graf: bold 200px 'Sedgwick Ave Display';
 $font-main: bold 70px 'Open Sans';
-$font-med: bold 30px 'Playfair Display';
+$font-med: bold 30px 'Hi Melody';
 $font-small: 200px 20px 'Playfair Display';
 
 //media
@@ -77,9 +77,6 @@ $smDev-width: 320px;
     padding: 50px;
     position: relative;
     text-align: center;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
     @include tablet {
         height: 500px;
     }
@@ -192,19 +189,18 @@ $smDev-width: 320px;
     }
     .ent {
         text-align: center;
-        width: 90%;
-        margin: 5% 5%;
         height: auto;
         background-color: #ede3e338;
         position: absolute;
-        border-radius: 0%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         .title {
             @include h;
-            letter-spacing: 3px;
+            letter-spacing: 5px;
             font-style: normal;
-            font-size: 400px;
             color: $white;
-            font-family: 'Cabin Sketch', cursive;
+            font: $font-graf;
         }
 
     }
@@ -403,7 +399,7 @@ $smDev-width: 320px;
     width: 100%;
     background-image: url(../../images/paint-red.png);
     background-size: 60%;
-    background-color: black;
+    background-color: $white;
         span{
             @include h;
             background-color: $white;
@@ -556,38 +552,43 @@ $smDev-width: 320px;
         background-color: $white;
         color: $red;
         width: 100%;
-        height: 90px;
         display: block;
         position: relative;
         vertical-align: text-bottom;
+        font: $font-med;
 
-    nav {
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        @include translateY(-50%);
 
-        ul li {
-            list-style-type: none;
-            display: inline-block;
-            margin-right: 10px;
+            nav {
+                width: 50%;
+                display: inline-block;
+                position: absolute;
+                text-align: right;
 
-            &.last {
-                margin: 0;
-            }
+                ul li {
+                    list-style-type: none;
+                    display: inline-block;
+                    margin-right: 10px;
 
-            a {
-                @include a;
-                i {
-                    padding: 5px;
-                    color: $red;
+                    &.last {
+                        margin: 0;
+                    }
+
+                    a {
+                        @include a;
+                        i {
+                            padding: 5px;
+                            color: $red;
+                        }
+                    }
+                    &:hover {
+                        color: $red;
+                    }
                 }
             }
-            &:hover {
-                color: $red;
-            }
+        p {
+            width: 50%;
+            display: inline-block;
+            text-align: left;
         }
-    }
-
 }
 

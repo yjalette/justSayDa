@@ -1,7 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
-@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-@import url("https://fonts.googleapis.com/css?family=Akronim|Averia+Sans+Libre|Finger+Paint|Nosifer|Ramaraja|Sedgwick+Ave+Display");
+@import url("https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display");
+@import url("https://fonts.googleapis.com/css?family=Hi+Melody");
 * {
   margin: 0px;
   padding: 0px;
@@ -34,21 +33,20 @@
       height: 100%; }
   .container-video .ent {
     text-align: center;
-    width: 90%;
-    margin: 5% 5%;
     height: auto;
     background-color: #ede3e338;
     position: absolute;
-    border-radius: 0%; }
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
     .container-video .ent .title {
       text-align: right;
       font: bold 70px "Open Sans";
       padding: 50px;
-      letter-spacing: 3px;
+      letter-spacing: 5px;
       font-style: normal;
-      font-size: 400px;
       color: #f0faf7;
-      font-family: 'Cabin Sketch', cursive; }
+      font: bold 200px "Sedgwick Ave Display"; }
 
 #bold {
   display: block;
@@ -61,10 +59,7 @@
   width: 100%;
   padding: 50px;
   position: relative;
-  text-align: center;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center; }
+  text-align: center; }
   @media (min-width: 768px) and (max-width: 1023px) {
     #bold {
       height: 500px; } }
@@ -77,7 +72,7 @@
       height: 300px;
       padding: 1px; } }
   #bold span {
-    font: bold 30px "Playfair Display";
+    font: bold 30px "Hi Melody";
     width: 80%;
     margin: 10% 10%;
     color: #f0faf7;
@@ -221,7 +216,7 @@
   width: 100%;
   background-image: url(../../images/paint-red.png);
   background-size: 60%;
-  background-color: black; }
+  background-color: #f0faf7; }
   .tag-lines span {
     text-align: right;
     font: bold 70px "Open Sans";
@@ -347,36 +342,38 @@
       background-color: #f0faf7;
       color: #e40004; }
 
-f#ooter {
+#footer {
   background-color: #f0faf7;
   color: #e40004;
   width: 100%;
-  height: 90px;
   display: block;
   position: relative;
-  vertical-align: text-bottom; }
-  f#ooter nav {
+  vertical-align: text-bottom;
+  font: bold 30px "Hi Melody"; }
+  #footer nav {
+    width: 50%;
+    display: inline-block;
     position: absolute;
-    top: 50%;
-    right: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translate(-50%);
-    transform: translateY(-50%); }
-    f#ooter nav ul li {
+    text-align: right; }
+    #footer nav ul li {
       list-style-type: none;
       display: inline-block;
       margin-right: 10px; }
-      f#ooter nav ul li.last {
+      #footer nav ul li.last {
         margin: 0; }
-      f#ooter nav ul li a {
+      #footer nav ul li a {
         padding: 5px;
         line-height: normal;
         cursor: pointer;
         text-decoration: none; }
-        f#ooter nav ul li a i {
+        #footer nav ul li a i {
           padding: 5px;
           color: #e40004; }
-      f#ooter nav ul li:hover {
+      #footer nav ul li:hover {
         color: #e40004; }
+  #footer p {
+    width: 50%;
+    display: inline-block;
+    text-align: left; }
 
 /*# sourceMappingURL=styles.css.map */
