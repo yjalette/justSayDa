@@ -3,11 +3,17 @@ window.onbeforeunload = function () {
 };
 
 $(document).ready(function(){
-    $(window).scroll(function(){
-        $(".tag-lines").children().slideDown(2000, function(){
-            $(".tag-lines").children().animate({'height': '300px'});
-            $(".tag-lines").css({'background-color': '#EE523F'});
-        });
+
+    $('#registration').hide();
+
+    $(window).on('load',function(){
+        $(".tag-lines").children().slideDown(2000);
     });
+
+    $('#ready').on("click", function(){
+        $("#registration").slideDown("slow");
+        $("#tag-reg").hide();
+    })
+
 
 })

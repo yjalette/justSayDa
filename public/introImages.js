@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-var $sm = 480;
-var $md = 768;
+var $sm = 400;
+var $md = 700;
 
 function resizeThis() {
 $imgH = $('.middle img').width();
@@ -31,7 +31,7 @@ var $sectionVert = (($h/2)-($sectionH/4));
 if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
 $(this).addClass('animate');
 } else {
-$(this).removeClass('animate');
+//$(this).removeClass('animate');
 }
 });
 });

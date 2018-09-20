@@ -16,16 +16,32 @@
 <main id="homePage">
 <section class="container-video">
             <div class="video-foreground">
-                <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?&playlist=nk3iTiSmG68&autoplay=1&start=1&showinfo=0&amp&loop=1&controls=0&amp&mute=1"></iframe>
+                <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?&playlist=nk3iTiSmG68&autoplay=1&start=12&showinfo=0&amp&loop=1&controls=0&amp&mute=1"></iframe>
+            </div>
+    <nav>
+            <div class="ent">
+                <img src="images/logo-orange-da.png">
             </div>
 
-            <div class="ent">
-                <h1 class="title">justsayDA!</h1>
-            </div>
-            <div id="bold">
-                <span>Fine Art Turned Into Clothes</span>
-            </div>
+            <ul>
+                <li>sign in/ sign up</li>
+            </ul>
+    </nav>
+    <div id="begin">
+        <a href="#" class="arrow down"></a>
+
+    </div>
+
   </section>
+
+    <section id="bold" class="tag-lines">
+        <span>Modern Art Turned Into Street Clothes</span>
+
+        <button><img src="images/logo-purple-da.png"><br>
+
+        </button>
+
+    </section>
 
     <section id="introImages">
 
@@ -104,15 +120,30 @@
               </div>
     </section>
 
-    <section class="tag-lines">
-        <span>Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings</span>
+    <section class="tag-lines" id="howWorks">
+        <span>How does it work?</span>
+        <button id="work-button"><img src="images/logo-purple-da.png"></button>
     </section>
 
-
-    <section id="gallery-cities">
+    <section id="pickDesign" class="pick">
+        <section id="designsText">
+            <h2>Pick Your Design!</h2>
+            <span>DA! is not just streetwear. It's our cities collection.
+                Each item in our collection represents a city and a piece of wearable art.
+                The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
+            </span>
+        </section>
+        <section id="designsExp">
+            <section>baseball jacket<img src="images/gray-baseball.png"></section>
+            <section>hoodie<img src="images/gray-baseball.png"></section>
+            <section>scarf<img src="images/gray-baseball.png"></section>
+        </section>
+    </section>
+    <!--Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings-->
+    <section id="gallery-cities" class="pick">
                   <div id="RepYourCity">
-                  <h2>Rep Your City!</h2>
-                  <span>It's not just streetwear. It's our cities collection.
+                  <h2>Pick Your Print!</h2>
+                      <span><strong>DA!</strong> is not just streetwear. It's our cities collection.
                       Each item in our collection represents a city and a piece of wearable art.
                       The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
                       </span>
@@ -167,6 +198,22 @@
     </section>
 
 
+
+    <section id="pickFabric" class="pick">
+        <section id="fabricText">
+            <h2>Pick Your Fabric!</h2>
+            <span>It's not just streetwear. It's our cities collection.
+                Each item in our collection represents a city and a piece of wearable art.
+                The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
+            </span>
+        </section>
+        <section id="fabricExp">
+            <section><span>vegan leather</span><img src="images/silk.jpg"></section>
+            <section><span>denim</span><img src="images/leather.jpg"></section>
+            <section><span>silk</span><img src="images/denim.jpg"></section>
+        </section>
+
+    </section>
 
     <section id="designs">
                   <div class="toolbar mb2 mt2">
@@ -269,8 +316,9 @@
     </section>
 
 
-    <section class="tag-lines">
+    <section class="tag-lines" id="tag-reg">
                 <span>Ready to purchase?</span>
+                <button id="ready"><img src="images/shop-now.png"></button>
     </section>
 
     <section id="registration">
@@ -281,7 +329,7 @@
                              <input placeholder="email" name="create_email" id="create_email" />
                              <input placeholder="password" name="create_password" id="create_password"/>
 
-                             <button type="submit">Submit</button>
+                             <button type="submit">create!</button>
 
                          </form>
 
@@ -290,7 +338,7 @@
                             <input placeholder="email" name="login_email" />
                             <input placeholder="password" name="login_password"/>
 
-                            <button type="submit">Submit</button>
+                            <button type="submit">login!</button>
 
                         </form>
 
@@ -305,20 +353,20 @@
                     <a href="https://www.instagram.com/da.clothing/"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/da.clothing/"><i class="fa fa-instagram"></i></a>
+                    <a href="mailto:yekaterinadoros@gmail.com?Subject=Hello%20again" target="_top"><i class="fa fa-envelope-open-o"></i></a>
                 </li>
             </ul>
         </nav>
     </section>
-
 </main>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="introImages.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-        <script src="gallery.js"></script>
         <script src="prints.js"></script>
         <script src="client.js"></script>
+        <script src="introImages.js"></script>
+        <script src="gallery.js"></script>
+
+
 </body>
 </html>
 

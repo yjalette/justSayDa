@@ -26,50 +26,77 @@ hr {
   z-index: 1;
   width: 100%;
   height: 100%;
-  display: inline-grid; }
+  display: inline-grid;
+  background-color: rgba(223, 227, 232, 0.3); }
   .container-video .video-foreground {
     position: relative;
     padding-bottom: 56.25%; }
     .container-video .video-foreground #myVideo {
-      filter: brightness(21%);
+      filter: brightness(25%);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  .container-video .ent {
+  .container-video nav {
+    display: flex; }
+    .container-video nav .ent {
+      position: absolute;
+      left: 30%;
+      top: 10%;
+      transform: translate(-50%, -50%); }
+      .container-video nav .ent img {
+        width: 35%; }
+    .container-video nav ul {
+      position: absolute;
+      right: 1%;
+      top: 5%;
+      transform: translate(-50%, -50%);
+      list-style: none; }
+      .container-video nav ul li {
+        letter-spacing: 5px;
+        color: #f0faf7;
+        font: bold 60px "Sedgwick Ave Display";
+        font-size: 25px !important; }
+  .container-video #begin {
     position: absolute;
-    left: 10%;
-    top: 10%;
-    transform: translate(-50%, -50%);
-    background-image: url(../../images/paint-purple.png);
-    padding: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10%; }
-    .container-video .ent .title {
-      letter-spacing: 5px;
-      color: #f0faf7;
-      font: bold 200px "Sedgwick Ave Display";
-      font-size: 25px !important;
-      padding: 2%; }
-  .container-video #bold {
-    position: absolute;
-    width: 100%;
+    top: 60%;
     left: 50%;
-    top: 50%;
-    padding: 2%;
-    text-align: center;
     transform: translate(-50%, -50%);
-    background-color: rgba(223, 227, 232, 0.3); }
-    .container-video #bold span {
-      font: bold 70px "Open Sans";
-      color: #3A2E3C; }
+    text-align: center;
+    width: 100%;
+    padding: 50px; }
+    .container-video #begin .arrow {
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0 32px;
+      display: block;
+      height: 0;
+      opacity: 0.4;
+      text-indent: -9999px;
+      transform-origin: 50% 50%;
+      width: 0; }
+    .container-video #begin .down {
+      margin-left: 50%;
+      -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+      border-top: 60px solid #f0faf7; }
+
+@-webkit-keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.8; }
+  100% {
+    -webkit-transform: translateY(7px);
+    opacity: 1; } }
+#bold {
+  top: 50% !important; }
+  #bold span {
+    margin: 3% 0% !important; }
 
 #introImages {
   width: 100%;
   position: relative;
-  background-color: black;
+  background-color: #bbbdc9;
   padding: 50px 0px; }
   #introImages .section {
     height: 600px !important; }
@@ -112,8 +139,8 @@ hr {
           font-size: 1em; } }
     #introImages .section.animate .left {
       left: 0;
-      background-color: #3A2E3C;
-      color: #bbbdc9; }
+      color: #bbbdc9;
+      background-color: #3A2E3C; }
       @media (min-width: 480px) {
         #introImages .section.animate .left {
           left: 50%; } }
@@ -122,7 +149,8 @@ hr {
           left: 0; } }
     #introImages .section.animate .right {
       left: 0;
-      background-color: #EE523F; }
+      background-color: #EE523F;
+      color: #3A2E3C; }
       @media (min-width: 480px) {
         #introImages .section.animate .right {
           left: 50%; } }
@@ -130,7 +158,7 @@ hr {
         #introImages .section.animate .right {
           left: 66.66%; } }
     #introImages .section .title {
-      background: black; }
+      background: #3A2E3C; }
       #introImages .section .title h2 {
         margin-top: 0;
         font: bold 30px "Hi Melody"; }
@@ -141,7 +169,7 @@ hr {
         color: #f0faf7; }
       #introImages .section .title .btn-primary {
         color: #f0faf7;
-        background: black;
+        background: #3A2E3C;
         padding: 10px;
         text-decoration: none;
         border-radius: 3px;
@@ -178,11 +206,11 @@ hr {
         #introImages .section .tiles {
           display: block; } }
     #introImages .section .middle {
-      background-image: linear-gradient(to left, #EE523F, #bbbdc9);
+      background-image: linear-gradient(to left, #EE523F, #3A2E3C);
       z-index: 1;
       padding: 0; }
       #introImages .section .middle img {
-        padding: 5px;
+        padding: 0px 5px 5px;
         width: 100%;
         height: auto;
         display: block;
@@ -203,28 +231,37 @@ hr {
   60% {
     transform: translateY(-10px); } }
 .tag-lines {
+  background-color: #EE523F;
   z-index: 2;
-  display: flex;
   position: relative;
   width: 100%;
-  background-size: 60%;
-  background-color: black; }
+  text-align: center;
+  height: 400px;
+  display: flex; }
   .tag-lines span {
     font: bold 30px "Hi Melody";
     padding: 50px;
     font-size: 100px;
     color: #EE523F;
     text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-    color: #3A2E3C;
-    text-align: center;
-    width: 100%;
+    color: #bbbdc9 !important;
+    width: 70%;
+    margin: 7% 0%;
     display: none; }
+  .tag-lines button {
+    z-index: 3;
+    width: 30%;
+    background-color: #bbbdc9;
+    display: none; }
+    .tag-lines button img {
+      width: 100%; }
 
 #gallery-cities {
-  background-color: black;
+  background-color: #3A2E3C;
   display: flex;
-  padding: 5% 0px;
-  position: relative; }
+  position: relative;
+  padding: 100px;
+  height: auto; }
   #gallery-cities #RepYourCity {
     padding: 0% 5%; }
     #gallery-cities #RepYourCity h2 {
@@ -232,11 +269,21 @@ hr {
       padding: 50px;
       font-size: 100px;
       color: #EE523F;
-      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5); }
+      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+      color: #EE523F; }
+    #gallery-cities #RepYourCity h2::before {
+      content: "Step #2: ";
+      color: #bbbdc9;
+      font-size: 50px; }
     #gallery-cities #RepYourCity span {
       font: 18px "Open Sans";
       text-align: center;
-      color: #bbbdc9; }
+      color: #bbbdc9;
+      padding: 5px; }
+    #gallery-cities #RepYourCity span::before {
+      content: "Rep your City! ";
+      font: bold 30px "Hi Melody";
+      color: #EE523F; }
   #gallery-cities .slider-wrapper {
     float: right;
     width: 50%; }
@@ -276,7 +323,7 @@ hr {
         top: 0;
         height: 390px;
         width: 390px;
-        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(255,255,255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
       #gallery-cities .slider-wrapper .rotatescroll .overlay-interaction {
         background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(255, 255, 255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
         z-index: 0; }
@@ -313,7 +360,7 @@ hr {
         width: 24px;
         height: 24px;
         z-index: 200;
-        background: #EE523F;
+        background: #bbbdc9;
         border: 2px solid #EE523F;
         border-radius: 50%; }
       #gallery-cities .slider-wrapper .rotatescroll .dot {
@@ -334,10 +381,10 @@ hr {
         top: 2px;
         left: 0;
         border-left: 2px solid #EE523F;
-        height: 42px;
-        /* display: table-cell; */ }
+        height: 42px; }
       #gallery-cities .slider-wrapper .rotatescroll .text {
-        padding-top: 20px; }
+        padding-top: 20px;
+        color: #bbbdc9; }
       #gallery-cities .slider-wrapper .rotatescroll .flip.text {
         padding-top: 30px; }
       #gallery-cities .slider-wrapper .rotatescroll .flip.text span {
@@ -349,10 +396,11 @@ hr {
         padding: 20px;
         height: 8px !important;
         text-shadow: 0 0 0.3px #bbbdc9, 0.7px 0.3px 0.3px rgba(48, 54, 52, 0.5);
-        font: 18px "Open Sans";
-        font-size: 12px !important; }
+        font: bold 30px "Hi Melody";
+        font-size: 20px !important;
+        font-weight: 300 !important; }
       #gallery-cities .slider-wrapper .rotatescroll .active h1 div.text:hover {
-        color: #3A2E3C;
+        color: #f0faf7;
         text-shadow: none; }
       #gallery-cities .slider-wrapper .rotatescroll h1 span {
         line-height: 0.65;
@@ -393,9 +441,89 @@ hr {
     #gallery-cities .slider-wrapper .rotatescroll [class*="-hovered"] {
       z-index: 1; }
 
+#pickDesign {
+  height: auto;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: #bbbdc9;
+  text-align: center; }
+  #pickDesign #designsExp {
+    display: inline-flex;
+    margin: 10%;
+    width: 80%; }
+    #pickDesign #designsExp section {
+      width: 33%;
+      font: bold 30px "Hi Melody"; }
+      #pickDesign #designsExp section img {
+        width: 100%; }
+  #pickDesign #designsText h2 {
+    font: bold 30px "Hi Melody";
+    padding: 50px;
+    font-size: 100px;
+    color: #EE523F;
+    text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+    text-align: center; }
+  #pickDesign #designsText h2::before {
+    content: "Step #1: ";
+    color: #3A2E3C;
+    font-size: 50px; }
+  #pickDesign #designsText span {
+    color: #3A2E3C;
+    padding: 5px;
+    font: 18px "Open Sans";
+    text-align: center; }
+  #pickDesign #designsText span::before {
+    content: "Rep your City! ";
+    font: bold 30px "Hi Melody";
+    color: #EE523F; }
+
+#pickFabric {
+  height: auto;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+  display: block;
+  background-color: #bbbdc9;
+  text-align: center; }
+  #pickFabric #fabricExp {
+    display: inline-flex;
+    margin: 10%;
+    width: 80%; }
+    #pickFabric #fabricExp section {
+      width: 33%; }
+      #pickFabric #fabricExp section span {
+        text-align: left;
+        font: bold 30px "Hi Melody";
+        display: block; }
+      #pickFabric #fabricExp section img {
+        width: 80%;
+        border-radius: 100%; }
+  #pickFabric #fabricText h2 {
+    font: bold 30px "Hi Melody";
+    padding: 50px;
+    font-size: 100px;
+    color: #EE523F;
+    text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+    text-align: center; }
+  #pickFabric #fabricText h2::before {
+    content: "Step #3: ";
+    color: #3A2E3C;
+    font-size: 50px; }
+  #pickFabric #fabricText span {
+    color: #3A2E3C;
+    padding: 5px;
+    font: 18px "Open Sans";
+    text-align: center; }
+  #pickFabric #fabricText span::before {
+    content: "Rep your City! ";
+    font: bold 30px "Hi Melody";
+    color: #EE523F; }
+
 #designs {
-  background-color: black;
-  padding: 30px 0px; }
+  background-color: #3A2E3C;
+  padding: 100px 0px; }
   #designs #portfolio {
     margin: 0% 5%;
     width: 90%;
@@ -417,8 +545,9 @@ hr {
       #designs #portfolio .tile img {
         width: 100%;
         height: auto;
-        margin: 10px;
-        padding: 5px; }
+        margin: 1px;
+        padding: 5px;
+        border: 4px double #bbbdc9; }
     #designs #portfolio .tile:hover {
       -ms-transform: scale(2.5);
       /* IE 9 */
@@ -430,19 +559,19 @@ hr {
     #designs #portfolio .scale-anm {
       transform: scale(1); }
     #designs #portfolio p {
-      padding: 10px;
-      border-bottom: 1px #ccc dotted;
+      padding: 20px;
+      border-bottom: 1px #EE523F dotted;
       text-decoration: none;
       font-family: lato;
       text-transform: uppercase;
       font-size: 12px;
-      color: #3A2E3C;
+      color: #EE523F;
       display: block;
       float: left; }
     #designs #portfolio p:hover {
       cursor: pointer;
       background: #3A2E3C;
-      color: #eee; }
+      color: #f0faf7; }
   #designs .btn {
     font-size: 25px;
     font-weight: normal;
@@ -455,7 +584,7 @@ hr {
     height: auto;
     vertical-align: middle;
     -webkit-appearance: none;
-    color: #f0faf7;
+    color: #EE523F;
     font: bold 30px "Hi Melody";
     background-color: rgba(0, 0, 0, 0); }
   #designs .btn:hover {
@@ -471,7 +600,7 @@ hr {
 #registration {
   display: inline-flex;
   width: 100%;
-  padding: 50px 0px;
+  padding: 30px 0px;
   background-color: #EE523F; }
   #registration #signUp-form {
     width: 50%;
@@ -479,43 +608,76 @@ hr {
     #registration #signUp-form p {
       font: 18px "Open Sans";
       text-align: center;
-      color: #f0faf7; }
+      font: bold 30px "Hi Melody";
+      color: #bbbdc9; }
     #registration #signUp-form input {
       width: 100%;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
       border-radius: 4px;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #3A2E3C; }
+    #registration #signUp-form input::placeholder {
+      color: #bbbdc9; }
     #registration #signUp-form input:hover {
       background-color: #f0faf7;
       color: #EE523F; }
+    #registration #signUp-form button {
+      padding: 20px 10px;
+      background-color: #bbbdc9;
+      color: #EE523F;
+      border-radius: 100%;
+      width: 30%;
+      left: 50%;
+      top: 30%;
+      position: relative;
+      display: block;
+      transform: translate(-50%, -50%);
+      font: bold 30px "Hi Melody"; }
   #registration #signIn-form {
     width: 50%;
     padding: 100px; }
     #registration #signIn-form p {
       font: 18px "Open Sans";
       text-align: center;
-      color: #f0faf7; }
+      font: bold 30px "Hi Melody";
+      color: #bbbdc9; }
     #registration #signIn-form input {
       width: 100%;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
       border-radius: 4px;
-      cursor: pointer; }
+      cursor: pointer;
+      background-color: #3A2E3C; }
+    #registration #signIn-form input::placeholder {
+      color: #bbbdc9; }
     #registration #signIn-form input:hover {
       background-color: #f0faf7;
       color: #EE523F; }
+    #registration #signIn-form button {
+      padding: 20px 10px;
+      background-color: #bbbdc9;
+      color: #EE523F;
+      border-radius: 100%;
+      width: 30%;
+      left: 50%;
+      top: 30%;
+      position: relative;
+      display: block;
+      transform: translate(-50%, -50%);
+      font: bold 30px "Hi Melody"; }
 
 #footer {
-  background-color: #f0faf7;
-  color: #EE523F;
+  background-color: #3A2E3C;
+  color: #bbbdc9;
   width: 100%;
   display: block;
   position: relative;
   vertical-align: text-bottom;
-  font: bold 30px "Hi Melody"; }
+  font: bold 30px "Hi Melody";
+  padding-top: 10px; }
   #footer nav {
     width: 50%;
     display: inline-block;
@@ -528,13 +690,12 @@ hr {
       #footer nav ul li.last {
         margin: 0; }
       #footer nav ul li a {
-        padding: 5px;
         line-height: normal;
         cursor: pointer;
         text-decoration: none; }
         #footer nav ul li a i {
-          padding: 5px;
-          color: #EE523F; }
+          padding: 0px 1px;
+          color: #bbbdc9; }
       #footer nav ul li:hover {
         color: #EE523F; }
   #footer p {

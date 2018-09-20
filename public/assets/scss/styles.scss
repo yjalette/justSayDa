@@ -31,10 +31,12 @@ $lightGray: #bbbdc9;
 $shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
 
 //fonts
-$font-graf: bold 200px 'Sedgwick Ave Display';
+$font-graf: bold 60px 'Sedgwick Ave Display';
 $font-main: bold 70px 'Open Sans';
 $font-med: bold 30px 'Hi Melody';
 $font-small: 18px 'Open Sans';
+
+
 
 //media
 $desktop-width: 1024px;
@@ -66,6 +68,18 @@ $smDev-width: 320px;
     }
 }
 
+@mixin arrow {
+        border-color:transparent;
+        border-style:solid;
+        border-width:0 32px;
+        display:block;
+        height:0;
+        opacity:0.4;
+        text-indent:-9999px;
+        transform-origin: 50% 50%;
+        width:0;
+    }
+
 
 @mixin btw {
     background-size: cover;
@@ -86,11 +100,26 @@ $smDev-width: 320px;
     }
 }
 
+@mixin pick {
+    height: auto;
+    padding: 100px;
+    position: relative;
+    width: 100%;
+    display: block;
+    background-color: $lightGray;
+    text-align: center;
+}
 
+@mixin exp {
+    display: inline-flex;
+    margin: 10%;
+    width: 80%;
+}
 
-@mixin center {
-    align-content: center;
-    justify-content: center;
+@mixin pickSpan {
+    color: $darkGray;
+    padding: 5px;
+
 }
 
 @mixin h {
@@ -107,7 +136,6 @@ $smDev-width: 320px;
 }
 
 @mixin a {
-    padding: 5px;
     line-height: normal;
     cursor: pointer;
     text-decoration: none;
@@ -165,6 +193,20 @@ $smDev-width: 320px;
     -o-filter: $filter;
 }
 
+@mixin button {
+    padding: 20px 10px;
+    background-color: $lightGray;
+    color: $red;
+    border-radius: 100%;
+    width: 30%;
+    left: 50%;
+    top: 30%;
+    position: relative;
+    display: block;
+    transform: translate(-50%, -50%);
+    font: $font-med;
+}
+
 hr {
     background-image: url(../../images/brush-gray.png);
     background-repeat:no-repeat;
@@ -177,11 +219,12 @@ hr {
     width: 100%;
     height: 100%;
     display: inline-grid;
+    background-color: rgba(223, 227, 232, 0.3);
     .video-foreground {
         position: relative;
         padding-bottom: 56.25%;
         #myVideo {
-            filter: brightness(21%);
+            filter: brightness(25%);
             position: absolute;
             top: 0;
             left: 0;
@@ -190,53 +233,100 @@ hr {
         }
     }
 
-    .ent {
-        position: absolute;
-        left: 10%;
-        top: 10%;
-        transform: translate(-50%, -50%);
-        background-image: url(../../images/paint-purple.png);
-        padding: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 10%;
-        .title {
-            letter-spacing: 5px;
-            color: $white;
-            font: $font-graf;
-            font-size: 25px !important;
-            padding: 2%;
+    nav {
+        display: flex;
+        .ent {
+            position: absolute;
+            left: 30%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            img {
+                width: 35%;
+            }
         }
+
+        ul {
+            position: absolute;
+            right: 1%;
+            top: 5%;
+            transform: translate(-50%, -50%);
+            list-style: none;
+
+            li {
+                letter-spacing: 5px;
+                color: $white;
+                font: $font-graf;
+                font-size: 25px !important;
+            }
+
+        }
+    }
+
+    #begin {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 50px;
+
+            .arrow {
+                @include arrow;
+            }
+
+            .down {
+                margin-left: 50%;
+                -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+                border-top:60px solid $white;
+
+            }
 
     }
 
-    #bold {
-        position: absolute;
-        width: 100%;
-        left: 50%;
-        top: 50%;
-        padding: 2%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        background-color: rgba(223, 227, 232, 0.3);
-
-        span {
-            font: $font-main;
-            color: $darkGray;
-
-
-        }
-
-
   }
+
+@-webkit-keyframes downarrow {
+    0% { -webkit-transform: translateY(0); opacity: 0.8 }
+    100% { -webkit-transform: translateY(7px); opacity: 1 }
+}
+
+#bold {
+    top: 50% !important;
+    span {
+        margin: 3% 0% !important;
+    }
+    img {
+
+    }
 
 }
 
+//#bold {
+//    background-color: $red;
+//    position: absolute;
+//    width: 100%;
+//    top: 70%;
+//    padding: 2%;
+//    text-align: center;
+//    transform: translate(-50%, -50%);
+//    opacity: 0.85;
+//    span {
+//        width: 70%;
+//        font: $font-graf;
+//        color: $white;
+//        font-style: normal;
+//    }
+//    img {
+//        width: 30%;
+//    }
+//
+//}
 
 #introImages{
     width: 100%;
     position: relative;
-    background-color: black;
+    background-color: $lightGray;
     padding: 50px 0px;
 .section {
     height: 600px !important;
@@ -283,8 +373,8 @@ hr {
     &.animate {
         .left {
             left:0;
-            background-color: $darkGray;
             color: $lightGray;
+            background-color: $darkGray;
 
             @media (min-width: $sm) {
                 left: 50%;
@@ -298,6 +388,7 @@ hr {
         .right {
             left:0;
             background-color: $red;
+            color: $darkGray;
             @media (min-width: $sm) {
                 left: 50%;
             }
@@ -311,7 +402,7 @@ hr {
     }
 
     .title {
-        background: black;
+        background: $darkGray;
 
         h2 {
             margin-top:0;
@@ -327,7 +418,7 @@ hr {
 
         .btn-primary {
             color: $white;
-            background: darken(purple, 80%);
+            background: $darkGray;
             padding: 10px;
             text-decoration:none;
             border-radius: 3px;
@@ -368,12 +459,12 @@ hr {
     }
 
     .middle {
-        background-image: linear-gradient(to left, $red , $lightGray);
+        background-image: linear-gradient(to left, $red , $darkGray);
         z-index: 1;
         padding:0;
 
         img {
-            padding: 5px;
+            padding: 0px 5px 5px;
             width: 100%;
             height: auto;
             display:block;
@@ -398,48 +489,76 @@ hr {
 }
 
 
-
-
 .tag-lines {
+    background-color: $red;
     z-index: 2;
-    display: flex;
     position: relative;
     width: 100%;
-//    background-image: url(../../images/paint-black.jpg);
-    background-size: 60%;
-    background-color: black;
+    text-align: center;
+    height: 400px;
+    display: flex;
 
-        span{
-            @include h;
-            color: $darkGray;
-            text-align: center;
+    span{
+        @include h;
+        color: $lightGray !important;
+        width: 70%;
+        margin: 7% 0%;
+        display: none;
+    }
+
+    button {
+        z-index: 3;
+        width: 30%;
+        background-color: $lightGray;
+        display: none;
+
+        img {
             width: 100%;
-            display: none;
         }
 
+
+    }
 }
 
+
+
 #gallery-cities{
-    background-color: black;
+    background-color: $darkGray;
     display: flex;
-    padding: 5% 0px;
     position: relative;
+    padding: 100px;
+    height: auto;
     #RepYourCity {
         padding: 0% 5%;
         h2 {
         @include h;
+        color: $red;
+
+        }
+        h2::before{
+            content: "Step #2: ";
+            color: $lightGray;
+            font-size: 50px;
+
         }
         span {
         @include p;
-        color: $lightGray;
+            color: $lightGray;
+            padding: 5px;
+        }
+        span::before{
+            content: "Rep your City! ";
+            font: $font-med;
+            color: $red;
+
         }
     }
 
     .slider-wrapper {
+
         float: right;
         width: 50%;
         .rotatescroll {
-
             position: relative;
             height: 390px;
             width: 390px;
@@ -482,7 +601,7 @@ hr {
                 top: 0;
                 height: 390px;
                 width: 390px;
-                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0, 0, 0)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(255,255,255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
             }
 
             .overlay-interaction {
@@ -531,7 +650,7 @@ hr {
                 width: 24px;
                 height: 24px;
                 z-index: 200;
-                background: $red;
+                background: $lightGray;
                 border: 2px solid $red;
                 border-radius: 50%;
             }
@@ -560,11 +679,13 @@ hr {
                 left: 0;
                 border-left: 2px solid $red;
                 height: 42px;
-                /* display: table-cell; */
+
             }
 
             .text {
                 padding-top: 20px;
+                color: $lightGray;
+
             }
 
             .flip.text {
@@ -573,6 +694,7 @@ hr {
 
            .flip.text span {
                 top: 5px;
+
             }
 
             .active .flip.text span {
@@ -585,12 +707,13 @@ hr {
                 padding: 20px;
                 height: 8px !important;
                 text-shadow: 0 0 0.3px $lightGray,0.7px 0.3px 0.3px hsla(160, 6%, 20%,.5);
-                font: $font-small;
-                font-size: 12px !important;
+                font: $font-med;
+                font-size: 20px !important;
+                font-weight: 300 !important;
             }
 
             .active h1 div.text:hover {
-                color: $darkGray;
+                color: $white;
                 text-shadow: none;
             }
 
@@ -662,9 +785,89 @@ hr {
   }
 }
 
+#pickDesign {
+    @include pick;
+
+    #designsExp{
+        @include exp;
+
+        section {
+            width: 33%;
+            font: $font-med;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #designsText{
+        h2{
+            @include h;
+            text-align: center;
+        }
+        h2::before{
+            content: "Step #1: ";
+            color: $darkGray;
+            font-size: 50px;
+
+        }
+        span {
+            @include pickSpan;
+            @include p;
+        }
+        span::before{
+            content: "Rep your City! ";
+            font: $font-med;
+            color: $red;
+
+        }
+    }
+}
+
+#pickFabric {
+    @include pick;
+    #fabricExp{
+        @include exp;
+        section {
+            width: 33%;
+            span{
+                text-align: left;
+                font: $font-med;
+                display: block;
+            }
+
+            img {
+                width: 80%;
+                border-radius: 100%;
+            }
+        }
+    }
+    #fabricText{
+        h2{
+            @include h;
+            text-align: center;
+        }
+        h2::before{
+            content: "Step #3: ";
+            color: $darkGray;
+            font-size: 50px;
+
+        }
+        span {
+            @include pickSpan;
+           @include p;
+        }
+        span::before{
+            content: "Rep your City! ";
+            font: $font-med;
+            color: $red;
+
+        }
+    }
+}
+
 #designs {
-    background-color: black;
-    padding: 30px 0px;
+    background-color: $darkGray;
+    padding: 100px 0px;
         #portfolio {
             margin: 0% 5%;
             width: 90%;
@@ -687,8 +890,9 @@ hr {
                 img {
                     width: 100%;
                     height: auto;
-                    margin: 10px;
+                    margin: 1px;
                     padding: 5px;
+                    border: 4px double $lightGray;
             }
 
 
@@ -709,13 +913,13 @@ hr {
 
 
         p {
-            padding:10px;
-            border-bottom: 1px #ccc dotted;
+            padding:20px;
+            border-bottom: 1px $red dotted;
             text-decoration: none;
             font-family: lato;
             text-transform:uppercase;
             font-size: 12px;
-            color: $darkGray;
+            color: $red;
             display:block;
             float:left;
         }
@@ -723,7 +927,8 @@ hr {
         p:hover {
             cursor:pointer;
             background: $darkGray;
-            color:#eee; }
+            color: $white;
+            }
 
     }
 
@@ -739,7 +944,7 @@ hr {
             height: auto;
             vertical-align: middle;
             -webkit-appearance: none;
-            color: $white;
+            color: $red;
             font: $font-med;
             background-color: rgba(0, 0, 0, 0);
         }
@@ -759,25 +964,35 @@ hr {
             padding: 0;
         }
 }
+
+
     //form
 #registration {
     display: inline-flex;
     width: 100%;
-    padding: 50px 0px;
+    padding: 30px 0px;
     background-color: $red;
     #signUp-form {
         width: 50%;
         padding: 100px;
         p {
             @include p;
-            color: $white;
+            font: $font-med;
+            color: $lightGray;
         }
         input {
             @include input;
+            background-color: $darkGray;
+        }
+        input::placeholder{
+            color: $lightGray;
         }
         input:hover {
             background-color: $white;
             color: $red;
+        }
+        button {
+            @include button;
         }
     }
     #signIn-form {
@@ -785,31 +1000,37 @@ hr {
         padding: 100px;
         p {
             @include p;
-            color: $white;
+            font: $font-med;
+            color: $lightGray;
         }
         input {
             @include input;
+            background-color: $darkGray;
         }
         input::placeholder{
-
+            color: $lightGray;
         }
         input:hover {
             background-color: $white;
             color: $red;
+        }
+
+        button {
+            @include button;
         }
     }
 
 }
 
     #footer {
-        background-color: $white;
-        color: $red;
+        background-color: $darkGray;
+        color: $lightGray;
         width: 100%;
         display: block;
         position: relative;
         vertical-align: text-bottom;
         font: $font-med;
-
+        padding-top: 10px;
 
             nav {
                 width: 50%;
@@ -829,8 +1050,8 @@ hr {
                     a {
                         @include a;
                         i {
-                            padding: 5px;
-                            color: $red;
+                            padding: 0px 1px;
+                            color: $lightGray;
                         }
                     }
                     &:hover {
