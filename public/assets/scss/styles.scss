@@ -195,8 +195,8 @@ $smDev-width: 320px;
 
 @mixin button {
     padding: 20px 10px;
-    background-color: $lightGray;
-    color: $red;
+    color: $white;
+    background-color: $darkGray;
     border-radius: 100%;
     width: 30%;
     left: 50%;
@@ -205,13 +205,6 @@ $smDev-width: 320px;
     display: block;
     transform: translate(-50%, -50%);
     font: $font-med;
-}
-
-hr {
-    background-image: url(../../images/brush-gray.png);
-    background-repeat:no-repeat;
-    background-color: black;
-    height: 150px;
 }
 
 .container-video {
@@ -253,6 +246,7 @@ hr {
             list-style: none;
 
             li {
+                display: inline;
                 letter-spacing: 5px;
                 color: $white;
                 font: $font-graf;
@@ -301,27 +295,6 @@ hr {
     }
 
 }
-
-//#bold {
-//    background-color: $red;
-//    position: absolute;
-//    width: 100%;
-//    top: 70%;
-//    padding: 2%;
-//    text-align: center;
-//    transform: translate(-50%, -50%);
-//    opacity: 0.85;
-//    span {
-//        width: 70%;
-//        font: $font-graf;
-//        color: $white;
-//        font-style: normal;
-//    }
-//    img {
-//        width: 30%;
-//    }
-//
-//}
 
 #introImages{
     width: 100%;
@@ -512,13 +485,18 @@ hr {
         background-color: $lightGray;
         display: none;
 
+
         img {
             width: 100%;
         }
 
+    }
 
+    button:hover {
+        background-color: $darkGray;
     }
 }
+
 
 
 
@@ -968,56 +946,79 @@ hr {
 
     //form
 #registration {
-    display: inline-flex;
+    display: flex;
     width: 100%;
-    padding: 30px 0px;
-    background-color: $red;
-    #signUp-form {
-        width: 50%;
-        padding: 100px;
-        p {
-            @include p;
-            font: $font-med;
-            color: $lightGray;
+    background-color: $lightGray;
+    #registration-wrap {
+        width: 70%;
+        margin: 0% 25%;
+        padding: 10px;
+
+        #signUp-form {
+
+            p {
+                @include p;
+                font: $font-med;
+                color: $darkGray;
+                text-transform: uppercase;
+            }
+            input {
+                @include input;
+                background-color: $white;
+            }
+            input::placeholder{
+                color: $darkGray;
+            }
+            input:hover {
+                background-color: $lightGray;
+                color: $white;
+            }
+            button {
+                @include button;
+            }
+
+            button:hover {
+                background-color: $lightGray;
+                color: $red;
+            }
         }
-        input {
-            @include input;
-            background-color: $darkGray;
-        }
-        input::placeholder{
-            color: $lightGray;
-        }
-        input:hover {
-            background-color: $white;
-            color: $red;
-        }
-        button {
-            @include button;
+        #signIn-form {
+
+            display: none;
+            p {
+                @include p;
+                text-transform: uppercase;
+                font: $font-med;
+                color: $darkGray;
+            }
+            input {
+                @include input;
+                background-color: $white;
+
+            }
+            input::placeholder{
+                color: $darkGray;
+            }
+
+            input:hover {
+                background-color: $lightGray;
+                color: $white;
+            }
+
+            button {
+                @include button;
+            }
+
+            button:hover {
+                background-color: $lightGray;
+                color: $red;
+            }
         }
     }
-    #signIn-form {
-        width: 50%;
-        padding: 100px;
-        p {
-            @include p;
-            font: $font-med;
-            color: $lightGray;
-        }
-        input {
-            @include input;
-            background-color: $darkGray;
-        }
-        input::placeholder{
-            color: $lightGray;
-        }
-        input:hover {
-            background-color: $white;
-            color: $red;
-        }
 
-        button {
-            @include button;
-        }
+    #registration-choice {
+        background-color: $red;
+        width: 30%;
     }
 
 }

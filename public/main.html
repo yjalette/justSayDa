@@ -13,6 +13,7 @@
     </head>
 
 <body>
+
 <main id="homePage">
 <section class="container-video">
             <div class="video-foreground">
@@ -24,7 +25,8 @@
             </div>
 
             <ul>
-                <li>sign in/ sign up</li>
+                <li id="top-login">sign in /</li>
+                <li id="top-signup"> sign up</li>
             </ul>
     </nav>
     <div id="begin">
@@ -322,12 +324,13 @@
     </section>
 
     <section id="registration">
-
+        <section id="registration-wrap">
                          <form action="/users_create" method="POST" id="signUp-form">
                              <p>Create an account</p>
                              <input placeholder="username" name="create_name" id="create_name" />
                              <input placeholder="email" name="create_email" id="create_email" />
                              <input placeholder="password" name="create_password" id="create_password"/>
+                             <span id="link-login">Sign Into My Account</span>
 
                              <button type="submit">create!</button>
 
@@ -337,11 +340,12 @@
                             <p>Welcome Back</p>
                             <input placeholder="email" name="login_email" />
                             <input placeholder="password" name="login_password"/>
-
+                            <span id="link-signup">Don't have an account yet?</span>
                             <button type="submit">login!</button>
 
                         </form>
-
+        </section>
+        <section id="registration-choice"></section>
 
     </section>
 
