@@ -69,16 +69,16 @@ $smDev-width: 320px;
 }
 
 @mixin arrow {
-        border-color:transparent;
-        border-style:solid;
-        border-width:0 32px;
-        display:block;
-        height:0;
-        opacity:0.4;
-        text-indent:-9999px;
-        transform-origin: 50% 50%;
-        width:0;
-    }
+    border-color:transparent;
+    border-style:solid;
+    border-width:0 32px;
+    display:block;
+    height:0;
+    opacity:0.4;
+    text-indent:-9999px;
+    transform-origin: 50% 50%;
+    width:0;
+}
 
 
 @mixin btw {
@@ -144,7 +144,7 @@ $smDev-width: 320px;
 @mixin translateY($e) {
     -webkit-transform: translateY($e);
     -moz-transform: translate($e);
-        transform: translateY($e);
+    transform: translateY($e);
 }
 
 @mixin transition($e) {
@@ -194,16 +194,13 @@ $smDev-width: 320px;
 }
 
 @mixin button {
-    padding: 20px 10px;
-    color: $white;
-    background-color: $darkGray;
-    border-radius: 100%;
-    width: 30%;
-    left: 50%;
-    top: 30%;
-    position: relative;
+    padding: 3px 10px;
+    color: $red;
+    background-color: $white;
+    border-radius: 4px;
+    width: auto;
+    margin: auto;
     display: block;
-    transform: translate(-50%, -50%);
     font: $font-med;
 }
 
@@ -265,20 +262,20 @@ $smDev-width: 320px;
         width: 100%;
         padding: 50px;
 
-            .arrow {
-                @include arrow;
-            }
+        .arrow {
+            @include arrow;
+        }
 
-            .down {
-                margin-left: 50%;
-                -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-                border-top:60px solid $white;
+        .down {
+            margin-left: 50%;
+            -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+            border-top:60px solid $white;
 
-            }
+        }
 
     }
 
-  }
+}
 
 @-webkit-keyframes downarrow {
     0% { -webkit-transform: translateY(0); opacity: 0.8 }
@@ -301,163 +298,163 @@ $smDev-width: 320px;
     position: relative;
     background-color: $lightGray;
     padding: 50px 0px;
-.section {
-    height: 600px !important;
+    .section {
+        height: 600px !important;
 
-    .left, .middle, .right {
-        width:100%;
-        display: block;
-        color: $white;
-        box-sizing: border-box;
-        left: 0;
-        padding: 30px;
-        text-align:center;
-        overflow:hidden;
-
-        @include transition;
-
-        .content {
-            @media (min-width: $sm) {
-                @include vertical-align();
-            }
-        }
-
-        @media (min-width: $sm) {
-            width: 100%;
-            font-size:0.9em;
-            padding: 10px;
+        .left, .middle, .right {
+            width:100%;
+            display: block;
+            color: $white;
+            box-sizing: border-box;
             left: 0;
-            float: left;
-            position: absolute;
-        }
-
-        @media (min-width: $md) {
-            width: 33.33333%;
-            left: 33.33%;
-            padding: 10px;
-        }
-
-        @media (min-width: $lg) {
             padding: 30px;
-            font-size: 1em;
-        }
-    }
+            text-align:center;
+            overflow:hidden;
 
-    &.animate {
-        .left {
-            left:0;
-            color: $lightGray;
-            background-color: $darkGray;
+            @include transition;
+
+            .content {
+                @media (min-width: $sm) {
+                    @include vertical-align();
+                }
+            }
 
             @media (min-width: $sm) {
-                left: 50%;
+                width: 100%;
+                font-size:0.9em;
+                padding: 10px;
+                left: 0;
+                float: left;
+                position: absolute;
             }
 
             @media (min-width: $md) {
+                width: 33.33333%;
+                left: 33.33%;
+                padding: 10px;
+            }
+
+            @media (min-width: $lg) {
+                padding: 30px;
+                font-size: 1em;
+            }
+        }
+
+        &.animate {
+            .left {
                 left:0;
+                color: $lightGray;
+                background-color: $darkGray;
+
+                @media (min-width: $sm) {
+                    left: 50%;
+                }
+
+                @media (min-width: $md) {
+                    left:0;
+                }
+            }
+
+            .right {
+                left:0;
+                background-color: $red;
+                color: $darkGray;
+                @media (min-width: $sm) {
+                    left: 50%;
+                }
+
+                @media (min-width: $md) {
+                    left:66.66%;
+                }
+            }
+
+
+        }
+
+        .title {
+            background: $darkGray;
+
+            h2 {
+                margin-top:0;
+                font: $font-med;
+            }
+
+            p {
+                line-height:1.55em;
+                margin-bottom: 0.75em;
+                font: $font-small;
+                color: $white;
+            }
+
+            .btn-primary {
+                color: $white;
+                background: $darkGray;
+                padding: 10px;
+                text-decoration:none;
+                border-radius: 3px;
+                display:inline-block;
+                @include transition;
+
+                &:hover {
+                    background: darken(tomato, 15%);
+                }
+
             }
         }
 
-        .right {
-            left:0;
-            background-color: $red;
-            color: $darkGray;
-            @media (min-width: $sm) {
-                left: 50%;
+        .tiles {
+            padding:0;
+            clear:both;
+            display:none;
+            float:none;
+
+            img {
+                width:50%;
+                float:left;
+                height:auto;
+                opacity: 0.7;
+                @include transition;
+                @include filter(grayscale(50%));
+
+
+                &:hover {
+                    opacity:1;
+                    @include filter(grayscale(0%));
+                }
             }
 
             @media (min-width: $md) {
-                left:66.66%;
+                display:block;
             }
         }
 
+        .middle {
+            background-image: linear-gradient(to left, $red , $darkGray);
+            z-index: 1;
+            padding:0;
 
-    }
-
-    .title {
-        background: $darkGray;
-
-        h2 {
-            margin-top:0;
-            font: $font-med;
-        }
-
-        p {
-            line-height:1.55em;
-            margin-bottom: 0.75em;
-            font: $font-small;
-            color: $white;
-        }
-
-        .btn-primary {
-            color: $white;
-            background: $darkGray;
-            padding: 10px;
-            text-decoration:none;
-            border-radius: 3px;
-            display:inline-block;
-            @include transition;
-
-            &:hover {
-                background: darken(tomato, 15%);
-            }
-
-        }
-    }
-
-    .tiles {
-        padding:0;
-        clear:both;
-        display:none;
-        float:none;
-
-        img {
-            width:50%;
-            float:left;
-            height:auto;
-            opacity: 0.7;
-            @include transition;
-            @include filter(grayscale(50%));
-
-
-            &:hover {
-                opacity:1;
-                @include filter(grayscale(0%));
+            img {
+                padding: 0px 5px 5px;
+                width: 100%;
+                height: auto;
+                display:block;
+                position: relative;
+                overflow: visible;
             }
         }
-
-        @media (min-width: $md) {
-            display:block;
-        }
     }
 
-    .middle {
-        background-image: linear-gradient(to left, $red , $darkGray);
-        z-index: 1;
-        padding:0;
-
-        img {
-            padding: 0px 5px 5px;
-            width: 100%;
-            height: auto;
-            display:block;
-            position: relative;
-            overflow: visible;
-        }
+    @-webkit-keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+        40% {-webkit-transform: translateY(-20px);}
+        60% {-webkit-transform: translateY(-10px);}
     }
-}
 
-@-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
-    40% {-webkit-transform: translateY(-20px);}
-    60% {-webkit-transform: translateY(-10px);}
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-20px);}
-    60% {transform: translateY(-10px);}
-}
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+        40% {transform: translateY(-20px);}
+        60% {transform: translateY(-10px);}
+    }
 
 }
 
@@ -509,8 +506,8 @@ $smDev-width: 320px;
     #RepYourCity {
         padding: 0% 5%;
         h2 {
-        @include h;
-        color: $red;
+            @include h;
+            color: $red;
 
         }
         h2::before{
@@ -520,7 +517,7 @@ $smDev-width: 320px;
 
         }
         span {
-        @include p;
+            @include p;
             color: $lightGray;
             padding: 5px;
         }
@@ -557,21 +554,21 @@ $smDev-width: 320px;
                     margin: -20px 0 0 -20px;
                     padding: 0;
                     z-index: 0;
-                        li {
-                            height: 342px;
-                            width: 342px;
-                            float: left;
-                            position: relative;
-                            padding: 15px;
-                            margin: 40px 0;
+                    li {
+                        height: 342px;
+                        width: 342px;
+                        float: left;
+                        position: relative;
+                        padding: 15px;
+                        margin: 40px 0;
 
-                            img {
-                                width: 100%;
-                            }
-
+                        img {
+                            width: 100%;
                         }
+
+                    }
                 }
-        }
+            }
             .overlay {
                 pointer-events: none;
                 position: absolute;
@@ -670,7 +667,7 @@ $smDev-width: 320px;
                 padding-top: 30px;
             }
 
-           .flip.text span {
+            .flip.text span {
                 top: 5px;
 
             }
@@ -756,11 +753,11 @@ $smDev-width: 320px;
             }
 
 
-    }
+        }
         .rotatescroll [class*="-hovered"] {
             z-index: 1;
         }
-  }
+    }
 }
 
 #pickDesign {
@@ -832,7 +829,7 @@ $smDev-width: 320px;
         }
         span {
             @include pickSpan;
-           @include p;
+            @include p;
         }
         span::before{
             content: "Rep your City! ";
@@ -846,18 +843,18 @@ $smDev-width: 320px;
 #designs {
     background-color: $darkGray;
     padding: 100px 0px;
-        #portfolio {
-            margin: 0% 5%;
-            width: 90%;
-            -webkit-column-count: 5;
-            -moz-column-count: 5;
-            column-count: 5;
-            -webkit-column-gap: 5px;
-            -moz-column-gap: 5px;
-            column-gap: 5px;
-            -webkit-column-width: 20%;
-            -moz-column-width: 20%;
-            column-width: 20%;
+    #portfolio {
+        margin: 0% 5%;
+        width: 90%;
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -webkit-column-gap: 5px;
+        -moz-column-gap: 5px;
+        column-gap: 5px;
+        -webkit-column-width: 20%;
+        -moz-column-width: 20%;
+        column-width: 20%;
 
         .tile {
             -webkit-transform: scale(0);
@@ -865,23 +862,23 @@ $smDev-width: 320px;
             -webkit-transition: all 150ms ease;
             transition: all 150ms ease;
             transition: transform .5s;
-                img {
-                    width: 100%;
-                    height: auto;
-                    margin: 1px;
-                    padding: 5px;
-                    border: 4px double $lightGray;
+            img {
+                width: 100%;
+                height: auto;
+                margin: 1px;
+                padding: 5px;
+                border: 4px double $lightGray;
             }
 
 
         }
         .tile:hover {
 
-                -ms-transform: scale(2.5); /* IE 9 */
-                -webkit-transform: scale(2.5); /* Safari 3-8 */
-                transform: scale(2.5);
-                display: block;
-                width: 100%;
+            -ms-transform: scale(2.5); /* IE 9 */
+            -webkit-transform: scale(2.5); /* Safari 3-8 */
+            transform: scale(2.5);
+            display: block;
+            width: 100%;
 
         }
 
@@ -906,72 +903,89 @@ $smDev-width: 320px;
             cursor:pointer;
             background: $darkGray;
             color: $white;
-            }
+        }
 
     }
 
-        .btn {
-            font-size: 25px;
-            font-weight: normal;
-            text-decoration: none;
-            cursor: pointer;
-            display: inline-block;
-            line-height: normal;
-            padding: 15px 20px;
-            margin: 5px;
-            height: auto;
-            vertical-align: middle;
-            -webkit-appearance: none;
-            color: $red;
-            font: $font-med;
-            background-color: rgba(0, 0, 0, 0);
-        }
+    .btn {
+        font-size: 25px;
+        font-weight: normal;
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        line-height: normal;
+        padding: 15px 20px;
+        margin: 5px;
+        height: auto;
+        vertical-align: middle;
+        -webkit-appearance: none;
+        color: $red;
+        font: $font-med;
+        background-color: rgba(0, 0, 0, 0);
+    }
 
-        .btn:hover {
-            text-decoration: none;
-        }
+    .btn:hover {
+        text-decoration: none;
+    }
 
-        .btn:focus {
-            outline: none;
-            border-color: var(--darken-2);
-            box-shadow: 0 0 0 3px var(--darken-3);
-        }
+    .btn:focus {
+        outline: none;
+        border-color: var(--darken-2);
+        box-shadow: 0 0 0 3px var(--darken-3);
+    }
 
-        ::-moz-focus-inner {
-            border: 0;
-            padding: 0;
-        }
+    ::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
 }
 
 
-    //form
+//form
 #registration {
-    display: flex;
+    display: block;
     width: 100%;
     background-color: $lightGray;
+    padding: 100px;
     #registration-wrap {
-        width: 70%;
-        margin: 0% 25%;
+        display: block;
+        width: 50%;
+        height: auto;
         padding: 10px;
+        background-color: $darkGray;
+        #reg-tabs {
+            display: flex;
+            width: 100%;
+            margin: auto;
 
+            span {
+                background-color: $darkGray;
+                color: $lightGray;
+                width: 50%;
+                padding: 20px;
+                font: $font-med;
+                cursor: pointer;
+            }
+
+            .active {
+                background-color: $white;
+                color: $red;
+                font: $font-med;
+                padding: 20px;
+                border-radius: 4px;
+            }
+        }
         #signUp-form {
 
-            p {
-                @include p;
-                font: $font-med;
-                color: $darkGray;
-                text-transform: uppercase;
-            }
             input {
                 @include input;
                 background-color: $white;
             }
             input::placeholder{
-                color: $darkGray;
+                color: $lightGray;
             }
             input:hover {
                 background-color: $lightGray;
-                color: $white;
             }
             button {
                 @include button;
@@ -983,26 +997,17 @@ $smDev-width: 320px;
             }
         }
         #signIn-form {
-
             display: none;
-            p {
-                @include p;
-                text-transform: uppercase;
-                font: $font-med;
-                color: $darkGray;
-            }
             input {
                 @include input;
                 background-color: $white;
 
             }
             input::placeholder{
-                color: $darkGray;
+                color: $lightGray;
             }
-
             input:hover {
                 background-color: $lightGray;
-                color: $white;
             }
 
             button {
@@ -1016,54 +1021,48 @@ $smDev-width: 320px;
         }
     }
 
-    #registration-choice {
-        background-color: $red;
-        width: 30%;
-    }
-
 }
 
-    #footer {
-        background-color: $darkGray;
-        color: $lightGray;
-        width: 100%;
-        display: block;
-        position: relative;
-        vertical-align: text-bottom;
-        font: $font-med;
-        padding-top: 10px;
+#footer {
+    background-color: $darkGray;
+    color: $lightGray;
+    width: 100%;
+    display: block;
+    position: relative;
+    vertical-align: text-bottom;
+    font: $font-med;
+    padding-top: 10px;
 
-            nav {
-                width: 50%;
-                display: inline-block;
-                position: absolute;
-                text-align: right;
+    nav {
+        width: 50%;
+        display: inline-block;
+        position: absolute;
+        text-align: right;
 
-                ul li {
-                    list-style-type: none;
-                    display: inline-block;
-                    margin-right: 10px;
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 10px;
 
-                    &.last {
-                        margin: 0;
-                    }
+            &.last {
+                margin: 0;
+            }
 
-                    a {
-                        @include a;
-                        i {
-                            padding: 0px 1px;
-                            color: $lightGray;
-                        }
-                    }
-                    &:hover {
-                        color: $red;
-                    }
+            a {
+                @include a;
+                i {
+                    padding: 0px 1px;
+                    color: $lightGray;
                 }
             }
-        p {
-            width: 50%;
-            display: inline-block;
-            text-align: left;
+            &:hover {
+                color: $red;
+            }
         }
+    }
+    p {
+        width: 50%;
+        display: inline-block;
+        text-align: left;
+    }
 }
-

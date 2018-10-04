@@ -595,19 +595,33 @@
     padding: 0; }
 
 #registration {
-  display: flex;
+  display: block;
   width: 100%;
-  background-color: #bbbdc9; }
+  background-color: #bbbdc9;
+  padding: 100px; }
   #registration #registration-wrap {
-    width: 70%;
-    margin: 0% 25%;
-    padding: 10px; }
-    #registration #registration-wrap #signUp-form p {
-      font: 18px "Open Sans";
-      text-align: center;
-      font: bold 30px "Hi Melody";
-      color: #3A2E3C;
-      text-transform: uppercase; }
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    background-color: #3A2E3C; }
+    #registration #registration-wrap #reg-tabs {
+      display: flex;
+      width: 100%;
+      margin: auto; }
+      #registration #registration-wrap #reg-tabs span {
+        background-color: #3A2E3C;
+        color: #bbbdc9;
+        width: 50%;
+        padding: 20px;
+        font: bold 30px "Hi Melody";
+        cursor: pointer; }
+      #registration #registration-wrap #reg-tabs .active {
+        background-color: #f0faf7;
+        color: #EE523F;
+        font: bold 30px "Hi Melody";
+        padding: 20px;
+        border-radius: 4px; }
     #registration #registration-wrap #signUp-form input {
       width: 100%;
       padding: 14px 20px;
@@ -617,33 +631,23 @@
       cursor: pointer;
       background-color: #f0faf7; }
     #registration #registration-wrap #signUp-form input::placeholder {
-      color: #3A2E3C; }
+      color: #bbbdc9; }
     #registration #registration-wrap #signUp-form input:hover {
-      background-color: #bbbdc9;
-      color: #f0faf7; }
+      background-color: #bbbdc9; }
     #registration #registration-wrap #signUp-form button {
-      padding: 20px 10px;
-      color: #f0faf7;
-      background-color: #3A2E3C;
-      border-radius: 100%;
-      width: 30%;
-      left: 50%;
-      top: 30%;
-      position: relative;
+      padding: 3px 10px;
+      color: #EE523F;
+      background-color: #f0faf7;
+      border-radius: 4px;
+      width: auto;
+      margin: auto;
       display: block;
-      transform: translate(-50%, -50%);
       font: bold 30px "Hi Melody"; }
     #registration #registration-wrap #signUp-form button:hover {
       background-color: #bbbdc9;
       color: #EE523F; }
     #registration #registration-wrap #signIn-form {
       display: none; }
-      #registration #registration-wrap #signIn-form p {
-        font: 18px "Open Sans";
-        text-align: center;
-        text-transform: uppercase;
-        font: bold 30px "Hi Melody";
-        color: #3A2E3C; }
       #registration #registration-wrap #signIn-form input {
         width: 100%;
         padding: 14px 20px;
@@ -653,28 +657,21 @@
         cursor: pointer;
         background-color: #f0faf7; }
       #registration #registration-wrap #signIn-form input::placeholder {
-        color: #3A2E3C; }
+        color: #bbbdc9; }
       #registration #registration-wrap #signIn-form input:hover {
-        background-color: #bbbdc9;
-        color: #f0faf7; }
+        background-color: #bbbdc9; }
       #registration #registration-wrap #signIn-form button {
-        padding: 20px 10px;
-        color: #f0faf7;
-        background-color: #3A2E3C;
-        border-radius: 100%;
-        width: 30%;
-        left: 50%;
-        top: 30%;
-        position: relative;
+        padding: 3px 10px;
+        color: #EE523F;
+        background-color: #f0faf7;
+        border-radius: 4px;
+        width: auto;
+        margin: auto;
         display: block;
-        transform: translate(-50%, -50%);
         font: bold 30px "Hi Melody"; }
       #registration #registration-wrap #signIn-form button:hover {
         background-color: #bbbdc9;
         color: #EE523F; }
-  #registration #registration-choice {
-    background-color: #EE523F;
-    width: 30%; }
 
 #footer {
   background-color: #3A2E3C;
