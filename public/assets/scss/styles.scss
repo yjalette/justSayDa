@@ -156,7 +156,7 @@ $smDev-width: 320px;
 @mixin input {
     width: 100%;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 12px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -202,7 +202,11 @@ $smDev-width: 320px;
     margin: auto;
     display: block;
     font: $font-med;
+    cursor: pointer;
 }
+
+#homePage {
+    background-color: $darkGray;
 
 .container-video {
     z-index: 1;
@@ -231,27 +235,23 @@ $smDev-width: 320px;
             top: 10%;
             transform: translate(-50%, -50%);
             img {
-                width: 35%;
+                width: 30%;
             }
         }
-
-        ul {
+        span {
             position: absolute;
             right: 1%;
             top: 5%;
             transform: translate(-50%, -50%);
             list-style: none;
-
-            li {
                 display: inline;
                 letter-spacing: 5px;
                 color: $white;
                 font: $font-graf;
                 font-size: 25px !important;
+                cursor: pointer;
             }
-
         }
-    }
 
     #begin {
         position: absolute;
@@ -261,20 +261,15 @@ $smDev-width: 320px;
         text-align: center;
         width: 100%;
         padding: 50px;
-
         .arrow {
             @include arrow;
         }
-
         .down {
             margin-left: 50%;
             -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-            border-top:60px solid $white;
-
+            border-top: 30px solid $red;
         }
-
     }
-
 }
 
 @-webkit-keyframes downarrow {
@@ -296,7 +291,7 @@ $smDev-width: 320px;
 #introImages{
     width: 100%;
     position: relative;
-    background-color: $lightGray;
+    background-color: $darkGray;
     padding: 50px 0px;
     .section {
         height: 600px !important;
@@ -343,8 +338,9 @@ $smDev-width: 320px;
         &.animate {
             .left {
                 left:0;
-                color: $lightGray;
-                background-color: $darkGray;
+                background-color: $lightGray;
+                color: $darkGray;
+                border: 4px solid $lightGray;
 
                 @media (min-width: $sm) {
                     left: 50%;
@@ -359,6 +355,7 @@ $smDev-width: 320px;
                 left:0;
                 background-color: $red;
                 color: $darkGray;
+                border: 4px solid $red;
                 @media (min-width: $sm) {
                     left: 50%;
                 }
@@ -434,7 +431,6 @@ $smDev-width: 320px;
             padding:0;
 
             img {
-                padding: 0px 5px 5px;
                 width: 100%;
                 height: auto;
                 display:block;
@@ -467,34 +463,27 @@ $smDev-width: 320px;
     text-align: center;
     height: 400px;
     display: flex;
-
+    border-bottom: 4px solid $darkGray;
     span{
         @include h;
         color: $lightGray !important;
         width: 70%;
         margin: 7% 0%;
-        display: none;
     }
 
     button {
         z-index: 3;
         width: 30%;
         background-color: $lightGray;
-        display: none;
-
-
+        border-top: 4px solid $red;
         img {
             width: 100%;
+
         }
 
     }
 
-    button:hover {
-        background-color: $darkGray;
-    }
 }
-
-
 
 
 #gallery-cities{
@@ -940,91 +929,170 @@ $smDev-width: 320px;
     }
 }
 
-
-//form
-#registration {
-    display: block;
-    width: 100%;
+#tag-reg {
     background-color: $lightGray;
-    padding: 100px;
-    #registration-wrap {
-        display: block;
-        width: 50%;
-        height: auto;
-        padding: 10px;
-        background-color: $darkGray;
-        #reg-tabs {
-            display: flex;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $red;
+    span{
+        width: 30%;
+
+        img {
             width: 100%;
-            margin: auto;
-
-            span {
-                background-color: $darkGray;
-                color: $lightGray;
-                width: 50%;
-                padding: 20px;
-                font: $font-med;
-                cursor: pointer;
-            }
-
-            .active {
-                background-color: $white;
-                color: $red;
-                font: $font-med;
-                padding: 20px;
-                border-radius: 4px;
-            }
-        }
-        #signUp-form {
-
-            input {
-                @include input;
-                background-color: $white;
-            }
-            input::placeholder{
-                color: $lightGray;
-            }
-            input:hover {
-                background-color: $lightGray;
-            }
-            button {
-                @include button;
-            }
-
-            button:hover {
-                background-color: $lightGray;
-                color: $red;
-            }
-        }
-        #signIn-form {
-            display: none;
-            input {
-                @include input;
-                background-color: $white;
-
-            }
-            input::placeholder{
-                color: $lightGray;
-            }
-            input:hover {
-                background-color: $lightGray;
-            }
-
-            button {
-                @include button;
-            }
-
-            button:hover {
-                background-color: $lightGray;
-                color: $red;
-            }
         }
     }
 
+
+    #registration-wrap {
+            width: 60%;
+            height: auto;
+            padding: 20px;
+            margin: auto;
+            background-color: $lightGray;
+
+            #reg-tabs {
+                display: flex;
+                width: 100%;
+                margin: auto;
+
+                span {
+                    background-color: $darkGray;
+                    color: $lightGray;
+                    width: 50%;
+                    padding: 20px;
+                    font: $font-med;
+                    cursor: pointer;
+                }
+
+                .active {
+                    background-color: $white;
+                    color: $red;
+                    font: $font-med;
+                    padding: 20px;
+                    border-radius: 4px;
+                    cursor: none;
+                }
+            }
+            #signUp-form {
+
+                input {
+                    @include input;
+                    background-color: $white;
+                }
+                input::placeholder{
+                    color: $lightGray;
+                }
+                input:hover {
+                    background-color: $darkGray;
+                }
+                button {
+                    @include button;
+                }
+
+                button:hover {
+                    background-color: $lightGray;
+                    color: $red;
+                }
+            }
+            #signIn-form {
+                display: none;
+                input {
+                    @include input;
+                    background-color: $white;
+
+                }
+                input::placeholder{
+                    color: $lightGray;
+                }
+                input:hover {
+                    background-color: $lightGray;
+                }
+
+                span {
+                    font-size: 12px;
+                    input {
+                        width: auto;
+                    }
+                }
+
+                button {
+                    @include button;
+                }
+
+                button:hover {
+                    background-color: $lightGray;
+                    color: $red;
+                }
+            }
+        }
+   }
+
 }
 
+
+///shop
+
+    header {
+        background-color: $darkGray;
+        display: block;
+        z-index: 1;
+        height: 120px;
+        nav {
+            display: flex;
+            .ent {
+                position: absolute;
+                left: 30%;
+                top: 10%;
+                transform: translate(-50%, -50%);
+                a {
+                    img {
+                        width: 20%;
+                    }
+                }
+
+            }
+
+            ul {
+                position: absolute;
+                right: 1%;
+                top: 5%;
+                transform: translate(-50%, -50%);
+                list-style: none;
+
+                li {
+                    display: inline;
+                    letter-spacing: 5px;
+                    color: $white;
+                    font: $font-graf;
+                    font-size: 25px !important;
+                }
+
+            }
+        }
+
+    }
+
+#shop {
+    background-color: $lightGray;
+    h1 {
+        @include h;
+    }
+    #collection-component-e17f8e09b08{
+        display: block;
+    }
+}
+
+
+
+
+
 #footer {
-    background-color: $darkGray;
+    background-color: $white;
     color: $lightGray;
     width: 100%;
     display: block;

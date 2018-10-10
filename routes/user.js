@@ -21,10 +21,11 @@ router.post('/users_create', (req, res) =>{
 
         console.log("added a new user with id:", results.insertId);
         res.redirect('/main.html');
-        res.end()
     });
 
 })
+
+
 
 router.post('/users_login', (req, res) =>{
     console.log("trying to login");

@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
         <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
         <title>DA</title>
     </head>
@@ -15,6 +16,7 @@
     <body>
 
         <main id="homePage">
+
             <section class="container-video">
                 <div class="video-foreground">
                     <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?&playlist=nk3iTiSmG68&autoplay=1&start=12&showinfo=0&amp&loop=1&controls=0&amp&mute=1"></iframe>
@@ -23,30 +25,27 @@
                     <div class="ent">
                         <img src="images/logo-orange-da.png">
                     </div>
-
-                    <ul>
-                        <li id="top-login">sign in /</li>
-                        <li id="top-signup"> sign up</li>
-                    </ul>
+                    <span id="top-login">sign in / sign up</span>
                 </nav>
                 <div id="begin">
                     <a href="#" class="arrow down"></a>
-
                 </div>
-
             </section>
 
-            <section id="bold" class="tag-lines">
+            <section id="bold" class="tag-lines"
+                     data-aos="fade-in-up"
+                     data-aos-duration="800"
+                     data-aos-easing="ease-in-out"
+                     >
                 <span>Modern Art Turned Into Street Clothes</span>
-
                 <button><img src="images/logo-purple-da.png"><br>
-
                 </button>
-
             </section>
 
-            <section id="introImages">
-
+            <section id="introImages" data-aos="fade-in-up"
+                     data-aos-duration="800"
+                     data-aos-easing="ease-in-out"
+                     data-aos-once="false">
                 <div class="section animate">
                     <div class="middle">
                         <img src="images/silk-almati-back.JPG">
@@ -59,18 +58,14 @@
 
                         </div>
                     </div>
-
                     <div class="left tiles">
                         <img src="images/silk-almati-back.JPG">
                         <img src="./images/silk-almati-front-f.JPG">
                     </div>
-
                 </div>
-
                 <div class="section">
                     <div class="middle">
                         <img src="./images/hoodieNycSide.jpg" />
-
                     </div>
                     <div class="left title">
                         <div class="content">
@@ -79,7 +74,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="right tiles">
                         <img src="./images/hoodieNycFront.jpg">
                         <img src="./images/hoodieNycSide.jpg">
@@ -104,7 +98,6 @@
                 </div>
                 <div class="section">
                     <div class="middle">
-
                         <img src="./images/longSleeveNycBack.jpg">
                     </div>
                     <div class="right title">
@@ -113,22 +106,26 @@
                             <p>Check out that technology! Imagine if we went back in time and put one of those in the hands of a neanderthal. Do you think they'd be impressed, or just try to club us to death?</p>
                         </div>
                     </div>
-
                     <div class="left tiles">
                         <img src="./images/longSleeveNycBack.jpg">
                         <img src="./images/longSleeveNycBack.jpg">
                     </div>
-
                 </div>
             </section>
 
-            <section class="tag-lines" id="howWorks">
+            <section class="tag-lines" id="howWorks" data-aos="fade-in-up"
+                     data-aos-duration="800"
+                     data-aos-easing="ease-in-out"
+                     data-aos-once="false">
                 <span>How does it work?</span>
                 <button id="work-button"><img src="images/logo-purple-da.png"></button>
             </section>
 
-            <section id="pickDesign" class="pick">
-                <section id="designsText">
+            <section id="pickDesign" class="pick" data-aos="fade-in-up"
+                     data-aos-duration="800"
+                     data-aos-easing="ease-in-out"
+                     data-aos-once="false">
+                <section id="designsText" data-aos="fade-right">
                     <h2>Pick Your Design!</h2>
                     <span>DA! is not just streetwear. It's our cities collection.
                         Each item in our collection represents a city and a piece of wearable art.
@@ -142,7 +139,7 @@
                 </section>
             </section>
             <!--Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings-->
-            <section id="gallery-cities" class="pick">
+            <section id="gallery-cities" class="pick" data-aos="fade-left">
                 <div id="RepYourCity">
                     <h2>Pick Your Print!</h2>
                     <span><strong>DA!</strong> is not just streetwear. It's our cities collection.
@@ -150,13 +147,9 @@
                         The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
                     </span>
                 </div>
-
                 <div class="slider-wrapper">
-
                     <div class="rotatescroll" id="rotatescroll">
-
                         <div class="viewport">
-
                             <ul class="overview">
                                 <li>
                                     <img src="./images/newYork-mir.png" alt="newYork" />
@@ -182,26 +175,17 @@
                                 <li>
                                     <img src="./images/london-mir.png" alt="london" />
                                 </li>
-
                             </ul>
-
                         </div>
-
-
                         <div class="dot"></div>
                         <div class="overlay overlay-interaction" id="overlayInteraction"></div>
                         <div class="overlay overlay-static"></div>
                         <div class="overlay overlay-active" id="overlayActive"></div>
                         <div class="thumb"></div>
-
                     </div>
-
                 </div>
             </section>
-
-
-
-            <section id="pickFabric" class="pick">
+            <section id="pickFabric" class="pick" data-aos="fade-right">
                 <section id="fabricText">
                     <h2>Pick Your Fabric!</h2>
                     <span>It's not just streetwear. It's our cities collection.
@@ -214,22 +198,19 @@
                     <section><span>denim</span><img src="images/leather.jpg"></section>
                     <section><span>silk</span><img src="images/denim.jpg"></section>
                 </section>
-
             </section>
 
-            <section id="designs">
+            <section id="designs" data-aos="fade-in-up"
+                     data-aos-duration="800"
+                     data-aos-easing="ease-in-out"
+                     data-aos-once="false">
                 <div class="toolbar mb2 mt2">
                     <button class="btn fil-cat" data-rel="leather">Leather</button>
                     <button class="btn fil-cat" data-rel="silk">Silk</button>
                     <button class="btn fil-cat" data-rel="denim">Denim</button>
                     <button class="btn fil-cat"  data-rel="all">All</button>
                 </div>
-
-
-
-                <div id="portfolio">
-
-
+               <div id="portfolio">
                     <div class="tile scale-anm leather">
                         <img src="./images/hoodieNycSide.jpg" alt="" />
                     </div>
@@ -318,38 +299,32 @@
             </section>
 
 
-            <section class="tag-lines" id="tag-reg">
-                <span>Ready to purchase?</span>
-                <button id="ready"><img src="images/shop-now.png"></button>
+
+            <section id="tag-reg" >
+                <span><img src="images/logo-purple-da.png"></span>
+                    <section id="registration-wrap">
+                        <div id="reg-tabs">
+                            <span id="reg-tab" class="active">Register</span>
+                            <span id="log-tab">Login</span>
+                        </div>
+                        <form action="/users_create" method="POST" id="signUp-form">
+                            <input placeholder="username" name="create_name" id="create_name" />
+                            <input placeholder="email" name="create_email" id="create_email" />
+                            <input placeholder="password" name="create_password" id="create_password"/>
+                            <button type="submit">submit</button>
+                        </form>
+                        <form action="/users_login" method="POST" id="signIn-form">
+                            <input placeholder="email" name="login_email" />
+                            <input placeholder="password" name="login_password"/>
+                            <span><input type="checkbox" name="remember">remember me</span>
+                            <button type="submit">submit</button>
+                        </form>
+                    </section>
+                <span><img src="images/shop-now-red.png"></span>
             </section>
 
-            <section id="registration">
-
-                <section id="registration-wrap">
-                    <div id="reg-tabs">
-                        <span id="reg-tab" class="active">Register</span>
-                        <span id="log-tab">Login</span>
-                    </div>
-                    <form action="/users_create" method="POST" id="signUp-form">
-                        <input placeholder="username" name="create_name" id="create_name" />
-                        <input placeholder="email" name="create_email" id="create_email" />
-                        <input placeholder="password" name="create_password" id="create_password"/>
-
-                        <button type="submit">submit</button>
-
-                    </form>
-
-                    <form action="/users_login" method="POST" id="signIn-form">
-                        <input placeholder="email" name="login_email" />
-                        <input placeholder="password" name="login_password"/>
-
-                        <button type="submit">submit</button>
-
-                    </form>
-                </section>
 
 
-            </section>
 
             <section id="footer">
                 <p>&copy;JUSTSAY DA</p>
@@ -372,7 +347,12 @@
         <script src="introImages.js"></script>
         <script src="gallery.js"></script>
 
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 600,
+            })
+        </script>
     </body>
 </html>
 
