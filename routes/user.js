@@ -3,7 +3,7 @@ const mysql = require('mysql')
 const router = express.Router();
 const app = express();
 const bcrypt = require('bcryptjs');
-const saltRounds = 10;
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -14,18 +14,27 @@ app.use(express.static(__dirname + '/public'));
         console.log("trying to create a new user");
         const name = req.body.create_name;
         const email = req.body.create_email;
-        const password = req.body.create_password;
-        const queryString = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)"
-        getConnection().query(queryString, [name, email, password], (err, results, fields) => {
-            if (err) {
-                console.log("failed a new user" + err)
-                res.sendStatus(500)
-                return
-            }
+//        const password = req.body.create_password;
 
-            console.log("added a new user with id:", results.insertId);
-            res.redirect('/main.html');
+        bcrypt.genSalt(10, function(err, salt) {
+            bcrypt.hash(req.body.create_password, salt, function(err, hash) {
+                const queryString = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)"
+                getConnection().query(queryString, [name, email, hash], (err, results, fields) => {
+                    if (err) {
+                        console.log("failed a new user" + err)
+                        res.sendStatus(500)
+                        return
+                    }
+
+                    console.log("added a new user with id:", results.insertId);
+                    res.redirect('/main.html');
+                });
+            });
         });
+
+
+
+
 });
 
 
