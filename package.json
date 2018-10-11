@@ -20,7 +20,7 @@
     "homepage": "https://github.com/yjalette/justSayDa#readme",
     "dependencies": {
         "aos": "^2.3.4",
-        "bcrypt-nodejs": "0.0.3",
+        "bcryptjs": "^2.4.3",
         "body-parser": "^1.18.3",
         "express": "^4.16.3",
         "heroku-repo": "^1.0.13",
