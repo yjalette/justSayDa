@@ -15,7 +15,6 @@ app.use(express.static(__dirname + '/public'));
         const name = req.body.create_name;
         const email = req.body.create_email;
         const password = req.body.create_password;
-        bcrypt.hash(password, saltRounds, function(err, hash) {
         const queryString = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)"
         getConnection().query(queryString, [name, email, password], (err, results, fields) => {
             if (err) {
@@ -27,8 +26,6 @@ app.use(express.static(__dirname + '/public'));
             console.log("added a new user with id:", results.insertId);
             res.redirect('/main.html');
         });
-
-        })
 });
 
 
