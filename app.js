@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const passport = require("passport");
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-
+module.exports.bcrypt = bcrypt;
 
 app.use(bodyParser.urlencoded({extended: false}))
 

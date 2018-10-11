@@ -2,8 +2,7 @@ const express = require("express");
 const mysql = require('mysql')
 const router = express.Router();
 const app = express();
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+const bcrypt = require('../app.js').bcrypt();
 
 app.use(express.static(__dirname + '/public'));
 
