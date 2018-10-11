@@ -139,6 +139,12 @@ $smDev-width: 320px;
     line-height: normal;
     cursor: pointer;
     text-decoration: none;
+    color: $red;
+    font: $font-med;
+    text-align: center;
+    border: 1px solid $darkGray;
+    padding: 5px;
+    margin: 2.5px;
 }
 
 @mixin translateY($e) {
@@ -844,7 +850,9 @@ $smDev-width: 320px;
         -webkit-column-width: 20%;
         -moz-column-width: 20%;
         column-width: 20%;
-
+        .snd {
+            display: none;
+        }
         .tile {
             -webkit-transform: scale(0);
             transform: scale(0);
@@ -861,14 +869,10 @@ $smDev-width: 320px;
 
 
         }
-        .tile:hover {
 
-            -ms-transform: scale(2.5); /* IE 9 */
-            -webkit-transform: scale(2.5); /* Safari 3-8 */
-            transform: scale(2.5);
-            display: block;
-            width: 100%;
-
+        #showMore {
+            color: $white;
+            font: $font-med;
         }
 
         .scale-anm {
@@ -927,6 +931,7 @@ $smDev-width: 320px;
         border: 0;
         padding: 0;
     }
+
 }
 
 #tag-reg {
@@ -1037,44 +1042,48 @@ $smDev-width: 320px;
 
 ///shop
 
-    header {
+    nav {
         background-color: $darkGray;
         display: block;
         z-index: 1;
         height: 120px;
-        nav {
-            display: flex;
             .ent {
-                position: absolute;
-                left: 30%;
-                top: 10%;
-                transform: translate(-50%, -50%);
-                a {
+                float: left;
                     img {
                         width: 20%;
                     }
                 }
-
-            }
-
-            ul {
-                position: absolute;
-                right: 1%;
-                top: 5%;
-                transform: translate(-50%, -50%);
-                list-style: none;
-
-                li {
-                    display: inline;
-                    letter-spacing: 5px;
+            .dropdown {
+                float: right;
+                overflow: hidden;
+                .dropbtn {
+                    font: $font-med;
+                    border: none;
+                    outline: none;
                     color: $white;
-                    font: $font-graf;
-                    font-size: 25px !important;
+                    padding: 14px 16px;
+                    background-color: inherit;
+                    font-family: inherit;
+                    margin: 0;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    box-shadow: $shadow;
+                    z-index: 1;
+                    a {
+                        @include a;
+                        display: block;
+                        background-color: $lightGray;
+                        border-radius: 100%;
+                    }
+                    a:hover {
+                        background-color: $white;
+                    }
+
                 }
 
             }
-        }
-
     }
 
 #shop {
@@ -1088,8 +1097,7 @@ $smDev-width: 320px;
 }
 
 
-
-
+//footer
 
 #footer {
     background-color: $white;

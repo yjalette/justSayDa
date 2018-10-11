@@ -528,6 +528,8 @@
       -webkit-column-width: 20%;
       -moz-column-width: 20%;
       column-width: 20%; }
+      #homePage #designs #portfolio .snd {
+        display: none; }
       #homePage #designs #portfolio .tile {
         -webkit-transform: scale(0);
         transform: scale(0);
@@ -540,14 +542,9 @@
           margin: 1px;
           padding: 5px;
           border: 4px double #bbbdc9; }
-      #homePage #designs #portfolio .tile:hover {
-        -ms-transform: scale(2.5);
-        /* IE 9 */
-        -webkit-transform: scale(2.5);
-        /* Safari 3-8 */
-        transform: scale(2.5);
-        display: block;
-        width: 100%; }
+      #homePage #designs #portfolio #showMore {
+        color: #f0faf7;
+        font: bold 30px "Hi Melody"; }
       #homePage #designs #portfolio .scale-anm {
         transform: scale(1); }
       #homePage #designs #portfolio p {
@@ -683,32 +680,46 @@
           background-color: #bbbdc9;
           color: #EE523F; }
 
-header {
+nav {
   background-color: #3A2E3C;
   display: block;
   z-index: 1;
   height: 120px; }
-  header nav {
-    display: flex; }
-    header nav .ent {
-      position: absolute;
-      left: 30%;
-      top: 10%;
-      transform: translate(-50%, -50%); }
-      header nav .ent a img {
-        width: 20%; }
-    header nav ul {
-      position: absolute;
-      right: 1%;
-      top: 5%;
-      transform: translate(-50%, -50%);
-      list-style: none; }
-      header nav ul li {
-        display: inline;
-        letter-spacing: 5px;
-        color: #f0faf7;
-        font: bold 60px "Sedgwick Ave Display";
-        font-size: 25px !important; }
+  nav .ent {
+    float: left; }
+    nav .ent img {
+      width: 20%; }
+  nav .dropdown {
+    float: right;
+    overflow: hidden; }
+    nav .dropdown .dropbtn {
+      font: bold 30px "Hi Melody";
+      border: none;
+      outline: none;
+      color: #f0faf7;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0; }
+    nav .dropdown .dropdown-content {
+      display: none;
+      box-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+      z-index: 1; }
+      nav .dropdown .dropdown-content a {
+        line-height: normal;
+        cursor: pointer;
+        text-decoration: none;
+        color: #EE523F;
+        font: bold 30px "Hi Melody";
+        text-align: center;
+        border: 1px solid #3A2E3C;
+        padding: 5px;
+        margin: 2.5px;
+        display: block;
+        background-color: #bbbdc9;
+        border-radius: 100%; }
+      nav .dropdown .dropdown-content a:hover {
+        background-color: #f0faf7; }
 
 #shop {
   background-color: #bbbdc9; }
@@ -744,7 +755,13 @@ header {
       #footer nav ul li a {
         line-height: normal;
         cursor: pointer;
-        text-decoration: none; }
+        text-decoration: none;
+        color: #EE523F;
+        font: bold 30px "Hi Melody";
+        text-align: center;
+        border: 1px solid #3A2E3C;
+        padding: 5px;
+        margin: 2.5px; }
         #footer nav ul li a i {
           padding: 0px 1px;
           color: #bbbdc9; }

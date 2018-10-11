@@ -6,6 +6,7 @@
 
 $(document).ready(function(){
 
+
 //top nav
 
     $('#top-login').on("click", function(){
@@ -21,22 +22,22 @@ $(document).ready(function(){
 
 
 
+////bottom nav
+//
+//    $('#link-login').on("click", function(){
+//
+//        $("#signIn-form").show().slideDown("fast");
+//        $("#signUp-form").hide();
+//    })
+//
+//    $('#link-signup').on("click", function(){
+//
+//        $("#signUp-form").show();
+//        $("#signIn-form").hide();
+//    })
+
+
 //bottom nav
-
-    $('#link-login').on("click", function(){
-
-        $("#signIn-form").show().slideDown("fast");
-        $("#signUp-form").hide();
-    })
-
-    $('#link-signup').on("click", function(){
-
-        $("#signUp-form").show();
-        $("#signIn-form").hide();
-    })
-
-
-
 
     $("#log-tab").on("click", function(){
 
@@ -55,6 +56,14 @@ $(document).ready(function(){
 
 
     });
+
+//login success
+
+// hover nav
+
+    $(".dropbtn").on("mouseover",function(){
+        $(".dropdown-content").toggle();
+    })
 
 
 

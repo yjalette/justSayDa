@@ -4,7 +4,8 @@ const morgan = require("morgan");
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const passport = require("passport");
-
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 
 app.use(bodyParser.urlencoded({extended: false}))
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static('./public'))
 
 app.use(morgan('short'))
+
 
 
 

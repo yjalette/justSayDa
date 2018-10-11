@@ -1,33 +1,35 @@
 {
-  "name": "justsayda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yjalette/justSayDa.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yjalette/justSayDa/issues"
-  },
-  "homepage": "https://github.com/yjalette/justSayDa#readme",
-  "dependencies": {
-    "aos": "^2.3.4",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "morgan": "^1.9.0",
-    "mysql": "^2.16.0",
-    "passport": "^0.4.0"
-  },
-  "devDependencies": {
-    "nodemon": "^1.18.3",
-    "ws": "3.3.2"
-  }
+    "name": "justsayda",
+    "version": "1.0.0",
+    "description": "",
+    "main": "\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yjalette/justSayDa.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yjalette/justSayDa/issues"
+    },
+    "homepage": "https://github.com/yjalette/justSayDa#readme",
+    "dependencies": {
+        "aos": "^2.3.4",
+        "bcrypt": "^3.0.0",
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "morgan": "^1.9.0",
+        "mysql": "^2.16.0",
+        "node-pre-gyp": "^0.11.0",
+        "passport": "^0.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.3",
+        "ws": "3.3.2"
+    }
 }
