@@ -275,7 +275,7 @@ $smDev-width: 320px;
     background-color: $lightGray;
 
     .container-video {
-        z-index: 1;
+        z-index: 2;
         width: 100%;
         height: 100%;
         display: inline-grid;
@@ -326,6 +326,7 @@ $smDev-width: 320px;
                 }
 
                 .dropdown-content {
+                    float: right;
                     display: none;
                     box-shadow: $shadow;
                     z-index: 1;
@@ -347,10 +348,19 @@ $smDev-width: 320px;
             }
         }
         #begin {
+            z-index: 1;
             position: absolute;
-            @include vert;
             width: 100%;
-            padding: 50px;
+            top: 50%;
+            @include tablet {
+                top: 25%;
+            }
+            @include phone {
+                top: 20%;
+            }
+            @include smDev {
+                top: 15%;
+            }
             .arrow {
                 @include arrow;
             }
@@ -367,20 +377,7 @@ $smDev-width: 320px;
         100% { -webkit-transform: translateY(7px); opacity: 1 }
     }
 
-//    #bold {
-//        @include tag;
-//        top: 50% !important;
-//        span {
-//            margin: 3% 0% !important;
-//
-//        }
-//        button {
-//            img {
-//
-//            }
-//        }
-//
-//    }
+
     .tag-lines {
         @include tag;
         span{
@@ -429,10 +426,7 @@ $smDev-width: 320px;
         background-color: $darkGray;
         padding: 50px 0px;
         .section {
-            height: 600px !important;
-            @include tablet {
-                height: 450px !important;
-            }
+            height: auto;
             .left, .middle, .right {
                 width:100%;
                 height: auto;
@@ -484,30 +478,43 @@ $smDev-width: 320px;
                     font-size: 1em;
                 }
             }
-
+            .right {
+                h2 {
+                    color: $darkGray;
+                }
+            }
+            .left {
+                h2 {
+                    color: $red;
+                }
+            }
             &.animate {
 
                 .left {
                     @include flex;
-                    left:0;
                     background-color: $lightGray;
                     color: $darkGray;
-                    border: 4px solid $lightGray;
+                    border-width: thick;
+                    border-style: solid;
+                    border-color: $red;
+                    border-right-width: 0px;
                     @media (max-width: $sm) {
-                        left: 99%;
+                        left: 0%;
                     }
 
                     @media (min-width: $md) {
-                        left:0;
+                        left:0%;
                     }
                 }
 
                 .right {
                     @include flex;
-                    left:0;
                     background-color: $red;
                     color: $darkGray;
-                    border: 4px solid $red;
+                    border-width: thick;
+                    border-style: solid;
+                    border-color: $lightGray;
+                    border-left-width: 0px;
                     @media (max-width: $sm) {
                         left: 99%;
                     }
@@ -516,13 +523,10 @@ $smDev-width: 320px;
                         left:66.66%;
                     }
                 }
-
-
             }
 
             .title {
                 background: $darkGray;
-
                 h2 {
                     margin-top:0;
                     font: $font-med;
@@ -556,37 +560,36 @@ $smDev-width: 320px;
                 clear:both;
                 display:none;
                 float:none;
-
                 img {
                     width:50%;
-                    float:left;
                     height:auto;
-                    opacity: 0.7;
+                    opacity: 0.5;
                     @include transition;
-                    @include filter(grayscale(50%));
-
+                    @include filter(grayscale(70%));
                     &:hover {
                         opacity:1;
                         @include filter(grayscale(0%));
                     }
                 }
-
                 @media (min-width: $md) {
                     display:block;
                 }
             }
-
             .middle {
-                background-image: linear-gradient(to left, $red , $darkGray);
                 z-index: 1;
                 padding:0;
-
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 50%;
                     display:block;
                     position: relative;
                     overflow: visible;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-top-color: $red;
+                    border-bottom-color: $lightGray;
+                    border-width: thick;
+                    border-style: solid;
                 }
             }
         }
@@ -627,7 +630,7 @@ $smDev-width: 320px;
 
             h2{
                 @include h;
-
+                padding: 0px !important;
                 text-align: center;
             }
             h2::before{
@@ -645,6 +648,7 @@ $smDev-width: 320px;
             span {
                 @include pickSpan;
                 @include p;
+                padding: 0px !important;
                 color: $lightGray;
             }
             span::before{
@@ -661,37 +665,12 @@ $smDev-width: 320px;
             align-items: center;
             width: 100%;
             padding: 40px;
-//            @include tablet {
-//                width: 100%;
-//                display: block;
-//                float: none;
-//            }
-//            @include phone {
-//                width: 100%;
-//                display: block;
-//                float: none;
-//            }
-//            @include smDev {
-//                width: 100%;
-//                display: block;
-//                float: none;
-//            }
             .rotatescroll {
                 position: relative;
                 height: 390px;
                 width: 390px;
                 padding: 40px;
                 overflow: hidden;
-                @include tablet{
-
-                }
-                @include phone{
-
-                }
-                @include smDev{
-
-                }
-
                 .viewport {
                     position: relative;
                     margin: 0 auto;
@@ -965,6 +944,7 @@ $smDev-width: 320px;
                 span{
                     text-align: center;
                     font: $font-med;
+                    color: $white;
                     display: block;
                     @include phone {
                         font-size: 20px;
@@ -1000,6 +980,7 @@ $smDev-width: 320px;
             span {
                 @include pickSpan;
                 @include p;
+                color: $darkGray;
             }
             span::before{
                 content: "Rep your City! ";
@@ -1270,7 +1251,7 @@ $smDev-width: 320px;
 //footer
 
 #footer {
-    background-color: $white;
+    background-color: $darkGray;
     color: $lightGray;
     width: 100%;
     display: block;
