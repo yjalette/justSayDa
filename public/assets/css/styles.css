@@ -71,7 +71,8 @@
         #homePage .container-video nav .dropdown .dropdown-content {
           display: none;
           box-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-          z-index: 1; }
+          z-index: 1;
+          width: auto; }
           @media (max-width: 480px) {
             #homePage .container-video nav .dropdown .dropdown-content {
               width: 40%; } }
@@ -87,8 +88,7 @@
             margin: 2.5px;
             word-wrap: break-word;
             display: block;
-            background-color: #bbbdc9;
-            border-radius: 100%; }
+            background-color: #bbbdc9; }
             @media (max-width: 480px) {
               #homePage .container-video nav .dropdown .dropdown-content a {
                 font-size: 12px; } }
@@ -124,30 +124,76 @@
   100% {
     -webkit-transform: translateY(7px);
     opacity: 1; } }
-  #homePage #bold {
+  #homePage .tag-lines {
     background-color: #EE523F;
     z-index: 2;
     position: relative;
     width: 100%;
     text-align: center;
-    height: 400px;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
     display: flex;
-    border-bottom: 4px solid #3A2E3C;
-    top: 50% !important; }
+    border-bottom: 4px solid #3A2E3C; }
     @media (min-width: 768px) and (max-width: 1023px) {
-      #homePage #bold {
+      #homePage .tag-lines {
         display: block;
         height: auto; } }
     @media (min-width: 481px) and (max-width: 767px) {
-      #homePage #bold {
+      #homePage .tag-lines {
         display: block;
         height: auto; } }
     @media (max-width: 480px) {
-      #homePage #bold {
+      #homePage .tag-lines {
         display: block;
         height: auto; } }
-    #homePage #bold span {
-      margin: 3% 0% !important; }
+    #homePage .tag-lines span {
+      font: bold 30px "Hi Melody";
+      font-size: 100px;
+      color: #EE523F;
+      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+      padding: 10px;
+      color: #bbbdc9 !important;
+      width: 50%;
+      margin: auto; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines span {
+          font-size: 80px;
+          padding: 30px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines span {
+          font-size: 60px;
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines span {
+          font-size: 45px;
+          padding: 10px; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block;
+          margin: 0%; } }
+    #homePage .tag-lines img {
+      z-index: 3;
+      width: 50%;
+      border-top: 4px solid #EE523F; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines img {
+          display: none; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines img {
+          display: none; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines img {
+          display: none; } }
   #homePage #introImages {
     width: 100%;
     position: relative;
@@ -160,6 +206,7 @@
           height: 450px !important; } }
       #homePage #introImages .section .left, #homePage #introImages .section .middle, #homePage #introImages .section .right {
         width: 100%;
+        height: auto;
         display: block;
         color: #f0faf7;
         box-sizing: border-box;
@@ -201,6 +248,9 @@
             padding: 30px;
             font-size: 1em; } }
       #homePage #introImages .section.animate .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         left: 0;
         background-color: #bbbdc9;
         color: #3A2E3C;
@@ -212,6 +262,9 @@
           #homePage #introImages .section.animate .left {
             left: 0; } }
       #homePage #introImages .section.animate .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         left: 0;
         background-color: #EE523F;
         color: #3A2E3C;
@@ -294,182 +347,89 @@
     transform: translateY(-20px); }
   60% {
     transform: translateY(-10px); } }
-  #homePage .tag-lines {
-    background-color: #EE523F;
-    z-index: 2;
+  #homePage #gallery-cities {
+    background-color: #3A2E3C !important;
+    height: auto;
+    padding: 100px;
     position: relative;
     width: 100%;
-    text-align: center;
-    height: 400px;
-    display: flex;
-    border-bottom: 4px solid #3A2E3C; }
+    display: block;
+    background-color: #bbbdc9;
+    text-align: center; }
     @media (min-width: 768px) and (max-width: 1023px) {
-      #homePage .tag-lines {
-        display: block;
-        height: auto; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #homePage .tag-lines {
-        display: block;
-        height: auto; } }
-    @media (max-width: 480px) {
-      #homePage .tag-lines {
-        display: block;
-        height: auto; } }
-    #homePage .tag-lines span {
-      font: bold 30px "Hi Melody";
-      padding: 50px;
-      font-size: 100px;
-      color: #EE523F;
-      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-      color: #bbbdc9 !important;
-      width: 70%;
-      margin: 7% 0%; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        #homePage .tag-lines span {
-          font-size: 80px;
-          padding: 30px; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #homePage .tag-lines span {
-          font-size: 60px;
-          padding: 20px; } }
-      @media (max-width: 480px) {
-        #homePage .tag-lines span {
-          font-size: 45px;
-          padding: 10px; } }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        #homePage .tag-lines span {
-          width: 100%;
-          display: block; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #homePage .tag-lines span {
-          width: 100%;
-          display: block; } }
-      @media (max-width: 480px) {
-        #homePage .tag-lines span {
-          width: 100%;
-          display: block;
-          margin: 0%; } }
-    #homePage .tag-lines button {
-      z-index: 3;
-      width: 30%;
-      background-color: #bbbdc9;
-      border-top: 4px solid #EE523F; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        #homePage .tag-lines button {
-          display: none; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #homePage .tag-lines button {
-          display: none; } }
-      @media (max-width: 480px) {
-        #homePage .tag-lines button {
-          display: none; } }
-  #homePage #gallery-cities {
-    background-color: #3A2E3C;
-    display: flex;
-    position: relative;
-    padding: 100px;
-    height: auto; }
+      #homePage #gallery-cities {
+        padding: 60px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #homePage #gallery-cities {
-        display: block;
+        padding: 40px; } }
+    @media (max-width: 480px) {
+      #homePage #gallery-cities {
+        padding: 20px; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #homePage #gallery-cities {
+        width: 100%;
+        padding: 20px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #gallery-cities {
         width: 100%;
         padding: 20px; } }
     @media (max-width: 480px) {
       #homePage #gallery-cities {
-        display: block;
         width: 100%;
         padding: 10px; } }
-    #homePage #gallery-cities #RepYourCity {
-      padding: 0% 5%; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #homePage #gallery-cities #RepYourCity {
-          display: block;
-          width: 100%;
-          text-align: center;
-          padding: 3%; } }
-      @media (max-width: 480px) {
-        #homePage #gallery-cities #RepYourCity {
-          display: block;
-          width: 100%;
-          text-align: center;
-          padding: 1%; } }
-      #homePage #gallery-cities #RepYourCity h2 {
-        font: bold 30px "Hi Melody";
-        padding: 50px;
-        font-size: 100px;
-        color: #EE523F;
-        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-        color: #EE523F; }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          #homePage #gallery-cities #RepYourCity h2 {
-            font-size: 80px;
-            padding: 30px; } }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #homePage #gallery-cities #RepYourCity h2 {
-            font-size: 60px;
-            padding: 20px; } }
-        @media (max-width: 480px) {
-          #homePage #gallery-cities #RepYourCity h2 {
-            font-size: 45px;
-            padding: 10px; } }
-      #homePage #gallery-cities #RepYourCity h2::before {
-        content: "Step #2: ";
-        color: #bbbdc9;
-        font-size: 50px; }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #homePage #gallery-cities #RepYourCity h2::before {
-            font-size: 40px; } }
-        @media (max-width: 480px) {
-          #homePage #gallery-cities #RepYourCity h2::before {
-            font-size: 25px; } }
-      #homePage #gallery-cities #RepYourCity span {
-        font: 18px "Open Sans";
-        text-align: center;
-        color: #bbbdc9;
-        padding: 5px; }
-        @media (max-width: 480px) {
-          #homePage #gallery-cities #RepYourCity span {
-            font-size: 16px; } }
-      #homePage #gallery-cities #RepYourCity span::before {
-        content: "Rep your City! ";
-        font: bold 30px "Hi Melody";
-        color: #EE523F; }
-    #homePage #gallery-cities .slider-wrapper {
-      float: right;
-      width: 50%; }
+    #homePage #gallery-cities #RepYourCity h2 {
+      font: bold 30px "Hi Melody";
+      font-size: 100px;
+      color: #EE523F;
+      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+      text-align: center; }
       @media (min-width: 768px) and (max-width: 1023px) {
-        #homePage #gallery-cities .slider-wrapper {
-          display: block;
-          float: none; } }
+        #homePage #gallery-cities #RepYourCity h2 {
+          font-size: 80px;
+          padding: 30px; } }
       @media (min-width: 481px) and (max-width: 767px) {
-        #homePage #gallery-cities .slider-wrapper {
-          display: block;
-          float: none; } }
+        #homePage #gallery-cities #RepYourCity h2 {
+          font-size: 60px;
+          padding: 20px; } }
       @media (max-width: 480px) {
-        #homePage #gallery-cities .slider-wrapper {
-          display: block;
-          float: none; } }
+        #homePage #gallery-cities #RepYourCity h2 {
+          font-size: 45px;
+          padding: 10px; } }
+    #homePage #gallery-cities #RepYourCity h2::before {
+      content: "Step #2: ";
+      font-size: 50px;
+      color: #f0faf7; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #gallery-cities #RepYourCity h2::before {
+          font-size: 40px; } }
+      @media (max-width: 480px) {
+        #homePage #gallery-cities #RepYourCity h2::before {
+          font-size: 25px; } }
+    #homePage #gallery-cities #RepYourCity span {
+      color: #3A2E3C;
+      padding: 5px;
+      font: 18px "Open Sans";
+      text-align: center;
+      color: #bbbdc9; }
+      @media (max-width: 480px) {
+        #homePage #gallery-cities #RepYourCity span {
+          font-size: 16px; } }
+    #homePage #gallery-cities #RepYourCity span::before {
+      content: "Rep your City! ";
+      font: bold 30px "Hi Melody";
+      color: #EE523F; }
+    #homePage #gallery-cities .slider-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 40px; }
       #homePage #gallery-cities .slider-wrapper .rotatescroll {
         position: relative;
         height: 390px;
         width: 390px;
         padding: 40px;
         overflow: hidden; }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          #homePage #gallery-cities .slider-wrapper .rotatescroll {
-            position: absolute;
-            left: 50%;
-            transform: translatex(-50%); } }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #homePage #gallery-cities .slider-wrapper .rotatescroll {
-            position: absolute;
-            left: 50%;
-            transform: translatex(-50%); } }
-        @media (max-width: 480px) {
-          #homePage #gallery-cities .slider-wrapper .rotatescroll {
-            position: absolute;
-            left: 50%;
-            transform: translatex(-50%); } }
         #homePage #gallery-cities .slider-wrapper .rotatescroll .viewport {
           position: relative;
           margin: 0 auto;
@@ -645,7 +605,6 @@
           width: 100%; }
     #homePage #pickDesign #designsText h2 {
       font: bold 30px "Hi Melody";
-      padding: 50px;
       font-size: 100px;
       color: #EE523F;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
@@ -722,7 +681,6 @@
           border-radius: 100%; }
     #homePage #pickFabric #fabricText h2 {
       font: bold 30px "Hi Melody";
-      padding: 50px;
       font-size: 100px;
       color: #EE523F;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
@@ -918,7 +876,8 @@
       #homePage #tag-reg #registration-wrap #signUp-form input::placeholder {
         color: #bbbdc9; }
       #homePage #tag-reg #registration-wrap #signUp-form input:hover {
-        background-color: #3A2E3C; }
+        background-color: #3A2E3C;
+        color: #f0faf7; }
       #homePage #tag-reg #registration-wrap #signUp-form button {
         padding: 3px 10px;
         color: #EE523F;
@@ -945,7 +904,8 @@
         #homePage #tag-reg #registration-wrap #signIn-form input::placeholder {
           color: #bbbdc9; }
         #homePage #tag-reg #registration-wrap #signIn-form input:hover {
-          background-color: #bbbdc9; }
+          background-color: #3A2E3C;
+          color: #f0faf7; }
         #homePage #tag-reg #registration-wrap #signIn-form span {
           font-size: 12px; }
           #homePage #tag-reg #registration-wrap #signIn-form span input {
@@ -968,7 +928,6 @@
   background-color: #bbbdc9; }
   #shop h1 {
     font: bold 30px "Hi Melody";
-    padding: 50px;
     font-size: 100px;
     color: #EE523F;
     text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5); }

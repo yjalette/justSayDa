@@ -117,7 +117,6 @@ $smDev-width: 320px;
 
 @mixin h {
     font: $font-med;
-    padding: 50px;
     font-size: 100px;
     color: $red;
     text-shadow: $shadow;
@@ -168,6 +167,12 @@ $smDev-width: 320px;
     transform: $e;
 }
 
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @mixin input {
     width: 100%;
     padding: 14px 20px;
@@ -193,7 +198,9 @@ $smDev-width: 320px;
     position: relative;
     width: 100%;
     text-align: center;
-    height: 400px;
+    justify-content: center;
+    vertical-align: middle;
+    height: 100%;
     display: flex;
     border-bottom: 4px solid $darkGray;
     @include tablet {
@@ -322,6 +329,7 @@ $smDev-width: 320px;
                     display: none;
                     box-shadow: $shadow;
                     z-index: 1;
+                    width: auto;
                     @include smDev {
                         width: 40%;
                     }
@@ -329,7 +337,6 @@ $smDev-width: 320px;
                         @include a;
                         display: block;
                         background-color: $lightGray;
-                        border-radius: 100%;
                     }
                     a:hover {
                         background-color: $white;
@@ -360,14 +367,57 @@ $smDev-width: 320px;
         100% { -webkit-transform: translateY(7px); opacity: 1 }
     }
 
-    #bold {
+//    #bold {
+//        @include tag;
+//        top: 50% !important;
+//        span {
+//            margin: 3% 0% !important;
+//
+//        }
+//        button {
+//            img {
+//
+//            }
+//        }
+//
+//    }
+    .tag-lines {
         @include tag;
-        top: 50% !important;
-        span {
-            margin: 3% 0% !important;
+        span{
+            @include h;
+            padding: 10px;
+            color: $lightGray !important;
+            width: 50%;
+            margin: auto;
+            @include tablet {
+                width: 100%;
+                display: block;
+            }
+            @include phone {
+                width: 100%;
+                display: block;
+            }
+            @include smDev {
+                width: 100%;
+                display: block;
+                margin: 0%;
+            }
 
         }
+
         img {
+            z-index: 3;
+            width: 50%;
+            border-top: 4px solid $red;
+            @include tablet {
+                display: none;
+            }
+            @include phone {
+                display: none;
+            }
+            @include smDev {
+                display: none;
+            }
 
         }
 
@@ -385,6 +435,7 @@ $smDev-width: 320px;
             }
             .left, .middle, .right {
                 width:100%;
+                height: auto;
                 display: block;
                 color: $white;
                 box-sizing: border-box;
@@ -435,7 +486,9 @@ $smDev-width: 320px;
             }
 
             &.animate {
+
                 .left {
+                    @include flex;
                     left:0;
                     background-color: $lightGray;
                     color: $darkGray;
@@ -450,6 +503,7 @@ $smDev-width: 320px;
                 }
 
                 .right {
+                    @include flex;
                     left:0;
                     background-color: $red;
                     color: $darkGray;
@@ -552,101 +606,46 @@ $smDev-width: 320px;
     }
 
 
-    .tag-lines {
-        @include tag;
-        span{
-            @include h;
-            color: $lightGray !important;
-            width: 70%;
-            margin: 7% 0%;
-            @include tablet {
-                width: 100%;
-                display: block;
-            }
-            @include phone {
-                width: 100%;
-                display: block;
-            }
-            @include smDev {
-                width: 100%;
-                display: block;
-                margin: 0%;
-            }
-
-        }
-
-        button {
-            z-index: 3;
-            width: 30%;
-            background-color: $lightGray;
-            border-top: 4px solid $red;
-            @include tablet {
-                display: none;
-            }
-            @include phone {
-                display: none;
-            }
-            @include smDev {
-                display: none;
-            }
-
-        }
-
-    }
 
 
     #gallery-cities{
-        background-color: $darkGray;
-        display: flex;
-        position: relative;
-        padding: 100px;
-        height: auto;
+        background-color: $darkGray !important;
+        @include pick;
+        @include tablet {
+            width: 100%;
+            padding: 20px;
+        }
         @include phone {
-            display: block;
             width: 100%;
             padding: 20px;
         }
         @include smDev {
-            display: block;
             width: 100%;
             padding: 10px;
         }
         #RepYourCity {
-            padding: 0% 5%;
-            @include phone {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 3%;
-            }
-            @include smDev {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 1%;
-            }
-            h2 {
+
+            h2{
                 @include h;
-                color: $red;
+
+                text-align: center;
             }
             h2::before{
                 content: "Step #2: ";
-                color: $lightGray;
                 font-size: 50px;
+                color: $white;
                 @include phone {
                     font-size: 40px;
                 }
                 @include smDev {
                     font-size: 25px;
                 }
+
             }
             span {
+                @include pickSpan;
                 @include p;
                 color: $lightGray;
-                padding: 5px;
-                @include smDev {
-                    font-size: 16px;
-                }
             }
             span::before{
                 content: "Rep your City! ";
@@ -657,20 +656,26 @@ $smDev-width: 320px;
         }
 
         .slider-wrapper {
-            float: right;
-            width: 50%;
-            @include tablet {
-                display: block;
-                float: none;
-            }
-            @include phone {
-                display: block;
-                float: none;
-            }
-            @include smDev {
-                display: block;
-                float: none;
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 40px;
+//            @include tablet {
+//                width: 100%;
+//                display: block;
+//                float: none;
+//            }
+//            @include phone {
+//                width: 100%;
+//                display: block;
+//                float: none;
+//            }
+//            @include smDev {
+//                width: 100%;
+//                display: block;
+//                float: none;
+//            }
             .rotatescroll {
                 position: relative;
                 height: 390px;
@@ -678,19 +683,13 @@ $smDev-width: 320px;
                 padding: 40px;
                 overflow: hidden;
                 @include tablet{
-                    position: absolute;
-                    left: 50%;
-                    transform: translatex(-50%);
+
                 }
                 @include phone{
-                    position: absolute;
-                    left: 50%;
-                    transform: translatex(-50%);
+
                 }
                 @include smDev{
-                    position: absolute;
-                    left: 50%;
-                    transform: translatex(-50%);
+
                 }
 
                 .viewport {
@@ -1204,6 +1203,7 @@ $smDev-width: 320px;
                     }
                     input:hover {
                         background-color: $darkGray;
+                        color: $white;
                     }
                     button {
                         @include button;
@@ -1225,7 +1225,8 @@ $smDev-width: 320px;
                         color: $lightGray;
                     }
                     input:hover {
-                        background-color: $lightGray;
+                        background-color: $darkGray;
+                        color: $white;
                     }
 
                     span {
