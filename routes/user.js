@@ -3,6 +3,7 @@ const mysql = require('mysql')
 const router = express.Router();
 const app = express();
 const bcrypt = require('bcryptjs');
+const passport = require("passport");
 
 
 app.use(express.static(__dirname + '/public'));
@@ -25,16 +26,38 @@ app.use(express.static(__dirname + '/public'));
                         res.sendStatus(500)
                         return
                     }
+                    getConnection().query('SELECT LAST_INSERT_ID() as user_id', function(err, results, fields){
+                        if (err) {
+                            console.log("failed!" + err)
+                            res.sendStatus(500)
+                            return
+                        }
 
-                    console.log("added a new user with id:", results.insertId);
-                    res.redirect('/main.html');
+                        const user_id = results[0];
+                        console.log(req.login(results[0]));
+//
+                        req.login(user_id, function (err){
+                            if (err) {
+                                console.log(err);
+                            }
+                            return res.redirect('/shop.html');
+                        });
+//
+
+//                        console.log("added a new user with id:", results.insertId);
+                    });
+
                 });
             });
         });
+});
 
+passport.serializeUser(function(user_id, done) {
+    done(null, user_id);
+});
 
-
-
+passport.deserializeUser(function(user_id, done) {
+    done(null, user_id);
 });
 
 
@@ -92,31 +115,37 @@ router.get("/users", (req, res) => {
     })
 })
 
-router.get('/users/:id', (req, res) => {
-    console.log("Fetching user with id: " + req.params.id);
+//router.get('/users/:id', (req, res) => {
+//    console.log("Fetching user with id: " + req.params.id);
+//
+//    const connection = getConnection();
+//
+//
+//    const userId = req.params.id;
+//    const queryString = "SELECT * FROM users WHERE id = ?";
+//
+//    connection.query( queryString, [userId], (err, rows, fields) => {
+//        if (err) {
+//            console.log("Failed for users" + err)
+//            res.sendsStatus(500)
+//            return
+//        }
+//        console.log("here are the users")
+//
+//        const users = rows.map((row)=>{
+//            return {name: row.name, email: row.email, password: row.password}
+//        })
+//
+//
+//        res.json(users)
+//    })
+//})
 
-    const connection = getConnection();
-
-
-    const userId = req.params.id;
-    const queryString = "SELECT * FROM users WHERE id = ?";
-
-    connection.query( queryString, [userId], (err, rows, fields) => {
-        if (err) {
-            console.log("Failed for users" + err)
-            res.sendsStatus(500)
-            return
-        }
-        console.log("here are the users")
-
-        const users = rows.map((row)=>{
-            return {name: row.name, email: row.email, password: row.password}
-        })
-
-
-        res.json(users)
-    })
-})
+router.get('/logout', function(req, res){
+    console.log('logging out');
+    req.logout();
+    res.redirect('/');
+});
 
 const pool = mysql.createPool({
     connectionLimit: 10,

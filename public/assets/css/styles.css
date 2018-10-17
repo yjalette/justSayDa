@@ -17,7 +17,7 @@
   -webkit-padding-end: 0px; }
 
 #homePage {
-  background-color: #3A2E3C; }
+  background-color: #bbbdc9; }
   #homePage .container-video {
     z-index: 1;
     width: 100%;
@@ -35,32 +35,72 @@
         width: 100%;
         height: 100%; }
     #homePage .container-video nav {
-      display: flex; }
+      position: absolute;
+      display: block;
+      width: 100%;
+      z-index: 1; }
       #homePage .container-video nav .ent {
-        position: absolute;
-        left: 30%;
-        top: 10%;
-        transform: translate(-50%, -50%); }
+        float: left;
+        display: inline-block;
+        width: 50%; }
         #homePage .container-video nav .ent img {
-          width: 30%; }
-      #homePage .container-video nav span {
-        position: absolute;
-        right: 1%;
-        top: 5%;
-        transform: translate(-50%, -50%);
-        list-style: none;
-        display: inline;
-        letter-spacing: 5px;
-        color: #f0faf7;
-        font: bold 60px "Sedgwick Ave Display";
-        font-size: 25px !important;
-        cursor: pointer; }
+          width: 40%; }
+          @media (min-width: 481px) and (max-width: 767px) {
+            #homePage .container-video nav .ent img {
+              width: 70%; } }
+          @media (max-width: 480px) {
+            #homePage .container-video nav .ent img {
+              width: 100%; } }
+      #homePage .container-video nav .dropdown {
+        text-align: right;
+        overflow: hidden;
+        display: inline-block;
+        width: 50%;
+        font: bold 30px "Hi Melody"; }
+        #homePage .container-video nav .dropdown .dropbtn {
+          font: bold 30px "Hi Melody";
+          border: none;
+          outline: none;
+          color: #f0faf7;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0; }
+          #homePage .container-video nav .dropdown .dropbtn i {
+            color: #EE523F; }
+        #homePage .container-video nav .dropdown .dropdown-content {
+          display: none;
+          box-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+          z-index: 1; }
+          @media (max-width: 480px) {
+            #homePage .container-video nav .dropdown .dropdown-content {
+              width: 40%; } }
+          #homePage .container-video nav .dropdown .dropdown-content a {
+            line-height: normal;
+            cursor: pointer;
+            text-decoration: none;
+            color: #EE523F;
+            font: bold 30px "Hi Melody";
+            text-align: center;
+            border: 1px solid #3A2E3C;
+            padding: 5px;
+            margin: 2.5px;
+            word-wrap: break-word;
+            display: block;
+            background-color: #bbbdc9;
+            border-radius: 100%; }
+            @media (max-width: 480px) {
+              #homePage .container-video nav .dropdown .dropdown-content a {
+                font-size: 12px; } }
+          #homePage .container-video nav .dropdown .dropdown-content a:hover {
+            background-color: #f0faf7; }
     #homePage .container-video #begin {
       position: absolute;
-      top: 60%;
-      left: 50%;
+      right: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      text-align: center;
       width: 100%;
       padding: 50px; }
       #homePage .container-video #begin .arrow {
@@ -85,7 +125,27 @@
     -webkit-transform: translateY(7px);
     opacity: 1; } }
   #homePage #bold {
+    background-color: #EE523F;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 400px;
+    display: flex;
+    border-bottom: 4px solid #3A2E3C;
     top: 50% !important; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #homePage #bold {
+        display: block;
+        height: auto; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #bold {
+        display: block;
+        height: auto; } }
+    @media (max-width: 480px) {
+      #homePage #bold {
+        display: block;
+        height: auto; } }
     #homePage #bold span {
       margin: 3% 0% !important; }
   #homePage #introImages {
@@ -95,6 +155,9 @@
     padding: 50px 0px; }
     #homePage #introImages .section {
       height: 600px !important; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage #introImages .section {
+          height: 450px !important; } }
       #homePage #introImages .section .left, #homePage #introImages .section .middle, #homePage #introImages .section .right {
         width: 100%;
         display: block;
@@ -108,13 +171,18 @@
         -o-transition: 0.3s ease-in-out all;
         -webkit-transition: 0.3s ease-in-out all;
         transition: 0.3s ease-in-out all; }
-        @media (min-width: 480px) {
-          #homePage #introImages .section .left .content, #homePage #introImages .section .middle .content, #homePage #introImages .section .right .content {
-            position: relative;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%); } }
+        @media (max-width: 480px) {
+          #homePage #introImages .section .left, #homePage #introImages .section .middle, #homePage #introImages .section .right {
+            z-index: 1;
+            overflow: visible;
+            position: absolute;
+            height: auto !important; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #homePage #introImages .section .left, #homePage #introImages .section .middle, #homePage #introImages .section .right {
+            z-index: 1;
+            overflow: visible;
+            position: absolute;
+            height: auto !important; } }
         @media (min-width: 480px) {
           #homePage #introImages .section .left, #homePage #introImages .section .middle, #homePage #introImages .section .right {
             width: 100%;
@@ -137,9 +205,9 @@
         background-color: #bbbdc9;
         color: #3A2E3C;
         border: 4px solid #bbbdc9; }
-        @media (min-width: 480px) {
+        @media (max-width: 480px) {
           #homePage #introImages .section.animate .left {
-            left: 50%; } }
+            left: 99%; } }
         @media (min-width: 768px) {
           #homePage #introImages .section.animate .left {
             left: 0; } }
@@ -148,9 +216,9 @@
         background-color: #EE523F;
         color: #3A2E3C;
         border: 4px solid #EE523F; }
-        @media (min-width: 480px) {
+        @media (max-width: 480px) {
           #homePage #introImages .section.animate .right {
-            left: 50%; } }
+            left: 99%; } }
         @media (min-width: 768px) {
           #homePage #introImages .section.animate .right {
             left: 66.66%; } }
@@ -235,6 +303,18 @@
     height: 400px;
     display: flex;
     border-bottom: 4px solid #3A2E3C; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #homePage .tag-lines {
+        display: block;
+        height: auto; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage .tag-lines {
+        display: block;
+        height: auto; } }
+    @media (max-width: 480px) {
+      #homePage .tag-lines {
+        display: block;
+        height: auto; } }
     #homePage .tag-lines span {
       font: bold 30px "Hi Melody";
       padding: 50px;
@@ -244,21 +324,75 @@
       color: #bbbdc9 !important;
       width: 70%;
       margin: 7% 0%; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines span {
+          font-size: 80px;
+          padding: 30px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines span {
+          font-size: 60px;
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines span {
+          font-size: 45px;
+          padding: 10px; } }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines span {
+          width: 100%;
+          display: block;
+          margin: 0%; } }
     #homePage .tag-lines button {
       z-index: 3;
       width: 30%;
       background-color: #bbbdc9;
       border-top: 4px solid #EE523F; }
-      #homePage .tag-lines button img {
-        width: 100%; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage .tag-lines button {
+          display: none; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage .tag-lines button {
+          display: none; } }
+      @media (max-width: 480px) {
+        #homePage .tag-lines button {
+          display: none; } }
   #homePage #gallery-cities {
     background-color: #3A2E3C;
     display: flex;
     position: relative;
     padding: 100px;
     height: auto; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #gallery-cities {
+        display: block;
+        width: 100%;
+        padding: 20px; } }
+    @media (max-width: 480px) {
+      #homePage #gallery-cities {
+        display: block;
+        width: 100%;
+        padding: 10px; } }
     #homePage #gallery-cities #RepYourCity {
       padding: 0% 5%; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #gallery-cities #RepYourCity {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 3%; } }
+      @media (max-width: 480px) {
+        #homePage #gallery-cities #RepYourCity {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 1%; } }
       #homePage #gallery-cities #RepYourCity h2 {
         font: bold 30px "Hi Melody";
         padding: 50px;
@@ -266,15 +400,36 @@
         color: #EE523F;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         color: #EE523F; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #homePage #gallery-cities #RepYourCity h2 {
+            font-size: 80px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #homePage #gallery-cities #RepYourCity h2 {
+            font-size: 60px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #homePage #gallery-cities #RepYourCity h2 {
+            font-size: 45px;
+            padding: 10px; } }
       #homePage #gallery-cities #RepYourCity h2::before {
         content: "Step #2: ";
         color: #bbbdc9;
         font-size: 50px; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #homePage #gallery-cities #RepYourCity h2::before {
+            font-size: 40px; } }
+        @media (max-width: 480px) {
+          #homePage #gallery-cities #RepYourCity h2::before {
+            font-size: 25px; } }
       #homePage #gallery-cities #RepYourCity span {
         font: 18px "Open Sans";
         text-align: center;
         color: #bbbdc9;
         padding: 5px; }
+        @media (max-width: 480px) {
+          #homePage #gallery-cities #RepYourCity span {
+            font-size: 16px; } }
       #homePage #gallery-cities #RepYourCity span::before {
         content: "Rep your City! ";
         font: bold 30px "Hi Melody";
@@ -282,12 +437,39 @@
     #homePage #gallery-cities .slider-wrapper {
       float: right;
       width: 50%; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage #gallery-cities .slider-wrapper {
+          display: block;
+          float: none; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #gallery-cities .slider-wrapper {
+          display: block;
+          float: none; } }
+      @media (max-width: 480px) {
+        #homePage #gallery-cities .slider-wrapper {
+          display: block;
+          float: none; } }
       #homePage #gallery-cities .slider-wrapper .rotatescroll {
         position: relative;
         height: 390px;
         width: 390px;
         padding: 40px;
         overflow: hidden; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #homePage #gallery-cities .slider-wrapper .rotatescroll {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%); } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #homePage #gallery-cities .slider-wrapper .rotatescroll {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%); } }
+        @media (max-width: 480px) {
+          #homePage #gallery-cities .slider-wrapper .rotatescroll {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%); } }
         #homePage #gallery-cities .slider-wrapper .rotatescroll .viewport {
           position: relative;
           margin: 0 auto;
@@ -443,6 +625,15 @@
     display: block;
     background-color: #bbbdc9;
     text-align: center; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #homePage #pickDesign {
+        padding: 60px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #pickDesign {
+        padding: 40px; } }
+    @media (max-width: 480px) {
+      #homePage #pickDesign {
+        padding: 20px; } }
     #homePage #pickDesign #designsExp {
       display: inline-flex;
       margin: 10%;
@@ -459,15 +650,36 @@
       color: #EE523F;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
       text-align: center; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage #pickDesign #designsText h2 {
+          font-size: 80px;
+          padding: 30px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #pickDesign #designsText h2 {
+          font-size: 60px;
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #homePage #pickDesign #designsText h2 {
+          font-size: 45px;
+          padding: 10px; } }
     #homePage #pickDesign #designsText h2::before {
       content: "Step #1: ";
       color: #3A2E3C;
       font-size: 50px; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #pickDesign #designsText h2::before {
+          font-size: 40px; } }
+      @media (max-width: 480px) {
+        #homePage #pickDesign #designsText h2::before {
+          font-size: 25px; } }
     #homePage #pickDesign #designsText span {
       color: #3A2E3C;
       padding: 5px;
       font: 18px "Open Sans";
       text-align: center; }
+      @media (max-width: 480px) {
+        #homePage #pickDesign #designsText span {
+          font-size: 16px; } }
     #homePage #pickDesign #designsText span::before {
       content: "Rep your City! ";
       font: bold 30px "Hi Melody";
@@ -480,6 +692,15 @@
     display: block;
     background-color: #bbbdc9;
     text-align: center; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #homePage #pickFabric {
+        padding: 60px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #pickFabric {
+        padding: 40px; } }
+    @media (max-width: 480px) {
+      #homePage #pickFabric {
+        padding: 20px; } }
     #homePage #pickFabric #fabricExp {
       display: inline-flex;
       margin: 10%;
@@ -487,9 +708,15 @@
       #homePage #pickFabric #fabricExp section {
         width: 33%; }
         #homePage #pickFabric #fabricExp section span {
-          text-align: left;
+          text-align: center;
           font: bold 30px "Hi Melody";
           display: block; }
+          @media (min-width: 481px) and (max-width: 767px) {
+            #homePage #pickFabric #fabricExp section span {
+              font-size: 20px; } }
+          @media (max-width: 480px) {
+            #homePage #pickFabric #fabricExp section span {
+              font-size: 15px; } }
         #homePage #pickFabric #fabricExp section img {
           width: 80%;
           border-radius: 100%; }
@@ -500,15 +727,36 @@
       color: #EE523F;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
       text-align: center; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #homePage #pickFabric #fabricText h2 {
+          font-size: 80px;
+          padding: 30px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #pickFabric #fabricText h2 {
+          font-size: 60px;
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #homePage #pickFabric #fabricText h2 {
+          font-size: 45px;
+          padding: 10px; } }
     #homePage #pickFabric #fabricText h2::before {
       content: "Step #3: ";
       color: #3A2E3C;
       font-size: 50px; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #pickFabric #fabricText h2::before {
+          font-size: 40px; } }
+      @media (max-width: 480px) {
+        #homePage #pickFabric #fabricText h2::before {
+          font-size: 25px; } }
     #homePage #pickFabric #fabricText span {
       color: #3A2E3C;
       padding: 5px;
       font: 18px "Open Sans";
       text-align: center; }
+      @media (max-width: 480px) {
+        #homePage #pickFabric #fabricText span {
+          font-size: 16px; } }
     #homePage #pickFabric #fabricText span::before {
       content: "Rep your City! ";
       font: bold 30px "Hi Melody";
@@ -516,6 +764,12 @@
   #homePage #designs {
     background-color: #3A2E3C;
     padding: 100px 0px; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #homePage #designs {
+        padding: 70px 10px; } }
+    @media (max-width: 480px) {
+      #homePage #designs {
+        padding: 50px 5px; } }
     #homePage #designs #portfolio {
       margin: 0% 5%;
       width: 90%;
@@ -541,10 +795,24 @@
           height: auto;
           margin: 1px;
           padding: 5px;
-          border: 4px double #bbbdc9; }
+          border: 3px double #bbbdc9; }
+          @media (min-width: 481px) and (max-width: 767px) {
+            #homePage #designs #portfolio .tile img {
+              padding: 3px;
+              border: 2px double #bbbdc9; } }
+          @media (max-width: 480px) {
+            #homePage #designs #portfolio .tile img {
+              padding: 1px;
+              border: 1px double #bbbdc9; } }
       #homePage #designs #portfolio #showMore {
         color: #f0faf7;
         font: bold 30px "Hi Melody"; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #homePage #designs #portfolio #showMore {
+            font-size: 25px; } }
+        @media (max-width: 480px) {
+          #homePage #designs #portfolio #showMore {
+            font-size: 20px; } }
       #homePage #designs #portfolio .scale-anm {
         transform: scale(1); }
       #homePage #designs #portfolio p {
@@ -576,6 +844,13 @@
       color: #EE523F;
       font: bold 30px "Hi Melody";
       background-color: rgba(0, 0, 0, 0); }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #homePage #designs .btn {
+          padding: 10px; } }
+      @media (max-width: 480px) {
+        #homePage #designs .btn {
+          padding: 5px;
+          font-size: 20px; } }
     #homePage #designs .btn:hover {
       text-decoration: none; }
     #homePage #designs .btn:focus {
@@ -597,14 +872,23 @@
     border-bottom: 2px solid #EE523F; }
     #homePage #tag-reg span {
       width: 30%; }
+      @media (max-width: 480px) {
+        #homePage #tag-reg span {
+          width: 1%; } }
       #homePage #tag-reg span img {
         width: 100%; }
+        @media (max-width: 480px) {
+          #homePage #tag-reg span img {
+            display: none; } }
     #homePage #tag-reg #registration-wrap {
       width: 60%;
       height: auto;
       padding: 20px;
       margin: auto;
       background-color: #bbbdc9; }
+      @media (max-width: 480px) {
+        #homePage #tag-reg #registration-wrap {
+          width: 100%; } }
       #homePage #tag-reg #registration-wrap #reg-tabs {
         display: flex;
         width: 100%;
@@ -680,47 +964,6 @@
           background-color: #bbbdc9;
           color: #EE523F; }
 
-nav {
-  background-color: #3A2E3C;
-  display: block;
-  z-index: 1;
-  height: 120px; }
-  nav .ent {
-    float: left; }
-    nav .ent img {
-      width: 20%; }
-  nav .dropdown {
-    float: right;
-    overflow: hidden; }
-    nav .dropdown .dropbtn {
-      font: bold 30px "Hi Melody";
-      border: none;
-      outline: none;
-      color: #f0faf7;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0; }
-    nav .dropdown .dropdown-content {
-      display: none;
-      box-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-      z-index: 1; }
-      nav .dropdown .dropdown-content a {
-        line-height: normal;
-        cursor: pointer;
-        text-decoration: none;
-        color: #EE523F;
-        font: bold 30px "Hi Melody";
-        text-align: center;
-        border: 1px solid #3A2E3C;
-        padding: 5px;
-        margin: 2.5px;
-        display: block;
-        background-color: #bbbdc9;
-        border-radius: 100%; }
-      nav .dropdown .dropdown-content a:hover {
-        background-color: #f0faf7; }
-
 #shop {
   background-color: #bbbdc9; }
   #shop h1 {
@@ -729,6 +972,18 @@ nav {
     font-size: 100px;
     color: #EE523F;
     text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5); }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #shop h1 {
+        font-size: 80px;
+        padding: 30px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #shop h1 {
+        font-size: 60px;
+        padding: 20px; } }
+    @media (max-width: 480px) {
+      #shop h1 {
+        font-size: 45px;
+        padding: 10px; } }
   #shop #collection-component-e17f8e09b08 {
     display: block; }
 
@@ -761,8 +1016,14 @@ nav {
         text-align: center;
         border: 1px solid #3A2E3C;
         padding: 5px;
-        margin: 2.5px; }
+        margin: 2.5px;
+        word-wrap: break-word;
+        border: none !important; }
+        @media (max-width: 480px) {
+          #footer nav ul li a {
+            font-size: 12px; } }
         #footer nav ul li a i {
+          font-size: 20px;
           padding: 0px 1px;
           color: #bbbdc9; }
       #footer nav ul li:hover {
@@ -771,5 +1032,8 @@ nav {
     width: 50%;
     display: inline-block;
     text-align: left; }
+    @media (max-width: 480px) {
+      #footer p {
+        font-size: 16px; } }
 
 /*# sourceMappingURL=styles.css.map */
