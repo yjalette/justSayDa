@@ -21,22 +21,6 @@ $(document).ready(function(){
     });
 
 
-
-////bottom nav
-//
-//    $('#link-login').on("click", function(){
-//
-//        $("#signIn-form").show().slideDown("fast");
-//        $("#signUp-form").hide();
-//    })
-//
-//    $('#link-signup').on("click", function(){
-//
-//        $("#signUp-form").show();
-//        $("#signIn-form").hide();
-//    })
-
-
 //bottom nav
 
     $("#log-tab").on("click", function(){
@@ -64,10 +48,6 @@ $(document).ready(function(){
     $(".dropbtn").on("mouseover",function(){
         $(".dropdown-content").toggle();
     })
-
-
-
-
 
 })
 

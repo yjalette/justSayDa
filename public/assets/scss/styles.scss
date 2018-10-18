@@ -627,7 +627,6 @@ $smDev-width: 320px;
             padding: 10px;
         }
         #RepYourCity {
-
             h2{
                 @include h;
                 padding: 0px !important;
@@ -643,7 +642,6 @@ $smDev-width: 320px;
                 @include smDev {
                     font-size: 25px;
                 }
-
             }
             span {
                 @include pickSpan;
@@ -655,10 +653,8 @@ $smDev-width: 320px;
                 content: "Rep your City! ";
                 font: $font-med;
                 color: $red;
-
             }
         }
-
         .slider-wrapper {
             display: flex;
             flex-direction: column;
@@ -692,11 +688,9 @@ $smDev-width: 320px;
                             position: relative;
                             padding: 15px;
                             margin: 40px 0;
-
                             img {
                                 width: 100%;
                             }
-
                         }
                     }
                 }
@@ -709,12 +703,10 @@ $smDev-width: 320px;
                     width: 390px;
                     background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
                 }
-
                 .overlay-interaction {
                     background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(255, 255, 255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
                     z-index: 0;
                 }
-
                 .rotatescroll .slideno\(1\),
                 .is-slide2-hovered {
                     transform: rotate(45deg);
@@ -744,7 +736,6 @@ $smDev-width: 320px;
                 .is-slide8-hovered {
                     transform: rotate(315deg);
                 }
-
                 .thumb {
                     touch-action: none;
                     -ms-touch-action: none;
@@ -760,7 +751,6 @@ $smDev-width: 320px;
                     border: 2px solid $red;
                     border-radius: 50%;
                 }
-
                 .dot {
                     left: inherit !important;
                     top: 0 !important;
@@ -768,16 +758,11 @@ $smDev-width: 320px;
                     text-align: center;
                     overflow: hidden;
                     position: absolute;
-                    /* top: 0; */
-
                     right: 0;
                     width: 50%;
                     height: 50%;
                     transform-origin: 0% 100%;
                 }
-
-
-
                 .dot:after {
                     content: '';
                     position: absolute;
@@ -785,30 +770,21 @@ $smDev-width: 320px;
                     left: 0;
                     border-left: 2px solid $red;
                     height: 42px;
-
                 }
-
                 .text {
                     padding-top: 20px;
                     color: $lightGray;
-
                 }
-
                 .flip.text {
                     padding-top: 30px;
                 }
-
                 .flip.text span {
                     top: 5px;
-
                 }
-
                 .active .flip.text span {
                     top: 18px !important;
                 }
-
                 .active h1 div.text {
-
                     color: $red;
                     padding: 20px;
                     height: 8px !important;
@@ -817,7 +793,6 @@ $smDev-width: 320px;
                     font-size: 20px !important;
                     font-weight: 300 !important;
                 }
-
                 .active h1 div.text:hover {
                     color: $white;
                     text-shadow: none;
@@ -1297,5 +1272,9 @@ $smDev-width: 320px;
             font-size: 16px;
         }
     }
+}
+
+#test {
+    display: none;
 }
 

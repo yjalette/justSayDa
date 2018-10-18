@@ -41,7 +41,7 @@
                      data-aos-duration="800"
                      data-aos-easing="ease-in-out"
                      >
-                <span>Modern Art Turned Into Street Clothes</span>
+                <span>Modern Art Turned Into Street Clothes {{message}}</span>
                 <img src="images/logo-purple-da.png">
             </section>
             <section id="introImages" data-aos="fade-in-up"
@@ -297,20 +297,22 @@
                             <span id="log-tab">login</span>
                         </div>
                         <form action="/users_create" method="POST" id="signUp-form">
-                            <input placeholder="username" name="create_name" id="create_name" />
-                            <input placeholder="email" name="create_email" id="create_email" />
-                            <input placeholder="password" name="create_password" id="create_password"/>
+                            <input placeholder="username" name="create_name" id="create_name" required />
+                            <input placeholder="email" name="create_email" id="create_email" required/>
+                            <input placeholder="password" name="create_password" id="create_password" required/>
                             <button type="submit">submit</button>
                         </form>
                         <form action="/users_login" method="POST" id="signIn-form">
-                            <input placeholder="email" name="login_email" />
-                            <input placeholder="password" name="login_password"/>
+                            <input placeholder="email" name="login_email" required/>
+                            <input placeholder="password" name="login_password" required/>
                             <span><input type="checkbox" name="remember">remember me</span>
                             <button type="submit">submit</button>
                         </form>
                     </section>
                 <span><img src="images/shop-now-red.png"></span>
             </section>
+        </main>
+            <a id="test" href="/shop-test">yyy</a>
             <section id="footer">
                 <p>&copy;JUSTSAY DA!!!!</p>
                 <nav>
@@ -324,14 +326,15 @@
                     </ul>
                 </nav>
             </section>
-        </main>
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="shop.js"></script>
         <script src="prints.js"></script>
         <script src="client.js"></script>
         <script src="introImages.js"></script>
         <script src="gallery.js"></script>
-
+        <srcipt src="../views/layouts/main.hbs"></srcipt>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({

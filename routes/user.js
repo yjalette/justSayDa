@@ -4,17 +4,39 @@ const router = express.Router();
 const app = express();
 const bcrypt = require('bcryptjs');
 const passport = require("passport");
+const session = require('express-session');
+const hbs = require('express-handlebars');
+const path = require('path');
 
+app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts'} ))
 
-app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'hbs')
 
+app.set('views', path.join(__dirname, 'views'));
 
+app.use(express.static('./public'))
 
+app.use(session({
+    secret: 'fyffjvhjvhj',
+    resave: false,
+    saveUninitialized: false,
+    //    cookie: { secure: true }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get("/", (req, res) => {
+    res.render('partials/home', {
+        message: "about meow"
+    }
+              )
+
+})
 
     router.post('/users_create', (req, res) =>{
         console.log("trying to create a new user");
-        const name = req.body.create_name;
         const email = req.body.create_email;
+        const name = req.body.create_name;
 //        const password = req.body.create_password;
 
         bcrypt.genSalt(10, function(err, salt) {
@@ -26,40 +48,36 @@ app.use(express.static(__dirname + '/public'));
                         res.sendStatus(500)
                         return
                     }
-                    getConnection().query('SELECT LAST_INSERT_ID() as user_id', function(err, results, fields){
+                    const userId = req.params.id;
+                    const queryString = "SELECT * FROM users WHERE id = ?";
+
+                    getConnection().query( queryString, [userId], (err, results, fields) => {
                         if (err) {
-                            console.log("failed!" + err)
+                            console.log("failed a new user" + err)
                             res.sendStatus(500)
                             return
                         }
 
-                        const user_id = results[0];
-                        console.log(req.login(results[0]));
-//
-                        req.login(user_id, function (err){
-                            if (err) {
-                                console.log(err);
-                            }
-                            return res.redirect('/shop.html');
+                        console.log(userId);
+
+                        req.login(userId, function(err) {
+                            res.redirect('/');
                         });
-//
 
-//                        console.log("added a new user with id:", results.insertId);
                     });
-
                 });
             });
         });
 });
 
-passport.serializeUser(function(user_id, done) {
-    done(null, user_id);
+
+passport.serializeUser(function(userId, done) {
+    done(null, userId);
 });
 
-passport.deserializeUser(function(user_id, done) {
-    done(null, user_id);
+passport.deserializeUser(function(userId, done) {
+    done(err, userId);
 });
-
 
 router.post('/users_login', (req, res) =>{
     console.log("trying to login");
@@ -69,7 +87,7 @@ router.post('/users_login', (req, res) =>{
     const password = req.body.login_password;
 
     const queryString = "SELECT * FROM users WHERE email = ?"
-    getConnection().query(queryString, [email], (err, results, fields) => {
+    getConnection().query(queryString, [email], (err, results, fields, user) => {
         if (err) {
             console.log("failed a new user" + err)
             res.sendStatus(400)
@@ -77,7 +95,8 @@ router.post('/users_login', (req, res) =>{
         } else {
             if (results.length > 0) {
                 if ( results[0].password == password) {
-                    res.redirect('/shop.html');
+                    res.redirect("shop.html")
+
                 } else {
                     res.send({
                         "code": 204,
@@ -93,13 +112,18 @@ router.post('/users_login', (req, res) =>{
 
         }
 
-    });
+        req.session.user = user;
+        return res.status(200).send();
 
-})
+        });
+    })
 
-router.get('/messages', (req, res) => {
-    console.log("meow mes-s")
-    res.end()
+
+router.get('/shop', (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).send();
+    }
+    return res.status(200).send("meooow")
 })
 
 router.get("/users", (req, res) => {
@@ -115,36 +139,39 @@ router.get("/users", (req, res) => {
     })
 })
 
-//router.get('/users/:id', (req, res) => {
-//    console.log("Fetching user with id: " + req.params.id);
-//
-//    const connection = getConnection();
-//
-//
-//    const userId = req.params.id;
-//    const queryString = "SELECT * FROM users WHERE id = ?";
-//
-//    connection.query( queryString, [userId], (err, rows, fields) => {
-//        if (err) {
-//            console.log("Failed for users" + err)
-//            res.sendsStatus(500)
-//            return
-//        }
-//        console.log("here are the users")
-//
-//        const users = rows.map((row)=>{
-//            return {name: row.name, email: row.email, password: row.password}
-//        })
-//
-//
-//        res.json(users)
-//    })
-//})
+router.get('/users/:id', (req, res) => {
+    console.log("Fetching user with id: " + req.params.id);
+
+    const connection = getConnection();
+
+
+    const userId = req.params.id;
+    const queryString = "SELECT * FROM users WHERE id = ?";
+
+    connection.query( queryString, [userId], (err, rows, fields) => {
+        if (err) {
+            console.log("Failed for users" + err)
+            res.sendsStatus(500)
+            return
+        }
+        console.log("here are the users")
+
+        const users = rows.map((row)=>{
+            return {name: row.name, email: row.email}
+        })
+
+
+
+
+        res.json(users)
+    })
+})
 
 router.get('/logout', function(req, res){
-    console.log('logging out');
     req.logout();
+    req.session.destroy();
     res.redirect('/');
+
 });
 
 const pool = mysql.createPool({

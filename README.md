@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/yjalette/justSayDa/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# DA Clothing
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Screenshots
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Initial UX
+User Stories
+* AS A VISITOR, NOT LOGGED IN
 
-# Header 1
-## Header 2
-### Header 3
+* As an initial visitor to the page, I want to land on the web page and see what the page is about so I can understand what the app is and does and decide whether or not to create an account to be able to use the app.
+* As a visitor, I want to create a new account so that I can place an order.
+(LANDING PAGE--wireframe will have title, logo, a few details about logging in and what the app is about)
+![UI Flow handwritten draft](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/index-screenshot.JPEG)
 
-- Bulleted
-- List
+* AS A LOGGED-IN USER
+* As a user, I want to view products.
+![UI Flow handwritten draft](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/signin.png)
+* As a user, I want to view detailts about chosen product.
+![UI Flow handwritten draft](https://github.com/yjalette/shopping-planner-node-capstone/blob/master/readme-images/signin.png)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Working Prototype
+Find a working prototype with at https://boiling-fjord-67437.herokuapp.com/ .
 
-[Link](url) and ![Image](src)
-```
+## Technical
+Link It was built as two separate parts.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Front End
 
-### Jekyll Themes
+* HTML5
+* CSS3(SASS)
+* JavaScript
+* jQuery
+* Handlebars
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yjalette/justSayDa/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Back End
 
-### Support or Contact
+* Node.js
+* Express.js
+* MySql
+* Shopify button
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Responsive
+* The app is responsive and optimized for both desktop and mobile viewing and use.
+
+### Security
+* User passwords are encrypted using bcrypt.js
+
+
+## API Documentation
+API endpoints for the back end include:
+* POST to '/users/create' for creating a new user
+* POST to '/signin' to sign in an existing user
+* POST to '/new/create' to add an order to a user's list of accomplishments
+* PUT to '/achievement/:id' to update an existing order
+* GET to '/achievements/:user' to access all of a user's existing order
+* GET to '/achievement/:id' to access a single order by ID
+* DELETE to '/achievement/:id' to delete a single order by ID
