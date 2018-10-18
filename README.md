@@ -54,7 +54,7 @@ API endpoints for the back end include:
 * POST to '/users/create' for creating a new user
 * POST to '/signin' to sign in an existing user
 * POST to '/new/create' to add an order to a user's list of accomplishments
-* PUT to '/achievement/:id' to update an existing order
-* GET to '/achievements/:user' to access all of a user's existing order
-* GET to '/achievement/:id' to access a single order by ID
-* DELETE to '/achievement/:id' to delete a single order by ID
+* PUT to '/order/:id' to update an existing order
+* GET to '/user/:user' to access all of a user's existing order
+* GET to '/product/:id' to access a single order by ID
+* DELETE to '/delete/:id' to delete a single order by ID
