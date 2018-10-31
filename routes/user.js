@@ -8,30 +8,8 @@ const session = require('express-session');
 const hbs = require('express-handlebars');
 const path = require('path');
 
-app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts'} ))
 
-app.set('view engine', 'hbs')
 
-app.set('views', path.join(__dirname, 'views'));
-
-app.use(express.static('./public'))
-
-app.use(session({
-    secret: 'fyffjvhjvhj',
-    resave: false,
-    saveUninitialized: false,
-    //    cookie: { secure: true }
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.get("/", (req, res) => {
-    res.render('partials/home', {
-        message: "about meow"
-    }
-              )
-
-})
 
     router.post('/users_create', (req, res) =>{
         console.log("trying to create a new user");
@@ -61,7 +39,9 @@ app.get("/", (req, res) => {
                         console.log(userId);
 
                         req.login(userId, function(err) {
-                            res.redirect('/');
+                            res.render('partials/home', {
+                                username: "Hello " + name.toUpperCase()
+                            });
                         });
 
                     });
@@ -79,7 +59,7 @@ passport.deserializeUser(function(userId, done) {
     done(err, userId);
 });
 
-router.post('/users_login', (req, res) =>{
+router.post('/shop', (req, res) =>{
     console.log("trying to login");
     console.log("email: " + req.body.login_email);
 
@@ -95,7 +75,10 @@ router.post('/users_login', (req, res) =>{
         } else {
             if (results.length > 0) {
                 if ( results[0].password == password) {
-                    res.redirect("shop.html")
+                    return res.render('partials/shop', {
+                        username: email,
+                        title: "shop"
+                    });
 
                 } else {
                     res.send({
@@ -119,12 +102,12 @@ router.post('/users_login', (req, res) =>{
     })
 
 
-router.get('/shop', (req, res) => {
-    if (!req.session.user) {
-        return res.status(401).send();
-    }
-    return res.status(200).send("meooow")
-})
+//router.get('/shop', (req, res) => {
+//    if (!req.session.user) {
+//        return res.status(401).send();
+//    }
+//    return res.status(200).send("meooow")
+//})
 
 router.get("/users", (req, res) => {
     const connection = getConnection()
@@ -171,7 +154,6 @@ router.get('/logout', function(req, res){
     req.logout();
     req.session.destroy();
     res.redirect('/');
-
 });
 
 const pool = mysql.createPool({

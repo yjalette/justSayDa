@@ -25,7 +25,7 @@ User Stories
 Find a working prototype with at https://boiling-fjord-67437.herokuapp.com/ .
 
 ## Technical
-Link It was built as two separate parts.
+DA was built as two separate parts.
 
 ### Front End
 
@@ -47,7 +47,6 @@ Link It was built as two separate parts.
 
 ### Security
 * User passwords are encrypted using bcrypt.js
-
 
 ## API Documentation
 API endpoints for the back end include:

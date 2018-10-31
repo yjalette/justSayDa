@@ -1,22 +1,23 @@
 <section id="tag-reg" >
-<span><img src="images/logo-purple-da.png"></span>
-<section id="registration-wrap">
-<div id="reg-tabs">
-<span id="reg-tab" class="active">register</span>
-<span id="log-tab">login</span>
-</div>
-<form action="/users_create" method="POST" id="signUp-form">
-<input placeholder="username" name="create_name" id="create_name" required />
-<input placeholder="email" name="create_email" id="create_email" required/>
-<input placeholder="password" name="create_password" id="create_password" required/>
-<button type="submit">submit</button>
-</form>
-<form action="/users_login" method="POST" id="signIn-form">
-<input placeholder="email" name="login_email" required/>
-<input placeholder="password" name="login_password" required/>
-<span><input type="checkbox" name="remember">remember me</span>
-<button type="submit">submit</button>
-</form>
+    <span><img src="images/logo-purple-da.png"></span>
+        <section id="registration-wrap">
+            <div id="reg-tabs">
+            <span id="reg-tab" class="active">register</span>
+            <span id="log-tab">login</span>
+            </div>
+            <form action="/users_create" method="POST" id="signUp-form">
+                <input placeholder="username" name="create_name" id="create_name" required />
+                <input placeholder="email" name="create_email" id="create_email" required/>
+                <input placeholder="password" name="create_password" id="create_password" required/>
+                <button type="submit">submit</button>
+            </form>
+            <form action="/shop" method="POST" id="signIn-form">
+                <input placeholder="email" name="login_email" required/>
+                <input placeholder="password" name="login_password" required/>
+                <span><input type="checkbox" name="remember">remember me</span>
+                <button type="submit">submit</button>
+            </form>
+        </section>
+    <span><img src="images/shop-now-red.png"></span>
 </section>
-<span><img src="images/shop-now-red.png"></span>
-</section>
+

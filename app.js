@@ -35,10 +35,9 @@ app.use(router)
 
 app.get("/", (req, res) => {
     res.render('partials/home', {
-        message: "about meow"
-    }
-              )
-
+        username: "menu",
+        title: "homepage"
+    })
 })
 
 const PORT = process.env.PORT || 4000;
