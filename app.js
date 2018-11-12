@@ -34,9 +34,12 @@ const router = require('./routes/user.js')
 app.use(router)
 
 app.get("/", (req, res) => {
-    res.render('partials/home', {
+    res.render('home', {
         username: "menu",
-        title: "homepage"
+        title: "homepage",
+        nav: "shop",
+        navLink: "#",
+        navId: "top-login"
     })
 })
 

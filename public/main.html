@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="theme-color" content="#000000">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
         <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/2.5.0/polaris.min.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
@@ -14,7 +12,7 @@
     </head>
     <body>
         <main id="homePage">
-         <section class="container-video">
+            <section class="container-video">
                 <nav>
                     <div class="ent">
                         <img src="images/logo-orange-da.png">
@@ -24,26 +22,28 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content">
+                            <!--                            <a href="#" id="top-login">shop</a>-->
+                            <a href="#">about</a>
                             <a href="#" id="top-login">shop</a>
                             <a href="#">contacts</a>
                         </div>
                     </div>
                 </nav>
+                <section id="bold"
+                         data-aos="fade-in-up"
+                         data-aos-duration="800"
+                         data-aos-easing="ease-in-out"
+                         >
+                    <span>Modern Art Turned Into Street Clothes</span>
+                </section>
                 <div id="begin">
                     <a href="#" class="arrow down"></a>
                 </div>
                 <div class="video-foreground">
                     <iframe id="myVideo" src="https://www.youtube.com/embed/nk3iTiSmG68?controls=0&showinfo=0&playlist=nk3iTiSmG68&autoplay=1&start=12&showinfo=0&amp&loop=1&controls=0&amp&mute=1&autohide=1"></iframe>
-              </div>
+                </div>
             </section>
-            <section id="bold" class="tag-lines"
-                     data-aos="fade-in-up"
-                     data-aos-duration="800"
-                     data-aos-easing="ease-in-out"
-                     >
-                <span>Modern Art Turned Into Street Clothes {{message}}</span>
-                <img src="images/logo-purple-da.png">
-            </section>
+
             <section id="introImages" data-aos="fade-in-up"
                      data-aos-duration="800"
                      data-aos-easing="ease-in-out"
@@ -84,14 +84,14 @@
                     <div class="middle">
                         <img src="./images/denimNycBackF.jpg" />
                     </div>
-                    <div class="left title">
+                    <div class="right title">
                         <div class="content">
                             <h2>Our Designs</h2>
                             <p>Each item in our collection represents a piece of wearable art.
                                 The designs are all prints based on hand painted portraits created by an artist.</p>
                         </div>
                     </div>
-                    <div class="right tiles">
+                    <div class="left tiles">
                         <img src="./images/denimNycFrontF.jpg" />
                         <img src="./images/denimNycBackF.jpg" />
                     </div>
@@ -112,103 +112,99 @@
                     </div>
                 </div>
             </section>
-            <section class="tag-lines" id="howWorks" data-aos="fade-in-up"
+
+            <section id="howWorks" class="tag-lines" data-aos="fade-in-up"
                      data-aos-duration="800"
                      data-aos-easing="ease-in-out"
                      data-aos-once="false">
                 <span>How does it work?</span>
-                <img src="images/logo-purple-da.png" id="work-button">
             </section>
+
             <section id="pickDesign" class="pick" data-aos="fade-in-up"
                      data-aos-duration="800"
                      data-aos-easing="ease-in-out"
                      data-aos-once="false">
                 <section id="designsText" data-aos="fade-right" data-aos-once="false">
-                    <h2><br>Pick Your Design!</h2>
+                    <h2>Design!</h2>
                     <span>DA! is not just streetwear. It's our cities collection.
                         Each item in our collection represents a city and a piece of wearable art.
                         The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
                     </span>
                 </section>
                 <section id="designsExp">
-                    <section>jacket<img src="images/jacket-small.png"></section>
-                    <section>hoodie<img src="images/hoodie-clear.png"></section>
-                    <section>scarf<img src="images/gray-baseball.png"></section>
+                    <input type="checkbox" for="jacket" checked>
+                    <label value="jacket">jacket<img src="images/jacket-small.png"></label>
+                    <!--                    <section>hoodie<img src="images/hoodie-clear.png"></section>-->
+                    <!--                    <section>scarf<img src="images/gray-baseball.png"></section>-->
                 </section>
             </section>
             <!--Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings-->
             <section id="gallery-cities" class="pick" data-aos="fade-left" data-aos-once="false">
                 <div id="RepYourCity">
-                    <h2><br>Pick Your Print!</h2>
+                    <h2>Print!</h2>
                     <span><strong>DA!</strong> is not just streetwear. It's our cities collection.
                         Each item in our collection represents a city and a piece of wearable art.
                         The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
                     </span>
                 </div>
-                <div class="slider-wrapper">
-                    <div class="rotatescroll" id="rotatescroll">
-                        <div class="viewport">
-                            <ul class="overview">
-                                <li>
-                                    <img src="./images/newYork-mir.png" alt="newYork" />
-                                </li>
-                                <li>
-                                    <img src="./images/amsterdam-mir.png" alt="amsterdam" />
-                                </li>
-                                <li>
-                                    <img src="./images/paris-mir.png" alt="paris" />
-                                </li>
-                                <li>
-                                    <img src="./images/tokyo-mir.png" alt="tokyo" />
-                                </li>
-                                <li>
-                                    <img src="./images/vancouver-mir.png" alt="vancouver" />
-                                </li>
-                                <li>
-                                    <img src="./images/moscow-mir.png" alt="moscow" />
-                                </li>
-                                <li>
-                                    <img src="./images/seoul-mir.png" alt="seoul" />
-                                </li>
-                                <li>
-                                    <img src="./images/london-mir.png" alt="london" />
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="dot"></div>
-                        <div class="overlay overlay-interaction" id="overlayInteraction"></div>
-                        <div class="overlay overlay-static"></div>
-                        <div class="overlay overlay-active" id="overlayActive"></div>
-                        <div class="thumb"></div>
-                    </div>
+                <div class="print-gal">
+                    <select>
+                        <img src="images/newYork-mir.png">
+                        <img src="images/amsterdam-mir.png">
+                        <img src="images/vancouver-mir.png">
+                        <img src="images/moscow-mir.png">
+                        <img src="images/seoul-mir.png">
+                        <img src="images/london-mir.png">
+                        <img src="images/paris-mir.png">
+                        <img src="images/stockholm-mir.png">
+                        <img src="images/almaty-mir.png">
+                        <img src="images/tokyo-mir.png">
+                        <img src="images/rome-mir.png">
+                        <img src="images/dubai-mir.png">
+                    </select>
                 </div>
+
             </section>
+
             <section id="pickFabric" class="pick" data-aos="fade-right" data-aos-once="false">
                 <section id="fabricText">
-                    <h2><br>Pick Your Fabric!</h2>
+                    <h2>Fabric!</h2>
                     <span>It's not just streetwear. It's our cities collection.
                         Each item in our collection represents a city and a piece of wearable art.
                         The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
                     </span>
                 </section>
                 <section id="fabricExp">
-                    <section><span>silk</span><img src="images/silk.jpg"></section>
-                    <section><span>denim</span><img src="images/denim.jpg"></section>
-                    <section><span>leather</span><img src="images/leather.jpg"></section>
+
+                    <input type="checkbox" for="silk" >
+                    <label value="silk">silk<img src="images/silk.jpg"></label>
+
+                    <input type="checkbox" for="denim" >
+                    <label value="denim">denim<img src="images/denim.jpg"></label>
+
+                    <input type="checkbox" for="leather" >
+                    <label value="leather">leather<img src="images/leather.jpg"></label>
+
                 </section>
             </section>
+
+            <section id="myShop"><div id='product-component-f782a413a8b'></div>
+
+            </section>
+
 
             <section id="designs" data-aos="fade-in-up"
                      data-aos-duration="800"
                      data-aos-easing="ease-in-out"
                      data-aos-once="false">
+                <h1>Previous Work</h1>
                 <div class="toolbar mb2 mt2">
                     <button class="btn fil-cat" data-rel="leather">Leather</button>
                     <button class="btn fil-cat" data-rel="silk">Silk</button>
                     <button class="btn fil-cat" data-rel="denim">Denim</button>
                     <button class="btn fil-cat"  data-rel="all">All</button>
                 </div>
-               <div id="portfolio">
+                <div id="portfolio">
                     <div class="tile scale-anm leather">
                         <img src="./images/hoodieNycSide.jpg" alt="" />
                     </div>
@@ -269,72 +265,51 @@
                     <div class="tile scale-anm all">
                         <img src="./images/wool-tokyo-front-m.jpg" alt="" />
                     </div>
-                   <div class="tile scale-anm all snd">
-                       <img src="./images/silk-almati-front-f.jpg" alt="" />
+                    <div class="tile scale-anm all snd">
+                        <img src="./images/silk-almati-front-f.jpg" alt="" />
                     </div>
-                   <div class="tile scale-anm all snd">
+                    <div class="tile scale-anm all snd">
                         <img src="./images/longSleeveNycBack.jpg" alt="" />
                     </div>
-                   <div class="tile scale-anm all snd">
-                       <img src="./images/hoodieLondonFront.jpg" alt="" />
+                    <div class="tile scale-anm all snd">
+                        <img src="./images/hoodieLondonFront.jpg" alt="" />
                     </div>
-                   <div class="tile scale-anm all snd">
+                    <div class="tile scale-anm all snd">
                         <img src="./images/scarfSilkNyc.jpg" alt="" />
                     </div>
                     <div class="tile scale-anm all snd">
                         <img src="./images/coatLondonSide.jpg" alt="" />
                     </div>
-                   <span id="showMore">show more..</span>
+                    <span id="showMore">show more..</span>
                 </div>
                 <div style="clear:both;"></div>
             </section>
 
-            <section id="tag-reg" >
-                <span><img src="images/logo-purple-da.png"></span>
-                    <section id="registration-wrap">
-                        <div id="reg-tabs">
-                            <span id="reg-tab" class="active">register</span>
-                            <span id="log-tab">login</span>
-                        </div>
-                        <form action="/users_create" method="POST" id="signUp-form">
-                            <input placeholder="username" name="create_name" id="create_name" required />
-                            <input placeholder="email" name="create_email" id="create_email" required/>
-                            <input placeholder="password" name="create_password" id="create_password" required/>
-                            <button type="submit">submit</button>
-                        </form>
-                        <form action="/users_login" method="POST" id="signIn-form">
-                            <input placeholder="email" name="login_email" required/>
-                            <input placeholder="password" name="login_password" required/>
-                            <span><input type="checkbox" name="remember">remember me</span>
-                            <button type="submit">submit</button>
-                        </form>
-                    </section>
-                <span><img src="images/shop-now-red.png"></span>
-            </section>
-        </main>
-            <a id="test" href="/shop-test">yyy</a>
-            <section id="footer">
-                <p>&copy;JUSTSAY DA-!</p>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="https://www.instagram.com/da.clothing/"><i class="fa fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="mailto:yekaterinadoros@gmail.com?Subject=Hello%20again" target="_top"><i class="fa fa-envelope-open-o"></i></a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+            <section class="tag-lines"><span>Question?</span></section>
 
+        </main>
+
+        <section id="footer">
+            <p>&copy;JUSTSAY DA</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/da.clothing/"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:yekaterinadoros@gmail.com?Subject=Hello%20again" target="_top"><i class="fa fa-envelope-open-o"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <srcipt src="../views/layouts/main.hbs"></srcipt>
         <script src="shop.js"></script>
         <script src="prints.js"></script>
         <script src="client.js"></script>
         <script src="introImages.js"></script>
         <script src="gallery.js"></script>
-        <srcipt src="../views/layouts/main.hbs"></srcipt>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
@@ -348,3 +323,45 @@
 <!--<span>We design bold clothing for those who go against the grain to express themselves while we leave behind
 the rule-bound world of age, race, and gender codes.
 </span>-->
+
+
+
+
+<!--
+<div class="slider-wrapper">
+<div class="rotatescroll" id="rotatescroll">
+<div class="viewport">
+<ul class="overview">
+<li>
+<img src="./images/newYork-mir.png" alt="newYork" />
+</li>
+<li>
+<img src="./images/amsterdam-mir.png" alt="amsterdam" />
+</li>
+<li>
+<img src="./images/paris-mir.png" alt="paris" />
+</li>
+<li>
+<img src="./images/tokyo-mir.png" alt="tokyo" />
+</li>
+<li>
+<img src="./images/vancouver-mir.png" alt="vancouver" />
+</li>
+<li>
+<img src="./images/moscow-mir.png" alt="moscow" />
+</li>
+<li>
+<img src="./images/seoul-mir.png" alt="seoul" />
+</li>
+<li>
+<img src="./images/london-mir.png" alt="london" />
+</li>
+</ul>
+</div>
+<div class="dot"></div>
+<div class="overlay overlay-interaction" id="overlayInteraction"></div>
+<div class="overlay overlay-static"></div>
+<div class="overlay overlay-active" id="overlayActive"></div>
+<div class="thumb"></div>
+</div>
+</div>-->

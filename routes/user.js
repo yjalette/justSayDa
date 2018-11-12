@@ -11,7 +11,7 @@ const path = require('path');
 
 
 
-    router.post('/users_create', (req, res) =>{
+router.post('/registration', (req, res) =>{
         console.log("trying to create a new user");
         const email = req.body.create_email;
         const name = req.body.create_name;
@@ -39,8 +39,9 @@ const path = require('path');
                         console.log(userId);
 
                         req.login(userId, function(err) {
-                            res.render('partials/home', {
-                                username: "Hello " + name.toUpperCase()
+                            res.render('registration', {
+                                username: "Hi " + name.toUpperCase() + "! ",
+                                registrationMessage: "Your account has been activated successfully. You can now login."
                             });
                         });
 
@@ -59,6 +60,7 @@ passport.deserializeUser(function(userId, done) {
     done(err, userId);
 });
 
+
 router.post('/shop', (req, res) =>{
     console.log("trying to login");
     console.log("email: " + req.body.login_email);
@@ -75,9 +77,13 @@ router.post('/shop', (req, res) =>{
         } else {
             if (results.length > 0) {
                 if ( results[0].password == password) {
-                    return res.render('partials/shop', {
+                    return res.render('shop', {
                         username: email,
-                        title: "shop"
+                        title: "shop",
+                        nav: "log out",
+                        navLink: "/logout",
+                        registrationMessage: "Welcome "
+
                     });
 
                 } else {
@@ -99,7 +105,7 @@ router.post('/shop', (req, res) =>{
         return res.status(200).send();
 
         });
-    })
+})
 
 
 //router.get('/shop', (req, res) => {
@@ -108,6 +114,18 @@ router.post('/shop', (req, res) =>{
 //    }
 //    return res.status(200).send("meooow")
 //})
+router.get('/registration', (req, res) => {
+    return res.render('registration', {
+        title: "registration",
+        registrationMessage: "to continue please create an account or log in now"
+    });
+})
+
+router.get('/about', (req, res) => {
+    return res.render('about', {
+        title: "about"
+    });
+})
 
 router.get("/users", (req, res) => {
     const connection = getConnection()
