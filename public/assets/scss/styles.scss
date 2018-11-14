@@ -13,6 +13,13 @@
     -webkit-padding-start: 0px;
     -webkit-padding-end: 0px;
 }
+
+
+//font-family: 'Architects Daughter', cursive;
+//font-family: 'Rock Salt', cursive;
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Allerta Stencil', sans-serif;
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 @import url('https://fonts.googleapis.com/css?family=Hi+Melody');
@@ -25,17 +32,18 @@ $lg: 992px;
 $white: #f0faf7;
 $red: #EE523F;
 $gray: #CAD2C5;
-//$darkGray: #3A2E3C;
+$purple: #3A2E3C;
 $darkGray: black;
 $lightGray: #bbbdc9;
 
 $shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
 
 //fonts
-$font-graf: bold 60px 'Sedgwick Ave Display';
-$font-main: bold 70px 'Open Sans';
-$font-med: bold 30px 'Hi Melody';
-$font-small: 16px 'Open Sans';
+$font-graf: bold 60px 'Rock Salt', cursive;
+$font-main: bold 40px 'Rock Salt', cursive;
+$font-med: bold 25px 'Architects Daughter', cursive;
+$font-small: 20px 'Open Sans', sans-serif;
+
 
 
 
@@ -77,7 +85,6 @@ $smDev-width: 320px;
     height:0;
     opacity:0.4;
     text-indent:-9999px;
-    transform-origin: 50% 50%;
     width:0;
 }
 
@@ -86,11 +93,8 @@ $smDev-width: 320px;
 @mixin pick {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: relative;
-    background-color: $lightGray;
+    padding: 10px 150px;
     text-align: center;
     @include tablet {
         padding: 60px;
@@ -103,9 +107,13 @@ $smDev-width: 320px;
     }
 }
 
-@mixin exp {
-    width: 100%;
+@mixin steps-image {
+  padding: 100px;
 
+}
+
+@mixin exp {
+    width: 50%;
 }
 
 @mixin pickSpan {
@@ -135,11 +143,6 @@ $smDev-width: 320px;
     }
 }
 
-@mixin p {
-    font: $font-small;
-    text-align: center;
-}
-
 @mixin a {
     line-height: normal;
     cursor: pointer;
@@ -148,8 +151,7 @@ $smDev-width: 320px;
     font: $font-med;
     text-align: center;
     border: 1px solid $darkGray;
-    padding: 5px;
-    margin: 2.5px;
+    padding: 1px;
     word-wrap: break-word;
     @include smDev {
         font-size: 12px;
@@ -170,7 +172,7 @@ $smDev-width: 320px;
 
 @mixin flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -291,46 +293,53 @@ $smDev-width: 320px;
             }
         }
 
-        #bold {
-            z-index: 1;
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            text-align: center;
-            span{
-                font: $font-med;
-                color: $red;
+     #bold {
+         @include flex;
+         flex-direction: row!important;
+         z-index: 1;
+         position: absolute;
+         width: 100%;
+         top: 50%;
+                span{
+                    font: $font-main;
+                    color: $white;
+                }
+
+            #begin {
+                transform: rotate(-90deg);
+                @include tablet {
+                    top: 25%;
+                }
+                @include phone {
+                    top: 20%;
+                }
+                @include smDev {
+                    top: 15%;
+                }
+                    .arrow {
+                        @include arrow;
+                    }
+                    .down {
+                        animation: downarrow 0.6s infinite alternate ease-in-out;
+                        -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+                        border-top: 30px solid $red;
+                    }
             }
         }
-        #begin {
-            z-index: 2;
-            position: absolute;
-            width: 100%;
-            top: 80%;
-            @include tablet {
-                top: 25%;
-            }
-            @include phone {
-                top: 20%;
-            }
-            @include smDev {
-                top: 15%;
-            }
-            .arrow {
-                @include arrow;
-            }
-            .down {
-                margin-left: 50%;
-                -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-                border-top: 30px solid $red;
-            }
-         }
+
+
+
     }
 
     @-webkit-keyframes downarrow {
         0% { -webkit-transform: translateY(0); opacity: 0.8 }
         100% { -webkit-transform: translateY(7px); opacity: 1 }
-    }
+}
+
+    @keyframes downarrow {
+    0% { transform: translateY(0); opacity: 0.8 }
+    100% {transform: translateY(7px); opacity: 1 }
+}
 
 
 
@@ -341,7 +350,8 @@ $smDev-width: 320px;
 #aboutUs {
     @include flex;
     flex-direction: row!important;
-    background-color: $darkGray;
+    position: relative;
+    background-color: $purple;
     padding: 100px;
     p {
         color: $lightGray;
@@ -483,9 +493,6 @@ $smDev-width: 320px;
             padding: 20px;
             height: 8px !important;
             text-shadow: 0 0 0.3px $lightGray,0.7px 0.3px 0.3px hsla(160, 6%, 20%,.5);
-            font: $font-med;
-            font-size: 20px !important;
-            font-weight: 300 !important;
         }
         .active h1 div.text:hover {
             color: $white;
@@ -561,8 +568,9 @@ $smDev-width: 320px;
 
 
 #designs {
-    background-color: $lightGray;
-    padding: 100px 0px;
+    position: relative;
+    background-color: $darkGray;
+    padding: 100px;
     @include phone {
         padding: 70px 10px;
     }
@@ -692,8 +700,7 @@ $smDev-width: 320px;
 #shop-slider{
     width: 100%;
     position: relative;
-    background-color: $darkGray;
-    padding: 50px 0px;
+    background-color: $purple;
     .section {
         height: auto;
         .left, .middle, .right {
@@ -749,7 +756,7 @@ $smDev-width: 320px;
         }
         .right {
             h2 {
-                color: $darkGray;
+                color: $red;
             }
         }
         .left {
@@ -763,10 +770,6 @@ $smDev-width: 320px;
                 @include flex;
                 background-color: $lightGray;
                 color: $darkGray;
-                border-width: thick;
-                border-style: solid;
-                border-color: $red;
-                border-right-width: 0px;
                 @media (max-width: $sm) {
                     left: 0%;
                 }
@@ -778,11 +781,8 @@ $smDev-width: 320px;
 
             .right {
                 @include flex;
-                background-color: $red;
-                color: $darkGray;
-                border-width: thick;
-                border-style: solid;
-                border-color: $lightGray;
+                background-color: $darkGray;
+                color: $lightGray;
                 border-left-width: 0px;
                 @media (max-width: $sm) {
                     left: 99%;
@@ -879,55 +879,9 @@ $smDev-width: 320px;
 
 
 #steps-form {
-
-   #pickDesign {
-        @include pick;
-        #designsExp{
-            @include exp;
-            @include flex;
-            select {
-                margin: 10px;
-                background-color: $lightGray;
-                font: $font-med;
-                color: $red;
-            }
-            img {
-                width: 50%;
-            }
-        }
-        #designsText{
-            h2{
-                @include h;
-                text-align: center;
-            }
-            h2::before{
-                content: "Step #1: ";
-                color: $darkGray;
-                font-size: 50px;
-                @include phone {
-                    font-size: 40px;
-                }
-                @include smDev {
-                    font-size: 25px;
-                }
-
-            }
-            span {
-                @include pickSpan;
-                @include p;
-            }
-            span::before{
-                content: "Rep your City! ";
-                font: $font-med;
-                color: $red;
-
-            }
-        }
-    }
-
-
+background-color: $lightGray;
     #gallery-cities{
-        background-color: $darkGray !important;
+        @include flex;
         @include pick;
         @include tablet {
             width: 100%;
@@ -949,6 +903,73 @@ $smDev-width: 320px;
                 text-align: center;
             }
             h2::before{
+                content: "Step #1: ";
+                color: $purple;;
+                font-size: 50px;
+                @include phone {
+                    font-size: 40px;
+                }
+                @include smDev {
+                    font-size: 25px;
+                }
+
+            }
+            span {
+                @include pickSpan;
+                padding: 0px !important;
+                color: $purple;
+            }
+            span::before{
+                content: "Rep your City! ";
+                font: $font-med;
+                color: $red;
+            }
+        }
+
+        .print-gal {
+            @include steps-image;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            select {
+                margin: 20px;
+                font: $font-med;
+                background-color: $purple;
+                color: $white;
+            }
+            img {
+                width: 100%;
+                border: 8px ridge $lightGray;
+            }
+        }
+    }
+
+   #pickDesign {
+       background-color: $darkGray !important;
+       @include pick;
+       @include flex;
+        #designsExp{
+            @include steps-image;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            select {
+                font: $font-med;
+                color: $purple;
+                background-color: $white;
+                margin: 20px;
+
+            }
+            img {
+                width: 100%;
+            }
+        }
+        #designsText{
+            h2{
+                @include h;
+                text-align: center;
+            }
+            h2::before{
                 content: "Step #2: ";
                 font-size: 50px;
                 color: $white;
@@ -961,49 +982,40 @@ $smDev-width: 320px;
             }
             span {
                 @include pickSpan;
-                @include p;
-                padding: 0px !important;
                 color: $lightGray;
             }
             span::before{
                 content: "Rep your City! ";
                 font: $font-med;
                 color: $red;
-            }
-        }
 
-        .print-gal {
-            @include exp;
-            @include flex;
-            select {
-                margin: 10px;
-                background-color: $darkGray;
-                font: $font-med;
-                color: $red;
-                }
-            img {
-                width: 50%;
-                border: 8px ridge $lightGray;
-            }
             }
         }
+    }
+
+
+
 
 
 
 
     #pickFabric {
         @include pick;
+        @include flex;
         #fabricGal{
+            @include steps-image;
             @include exp;
             @include flex;
+            flex-direction: column!important;
             select {
-                margin: 10px;
-                background-color: $darkGray;
                 font: $font-med;
-                color: $lightGray;
+                background-color: $purple;
+                color: $white;
+                margin: 20px;
             }
             img {
-                width: 50%;
+                width: 100%;
+                border-radius: 100%;
             }
         }
         #fabricText{
@@ -1014,7 +1026,7 @@ $smDev-width: 320px;
             }
             h2::before{
                 content: "Step #3: ";
-                color: $darkGray;
+                color: $purple;
                 font-size: 50px;
                 @include phone {
                     font-size: 40px;
@@ -1026,8 +1038,7 @@ $smDev-width: 320px;
             }
             span {
                 @include pickSpan;
-                @include p;
-                color: $darkGray;
+                color: $purple;
             }
             span::before{
                 content: "Rep your City! ";
@@ -1047,32 +1058,63 @@ $smDev-width: 320px;
     padding: 10px;
 }
 
+#buyButton::after{
+    content: " click here";
+    color: $purple;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 #myShop {
     @include flex;
-    flex-direction: row!important;
     background-color: $darkGray;
     padding: 100px;
-    #productImg {
-        width: 40%;
+    #aboutProduct {
+        @include exp;
+        h2 {
+            @include h;
+        }
+        span {
+            @include pickSpan;
+            color: $lightGray;
+        }
     }
-    .showProduct{
 
+    #product {
+        @include steps-image;
+        @include exp;
+        #productImg {
+            width: 100%;
+        }
+        .showProduct{
+
+        }
     }
+
 }
 
 
 // registration
 
+h3 {
+    background-color: $purple;
+    color: $white;
+    font: $font-small;
+    text-align: center;
+    padding: 10px;
+}
+
+
  #tag-reg {
-        background-color: $lightGray;
+        background-color: $darkGray;
         position: relative;
         width: 100%;
         height: auto;
         display: flex;
         align-items: center;
-        vertical-align: middle;
-        border-top: 2px solid $white;
-        border-bottom: 2px solid $red;
+        justify-content: center;
+        border-left: 4px solid $purple;
+        border-right: 4px solid $purple;
         span{
             width: 30%;
             @include smDev {
@@ -1137,9 +1179,9 @@ $smDev-width: 320px;
                     }
 
                     button:hover {
-                        background-color: $lightGray;
-                        color: $red;
-                    }
+                            background-color: $purple;
+                            color: $white;
+                        }
                 }
                 #signIn-form {
                     display: none;
@@ -1168,8 +1210,8 @@ $smDev-width: 320px;
                     }
 
                     button:hover {
-                        background-color: $lightGray;
-                        color: $red;
+                        background-color: $purple;
+                        color: $white;
                     }
             }
      }
@@ -1180,21 +1222,23 @@ $smDev-width: 320px;
 
 nav {
   background-color: $darkGray;
-  height: fit-content;
+  height: auto;
   position: relative;
+  width: 100%;
     .ent {
         float: left;
         display: inline-block;
         width: 50%;
-        img {
-            width: 20%;
-            @include phone {
-                width: 50%;
-            }
-            @include smDev {
-                width: 70%;
-            }
+        a {
+            text-decoration: none;
+                span {
+                    font: $font-main;
+                    font-size: 20px!important;
+                    color: $red;
+                    padding: 5px;
+                }
         }
+
     }
     .dropdown {
         text-align: right;
@@ -1205,7 +1249,7 @@ nav {
         .dropbtn {
             @include dropbtn;
             i {
-                color: $red;
+                color: $white;
             }
         }
 
@@ -1236,12 +1280,11 @@ nav {
     @include flex;
     background-color: $red;
     position: relative;
-    height: auto;
     width: 100%;
-    padding: 100px;
+    padding: 20px;
     span {
-        color: $lightGray;
-        font: $font-graf;
+        color: $white;
+        font: $font-main;
     }
 }
 
@@ -1249,16 +1292,16 @@ nav {
 //footer
 
 #footer {
-    background-color: $darkGray;
+    background-color: $purple;
     color: $lightGray;
     width: 100%;
     display: block;
-    position: relative;
-    vertical-align: text-bottom;
+    bottom: 0;
     font: $font-med;
     padding-top: 10px;
 
     nav {
+        background-color: $purple;
         width: 50%;
         display: inline-block;
         position: absolute;
@@ -1277,7 +1320,7 @@ nav {
                 @include a;
                 border: none !important;
                 i {
-                    font-size: 20px;
+                    font-size: 25px;
                     padding: 0px 1px;
                     color: $lightGray;
                 }

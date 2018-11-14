@@ -1,14 +1,16 @@
-{{> nav}}
+<section data-aos="fade-out-right"
+         data-aos-offset="300"
+         data-aos-easing="ease-in-sine" data-aos-duration="1000">
 
-<section class="tag-lines"><span>Hey, {{username}}!</span></section>
+    {{> nav}}
 
-{{> shop-slider}}
-{{> steps}}
+    <section class="tag-lines"><span data-aos="fade-down"
+                                     >Hey, {{username}}!</span></section>
 
-<section id="myShop">
-    <img src="images/jacket-silk-newYork.png" id="productImg">
-    <div id='product-component-a6b7530f36c' class="showProduct"></div>
+    {{> steps}}
+
+    {{> product}}
+
 </section>
-
 
 <script src="shop.js"></script>

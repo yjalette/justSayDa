@@ -8,6 +8,7 @@ const bcrypt = require('bcryptjs');
 const session = require('express-session')
 const hbs = require('express-handlebars');
 const path = require('path');
+const expressValidator = require('express-validator');
 
 
 
@@ -17,14 +18,18 @@ app.set('view engine', 'hbs')
 
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(express.static('./public'))
+app.use(expressValidator());
 
 app.use(session({
     secret: 'fyffjvhjvhj',
     resave: false,
     saveUninitialized: false,
-//    cookie: { secure: true }
+    //    cookie: { secure: true }
 }));
+
+app.use(express.static('./public'))
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 

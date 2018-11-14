@@ -7,15 +7,18 @@ const passport = require("passport");
 const session = require('express-session');
 const hbs = require('express-handlebars');
 const path = require('path');
+const expressValidator = require('express-validator');
 
 
 
 
 router.post('/registration', (req, res) =>{
         console.log("trying to create a new user");
+
+
         const email = req.body.create_email;
         const name = req.body.create_name;
-//        const password = req.body.create_password;
+        const password = req.body.create_password;
 
         bcrypt.genSalt(10, function(err, salt) {
             bcrypt.hash(req.body.create_password, salt, function(err, hash) {
@@ -68,6 +71,7 @@ router.post('/shop', (req, res) =>{
     const email = req.body.login_email;
     const password = req.body.login_password;
 
+
     const queryString = "SELECT * FROM users WHERE email = ?"
     getConnection().query(queryString, [email], (err, results, fields, user) => {
         if (err) {
@@ -117,7 +121,7 @@ router.post('/shop', (req, res) =>{
 router.get('/registration', (req, res) => {
     return res.render('registration', {
         title: "registration",
-        registrationMessage: "to continue please create an account or log in now"
+        registrationMessage: "please create an account or log in"
     });
 })
 

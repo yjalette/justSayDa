@@ -7,6 +7,8 @@
 
 $(document).ready(function(){
 
+$("#myShop").hide();
+
 //registration
 
     $("#log-tab").on("click", function(){
@@ -69,17 +71,24 @@ $(document).ready(function(){
 
         $("#buyButton").on("click", function(){
             let product_path = "images/" + design + "-" + fabric + "-" + print + ".png";
-            console.log(product_path);
-            let product = $("#productImg").attr("src", product_path);
-            console.log(design);
-        });
 
-        console.log(design);
-        console.log(fabric);
-        console.log(print);
+            let product = $("#productImg").attr("src", product_path);
+
+            if ( design == null){
+                alert("Please select a design");
+            } else if ( fabric == null) {
+                alert("Please select a fabric");
+            } else if ( print == null){
+                alert("Please select a print");
+            } else {
+                $("#myShop").show();
+            }
+
+        });
     }
 
     displayOrder();
+
 
 });
 

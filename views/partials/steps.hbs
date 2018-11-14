@@ -1,35 +1,16 @@
-<section id="howWorks" class="tag-lines"><span>How does it work?</span></section>
-
 <form id="steps-form">
 
-    <section id="pickDesign">
-        <section id="designsText">
-            <h2 data-aos="fade-in-up" data-aos-once="false">Design!</h2>
-            <span>DA! is not just streetwear. It's our cities collection.
-                Each item in our collection represents a city and a piece of wearable art.
-                The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
-            </span>
-        </section>
-        <section id="designsExp">
-            <select id="selectDesign" required>
-                <option value="jacket">jacket</option>
-                <option value="hoodie">hodie</option>
-            </select>
-            <img src="images/jacket.png" id="design">
-        </section>
-    </section>
-
-<!--Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings-->
     <section id="gallery-cities" class="pick">
         <section id="RepYourCity">
-            <h2 data-aos="fade-left" data-aos-once="false">Artwork!</h2>
+            <h2 data-aos="fade-in-up" data-aos-once="false">Artwork!</h2>
             <span><strong>DA!</strong> is not just streetwear. It's our cities collection.
                 Each item in our collection represents a city and a piece of wearable art.
                 The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
             </span>
         </section>
-        <section class="print-gal">
+        <section class="print-gal" name="selectPrint">
             <select id="selectPrint" required>
+                <option selected disabled value="">Please select</option>
                 <option value="newYork">New York</option>
                 <option value="london">London</option>
                 <option value="paris">Paris</option>
@@ -47,9 +28,30 @@
         </section>
     </section>
 
+    <section id="pickDesign">
+        <section id="designsExp">
+            <select id="selectDesign" required>
+                <option  selected disabled value="">Please select</option>
+                <option value="jacket">jacket</option>
+                <option value="hoodie">hodie</option>
+            </select>
+            <img src="images/jacket.png" id="design">
+        </section>
+        <section id="designsText">
+            <h2 data-aos="fade-in-up" data-aos-once="false">Design!</h2>
+            <span>DA! is not just streetwear. It's our cities collection.
+                Each item in our collection represents a city and a piece of wearable art.
+                The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
+            </span>
+        </section>
+    </section>
+
+<!--Fine Art Turned Into Clothes Lets You Wear Your Favorite Paintings-->
+
+
     <section id="pickFabric" class="pick">
         <section id="fabricText">
-            <h2 data-aos="fade-right" data-aos-once="false">Fabric!</h2>
+            <h2 data-aos="fade-in-up" data-aos-once="false">Fabric!</h2>
             <span>It's not just streetwear. It's our cities collection.
                 Each item in our collection represents a city and a piece of wearable art.
                 The designs are all prints based on hand painted portraits created by an artist to capture the unique style of each city.
@@ -57,6 +59,7 @@
         </section>
         <section id="fabricGal">
             <select id="selectFabric" required>
+                <option  selected disabled value="">Please select</option>
                 <option value="silk">silk</option>
                 <option value="denim">denim</option>
                 <option value="leather">leather</option>
@@ -64,10 +67,11 @@
             <img src="images/silk.jpg" id="fabric">
         </section>
     </section>
+
 </form>
 
 
-<button type="button" id="buyButton">submit</button>
+<button type="button" id="buyButton">to see your result</button>
 
 
 
