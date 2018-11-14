@@ -51,7 +51,7 @@ $font-small: 20px 'Open Sans', sans-serif;
 $desktop-width: 1024px;
 $tablet-width: 768px;
 $phone-width: 481px;
-$smDev-width: 320px;
+$smDev-width: 280px;
 
 @mixin desktop {
     @media (min-width: #{$desktop-width}) {
@@ -109,11 +109,23 @@ $smDev-width: 320px;
 
 @mixin steps-image {
   padding: 100px;
+    @include phone {
+        padding: 20px;
+    }
+    @include smDev {
+        padding: 10px;
+    }
 
 }
 
 @mixin exp {
     width: 50%;
+    @include phone {
+        width: 100%;
+    }
+    @include smDev {
+        width: 100%;
+    }
 }
 
 @mixin pickSpan {
@@ -175,6 +187,12 @@ $smDev-width: 320px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    @include phone {
+        flex-direction: column;
+    }
+    @include smDev {
+        flex-direction: column;
+    }
 }
 
 @mixin input {
@@ -294,12 +312,7 @@ $smDev-width: 320px;
         }
 
      #bold {
-         @include flex;
-         flex-direction: row!important;
-         z-index: 1;
-         position: absolute;
-         width: 100%;
-         top: 50%;
+
                 span{
                     font: $font-main;
                     color: $white;
@@ -322,7 +335,7 @@ $smDev-width: 320px;
                     .down {
                         animation: downarrow 0.6s infinite alternate ease-in-out;
                         -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-                        border-top: 30px solid $red;
+                        border-top: 30px solid white;
                     }
             }
         }
@@ -346,6 +359,12 @@ $smDev-width: 320px;
 
 
 // about us
+#da-span {
+    @include smDev {
+        display: none;
+    }
+}
+
 
 #aboutUs {
     @include flex;
@@ -353,9 +372,21 @@ $smDev-width: 320px;
     position: relative;
     background-color: $purple;
     padding: 100px;
+    @include phone {
+        flex-direction: column!important;
+        padding: 40px;
+    }
+    @include smDev {
+        flex-direction: column!important;
+        padding: 10px;
+    }
+
     p {
         color: $lightGray;
         font: $font-small;
+        @include smDev {
+            font-size: 15px!important;
+        }
     }
 }
 
@@ -592,6 +623,7 @@ $smDev-width: 320px;
         .snd {
             display: none;
         }
+
         .tile {
             -webkit-transform: scale(0);
             transform: scale(0);
@@ -729,10 +761,6 @@ $smDev-width: 320px;
             }
 
             @include transition;
-
-            .content {
-
-            }
 
             @media (min-width: $sm) {
                 width: 100%;
@@ -1067,8 +1095,8 @@ background-color: $lightGray;
 
 #myShop {
     @include flex;
+    @include pick;
     background-color: $darkGray;
-    padding: 100px;
     #aboutProduct {
         @include exp;
         h2 {
@@ -1106,33 +1134,26 @@ h3 {
 
 
  #tag-reg {
-        background-color: $darkGray;
+     @include flex;
+        background-color: white;
         position: relative;
         width: 100%;
         height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border-left: 4px solid $purple;
         border-right: 4px solid $purple;
         span{
             width: 30%;
             @include smDev {
                 width: 1%;
-            }
-            img {
-                width: 100%;
-                @include smDev {
-                    display: none;
-                }
+
             }
 
         }
 
         #registration-wrap {
-                width: 60%;
+                width: 70%;
                 height: auto;
-                padding: 20px;
+                padding: 30px;
                 margin: auto;
                 background-color: $lightGray;
                 @include smDev {
@@ -1144,8 +1165,8 @@ h3 {
                     margin: auto;
 
                     span {
-                        background-color: $darkGray;
-                        color: $lightGray;
+                        background-color: $red;
+                        color: $white;
                         width: 50%;
                         padding: 20px;
                         font: $font-med;
@@ -1171,7 +1192,7 @@ h3 {
                         color: $lightGray;
                     }
                     input:hover {
-                        background-color: $darkGray;
+                        background-color: $purple;
                         color: $white;
                     }
                     button {
@@ -1194,7 +1215,7 @@ h3 {
                         color: $lightGray;
                     }
                     input:hover {
-                        background-color: $darkGray;
+                        background-color: $purple;
                         color: $white;
                     }
 
@@ -1221,21 +1242,30 @@ h3 {
 //nav pages
 
 nav {
-  background-color: $darkGray;
+ @include flex;
+  background-color: white;
   height: auto;
   position: relative;
   width: 100%;
+    @include phone {
+        flex-direction: row!important;
+    }
+    @include smDev {
+        flex-direction: row!important;
+    }
     .ent {
         float: left;
-        display: inline-block;
         width: 50%;
         a {
             text-decoration: none;
-                span {
-                    font: $font-main;
-                    font-size: 20px!important;
-                    color: $red;
-                    padding: 5px;
+                img {
+                    width: 20%;
+                    @include phone {
+                        width: 50%;
+                    }
+                    @include smDev {
+                        width: 70%;
+                    }
                 }
         }
 
@@ -1243,13 +1273,12 @@ nav {
     .dropdown {
         text-align: right;
         overflow: hidden;
-        display: inline-block;
         width: 50%;
         font: $font-med;
         .dropbtn {
             @include dropbtn;
             i {
-                color: $white;
+                color: $red;
             }
         }
 
@@ -1265,10 +1294,12 @@ nav {
             a {
                 @include a;
                 display: block;
-                background-color: $lightGray;
+                background-color: $red;
+                color: $white;
             }
             a:hover {
                 background-color: $white;
+                color: $red;
             }
 
         }
@@ -1282,11 +1313,70 @@ nav {
     position: relative;
     width: 100%;
     padding: 20px;
+    @include smDev {
+        padding: 5px;
+    }
     span {
         color: $white;
         font: $font-main;
+        @include tablet {
+            font-size: 30px!important;
+        }
+        @include phone {
+            font-size: 20px!important;
+        }
+        @include smDev {
+            font-size: 15px!important;
+        }
+    }
+
+}
+
+// contact
+#contact {
+    @include flex;
+    background-color: $lightGray;
+    #contact-form {
+        @include flex;
+        width: 60%;
+        fieldset {
+            @include flex;
+            flex-direction: column!important;
+            label {
+                color: $red;
+                font: $font-med;
+            }
+            input{
+                width: 500px;
+                height: 30px;
+                color: $lightGray;
+                background-color: $purple;
+            }
+            input:placeholder{
+
+            }
+            textarea {
+                width: 500px;
+                background-color: $purple;
+                color: $white;
+            }
+            button {
+                margin: 10px!important;
+                @include button;
+            }
+
+            button:hover {
+                background-color: $purple;
+                color: $white;
+            }
+        }
+    }
+
+    img {
+        width: 40%;
     }
 }
+
 
 
 //footer

@@ -9,6 +9,7 @@ const session = require('express-session')
 const hbs = require('express-handlebars');
 const path = require('path');
 const expressValidator = require('express-validator');
+const nodemailer = require('nodemailer');
 
 
 
@@ -42,9 +43,8 @@ app.get("/", (req, res) => {
     res.render('home', {
         username: "menu",
         title: "homepage",
-        nav: "shop",
-        navLink: "#",
-        navId: "top-login"
+        shop: "registration",
+        login: "registration"
     })
 })
 

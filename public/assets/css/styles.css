@@ -32,43 +32,33 @@
       left: 0;
       width: 100%;
       height: 100%; }
-  .container-video #bold {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row !important;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    top: 50%; }
-    .container-video #bold span {
-      font: bold 40px "Rock Salt", cursive;
-      color: #f0faf7; }
-    .container-video #bold #begin {
-      transform: rotate(-90deg); }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .container-video #bold #begin {
-          top: 25%; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        .container-video #bold #begin {
-          top: 20%; } }
-      @media (max-width: 480px) {
-        .container-video #bold #begin {
-          top: 15%; } }
-      .container-video #bold #begin .arrow {
-        border-color: transparent;
-        border-style: solid;
-        border-width: 0 32px;
-        display: block;
-        height: 0;
-        opacity: 0.4;
-        text-indent: -9999px;
-        width: 0; }
-      .container-video #bold #begin .down {
-        animation: downarrow 0.6s infinite alternate ease-in-out;
-        -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-        border-top: 30px solid #EE523F; }
+  .container-video #bold span {
+    font: bold 40px "Rock Salt", cursive;
+    color: #f0faf7; }
+  .container-video #bold #begin {
+    transform: rotate(-90deg); }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .container-video #bold #begin {
+        top: 25%; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      .container-video #bold #begin {
+        top: 20%; } }
+    @media (max-width: 480px) {
+      .container-video #bold #begin {
+        top: 15%; } }
+    .container-video #bold #begin .arrow {
+      border-color: transparent;
+      border-style: solid;
+      border-width: 0 32px;
+      display: block;
+      height: 0;
+      opacity: 0.4;
+      text-indent: -9999px;
+      width: 0; }
+    .container-video #bold #begin .down {
+      animation: downarrow 0.6s infinite alternate ease-in-out;
+      -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+      border-top: 30px solid white; }
 
 @-webkit-keyframes downarrow {
   0% {
@@ -84,6 +74,10 @@
   100% {
     transform: translateY(7px);
     opacity: 1; } }
+@media (max-width: 480px) {
+  #da-span {
+    display: none; } }
+
 #aboutUs {
   display: flex;
   flex-direction: row;
@@ -93,9 +87,26 @@
   position: relative;
   background-color: #3A2E3C;
   padding: 100px; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #aboutUs {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #aboutUs {
+      flex-direction: column; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #aboutUs {
+      flex-direction: column !important;
+      padding: 40px; } }
+  @media (max-width: 480px) {
+    #aboutUs {
+      flex-direction: column !important;
+      padding: 10px; } }
   #aboutUs p {
     color: #bbbdc9;
     font: 20px "Open Sans", sans-serif; }
+    @media (max-width: 480px) {
+      #aboutUs p {
+        font-size: 15px !important; } }
 
 .slider-wrapper {
   display: flex;
@@ -414,6 +425,12 @@
       align-items: center;
       background-color: #bbbdc9;
       color: black; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #shop-slider .section.animate .left {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #shop-slider .section.animate .left {
+          flex-direction: column; } }
       @media (max-width: 480px) {
         #shop-slider .section.animate .left {
           left: 0%; } }
@@ -428,6 +445,12 @@
       background-color: black;
       color: #bbbdc9;
       border-left-width: 0px; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #shop-slider .section.animate .right {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #shop-slider .section.animate .right {
+          flex-direction: column; } }
       @media (max-width: 480px) {
         #shop-slider .section.animate .right {
           left: 99%; } }
@@ -522,6 +545,12 @@
     position: relative;
     padding: 10px 150px;
     text-align: center; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #gallery-cities {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #steps-form #gallery-cities {
+        flex-direction: column; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       #steps-form #gallery-cities {
         padding: 60px; } }
@@ -545,6 +574,12 @@
         padding: 10px; } }
     #steps-form #gallery-cities #RepYourCity {
       width: 50%; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities #RepYourCity {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities #RepYourCity {
+          width: 100%; } }
       #steps-form #gallery-cities #RepYourCity h2 {
         font: bold 25px "Architects Daughter", cursive;
         font-size: 100px;
@@ -594,6 +629,24 @@
       justify-content: center;
       align-items: center;
       flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          padding: 10px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          width: 100%; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          flex-direction: column; } }
       #steps-form #gallery-cities .print-gal select {
         margin: 20px;
         font: bold 25px "Architects Daughter", cursive;
@@ -622,6 +675,12 @@
     @media (max-width: 480px) {
       #steps-form #pickDesign {
         padding: 20px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #pickDesign {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #steps-form #pickDesign {
+        flex-direction: column; } }
     #steps-form #pickDesign #designsExp {
       padding: 100px;
       width: 50%;
@@ -630,6 +689,24 @@
       justify-content: center;
       align-items: center;
       flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickDesign #designsExp {
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #steps-form #pickDesign #designsExp {
+          padding: 10px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickDesign #designsExp {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #pickDesign #designsExp {
+          width: 100%; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickDesign #designsExp {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #steps-form #pickDesign #designsExp {
+          flex-direction: column; } }
       #steps-form #pickDesign #designsExp select {
         font: bold 25px "Architects Daughter", cursive;
         color: #3A2E3C;
@@ -695,6 +772,12 @@
     @media (max-width: 480px) {
       #steps-form #pickFabric {
         padding: 20px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #pickFabric {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #steps-form #pickFabric {
+        flex-direction: column; } }
     #steps-form #pickFabric #fabricGal {
       padding: 100px;
       width: 50%;
@@ -703,6 +786,24 @@
       justify-content: center;
       align-items: center;
       flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          padding: 10px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          width: 100%; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          flex-direction: column; } }
       #steps-form #pickFabric #fabricGal select {
         font: bold 25px "Architects Daughter", cursive;
         background-color: #3A2E3C;
@@ -713,6 +814,12 @@
         border-radius: 100%; }
     #steps-form #pickFabric #fabricText {
       width: 50%; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricText {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricText {
+          width: 100%; } }
       #steps-form #pickFabric #fabricText h2 {
         font: bold 25px "Architects Daughter", cursive;
         font-size: 100px;
@@ -771,10 +878,35 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  padding: 100px; }
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 10px 150px;
+  text-align: center;
+  background-color: black; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #myShop {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #myShop {
+      flex-direction: column; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #myShop {
+      padding: 60px; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #myShop {
+      padding: 40px; } }
+  @media (max-width: 480px) {
+    #myShop {
+      padding: 20px; } }
   #myShop #aboutProduct {
     width: 50%; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #myShop #aboutProduct {
+        width: 100%; } }
+    @media (max-width: 480px) {
+      #myShop #aboutProduct {
+        width: 100%; } }
     #myShop #aboutProduct h2 {
       font: bold 25px "Architects Daughter", cursive;
       font-size: 100px;
@@ -802,6 +934,18 @@
   #myShop #product {
     padding: 100px;
     width: 50%; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #myShop #product {
+        padding: 20px; } }
+    @media (max-width: 480px) {
+      #myShop #product {
+        padding: 10px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #myShop #product {
+        width: 100%; } }
+    @media (max-width: 480px) {
+      #myShop #product {
+        width: 100%; } }
     #myShop #product #productImg {
       width: 100%; }
 
@@ -813,29 +957,31 @@ h3 {
   padding: 10px; }
 
 #tag-reg {
-  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
   position: relative;
   width: 100%;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-left: 4px solid #3A2E3C;
   border-right: 4px solid #3A2E3C; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #tag-reg {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #tag-reg {
+      flex-direction: column; } }
   #tag-reg span {
     width: 30%; }
     @media (max-width: 480px) {
       #tag-reg span {
         width: 1%; } }
-    #tag-reg span img {
-      width: 100%; }
-      @media (max-width: 480px) {
-        #tag-reg span img {
-          display: none; } }
   #tag-reg #registration-wrap {
-    width: 60%;
+    width: 70%;
     height: auto;
-    padding: 20px;
+    padding: 30px;
     margin: auto;
     background-color: #bbbdc9; }
     @media (max-width: 480px) {
@@ -846,8 +992,8 @@ h3 {
       width: 100%;
       margin: auto; }
       #tag-reg #registration-wrap #reg-tabs span {
-        background-color: black;
-        color: #bbbdc9;
+        background-color: #EE523F;
+        color: #f0faf7;
         width: 50%;
         padding: 20px;
         font: bold 25px "Architects Daughter", cursive;
@@ -870,7 +1016,7 @@ h3 {
     #tag-reg #registration-wrap #signUp-form input::placeholder {
       color: #bbbdc9; }
     #tag-reg #registration-wrap #signUp-form input:hover {
-      background-color: black;
+      background-color: #3A2E3C;
       color: #f0faf7; }
     #tag-reg #registration-wrap #signUp-form button {
       padding: 3px 10px;
@@ -898,7 +1044,7 @@ h3 {
       #tag-reg #registration-wrap #signIn-form input::placeholder {
         color: #bbbdc9; }
       #tag-reg #registration-wrap #signIn-form input:hover {
-        background-color: black;
+        background-color: #3A2E3C;
         color: #f0faf7; }
       #tag-reg #registration-wrap #signIn-form span {
         font-size: 12px; }
@@ -919,25 +1065,42 @@ h3 {
         color: #f0faf7; }
 
 nav {
-  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
   height: auto;
   position: relative;
   width: 100%; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    nav {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    nav {
+      flex-direction: row !important; } }
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: row !important; } }
   nav .ent {
     float: left;
-    display: inline-block;
     width: 50%; }
     nav .ent a {
       text-decoration: none; }
-      nav .ent a span {
-        font: bold 40px "Rock Salt", cursive;
-        font-size: 20px !important;
-        color: #EE523F;
-        padding: 5px; }
+      nav .ent a img {
+        width: 20%; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          nav .ent a img {
+            width: 50%; } }
+        @media (max-width: 480px) {
+          nav .ent a img {
+            width: 70%; } }
   nav .dropdown {
     text-align: right;
     overflow: hidden;
-    display: inline-block;
     width: 50%;
     font: bold 25px "Architects Daughter", cursive; }
     nav .dropdown .dropbtn {
@@ -950,7 +1113,7 @@ nav {
       font-family: inherit;
       margin: 0; }
       nav .dropdown .dropbtn i {
-        color: #f0faf7; }
+        color: #EE523F; }
     nav .dropdown .dropdown-content {
       float: right;
       display: none;
@@ -971,12 +1134,14 @@ nav {
         padding: 1px;
         word-wrap: break-word;
         display: block;
-        background-color: #bbbdc9; }
+        background-color: #EE523F;
+        color: #f0faf7; }
         @media (max-width: 480px) {
           nav .dropdown .dropdown-content a {
             font-size: 12px; } }
       nav .dropdown .dropdown-content a:hover {
-        background-color: #f0faf7; }
+        background-color: #f0faf7;
+        color: #EE523F; }
 
 .tag-lines {
   display: flex;
@@ -987,9 +1152,92 @@ nav {
   position: relative;
   width: 100%;
   padding: 20px; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .tag-lines {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    .tag-lines {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    .tag-lines {
+      padding: 5px; } }
   .tag-lines span {
     color: #f0faf7;
     font: bold 40px "Rock Salt", cursive; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .tag-lines span {
+        font-size: 30px !important; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      .tag-lines span {
+        font-size: 20px !important; } }
+    @media (max-width: 480px) {
+      .tag-lines span {
+        font-size: 15px !important; } }
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #bbbdc9; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #contact {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #contact {
+      flex-direction: column; } }
+  #contact #contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #contact #contact-form {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #contact #contact-form {
+        flex-direction: column; } }
+    #contact #contact-form fieldset {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #contact #contact-form fieldset {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #contact #contact-form fieldset {
+          flex-direction: column; } }
+      #contact #contact-form fieldset label {
+        color: #EE523F;
+        font: bold 25px "Architects Daughter", cursive; }
+      #contact #contact-form fieldset input {
+        width: 500px;
+        height: 30px;
+        color: #bbbdc9;
+        background-color: #3A2E3C; }
+      #contact #contact-form fieldset textarea {
+        width: 500px;
+        background-color: #3A2E3C;
+        color: #f0faf7; }
+      #contact #contact-form fieldset button {
+        margin: 10px !important;
+        padding: 3px 10px;
+        color: #EE523F;
+        background-color: #f0faf7;
+        border-radius: 4px;
+        width: auto;
+        margin: auto;
+        display: block;
+        font: bold 25px "Architects Daughter", cursive;
+        cursor: pointer; }
+      #contact #contact-form fieldset button:hover {
+        background-color: #3A2E3C;
+        color: #f0faf7; }
+  #contact img {
+    width: 40%; }
 
 #footer {
   background-color: #3A2E3C;

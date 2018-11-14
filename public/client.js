@@ -75,12 +75,13 @@ $("#myShop").hide();
             let product = $("#productImg").attr("src", product_path);
 
             if ( design == null){
-                alert("Please select a design");
-            } else if ( fabric == null) {
-                alert("Please select a fabric");
-            } else if ( print == null){
                 alert("Please select a print");
+            } else if ( fabric == null) {
+                alert("Please select a design");
+            } else if ( print == null){
+                alert("Please select a fabric");
             } else {
+                $("#showProduct").slideDown();
                 $("#myShop").show();
             }
 
