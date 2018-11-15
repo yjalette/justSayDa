@@ -1040,9 +1040,9 @@ h3 {
       #tag-reg span {
         width: 1%; } }
   #tag-reg #registration-wrap {
-    width: 70%;
+    width: 60%;
     height: auto;
-    padding: 30px;
+    padding: 40px;
     margin: auto;
     background-color: #bbbdc9; }
     @media (max-width: 480px) {

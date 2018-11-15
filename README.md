@@ -3,7 +3,10 @@
 
 
 ## Screenshots
-
+![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/landpage.png)
+![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/about.png)
+![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/registration.png)
+![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/shop.png)
 
 ## Initial UX
 User Stories
@@ -12,13 +15,13 @@ User Stories
 * As an initial visitor to the page, I want to land on the web page and see what the page is about so I can understand what the app is and does and decide whether or not to create an account to be able to use the app.
 * As a visitor, I want to create a new account so that I can place an order.
 (LANDING PAGE--wireframe will have title, logo, a few details about logging in and what the app is about)
-![UI Flow handwritten draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-product.jpg)
+![UI Flow draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-product.jpg)
 
 * AS A LOGGED-IN USER
 * As a user, I want to view products.
-![UI Flow handwritten draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-shop.jpg)
+![UI Flow draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-shop.jpg)
 * As a user, I want to view detailts about chosen product.
-![UI Flow handwritten draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-product.jpg)
+![UI Flow draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-product.jpg)
 
 
 ## Working Prototype
