@@ -15,6 +15,8 @@
 }
 
 
+
+
 //font-family: 'Architects Daughter', cursive;
 //font-family: 'Rock Salt', cursive;
 //font-family: 'Open Sans', sans-serif;
@@ -30,7 +32,8 @@ $lg: 992px;
 
 //colors
 $white: #f0faf7;
-$red: #EE523F;
+//$red: #EE523F;
+$red: #fe0116;
 $gray: #CAD2C5;
 $purple: #3A2E3C;
 $darkGray: black;
@@ -86,8 +89,17 @@ $smDev-width: 280px;
     opacity:0.4;
     text-indent:-9999px;
     width:0;
+    @include tablet {
+        border-width:0 28px;
+    }
+    @include phone {
+        border-width:0 20px;
+    }
+    @include smDev {
+        border-width:0 10px;
+        margin: 10px;
+    }
 }
-
 
 
 @mixin pick {
@@ -292,15 +304,24 @@ $smDev-width: 280px;
 }
 
 
-.container-video {
-        z-index: 2;
+#intro {
+    @include flex;
+    flex-flow: column!important;
+    background-color: white;
+    .container-video {
+        z-index: 1;
         width: 100%;
-        height: 100%;
-        display: inline-grid;
+        height: auto;
+        display: block;
         background-color: rgba(223, 227, 232, 0.3);
+        @include smDev {
+            display: none;
+        }
+
         .video-foreground {
             position: relative;
             padding-bottom: 56.25%;
+
             #myVideo {
                 filter: brightness(25%);
                 position: absolute;
@@ -311,55 +332,80 @@ $smDev-width: 280px;
             }
         }
 
-     #bold {
-
-                span{
-                    font: $font-main;
-                    color: $white;
-                }
-
-            #begin {
-                transform: rotate(-90deg);
-                @include tablet {
-                    top: 25%;
-                }
-                @include phone {
-                    top: 20%;
-                }
-                @include smDev {
-                    top: 15%;
-                }
-                    .arrow {
-                        @include arrow;
-                    }
-                    .down {
-                        animation: downarrow 0.6s infinite alternate ease-in-out;
-                        -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-                        border-top: 30px solid white;
-                    }
-            }
-        }
-
-
-
     }
 
     @-webkit-keyframes downarrow {
         0% { -webkit-transform: translateY(0); opacity: 0.8 }
         100% { -webkit-transform: translateY(7px); opacity: 1 }
-}
+    }
 
     @keyframes downarrow {
-    0% { transform: translateY(0); opacity: 0.8 }
-    100% {transform: translateY(7px); opacity: 1 }
+        0% { transform: translateY(0); opacity: 0.8 }
+        100% {transform: translateY(7px); opacity: 1 }
+    }
+
+    #bold {
+        @include flex;
+        flex-direction: row!important;
+        position: absolute;
+        z-index: 2;
+        @include smDev {
+            position: relative;
+        }
+
+        span {
+            font: $font-main;
+            color: $white;
+            @include tablet {
+                font-size: 30px!important;
+            }
+            @include phone {
+                font-size: 20px!important;
+                padding: 4px;
+            }
+            @include smDev {
+                font-size: 12px!important;
+                padding: 2px;
+                color: $red;
+            }
+        }
+
+        #begin {
+            transform: rotate(-90deg);
+
+            .arrow {
+                @include arrow;
+            }
+
+            .down {
+                animation: downarrow 0.6s infinite alternate ease-in-out;
+                -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+                border-top: 30px solid $red;
+                @include smDev {
+                    border-top: 30px solid $darkGray;
+                }
+            }
+        }
+    }
+
+    #img-repl {
+        display: none;
+        @include smDev {
+            display: block;
+            width: 120%;
+            height: 80vh;
+            padding: 50px;
+        }
+    }
+
 }
-
-
-
 
 
 // about us
 #da-span {
+    @include phone {
+        display: none;
+    }
     @include smDev {
         display: none;
     }
@@ -372,6 +418,10 @@ $smDev-width: 280px;
     position: relative;
     background-color: $purple;
     padding: 100px;
+    @include tablet {
+        flex-direction: column!important;
+        padding: 40px;
+    }
     @include phone {
         flex-direction: column!important;
         padding: 40px;
@@ -798,8 +848,8 @@ $smDev-width: 280px;
                 @include flex;
                 background-color: $lightGray;
                 color: $darkGray;
-                @media (max-width: $sm) {
-                    left: 0%;
+                @media (max-width: $md) {
+                    left: 99%;
                 }
 
                 @media (min-width: $md) {
@@ -812,8 +862,9 @@ $smDev-width: 280px;
                 background-color: $darkGray;
                 color: $lightGray;
                 border-left-width: 0px;
-                @media (max-width: $sm) {
-                    left: 99%;
+                @media (max-width: $md) {
+                    left: 0%;
+                    background-color: $purple;
                 }
 
                 @media (min-width: $md) {
@@ -904,6 +955,7 @@ $smDev-width: 280px;
     }
 
 }
+
 
 
 #steps-form {
@@ -1084,6 +1136,12 @@ background-color: $lightGray;
     font: $font-med;
     width: 100%;
     padding: 10px;
+    @include phone {
+        background-color: $purple;
+    }
+    @include smDev {
+        background-color: $purple;
+    }
 }
 
 #buyButton::after{
@@ -1091,12 +1149,21 @@ background-color: $lightGray;
     color: $purple;
     font-weight: bold;
     text-decoration: underline;
+    @include phone {
+        color: $red;
+    }
+    @include smDev {
+        color: $red;
+    }
 }
 
 #myShop {
     @include flex;
     @include pick;
     background-color: $darkGray;
+    @include phone {
+        flex-direction: column!important;
+    }
     #aboutProduct {
         @include exp;
         h2 {
@@ -1132,9 +1199,8 @@ h3 {
     padding: 10px;
 }
 
-
  #tag-reg {
-     @include flex;
+        @include flex;
         background-color: white;
         position: relative;
         width: 100%;
@@ -1252,6 +1318,7 @@ nav {
     }
     @include smDev {
         flex-direction: row!important;
+        background-color: $darkGray;
     }
     .ent {
         float: left;
@@ -1259,12 +1326,12 @@ nav {
         a {
             text-decoration: none;
                 img {
-                    width: 20%;
+                    width: 15%;
                     @include phone {
-                        width: 50%;
+                        width: 30%;
                     }
                     @include smDev {
-                        width: 70%;
+                        display: none;
                     }
                 }
         }
@@ -1382,21 +1449,20 @@ nav {
 //footer
 
 #footer {
-    background-color: $purple;
-    color: $lightGray;
+    background-color: $red;
+    color: $white;
     width: 100%;
     display: block;
     bottom: 0;
     font: $font-med;
-    padding-top: 10px;
+    padding: 10px;
 
     nav {
-        background-color: $purple;
         width: 50%;
         display: inline-block;
         position: absolute;
         text-align: right;
-
+        background-color: $red;
         ul li {
             list-style-type: none;
             display: inline-block;
@@ -1410,13 +1476,20 @@ nav {
                 @include a;
                 border: none !important;
                 i {
-                    font-size: 25px;
-                    padding: 0px 1px;
-                    color: $lightGray;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 6px;
+                    border-radius: 100%;
+                    background-color: $white;
+                    color: $red;
+                    @include smDev {
+                        color: $white;
+                        background-color: $darkGray;
+                    }
                 }
             }
             &:hover {
-                color: $red;
+                color: $purple;
             }
         }
     }
@@ -1426,6 +1499,7 @@ nav {
         text-align: left;
         @include smDev {
             font-size: 16px;
+            color: $darkGray;
         }
     }
 }

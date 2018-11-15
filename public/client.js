@@ -7,7 +7,8 @@
 
 $(document).ready(function(){
 
-$("#myShop").hide();
+    $("#myShop").hide();
+
 
 //registration
 

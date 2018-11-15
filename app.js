@@ -42,9 +42,7 @@ app.use(router)
 app.get("/", (req, res) => {
     res.render('home', {
         username: "menu",
-        title: "homepage",
-        shop: "registration",
-        login: "registration"
+        title: "homepage"
     })
 })
 

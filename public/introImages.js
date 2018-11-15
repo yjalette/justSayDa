@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-var $sm = 400;
+var $sm = 100;
 var $md = 700;
 
 function resizeThis() {
@@ -37,7 +37,7 @@ $(window).scroll(function() {
 });
 
 $('.btn-primary').click(function(){
-    alert('I lied');
+    alert(':)');
     });
 });
 

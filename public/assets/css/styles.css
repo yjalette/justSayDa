@@ -16,50 +16,38 @@
   -webkit-padding-start: 0px;
   -webkit-padding-end: 0px; }
 
-.container-video {
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: inline-grid;
-  background-color: rgba(223, 227, 232, 0.3); }
-  .container-video .video-foreground {
-    position: relative;
-    padding-bottom: 56.25%; }
-    .container-video .video-foreground #myVideo {
-      filter: brightness(25%);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-  .container-video #bold span {
-    font: bold 40px "Rock Salt", cursive;
-    color: #f0faf7; }
-  .container-video #bold #begin {
-    transform: rotate(-90deg); }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .container-video #bold #begin {
-        top: 25%; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      .container-video #bold #begin {
-        top: 20%; } }
+#intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column !important;
+  background-color: white; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #intro {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #intro {
+      flex-direction: column; } }
+  #intro .container-video {
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: rgba(223, 227, 232, 0.3); }
     @media (max-width: 480px) {
-      .container-video #bold #begin {
-        top: 15%; } }
-    .container-video #bold #begin .arrow {
-      border-color: transparent;
-      border-style: solid;
-      border-width: 0 32px;
-      display: block;
-      height: 0;
-      opacity: 0.4;
-      text-indent: -9999px;
-      width: 0; }
-    .container-video #bold #begin .down {
-      animation: downarrow 0.6s infinite alternate ease-in-out;
-      -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
-      border-top: 30px solid white; }
-
+      #intro .container-video {
+        display: none; } }
+    #intro .container-video .video-foreground {
+      position: relative;
+      padding-bottom: 56.25%; }
+      #intro .container-video .video-foreground #myVideo {
+        filter: brightness(25%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
 @-webkit-keyframes downarrow {
   0% {
     -webkit-transform: translateY(0);
@@ -74,6 +62,78 @@
   100% {
     transform: translateY(7px);
     opacity: 1; } }
+  #intro #bold {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+    position: absolute;
+    z-index: 2; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #intro #bold {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #intro #bold {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #intro #bold {
+        position: relative; } }
+    #intro #bold span {
+      font: bold 40px "Rock Salt", cursive;
+      color: #f0faf7; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        #intro #bold span {
+          font-size: 30px !important; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #intro #bold span {
+          font-size: 20px !important;
+          padding: 4px; } }
+      @media (max-width: 480px) {
+        #intro #bold span {
+          font-size: 12px !important;
+          padding: 2px;
+          color: #fe0116; } }
+    #intro #bold #begin {
+      transform: rotate(-90deg); }
+      #intro #bold #begin .arrow {
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0 32px;
+        display: block;
+        height: 0;
+        opacity: 0.4;
+        text-indent: -9999px;
+        width: 0; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #intro #bold #begin .arrow {
+            border-width: 0 28px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #intro #bold #begin .arrow {
+            border-width: 0 20px; } }
+        @media (max-width: 480px) {
+          #intro #bold #begin .arrow {
+            border-width: 0 10px;
+            margin: 10px; } }
+      #intro #bold #begin .down {
+        animation: downarrow 0.6s infinite alternate ease-in-out;
+        -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
+        border-top: 30px solid #fe0116; }
+        @media (max-width: 480px) {
+          #intro #bold #begin .down {
+            border-top: 30px solid black; } }
+  #intro #img-repl {
+    display: none; }
+    @media (max-width: 480px) {
+      #intro #img-repl {
+        display: block;
+        width: 120%;
+        height: 80vh;
+        padding: 50px; } }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #da-span {
+    display: none; } }
 @media (max-width: 480px) {
   #da-span {
     display: none; } }
@@ -93,6 +153,10 @@
   @media (max-width: 480px) {
     #aboutUs {
       flex-direction: column; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #aboutUs {
+      flex-direction: column !important;
+      padding: 40px; } }
   @media (min-width: 481px) and (max-width: 767px) {
     #aboutUs {
       flex-direction: column !important;
@@ -188,7 +252,7 @@
       height: 24px;
       z-index: 200;
       background: #bbbdc9;
-      border: 2px solid #EE523F;
+      border: 2px solid #fe0116;
       border-radius: 50%; }
     .slider-wrapper .rotatescroll .dot {
       left: inherit !important;
@@ -206,7 +270,7 @@
       position: absolute;
       top: 2px;
       left: 0;
-      border-left: 2px solid #EE523F;
+      border-left: 2px solid #fe0116;
       height: 42px; }
     .slider-wrapper .rotatescroll .text {
       padding-top: 20px;
@@ -218,7 +282,7 @@
     .slider-wrapper .rotatescroll .active .flip.text span {
       top: 18px !important; }
     .slider-wrapper .rotatescroll .active h1 div.text {
-      color: #EE523F;
+      color: #fe0116;
       padding: 20px;
       height: 8px !important;
       text-shadow: 0 0 0.3px #bbbdc9, 0.7px 0.3px 0.3px rgba(48, 54, 52, 0.5); }
@@ -321,12 +385,12 @@
       transform: scale(1); }
     #designs #portfolio p {
       padding: 20px;
-      border-bottom: 1px #EE523F dotted;
+      border-bottom: 1px #fe0116 dotted;
       text-decoration: none;
       font-family: lato;
       text-transform: uppercase;
       font-size: 12px;
-      color: #EE523F;
+      color: #fe0116;
       display: block;
       float: left; }
     #designs #portfolio p:hover {
@@ -345,7 +409,7 @@
     height: auto;
     vertical-align: middle;
     -webkit-appearance: none;
-    color: #EE523F;
+    color: #fe0116;
     font: bold 25px "Architects Daughter", cursive;
     background-color: rgba(0, 0, 0, 0); }
     @media (min-width: 481px) and (max-width: 767px) {
@@ -415,9 +479,9 @@
           padding: 30px;
           font-size: 1em; } }
     #shop-slider .section .right h2 {
-      color: #EE523F; }
+      color: #fe0116; }
     #shop-slider .section .left h2 {
-      color: #EE523F; }
+      color: #fe0116; }
     #shop-slider .section.animate .left {
       display: flex;
       flex-direction: row;
@@ -431,9 +495,9 @@
       @media (max-width: 480px) {
         #shop-slider .section.animate .left {
           flex-direction: column; } }
-      @media (max-width: 480px) {
+      @media (max-width: 768px) {
         #shop-slider .section.animate .left {
-          left: 0%; } }
+          left: 99%; } }
       @media (min-width: 768px) {
         #shop-slider .section.animate .left {
           left: 0%; } }
@@ -451,9 +515,10 @@
       @media (max-width: 480px) {
         #shop-slider .section.animate .right {
           flex-direction: column; } }
-      @media (max-width: 480px) {
+      @media (max-width: 768px) {
         #shop-slider .section.animate .right {
-          left: 99%; } }
+          left: 0%;
+          background-color: #3A2E3C; } }
       @media (min-width: 768px) {
         #shop-slider .section.animate .right {
           left: 66.66%; } }
@@ -515,7 +580,7 @@
         overflow: visible;
         border-left-width: 0px;
         border-right-width: 0px;
-        border-top-color: #EE523F;
+        border-top-color: #fe0116;
         border-bottom-color: #bbbdc9;
         border-width: thick;
         border-style: solid; }
@@ -583,7 +648,7 @@
       #steps-form #gallery-cities #RepYourCity h2 {
         font: bold 25px "Architects Daughter", cursive;
         font-size: 100px;
-        color: #EE523F;
+        color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         padding: 0px !important;
         text-align: center; }
@@ -620,7 +685,7 @@
       #steps-form #gallery-cities #RepYourCity span::before {
         content: "Rep your City! ";
         font: bold 25px "Architects Daughter", cursive;
-        color: #EE523F; }
+        color: #fe0116; }
     #steps-form #gallery-cities .print-gal {
       padding: 100px;
       width: 50%;
@@ -717,7 +782,7 @@
     #steps-form #pickDesign #designsText h2 {
       font: bold 25px "Architects Daughter", cursive;
       font-size: 100px;
-      color: #EE523F;
+      color: #fe0116;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
       text-align: center; }
       @media (min-width: 768px) and (max-width: 1023px) {
@@ -752,7 +817,7 @@
     #steps-form #pickDesign #designsText span::before {
       content: "Rep your City! ";
       font: bold 25px "Architects Daughter", cursive;
-      color: #EE523F; }
+      color: #fe0116; }
   #steps-form #pickFabric {
     width: 100%;
     height: auto;
@@ -823,7 +888,7 @@
       #steps-form #pickFabric #fabricText h2 {
         font: bold 25px "Architects Daughter", cursive;
         font-size: 100px;
-        color: #EE523F;
+        color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         text-align: center; }
         @media (min-width: 768px) and (max-width: 1023px) {
@@ -858,20 +923,32 @@
       #steps-form #pickFabric #fabricText span::before {
         content: "Rep your City! ";
         font: bold 25px "Architects Daughter", cursive;
-        color: #EE523F; }
+        color: #fe0116; }
 
 #buyButton {
-  background-color: #EE523F;
+  background-color: #fe0116;
   color: #f0faf7;
   font: bold 25px "Architects Daughter", cursive;
   width: 100%;
   padding: 10px; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #buyButton {
+      background-color: #3A2E3C; } }
+  @media (max-width: 480px) {
+    #buyButton {
+      background-color: #3A2E3C; } }
 
 #buyButton::after {
   content: " click here";
   color: #3A2E3C;
   font-weight: bold;
   text-decoration: underline; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #buyButton::after {
+      color: #fe0116; } }
+  @media (max-width: 480px) {
+    #buyButton::after {
+      color: #fe0116; } }
 
 #myShop {
   display: flex;
@@ -899,6 +976,9 @@
   @media (max-width: 480px) {
     #myShop {
       padding: 20px; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #myShop {
+      flex-direction: column !important; } }
   #myShop #aboutProduct {
     width: 50%; }
     @media (min-width: 481px) and (max-width: 767px) {
@@ -910,7 +990,7 @@
     #myShop #aboutProduct h2 {
       font: bold 25px "Architects Daughter", cursive;
       font-size: 100px;
-      color: #EE523F;
+      color: #fe0116;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5); }
       @media (min-width: 768px) and (max-width: 1023px) {
         #myShop #aboutProduct h2 {
@@ -992,7 +1072,7 @@ h3 {
       width: 100%;
       margin: auto; }
       #tag-reg #registration-wrap #reg-tabs span {
-        background-color: #EE523F;
+        background-color: #fe0116;
         color: #f0faf7;
         width: 50%;
         padding: 20px;
@@ -1000,7 +1080,7 @@ h3 {
         cursor: pointer; }
       #tag-reg #registration-wrap #reg-tabs .active {
         background-color: #f0faf7;
-        color: #EE523F;
+        color: #fe0116;
         font: bold 25px "Architects Daughter", cursive;
         padding: 20px;
         border-radius: 4px;
@@ -1020,7 +1100,7 @@ h3 {
       color: #f0faf7; }
     #tag-reg #registration-wrap #signUp-form button {
       padding: 3px 10px;
-      color: #EE523F;
+      color: #fe0116;
       background-color: #f0faf7;
       border-radius: 4px;
       width: auto;
@@ -1052,7 +1132,7 @@ h3 {
           width: auto; }
       #tag-reg #registration-wrap #signIn-form button {
         padding: 3px 10px;
-        color: #EE523F;
+        color: #fe0116;
         background-color: #f0faf7;
         border-radius: 4px;
         width: auto;
@@ -1084,20 +1164,21 @@ nav {
       flex-direction: row !important; } }
   @media (max-width: 480px) {
     nav {
-      flex-direction: row !important; } }
+      flex-direction: row !important;
+      background-color: black; } }
   nav .ent {
     float: left;
     width: 50%; }
     nav .ent a {
       text-decoration: none; }
       nav .ent a img {
-        width: 20%; }
+        width: 15%; }
         @media (min-width: 481px) and (max-width: 767px) {
           nav .ent a img {
-            width: 50%; } }
+            width: 30%; } }
         @media (max-width: 480px) {
           nav .ent a img {
-            width: 70%; } }
+            display: none; } }
   nav .dropdown {
     text-align: right;
     overflow: hidden;
@@ -1113,7 +1194,7 @@ nav {
       font-family: inherit;
       margin: 0; }
       nav .dropdown .dropbtn i {
-        color: #EE523F; }
+        color: #fe0116; }
     nav .dropdown .dropdown-content {
       float: right;
       display: none;
@@ -1127,28 +1208,28 @@ nav {
         line-height: normal;
         cursor: pointer;
         text-decoration: none;
-        color: #EE523F;
+        color: #fe0116;
         font: bold 25px "Architects Daughter", cursive;
         text-align: center;
         border: 1px solid black;
         padding: 1px;
         word-wrap: break-word;
         display: block;
-        background-color: #EE523F;
+        background-color: #fe0116;
         color: #f0faf7; }
         @media (max-width: 480px) {
           nav .dropdown .dropdown-content a {
             font-size: 12px; } }
       nav .dropdown .dropdown-content a:hover {
         background-color: #f0faf7;
-        color: #EE523F; }
+        color: #fe0116; }
 
 .tag-lines {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #EE523F;
+  background-color: #fe0116;
   position: relative;
   width: 100%;
   padding: 20px; }
@@ -1211,7 +1292,7 @@ nav {
         #contact #contact-form fieldset {
           flex-direction: column; } }
       #contact #contact-form fieldset label {
-        color: #EE523F;
+        color: #fe0116;
         font: bold 25px "Architects Daughter", cursive; }
       #contact #contact-form fieldset input {
         width: 500px;
@@ -1225,7 +1306,7 @@ nav {
       #contact #contact-form fieldset button {
         margin: 10px !important;
         padding: 3px 10px;
-        color: #EE523F;
+        color: #fe0116;
         background-color: #f0faf7;
         border-radius: 4px;
         width: auto;
@@ -1240,19 +1321,19 @@ nav {
     width: 40%; }
 
 #footer {
-  background-color: #3A2E3C;
-  color: #bbbdc9;
+  background-color: #fe0116;
+  color: #f0faf7;
   width: 100%;
   display: block;
   bottom: 0;
   font: bold 25px "Architects Daughter", cursive;
-  padding-top: 10px; }
+  padding: 10px; }
   #footer nav {
-    background-color: #3A2E3C;
     width: 50%;
     display: inline-block;
     position: absolute;
-    text-align: right; }
+    text-align: right;
+    background-color: #fe0116; }
     #footer nav ul li {
       list-style-type: none;
       display: inline-block;
@@ -1263,7 +1344,7 @@ nav {
         line-height: normal;
         cursor: pointer;
         text-decoration: none;
-        color: #EE523F;
+        color: #fe0116;
         font: bold 25px "Architects Daughter", cursive;
         text-align: center;
         border: 1px solid black;
@@ -1274,17 +1355,25 @@ nav {
           #footer nav ul li a {
             font-size: 12px; } }
         #footer nav ul li a i {
-          font-size: 25px;
-          padding: 0px 1px;
-          color: #bbbdc9; }
+          font-size: 16px;
+          font-weight: bold;
+          padding: 6px;
+          border-radius: 100%;
+          background-color: #f0faf7;
+          color: #fe0116; }
+          @media (max-width: 480px) {
+            #footer nav ul li a i {
+              color: #f0faf7;
+              background-color: black; } }
       #footer nav ul li:hover {
-        color: #EE523F; }
+        color: #3A2E3C; }
   #footer p {
     width: 50%;
     display: inline-block;
     text-align: left; }
     @media (max-width: 480px) {
       #footer p {
-        font-size: 16px; } }
+        font-size: 16px;
+        color: black; } }
 
 /*# sourceMappingURL=styles.css.map */
