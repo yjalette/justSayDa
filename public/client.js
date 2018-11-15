@@ -82,8 +82,8 @@ $(document).ready(function(){
             } else if ( print == null){
                 alert("Please select a fabric");
             } else {
-                $("#showProduct").slideDown();
                 $("#myShop").show();
+                $("#buyButton").hide();
             }
 
         });

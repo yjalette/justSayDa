@@ -647,22 +647,22 @@
           width: 100%; } }
       #steps-form #gallery-cities #RepYourCity h2 {
         font: bold 25px "Architects Daughter", cursive;
-        font-size: 100px;
+        font-size: 60px;
         color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         padding: 0px !important;
         text-align: center; }
         @media (min-width: 768px) and (max-width: 1023px) {
           #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 80px;
+            font-size: 50px;
             padding: 30px; } }
         @media (min-width: 481px) and (max-width: 767px) {
           #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 60px;
+            font-size: 30px;
             padding: 20px; } }
         @media (max-width: 480px) {
           #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 45px;
+            font-size: 20px;
             padding: 10px; } }
       #steps-form #gallery-cities #RepYourCity h2::before {
         content: "Step #1: ";
@@ -781,21 +781,21 @@
         width: 100%; }
     #steps-form #pickDesign #designsText h2 {
       font: bold 25px "Architects Daughter", cursive;
-      font-size: 100px;
+      font-size: 60px;
       color: #fe0116;
       text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
       text-align: center; }
       @media (min-width: 768px) and (max-width: 1023px) {
         #steps-form #pickDesign #designsText h2 {
-          font-size: 80px;
+          font-size: 50px;
           padding: 30px; } }
       @media (min-width: 481px) and (max-width: 767px) {
         #steps-form #pickDesign #designsText h2 {
-          font-size: 60px;
+          font-size: 30px;
           padding: 20px; } }
       @media (max-width: 480px) {
         #steps-form #pickDesign #designsText h2 {
-          font-size: 45px;
+          font-size: 20px;
           padding: 10px; } }
     #steps-form #pickDesign #designsText h2::before {
       content: "Step #2: ";
@@ -887,21 +887,21 @@
           width: 100%; } }
       #steps-form #pickFabric #fabricText h2 {
         font: bold 25px "Architects Daughter", cursive;
-        font-size: 100px;
+        font-size: 60px;
         color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         text-align: center; }
         @media (min-width: 768px) and (max-width: 1023px) {
           #steps-form #pickFabric #fabricText h2 {
-            font-size: 80px;
+            font-size: 50px;
             padding: 30px; } }
         @media (min-width: 481px) and (max-width: 767px) {
           #steps-form #pickFabric #fabricText h2 {
-            font-size: 60px;
+            font-size: 30px;
             padding: 20px; } }
         @media (max-width: 480px) {
           #steps-form #pickFabric #fabricText h2 {
-            font-size: 45px;
+            font-size: 20px;
             padding: 10px; } }
       #steps-form #pickFabric #fabricText h2::before {
         content: "Step #3: ";
@@ -926,31 +926,19 @@
         color: #fe0116; }
 
 #buyButton {
-  background-color: #fe0116;
+  background-color: #3A2E3C;
   color: #f0faf7;
   font: bold 25px "Architects Daughter", cursive;
   width: 100%;
   padding: 10px; }
-  @media (min-width: 481px) and (max-width: 767px) {
-    #buyButton {
-      background-color: #3A2E3C; } }
-  @media (max-width: 480px) {
-    #buyButton {
-      background-color: #3A2E3C; } }
 
 #buyButton::after {
   content: " click here";
-  color: #3A2E3C;
+  color: #fe0116;
   font-weight: bold;
   text-decoration: underline; }
-  @media (min-width: 481px) and (max-width: 767px) {
-    #buyButton::after {
-      color: #fe0116; } }
-  @media (max-width: 480px) {
-    #buyButton::after {
-      color: #fe0116; } }
 
-#myShop {
+#myShop #shopWrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -962,71 +950,64 @@
   text-align: center;
   background-color: black; }
   @media (min-width: 481px) and (max-width: 767px) {
-    #myShop {
+    #myShop #shopWrapper {
       flex-direction: column; } }
   @media (max-width: 480px) {
-    #myShop {
+    #myShop #shopWrapper {
       flex-direction: column; } }
   @media (min-width: 768px) and (max-width: 1023px) {
-    #myShop {
+    #myShop #shopWrapper {
       padding: 60px; } }
   @media (min-width: 481px) and (max-width: 767px) {
-    #myShop {
+    #myShop #shopWrapper {
       padding: 40px; } }
   @media (max-width: 480px) {
-    #myShop {
+    #myShop #shopWrapper {
       padding: 20px; } }
   @media (min-width: 481px) and (max-width: 767px) {
-    #myShop {
+    #myShop #shopWrapper {
       flex-direction: column !important; } }
-  #myShop #aboutProduct {
+  #myShop #shopWrapper #aboutProduct {
     width: 50%; }
     @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #aboutProduct {
+      #myShop #shopWrapper #aboutProduct {
         width: 100%; } }
     @media (max-width: 480px) {
-      #myShop #aboutProduct {
+      #myShop #shopWrapper #aboutProduct {
         width: 100%; } }
-    #myShop #aboutProduct h2 {
-      font: bold 25px "Architects Daughter", cursive;
-      font-size: 100px;
-      color: #fe0116;
-      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5); }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        #myShop #aboutProduct h2 {
-          font-size: 80px;
-          padding: 30px; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #myShop #aboutProduct h2 {
-          font-size: 60px;
-          padding: 20px; } }
-      @media (max-width: 480px) {
-        #myShop #aboutProduct h2 {
-          font-size: 45px;
-          padding: 10px; } }
-    #myShop #aboutProduct span {
+    #myShop #shopWrapper #aboutProduct span {
       color: black;
       padding: 5px;
       color: #bbbdc9; }
       @media (max-width: 480px) {
-        #myShop #aboutProduct span {
+        #myShop #shopWrapper #aboutProduct span {
           font-size: 16px; } }
-  #myShop #product {
+  #myShop #shopWrapper #product {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 100px;
     width: 50%; }
     @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #product {
+      #myShop #shopWrapper #product {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #myShop #shopWrapper #product {
+        flex-direction: column; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #myShop #shopWrapper #product {
         padding: 20px; } }
     @media (max-width: 480px) {
-      #myShop #product {
+      #myShop #shopWrapper #product {
         padding: 10px; } }
     @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #product {
+      #myShop #shopWrapper #product {
         width: 100%; } }
     @media (max-width: 480px) {
-      #myShop #product {
+      #myShop #shopWrapper #product {
         width: 100%; } }
-    #myShop #product #productImg {
+    #myShop #shopWrapper #product #productImg {
       width: 100%; }
 
 h3 {
