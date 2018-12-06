@@ -30,12 +30,31 @@ $(document).ready(function(){
 
 // hover nav
 
-    $(".dropbtn").on("mouseover",function(){
+    $(".dropbtn").on("mouseenter",function(){
         $(".dropdown-content").toggle();
     });
 
 
+// slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides(){
+        let slides = $(".mySlides");
+        for ( let i=0; i < slides.length; i++){
+            $(slides[i]).css("display", "none");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length ) {slideIndex = 1;}
+        $(slides[slideIndex - 1]).css("display", "block");
+        setTimeout( showSlides, 3000);
+    }
+
+
+
+
 // shop
+    displayOrder();
 
     function displayOrder(){
         var print;
@@ -83,13 +102,14 @@ $(document).ready(function(){
                 alert("Please select a fabric");
             } else {
                 $("#myShop").show();
+                $(".showProduct").show();
                 $("#buyButton").hide();
             }
 
         });
     }
 
-    displayOrder();
+
 
 
 });

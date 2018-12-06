@@ -123,14 +123,25 @@
           #intro #bold #begin .down {
             border-top: 30px solid black; } }
   #intro #img-repl {
-    display: none; }
+    display: none;
+    overflow: hidden; }
     @media (max-width: 480px) {
       #intro #img-repl {
         display: block;
         width: 120%;
         height: 80vh;
         padding: 50px; } }
+    #intro #img-repl .mySlides {
+      animation: intro-slider 2s infinite alternate ease-in-out;
+      transition: 2s; }
+      #intro #img-repl .mySlides .intro-slider {
+        width: 100%; }
 
+@keyframes intro-slider {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
 @media (min-width: 481px) and (max-width: 767px) {
   #da-span {
     display: none; } }
@@ -145,8 +156,9 @@
   align-items: center;
   flex-direction: row !important;
   position: relative;
-  background-color: #3A2E3C;
-  padding: 100px; }
+  background-color: black;
+  padding: 50px;
+  animation: about-bg 3s ease-in-out forwards; }
   @media (min-width: 481px) and (max-width: 767px) {
     #aboutUs {
       flex-direction: column; } }
@@ -166,8 +178,9 @@
       flex-direction: column !important;
       padding: 10px; } }
   #aboutUs p {
-    color: #bbbdc9;
-    font: 20px "Open Sans", sans-serif; }
+    font: 20px "Open Sans", sans-serif;
+    animation: about-us 3s ease-in-out forwards;
+    transition: 1s; }
     @media (max-width: 480px) {
       #aboutUs p {
         font-size: 15px !important; } }
@@ -214,7 +227,7 @@
       top: 0;
       height: 390px;
       width: 390px;
-      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
     .slider-wrapper .rotatescroll .overlay-interaction {
       background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(255, 255, 255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
       z-index: 0; }
@@ -328,10 +341,21 @@
   .slider-wrapper .rotatescroll [class*="-hovered"] {
     z-index: 1; }
 
+@keyframes about-us {
+  from {
+    color: black; }
+  to {
+    color: #bbbdc9; } }
+@keyframes about-bg {
+  from {
+    background-color: #f0faf7; }
+  to {
+    background-color: black; } }
 #designs {
   position: relative;
-  background-color: black;
-  padding: 100px; }
+  background-color: #bbbdc9;
+  padding: 100px;
+  animation: designs-bg 2s forwards; }
   @media (min-width: 481px) and (max-width: 767px) {
     #designs {
       padding: 70px 10px; } }
@@ -350,37 +374,53 @@
     -webkit-column-width: 20%;
     -moz-column-width: 20%;
     column-width: 20%; }
+    @media (max-width: 480px) {
+      #designs #portfolio {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-gap: 1px;
+        -moz-column-gap: 1px;
+        column-gap: 1px;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%; } }
     #designs #portfolio .snd {
       display: none; }
-    #designs #portfolio .tile {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-      -webkit-transition: all 150ms ease;
-      transition: all 150ms ease;
-      transition: transform .5s; }
-      #designs #portfolio .tile img {
-        width: 100%;
-        height: auto;
-        margin: 1px;
-        padding: 5px;
-        border: 3px double #bbbdc9; }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #designs #portfolio .tile img {
-            padding: 3px;
-            border: 2px double #bbbdc9; } }
-        @media (max-width: 480px) {
-          #designs #portfolio .tile img {
-            padding: 1px;
-            border: 1px double #bbbdc9; } }
+    #designs #portfolio .tile img {
+      width: 100%;
+      height: auto;
+      margin: 1px;
+      padding: 5px;
+      border: 3px double #3A2E3C;
+      z-index: 1;
+      transition: 2s; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #designs #portfolio .tile img {
+          padding: 3px;
+          border-width: 2px; } }
+      @media (max-width: 480px) {
+        #designs #portfolio .tile img {
+          padding: 1px;
+          border-width: 1px; } }
+    #designs #portfolio .tile img:hover {
+      transform: scale(1.5);
+      overflow: visible;
+      z-index: 2; }
     #designs #portfolio #showMore {
+      cursor: pointer;
       color: #f0faf7;
-      font: bold 25px "Architects Daughter", cursive; }
+      font: bold 25px "Architects Daughter", cursive;
+      transition: 2s; }
       @media (min-width: 481px) and (max-width: 767px) {
         #designs #portfolio #showMore {
-          font-size: 25px; } }
+          font-size: 20px; } }
       @media (max-width: 480px) {
         #designs #portfolio #showMore {
-          font-size: 20px; } }
+          font-size: 15px;
+          text-align: right; } }
+    #designs #portfolio #showMore:hover {
+      color: #fe0116; }
     #designs #portfolio .scale-anm {
       transform: scale(1); }
     #designs #portfolio p {
@@ -398,29 +438,30 @@
       background: black;
       color: #f0faf7; }
   #designs .btn {
-    font-size: 25px;
+    color: #fe0116;
+    font: bold 25px "Architects Daughter", cursive;
     font-weight: normal;
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
     display: inline-block;
     line-height: normal;
     padding: 15px 20px;
-    margin: 5px;
+    margin: auto;
     height: auto;
     vertical-align: middle;
     -webkit-appearance: none;
-    color: #fe0116;
-    font: bold 25px "Architects Daughter", cursive;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: rgba(0, 0, 0, 0);
+    transition: 2s; }
     @media (min-width: 481px) and (max-width: 767px) {
       #designs .btn {
         padding: 10px; } }
     @media (max-width: 480px) {
       #designs .btn {
-        padding: 5px;
-        font-size: 20px; } }
+        padding: 3px;
+        font-size: 17px; } }
   #designs .btn:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #f0faf7; }
   #designs .btn:focus {
     outline: none;
     border-color: var(--darken-2);
@@ -429,6 +470,11 @@
     border: 0;
     padding: 0; }
 
+@keyframes designs-bg {
+  from {
+    background-color: #3A2E3C; }
+  to {
+    background-color: #bbbdc9; } }
 #shop-slider {
   width: 100%;
   position: relative;
@@ -445,6 +491,7 @@
       padding: 30px;
       text-align: center;
       overflow: hidden;
+      position: absolute;
       -moz-transition: 0.3s ease-in-out all;
       -o-transition: 0.3s ease-in-out all;
       -webkit-transition: 0.3s ease-in-out all;
@@ -452,23 +499,18 @@
       @media (max-width: 480px) {
         #shop-slider .section .left, #shop-slider .section .middle, #shop-slider .section .right {
           z-index: 1;
-          overflow: visible;
-          position: absolute;
-          height: auto !important; } }
+          overflow: visible; } }
       @media (min-width: 481px) and (max-width: 767px) {
         #shop-slider .section .left, #shop-slider .section .middle, #shop-slider .section .right {
           z-index: 1;
-          overflow: visible;
-          position: absolute;
-          height: auto !important; } }
-      @media (min-width: 480px) {
+          overflow: visible; } }
+      @media (max-width: 768px) {
         #shop-slider .section .left, #shop-slider .section .middle, #shop-slider .section .right {
           width: 100%;
           font-size: 0.9em;
-          padding: 10px;
+          padding: 1px;
           left: 0;
-          float: left;
-          position: absolute; } }
+          float: left; } }
       @media (min-width: 768px) {
         #shop-slider .section .left, #shop-slider .section .middle, #shop-slider .section .right {
           width: 33.33333%;
@@ -488,7 +530,8 @@
       justify-content: center;
       align-items: center;
       background-color: #bbbdc9;
-      color: black; }
+      color: black;
+      left: 0%; }
       @media (min-width: 481px) and (max-width: 767px) {
         #shop-slider .section.animate .left {
           flex-direction: column; } }
@@ -497,10 +540,13 @@
           flex-direction: column; } }
       @media (max-width: 768px) {
         #shop-slider .section.animate .left {
-          left: 99%; } }
+          right: 100%; } }
       @media (min-width: 768px) {
         #shop-slider .section.animate .left {
-          left: 0%; } }
+          right: 0%; } }
+    #shop-slider .section.animate .left:nth-child(even) {
+      background-color: black;
+      color: #bbbdc9; }
     #shop-slider .section.animate .right {
       display: flex;
       flex-direction: row;
@@ -517,13 +563,25 @@
           flex-direction: column; } }
       @media (max-width: 768px) {
         #shop-slider .section.animate .right {
-          left: 0%;
-          background-color: #3A2E3C; } }
+          left: 100%; } }
       @media (min-width: 768px) {
         #shop-slider .section.animate .right {
           left: 66.66%; } }
+    #shop-slider .section.animate .right:nth-child(odd) {
+      color: black;
+      background-color: #bbbdc9; }
     #shop-slider .section .title {
-      background: black; }
+      background: black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #shop-slider .section .title {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #shop-slider .section .title {
+          flex-direction: column; } }
       #shop-slider .section .title h2 {
         margin-top: 0;
         font: bold 25px "Architects Daughter", cursive; }
@@ -618,25 +676,13 @@
         flex-direction: column; } }
     @media (min-width: 768px) and (max-width: 1023px) {
       #steps-form #gallery-cities {
-        padding: 60px; } }
+        padding: 60px 10px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #steps-form #gallery-cities {
-        padding: 40px; } }
+        padding: 50px 5px; } }
     @media (max-width: 480px) {
       #steps-form #gallery-cities {
-        padding: 20px; } }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      #steps-form #gallery-cities {
-        width: 100%;
-        padding: 20px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #steps-form #gallery-cities {
-        width: 100%;
-        padding: 20px; } }
-    @media (max-width: 480px) {
-      #steps-form #gallery-cities {
-        width: 100%;
-        padding: 10px; } }
+        padding: 40px 4px; } }
     #steps-form #gallery-cities #RepYourCity {
       width: 50%; }
       @media (min-width: 481px) and (max-width: 767px) {
@@ -662,8 +708,8 @@
             padding: 20px; } }
         @media (max-width: 480px) {
           #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 20px;
-            padding: 10px; } }
+            font-size: 22px;
+            padding: 5px; } }
       #steps-form #gallery-cities #RepYourCity h2::before {
         content: "Step #1: ";
         color: #3A2E3C;
@@ -681,11 +727,14 @@
         color: #3A2E3C; }
         @media (max-width: 480px) {
           #steps-form #gallery-cities #RepYourCity span {
-            font-size: 16px; } }
+            font-size: 13px; } }
       #steps-form #gallery-cities #RepYourCity span::before {
         content: "Rep your City! ";
         font: bold 25px "Architects Daughter", cursive;
         color: #fe0116; }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities #RepYourCity span::before {
+            font-size: 18px; } }
     #steps-form #gallery-cities .print-gal {
       padding: 100px;
       width: 50%;
@@ -713,10 +762,13 @@
         #steps-form #gallery-cities .print-gal {
           flex-direction: column; } }
       #steps-form #gallery-cities .print-gal select {
-        margin: 20px;
         font: bold 25px "Architects Daughter", cursive;
-        background-color: #3A2E3C;
-        color: #f0faf7; }
+        color: #3A2E3C;
+        background-color: #f0faf7;
+        margin: 20px; }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities .print-gal select {
+            font-size: 18px; } }
       #steps-form #gallery-cities .print-gal img {
         width: 100%;
         border: 8px ridge #bbbdc9; }
@@ -733,13 +785,13 @@
     align-items: center; }
     @media (min-width: 768px) and (max-width: 1023px) {
       #steps-form #pickDesign {
-        padding: 60px; } }
+        padding: 60px 10px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #steps-form #pickDesign {
-        padding: 40px; } }
+        padding: 50px 5px; } }
     @media (max-width: 480px) {
       #steps-form #pickDesign {
-        padding: 20px; } }
+        padding: 40px 4px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #steps-form #pickDesign {
         flex-direction: column; } }
@@ -777,6 +829,9 @@
         color: #3A2E3C;
         background-color: #f0faf7;
         margin: 20px; }
+        @media (max-width: 480px) {
+          #steps-form #pickDesign #designsExp select {
+            font-size: 18px; } }
       #steps-form #pickDesign #designsExp img {
         width: 100%; }
     #steps-form #pickDesign #designsText h2 {
@@ -795,8 +850,8 @@
           padding: 20px; } }
       @media (max-width: 480px) {
         #steps-form #pickDesign #designsText h2 {
-          font-size: 20px;
-          padding: 10px; } }
+          font-size: 22px;
+          padding: 5px; } }
     #steps-form #pickDesign #designsText h2::before {
       content: "Step #2: ";
       font-size: 50px;
@@ -813,11 +868,14 @@
       color: #bbbdc9; }
       @media (max-width: 480px) {
         #steps-form #pickDesign #designsText span {
-          font-size: 16px; } }
+          font-size: 13px; } }
     #steps-form #pickDesign #designsText span::before {
       content: "Rep your City! ";
       font: bold 25px "Architects Daughter", cursive;
       color: #fe0116; }
+      @media (max-width: 480px) {
+        #steps-form #pickDesign #designsText span::before {
+          font-size: 18px; } }
   #steps-form #pickFabric {
     width: 100%;
     height: auto;
@@ -830,13 +888,13 @@
     align-items: center; }
     @media (min-width: 768px) and (max-width: 1023px) {
       #steps-form #pickFabric {
-        padding: 60px; } }
+        padding: 60px 10px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #steps-form #pickFabric {
-        padding: 40px; } }
+        padding: 50px 5px; } }
     @media (max-width: 480px) {
       #steps-form #pickFabric {
-        padding: 20px; } }
+        padding: 40px 4px; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #steps-form #pickFabric {
         flex-direction: column; } }
@@ -871,9 +929,12 @@
           flex-direction: column; } }
       #steps-form #pickFabric #fabricGal select {
         font: bold 25px "Architects Daughter", cursive;
-        background-color: #3A2E3C;
-        color: #f0faf7;
+        color: #3A2E3C;
+        background-color: #f0faf7;
         margin: 20px; }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricGal select {
+            font-size: 18px; } }
       #steps-form #pickFabric #fabricGal img {
         width: 100%;
         border-radius: 100%; }
@@ -901,8 +962,8 @@
             padding: 20px; } }
         @media (max-width: 480px) {
           #steps-form #pickFabric #fabricText h2 {
-            font-size: 20px;
-            padding: 10px; } }
+            font-size: 22px;
+            padding: 5px; } }
       #steps-form #pickFabric #fabricText h2::before {
         content: "Step #3: ";
         color: #3A2E3C;
@@ -919,11 +980,14 @@
         color: #3A2E3C; }
         @media (max-width: 480px) {
           #steps-form #pickFabric #fabricText span {
-            font-size: 16px; } }
+            font-size: 13px; } }
       #steps-form #pickFabric #fabricText span::before {
         content: "Rep your City! ";
         font: bold 25px "Architects Daughter", cursive;
         color: #fe0116; }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricText span::before {
+            font-size: 18px; } }
 
 #buyButton {
   background-color: #3A2E3C;
@@ -931,6 +995,9 @@
   font: bold 25px "Architects Daughter", cursive;
   width: 100%;
   padding: 10px; }
+  @media (max-width: 480px) {
+    #buyButton {
+      font-size: 18px; } }
 
 #buyButton::after {
   content: " click here";
@@ -957,31 +1024,45 @@
       flex-direction: column; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     #myShop #shopWrapper {
-      padding: 60px; } }
+      padding: 60px 10px; } }
   @media (min-width: 481px) and (max-width: 767px) {
     #myShop #shopWrapper {
-      padding: 40px; } }
+      padding: 50px 5px; } }
   @media (max-width: 480px) {
     #myShop #shopWrapper {
-      padding: 20px; } }
+      padding: 40px 4px; } }
   @media (min-width: 481px) and (max-width: 767px) {
     #myShop #shopWrapper {
       flex-direction: column !important; } }
+  @media (max-width: 480px) {
+    #myShop #shopWrapper {
+      flex-direction: column !important; } }
   #myShop #shopWrapper #aboutProduct {
-    width: 50%; }
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important; }
     @media (min-width: 481px) and (max-width: 767px) {
       #myShop #shopWrapper #aboutProduct {
         width: 100%; } }
     @media (max-width: 480px) {
       #myShop #shopWrapper #aboutProduct {
         width: 100%; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #myShop #shopWrapper #aboutProduct {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #myShop #shopWrapper #aboutProduct {
+        flex-direction: column; } }
     #myShop #shopWrapper #aboutProduct span {
       color: black;
       padding: 5px;
       color: #bbbdc9; }
       @media (max-width: 480px) {
         #myShop #shopWrapper #aboutProduct span {
-          font-size: 16px; } }
+          font-size: 13px; } }
   #myShop #shopWrapper #product {
     display: flex;
     flex-direction: row;
@@ -1148,23 +1229,41 @@ nav {
       flex-direction: row !important;
       background-color: black; } }
   nav .ent {
-    float: left;
-    width: 50%; }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    padding: 2px; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      nav .ent {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      nav .ent {
+        flex-direction: column; } }
+    nav .ent span {
+      font: bold 25px "Architects Daughter", cursive; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        nav .ent span {
+          display: none; } }
+      @media (max-width: 480px) {
+        nav .ent span {
+          display: none; } }
     nav .ent a {
       text-decoration: none; }
       nav .ent a img {
-        width: 15%; }
+        width: 20%; }
         @media (min-width: 481px) and (max-width: 767px) {
           nav .ent a img {
-            width: 30%; } }
+            display: none; } }
         @media (max-width: 480px) {
           nav .ent a img {
             display: none; } }
   nav .dropdown {
     text-align: right;
     overflow: hidden;
-    width: 50%;
-    font: bold 25px "Architects Daughter", cursive; }
+    width: 50%; }
     nav .dropdown .dropbtn {
       font: bold 25px "Architects Daughter", cursive;
       border: none;
@@ -1192,9 +1291,9 @@ nav {
         color: #fe0116;
         font: bold 25px "Architects Daughter", cursive;
         text-align: center;
-        border: 1px solid black;
-        padding: 1px;
+        padding: 5px;
         word-wrap: break-word;
+        padding: 2px;
         display: block;
         background-color: #fe0116;
         color: #f0faf7; }
@@ -1302,8 +1401,7 @@ nav {
     width: 40%; }
 
 #footer {
-  background-color: #fe0116;
-  color: #f0faf7;
+  background-color: black;
   width: 100%;
   display: block;
   bottom: 0;
@@ -1314,7 +1412,7 @@ nav {
     display: inline-block;
     position: absolute;
     text-align: right;
-    background-color: #fe0116; }
+    background-color: black; }
     #footer nav ul li {
       list-style-type: none;
       display: inline-block;
@@ -1328,20 +1426,17 @@ nav {
         color: #fe0116;
         font: bold 25px "Architects Daughter", cursive;
         text-align: center;
-        border: 1px solid black;
-        padding: 1px;
+        padding: 5px;
         word-wrap: break-word;
         border: none !important; }
         @media (max-width: 480px) {
           #footer nav ul li a {
             font-size: 12px; } }
         #footer nav ul li a i {
-          font-size: 16px;
+          font-size: 20px;
           font-weight: bold;
-          padding: 6px;
-          border-radius: 100%;
-          background-color: #f0faf7;
-          color: #fe0116; }
+          padding: 1px;
+          color: #bbbdc9; }
           @media (max-width: 480px) {
             #footer nav ul li a i {
               color: #f0faf7;
@@ -1351,10 +1446,10 @@ nav {
   #footer p {
     width: 50%;
     display: inline-block;
-    text-align: left; }
+    text-align: left;
+    color: #bbbdc9; }
     @media (max-width: 480px) {
       #footer p {
-        font-size: 16px;
-        color: black; } }
+        font-size: 16px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -109,13 +109,13 @@ $smDev-width: 280px;
     padding: 10px 150px;
     text-align: center;
     @include tablet {
-        padding: 60px;
+        padding: 60px 10px;
     }
     @include phone {
-        padding: 40px;
+        padding: 50px 5px;
     }
     @include smDev {
-        padding: 20px;
+        padding: 40px 4px;
     }
 }
 
@@ -144,7 +144,7 @@ $smDev-width: 280px;
     color: $darkGray;
     padding: 5px;
     @include smDev {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -162,8 +162,8 @@ $smDev-width: 280px;
         padding: 20px;
     }
     @include smDev {
-        font-size: 20px;
-        padding: 10px;
+        font-size: 22px;
+        padding: 5px;
     }
 }
 
@@ -174,8 +174,7 @@ $smDev-width: 280px;
     color: $red;
     font: $font-med;
     text-align: center;
-    border: 1px solid $darkGray;
-    padding: 1px;
+    padding: 5px;
     word-wrap: break-word;
     @include smDev {
         font-size: 12px;
@@ -216,15 +215,15 @@ $smDev-width: 280px;
     cursor: pointer;
 }
 
-@mixin select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+//@mixin select {
+//    width: 100%;
+//    padding: 12px 20px;
+//    margin: 8px 0;
+//    display: inline-block;
+//    border: 1px solid #ccc;
+//    border-radius: 4px;
+//    box-sizing: border-box;
+//}
 
 @mixin tag {
     background-color: $red;
@@ -232,11 +231,8 @@ $smDev-width: 280px;
     position: relative;
     width: 100%;
     text-align: center;
-    justify-content: center;
-    vertical-align: middle;
     height: 100%;
     display: flex;
-    border-bottom: 4px solid $darkGray;
     @include tablet {
         display: block;
         height: auto;
@@ -301,6 +297,17 @@ $smDev-width: 280px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+}
+
+@mixin select {
+    font: $font-med;
+    color: $purple;
+    background-color: $white;
+    margin: 20px;
+    @include smDev {
+        font-size: 18px;
+    }
+
 }
 
 
@@ -390,14 +397,30 @@ $smDev-width: 280px;
 
     #img-repl {
         display: none;
+        overflow: hidden;
         @include smDev {
             display: block;
             width: 120%;
             height: 80vh;
             padding: 50px;
         }
+        .mySlides {
+            animation: intro-slider 2s infinite alternate ease-in-out;
+            transition: 2s;
+            .intro-slider{
+                width: 100%;
+            }
+            .text{
+
+            }
+        }
     }
 
+}
+
+@keyframes intro-slider{
+    from {opacity: 0.3;}
+    to {opacity: 1;}
 }
 
 
@@ -416,8 +439,11 @@ $smDev-width: 280px;
     @include flex;
     flex-direction: row!important;
     position: relative;
-    background-color: $purple;
-    padding: 100px;
+    background-color: black;
+    padding: 50px;
+
+    animation: about-bg 3s ease-in-out forwards;
+
     @include tablet {
         flex-direction: column!important;
         padding: 40px;
@@ -432,8 +458,9 @@ $smDev-width: 280px;
     }
 
     p {
-        color: $lightGray;
         font: $font-small;
+        animation: about-us 3s ease-in-out forwards;
+        transition: 1s;
         @include smDev {
             font-size: 15px!important;
         }
@@ -486,7 +513,7 @@ $smDev-width: 280px;
             top: 0;
             height: 390px;
             width: 390px;
-            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(58, 46, 60)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
         }
         .overlay-interaction {
             background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(255, 255, 255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
@@ -647,11 +674,21 @@ $smDev-width: 280px;
     }
 }
 
+@keyframes about-us {
+    from { color: black;}
+    to { color: $lightGray;}
+}
+@keyframes about-bg {
+    from { background-color: $white;}
+    to { background-color: black;}
+}
+
 
 #designs {
     position: relative;
-    background-color: $darkGray;
+    background-color: $lightGray;
     padding: 100px;
+    animation: designs-bg 2s forwards;
     @include phone {
         padding: 70px 10px;
     }
@@ -670,44 +707,65 @@ $smDev-width: 280px;
         -webkit-column-width: 20%;
         -moz-column-width: 20%;
         column-width: 20%;
+        @include smDev {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+            -webkit-column-gap: 1px;
+            -moz-column-gap: 1px;
+            column-gap: 1px;
+            -webkit-column-width: 100%;
+            -moz-column-width: 100%;
+            column-width: 100%;
+        }
         .snd {
             display: none;
         }
 
         .tile {
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            -webkit-transition: all 150ms ease;
-            transition: all 150ms ease;
-            transition: transform .5s;
+
             img {
                 width: 100%;
                 height: auto;
                 margin: 1px;
                 padding: 5px;
-                border: 3px double $lightGray;
+                border: 3px double $purple;
+                z-index: 1;
+                transition: 2s;
+
                 @include phone {
                     padding: 3px;
-                    border: 2px double $lightGray;
+                    border-width: 2px;
                 }
                 @include smDev {
                     padding: 1px;
-                    border: 1px double $lightGray;
+                    border-width: 1px;
                 }
+            }
+            img:hover{
+                transform: scale(1.5);
+                overflow: visible;
+                z-index: 2;
             }
 
 
         }
 
         #showMore {
+            cursor: pointer;
             color: $white;
             font: $font-med;
+            transition: 2s;
             @include phone {
-                font-size: 25px;
-            }
-            @include smDev {
                 font-size: 20px;
             }
+            @include smDev {
+                font-size: 15px;
+                text-align: right;
+            }
+        }
+        #showMore:hover{
+            color: $red;
         }
 
         .scale-anm {
@@ -725,6 +783,7 @@ $smDev-width: 280px;
             color: $red;
             display:block;
             float:left;
+
         }
 
         p:hover {
@@ -736,31 +795,32 @@ $smDev-width: 280px;
     }
 
     .btn {
-        font-size: 25px;
+        color: $red;
+        font: $font-med;
         font-weight: normal;
-        text-decoration: none;
+        text-decoration: underline;
         cursor: pointer;
         display: inline-block;
         line-height: normal;
         padding: 15px 20px;
-        margin: 5px;
+        margin: auto;
         height: auto;
         vertical-align: middle;
         -webkit-appearance: none;
-        color: $red;
-        font: $font-med;
         background-color: rgba(0, 0, 0, 0);
+        transition: 2s;
         @include phone {
             padding: 10px;
         }
         @include smDev {
-            padding: 5px;
-            font-size: 20px;
+            padding: 3px;
+            font-size: 17px;
         }
     }
 
     .btn:hover {
         text-decoration: none;
+        color: $white;
     }
 
     .btn:focus {
@@ -775,7 +835,10 @@ $smDev-width: 280px;
     }
 
 }
-
+@keyframes designs-bg {
+    from {background-color: $purple;}
+    to {background-color: $lightGray;}
+}
 
 // shop
 
@@ -795,30 +858,29 @@ $smDev-width: 280px;
             padding: 30px;
             text-align:center;
             overflow:hidden;
+            position: absolute;
 
             @include smDev {
                 z-index: 1;
                 overflow: visible;
-                position: absolute;
-                height: auto !important;
+
             }
 
             @include phone {
                 z-index: 1;
                 overflow: visible;
-                position: absolute;
-                height: auto !important;
+
             }
 
             @include transition;
 
-            @media (min-width: $sm) {
+            @media (max-width: $md) {
                 width: 100%;
                 font-size:0.9em;
-                padding: 10px;
+                padding: 1px;
                 left: 0;
                 float: left;
-                position: absolute;
+
             }
 
             @media (min-width: $md) {
@@ -848,13 +910,20 @@ $smDev-width: 280px;
                 @include flex;
                 background-color: $lightGray;
                 color: $darkGray;
+                left: 0%;
+
                 @media (max-width: $md) {
-                    left: 99%;
+                    right: 100%;
+
                 }
 
                 @media (min-width: $md) {
-                    left:0%;
+                    right:0%;
                 }
+            }
+            .left:nth-child(even){
+                background-color: $darkGray;
+                color: $lightGray;
             }
 
             .right {
@@ -862,19 +931,25 @@ $smDev-width: 280px;
                 background-color: $darkGray;
                 color: $lightGray;
                 border-left-width: 0px;
+
                 @media (max-width: $md) {
-                    left: 0%;
-                    background-color: $purple;
+                    left: 100%;
                 }
 
                 @media (min-width: $md) {
                     left:66.66%;
                 }
             }
+            .right:nth-child(odd){
+                color: $darkGray;
+                background-color: $lightGray;
+            }
         }
 
         .title {
             background: $darkGray;
+            @include flex;
+
             h2 {
                 margin-top:0;
                 font: $font-med;
@@ -938,6 +1013,7 @@ $smDev-width: 280px;
                 border-bottom-color: $lightGray;
                 border-width: thick;
                 border-style: solid;
+
             }
         }
     }
@@ -963,18 +1039,7 @@ background-color: $lightGray;
     #gallery-cities{
         @include flex;
         @include pick;
-        @include tablet {
-            width: 100%;
-            padding: 20px;
-        }
-        @include phone {
-            width: 100%;
-            padding: 20px;
-        }
-        @include smDev {
-            width: 100%;
-            padding: 10px;
-        }
+
         #RepYourCity {
             @include exp;
             h2{
@@ -1003,6 +1068,9 @@ background-color: $lightGray;
                 content: "Rep your City! ";
                 font: $font-med;
                 color: $red;
+                @include smDev {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -1012,10 +1080,7 @@ background-color: $lightGray;
             @include flex;
             flex-direction: column!important;
             select {
-                margin: 20px;
-                font: $font-med;
-                background-color: $purple;
-                color: $white;
+                @include select;
             }
             img {
                 width: 100%;
@@ -1034,10 +1099,7 @@ background-color: $lightGray;
             @include flex;
             flex-direction: column!important;
             select {
-                font: $font-med;
-                color: $purple;
-                background-color: $white;
-                margin: 20px;
+                @include select;
 
             }
             img {
@@ -1068,14 +1130,12 @@ background-color: $lightGray;
                 content: "Rep your City! ";
                 font: $font-med;
                 color: $red;
-
+                @include smDev {
+                    font-size: 18px;
+                }
             }
         }
     }
-
-
-
-
 
 
 
@@ -1087,12 +1147,11 @@ background-color: $lightGray;
             @include exp;
             @include flex;
             flex-direction: column!important;
+
             select {
-                font: $font-med;
-                background-color: $purple;
-                color: $white;
-                margin: 20px;
-            }
+                    @include select;
+             }
+
             img {
                 width: 100%;
                 border-radius: 100%;
@@ -1124,7 +1183,9 @@ background-color: $lightGray;
                 content: "Rep your City! ";
                 font: $font-med;
                 color: $red;
-
+                @include smDev {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -1136,6 +1197,9 @@ background-color: $lightGray;
     font: $font-med;
     width: 100%;
     padding: 10px;
+    @include smDev {
+        font-size: 18px;
+    }
 }
 
 #buyButton::after{
@@ -1156,16 +1220,21 @@ background-color: $lightGray;
         @include phone {
             flex-direction: column!important;
         }
+        @include smDev {
+            flex-direction: column!important;
+        }
         #aboutProduct {
             @include exp;
-
-            .showProduct{
-
-            }
+            @include flex;
+            flex-direction: column!important;
             span {
                 @include pickSpan;
                 color: $lightGray;
             }
+            .showProduct{
+
+            }
+
         }
         #product {
             @include flex;
@@ -1230,6 +1299,7 @@ h3 {
                         padding: 20px;
                         font: $font-med;
                         cursor: pointer;
+
                     }
 
                     .active {
@@ -1314,14 +1384,25 @@ nav {
         background-color: $darkGray;
     }
     .ent {
-        float: left;
+        @include flex;
+        justify-content: flex-start;
         width: 50%;
+        padding: 2px;
+        span {
+            font: $font-med;
+            @include phone {
+                display: none;
+            }
+            @include smDev {
+                display: none;
+            }
+        }
         a {
             text-decoration: none;
                 img {
-                    width: 15%;
+                    width: 20%;
                     @include phone {
-                        width: 30%;
+                        display: none;
                     }
                     @include smDev {
                         display: none;
@@ -1334,7 +1415,7 @@ nav {
         text-align: right;
         overflow: hidden;
         width: 50%;
-        font: $font-med;
+
         .dropbtn {
             @include dropbtn;
             i {
@@ -1353,6 +1434,7 @@ nav {
             }
             a {
                 @include a;
+                padding: 2px;
                 display: block;
                 background-color: $red;
                 color: $white;
@@ -1442,8 +1524,7 @@ nav {
 //footer
 
 #footer {
-    background-color: $red;
-    color: $white;
+    background-color: black;
     width: 100%;
     display: block;
     bottom: 0;
@@ -1455,7 +1536,7 @@ nav {
         display: inline-block;
         position: absolute;
         text-align: right;
-        background-color: $red;
+        background-color: black;
         ul li {
             list-style-type: none;
             display: inline-block;
@@ -1469,12 +1550,10 @@ nav {
                 @include a;
                 border: none !important;
                 i {
-                    font-size: 16px;
+                    font-size: 20px;
                     font-weight: bold;
-                    padding: 6px;
-                    border-radius: 100%;
-                    background-color: $white;
-                    color: $red;
+                    padding: 1px;
+                    color: $lightGray;
                     @include smDev {
                         color: $white;
                         background-color: $darkGray;
@@ -1490,9 +1569,10 @@ nav {
         width: 50%;
         display: inline-block;
         text-align: left;
+        color: $lightGray;
         @include smDev {
             font-size: 16px;
-            color: $darkGray;
+
         }
     }
 }

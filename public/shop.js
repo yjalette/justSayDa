@@ -26,21 +26,19 @@
 
         ShopifyBuy.UI.onReady(client).then(function (ui) {
             ui.createComponent('product', {
-                id: [1423676801113],
-                variantId: 12914752225369,
-                node: document.getElementById('product-component-a6b7530f36c'),
+                id: [1902280605785],
+                node: document.getElementById('product-component-902b29fe6df'),
                 moneyFormat: '%24%7B%7Bamount%7D%7D',
                 options: {
                     "product": {
                         "buttonDestination": "checkout",
-                        "variantId": "12914752225369",
+                        "variantId": "all",
                         "width": "240px",
                         "contents": {
                             "img": false,
                             "imgWithCarousel": false,
                             "title": false,
                             "variantTitle": false,
-                            "options": false,
                             "price": false,
                             "description": false,
                             "buttonWithQuantity": false,
@@ -70,10 +68,14 @@
                                 }
                             },
                             "title": {
+                                "font-size": "26px",
                                 "color": "#ee523f"
                             },
+                            "price": {
+                                "font-size": "18px"
+                            },
                             "compareAt": {
-                                "font-size": "12px"
+                                "font-size": "15px"
                             }
                         }
                     },
