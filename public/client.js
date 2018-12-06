@@ -58,7 +58,7 @@ $(document).ready(function(){
         // display print
 
         $("#selectPrint").on("click", function () {
-            let print_path = "images/" + $(this).val() + "-mir.png";
+            let print_path = "images/" + $(this).val() + "-mir.jpg";
             let printImg = $("#print").attr("src", print_path);
             print = $(this).val();
         });
@@ -66,7 +66,7 @@ $(document).ready(function(){
         // display design
 
         $("#selectDesign").on("click", function () {
-            let design_path = "images/" + $(this).val() + ".png";
+            let design_path = "images/" + $(this).val() + ".jpg";
             let designImg = $("#design").attr("src", design_path);
             design = $(this).val();
         });

@@ -227,7 +227,7 @@
       top: 0;
       height: 390px;
       width: 390px;
-      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0H0v195C0,87.305,87.305,0,195,0z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,390h195V195C390,302.696,302.695,390,195,390z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M0,195v195h195C87.305,390,0,302.696,0,195z'/%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,0c107.695,0,195,87.305,195,195V0H195z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(255,  255,  255)' d='M195,0C87.304,0,0,87.305,0,195s87.304,195,195,195c107.695,0,195-87.305,195-195S302.695,0,195,0z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345 z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(0,  0,  0)' d='M195,3C88.919,3,3,88.92,3,195s85.919,192,192,192c106.08,0,192-85.92,192-192S301.08,3,195,3z M195,345 c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(255,  255,  255)' d='M195,43c-84.003,0-152,67.998-152,152c0,84.002,67.997,152,152,152c84.002,0,152-67.998,152-152 C347,110.998,279.002,43,195,43z M195,345c-82.926,0-150-67.074-150-150c0-82.925,67.074-150,150-150c82.926,0,150,67.075,150,150 C345,277.926,277.926,345,195,345z'/%3E%3C/g%3E%3Cg%3E%3Cpath fill='rgb(255,  255,  255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat; }
     .slider-wrapper .rotatescroll .overlay-interaction {
       background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 390'%3E%3Cg%3E%3Cpath fill='rgb(255, 255, 255)' d='M137.375,56.438C155.096,49.08,174.598,45,195,45s39.697,4.018,57.417,11.375l16.792-40.458 C246.524,6.489,221.106,1,195,1c-26.107,0-51.759,5.447-74.443,14.875L137.375,56.438z'/%3E%3C/g%3E%3C/svg%3E") 0 0 no-repeat;
       z-index: 0; }
@@ -771,7 +771,7 @@
             font-size: 18px; } }
       #steps-form #gallery-cities .print-gal img {
         width: 100%;
-        border: 8px ridge #bbbdc9; }
+        border: 8px ridge #fe0116; }
   #steps-form #pickDesign {
     background-color: black !important;
     width: 100%;
@@ -833,49 +833,58 @@
           #steps-form #pickDesign #designsExp select {
             font-size: 18px; } }
       #steps-form #pickDesign #designsExp img {
-        width: 100%; }
-    #steps-form #pickDesign #designsText h2 {
-      font: bold 25px "Architects Daughter", cursive;
-      font-size: 60px;
-      color: #fe0116;
-      text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-      text-align: center; }
-      @media (min-width: 768px) and (max-width: 1023px) {
-        #steps-form #pickDesign #designsText h2 {
-          font-size: 50px;
-          padding: 30px; } }
+        width: 100%;
+        border: 8px ridge #fe0116; }
+    #steps-form #pickDesign #designsText {
+      width: 50%; }
       @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickDesign #designsText h2 {
-          font-size: 30px;
-          padding: 20px; } }
+        #steps-form #pickDesign #designsText {
+          width: 100%; } }
       @media (max-width: 480px) {
-        #steps-form #pickDesign #designsText h2 {
-          font-size: 22px;
-          padding: 5px; } }
-    #steps-form #pickDesign #designsText h2::before {
-      content: "Step #2: ";
-      font-size: 50px;
-      color: #f0faf7; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickDesign #designsText h2::before {
-          font-size: 40px; } }
-      @media (max-width: 480px) {
-        #steps-form #pickDesign #designsText h2::before {
-          font-size: 25px; } }
-    #steps-form #pickDesign #designsText span {
-      color: black;
-      padding: 5px;
-      color: #bbbdc9; }
-      @media (max-width: 480px) {
-        #steps-form #pickDesign #designsText span {
-          font-size: 13px; } }
-    #steps-form #pickDesign #designsText span::before {
-      content: "Rep your City! ";
-      font: bold 25px "Architects Daughter", cursive;
-      color: #fe0116; }
-      @media (max-width: 480px) {
-        #steps-form #pickDesign #designsText span::before {
-          font-size: 18px; } }
+        #steps-form #pickDesign #designsText {
+          width: 100%; } }
+      #steps-form #pickDesign #designsText h2 {
+        font: bold 25px "Architects Daughter", cursive;
+        font-size: 60px;
+        color: #fe0116;
+        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+        text-align: center; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #steps-form #pickDesign #designsText h2 {
+            font-size: 50px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #pickDesign #designsText h2 {
+            font-size: 30px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #steps-form #pickDesign #designsText h2 {
+            font-size: 22px;
+            padding: 5px; } }
+      #steps-form #pickDesign #designsText h2::before {
+        content: "Step #2: ";
+        font-size: 50px;
+        color: #f0faf7; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #pickDesign #designsText h2::before {
+            font-size: 40px; } }
+        @media (max-width: 480px) {
+          #steps-form #pickDesign #designsText h2::before {
+            font-size: 25px; } }
+      #steps-form #pickDesign #designsText span {
+        color: black;
+        padding: 5px;
+        color: #bbbdc9; }
+        @media (max-width: 480px) {
+          #steps-form #pickDesign #designsText span {
+            font-size: 13px; } }
+      #steps-form #pickDesign #designsText span::before {
+        content: "Rep your City! ";
+        font: bold 25px "Architects Daughter", cursive;
+        color: #fe0116; }
+        @media (max-width: 480px) {
+          #steps-form #pickDesign #designsText span::before {
+            font-size: 18px; } }
   #steps-form #pickFabric {
     width: 100%;
     height: auto;
@@ -937,7 +946,7 @@
             font-size: 18px; } }
       #steps-form #pickFabric #fabricGal img {
         width: 100%;
-        border-radius: 100%; }
+        border: 8px ridge #fe0116; }
     #steps-form #pickFabric #fabricText {
       width: 50%; }
       @media (min-width: 481px) and (max-width: 767px) {
