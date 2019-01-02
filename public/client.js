@@ -84,7 +84,7 @@ $(document).ready(function(){
         // submit
 
         $("#buyButton").on("click", function(){
-            let product_path = "images/" + design + "-" + fabric + "-" + print + ".png";
+            let product_path = "images/" + design + "-" + fabric + "-" + print + ".jpeg";
 
             let product = $("#productImg").attr("src", product_path);
 
