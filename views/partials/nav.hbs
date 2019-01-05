@@ -10,9 +10,12 @@
             <div class="dropdown-content">
                 <a href="/">home</a>
                 <a href="/about">about</a>
-                <a href="/registration">shop</a>
-<!--                <a href="/{{login}}">{{login}}</a>-->
-<!--                <a href="/contact">contacts</a>-->
+                <a href="/shop">shop</a>
+
+                {{#if logout}}
+                    <a href="/logout">Logout</a>
+                {{/if}}
+
             </div>
         </div>
 </nav>
