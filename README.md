@@ -60,3 +60,6 @@ API endpoints for the back end include:
 * GET to '/user/:user' to access all of a user's existing order
 * GET to '/product/:id' to access a single order by ID
 * DELETE to '/delete/:id' to delete a single order by ID
+
+## DB config 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'test';
