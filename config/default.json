@@ -1,0 +1,23 @@
+{
+  "db": {
+    "client": "mysql",
+    "connection": {
+      "host"     : "us-cdbr-iron-east-01.cleardb.net",
+      "user"     : "b0b228f5825a1c",
+      "password" : "7ae88a81",
+      "database" : "heroku_8da4bd6506e30bf",
+      "charset"  : "utf8"
+    },
+    "migrations": {
+      "directory": "./db/migrations",
+      "tableName": "migrations"
+    },
+    "seeds": {
+      "directory": "./db/seeds"
+    }
+  },
+  "salt": "salt",
+  "JustSayDAEmail": "test@test.com",
+  "host": "https://boiling-fjord-67437.herokuapp.com/",
+  "mailingkey": "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"
+}
