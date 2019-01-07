@@ -8,6 +8,8 @@
 $(document).ready(function(){
 
     $("#myShop").hide();
+    $("#password-wrapper").hide();
+
 
 //registration
 
@@ -47,6 +49,13 @@ $(document).ready(function(){
         setTimeout( showSlides, 3000);
     }
 
+/* forgot password*/
+
+    $("#forgotPassword").on("click", function(){
+        $("#password-wrapper").show();
+    })
+
+
 // shop
     displayOrder();
 
@@ -68,7 +77,8 @@ $(document).ready(function(){
         $("#selectDesign").on("click", function () {
             let design_path = "images/" + $(this).val() + ".jpg";
             let designImg = $("#design").attr("src", design_path);
-            design = $(this).val();
+//            design = $(this).val();
+            design = "jacket";
         });
 
         // display fabric

@@ -1207,44 +1207,44 @@ background-color: $lightGray;
 
 
 
-#myShop {
-
-    #shopWrapper {
-        @include flex;
-        @include pick;
-        background-color: $darkGray;
-        @include phone {
-            flex-direction: column!important;
-        }
-        @include smDev {
-            flex-direction: column!important;
-        }
-        #aboutProduct {
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-            span {
-                @include pickSpan;
-                color: $lightGray;
-            }
-            .showProduct{
-
-            }
-
-        }
-        #product {
-            @include flex;
-            @include steps-image;
-            @include exp;
-            #productImg {
-                width: 100%;
-            }
-
-        }
-
-    }
-
-}
+//#myShop {
+//
+//    #shopWrapper {
+//        @include flex;
+//        @include pick;
+//        background-color: $darkGray;
+//        @include phone {
+//            flex-direction: column!important;
+//        }
+//        @include smDev {
+//            flex-direction: column!important;
+//        }
+//        #aboutProduct {
+//            @include exp;
+//            @include flex;
+//            flex-direction: column!important;
+//            span {
+//                @include pickSpan;
+//                color: $lightGray;
+//            }
+//            .showProduct{
+//
+//            }
+//
+//        }
+//        #product {
+//            @include flex;
+//            @include steps-image;
+//            @include exp;
+//            #productImg {
+//                width: 100%;
+//            }
+//
+//        }
+//
+//    }
+//
+//}
 
 
 // registration
@@ -1259,7 +1259,7 @@ h3 {
 
  #tag-reg {
         @include flex;
-        background-color: white;
+        background-color: black;
         position: relative;
         width: 100%;
         height: auto;
@@ -1334,7 +1334,6 @@ h3 {
                     input {
                         @include input;
                         background-color: $white;
-
                     }
                     input::placeholder{
                         color: $lightGray;
@@ -1343,25 +1342,54 @@ h3 {
                         background-color: $purple;
                         color: $white;
                     }
-
                     span {
                         font-size: 12px;
                         input {
                             width: auto;
                         }
                     }
+                    a {
+                        font-size: 12px;
+                        color: $white;
 
+                    }
+                    a:hover{
+                        color: $purple;
+                    }
                     button {
                         @include button;
                     }
-
                     button:hover {
                         background-color: $purple;
                         color: $white;
                     }
             }
      }
+}
 
+//forgot password
+#password-wrapper{
+    background-color: black;
+    input {
+        @include input;
+        background-color: $white;
+        padding: 1%;
+    }
+    input::placeholder{
+        color: $lightGray;
+    }
+    input:hover {
+        background-color: $purple;
+        color: $white;
+    }
+    button {
+        @include button;
+    }
+
+    button:hover {
+        background-color: $purple;
+        color: $white;
+    }
 }
 
 //nav pages
@@ -1520,7 +1548,7 @@ nav {
 //footer
 
 #footer {
-    background-color: black;
+    background-color: $purple;
     width: 100%;
     display: block;
     bottom: 0;
@@ -1532,7 +1560,7 @@ nav {
         display: inline-block;
         position: absolute;
         text-align: right;
-        background-color: black;
+        background-color: $purple;
         ul li {
             list-style-type: none;
             display: inline-block;

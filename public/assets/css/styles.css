@@ -1014,92 +1014,6 @@
   font-weight: bold;
   text-decoration: underline; }
 
-#myShop #shopWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  position: relative;
-  padding: 10px 150px;
-  text-align: center;
-  background-color: black; }
-  @media (min-width: 481px) and (max-width: 767px) {
-    #myShop #shopWrapper {
-      flex-direction: column; } }
-  @media (max-width: 480px) {
-    #myShop #shopWrapper {
-      flex-direction: column; } }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    #myShop #shopWrapper {
-      padding: 60px 10px; } }
-  @media (min-width: 481px) and (max-width: 767px) {
-    #myShop #shopWrapper {
-      padding: 50px 5px; } }
-  @media (max-width: 480px) {
-    #myShop #shopWrapper {
-      padding: 40px 4px; } }
-  @media (min-width: 481px) and (max-width: 767px) {
-    #myShop #shopWrapper {
-      flex-direction: column !important; } }
-  @media (max-width: 480px) {
-    #myShop #shopWrapper {
-      flex-direction: column !important; } }
-  #myShop #shopWrapper #aboutProduct {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column !important; }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #shopWrapper #aboutProduct {
-        width: 100%; } }
-    @media (max-width: 480px) {
-      #myShop #shopWrapper #aboutProduct {
-        width: 100%; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #shopWrapper #aboutProduct {
-        flex-direction: column; } }
-    @media (max-width: 480px) {
-      #myShop #shopWrapper #aboutProduct {
-        flex-direction: column; } }
-    #myShop #shopWrapper #aboutProduct span {
-      color: black;
-      padding: 5px;
-      color: #bbbdc9; }
-      @media (max-width: 480px) {
-        #myShop #shopWrapper #aboutProduct span {
-          font-size: 13px; } }
-  #myShop #shopWrapper #product {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-    width: 50%; }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #shopWrapper #product {
-        flex-direction: column; } }
-    @media (max-width: 480px) {
-      #myShop #shopWrapper #product {
-        flex-direction: column; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #shopWrapper #product {
-        padding: 20px; } }
-    @media (max-width: 480px) {
-      #myShop #shopWrapper #product {
-        padding: 10px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #myShop #shopWrapper #product {
-        width: 100%; } }
-    @media (max-width: 480px) {
-      #myShop #shopWrapper #product {
-        width: 100%; } }
-    #myShop #shopWrapper #product #productImg {
-      width: 100%; }
-
 h3 {
   background-color: #3A2E3C;
   color: #f0faf7;
@@ -1112,7 +1026,7 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: black;
   position: relative;
   width: 100%;
   height: auto;
@@ -1201,6 +1115,11 @@ h3 {
         font-size: 12px; }
         #tag-reg #registration-wrap #signIn-form span input {
           width: auto; }
+      #tag-reg #registration-wrap #signIn-form a {
+        font-size: 12px;
+        color: #f0faf7; }
+      #tag-reg #registration-wrap #signIn-form a:hover {
+        color: #3A2E3C; }
       #tag-reg #registration-wrap #signIn-form button {
         padding: 3px 10px;
         color: #fe0116;
@@ -1214,6 +1133,36 @@ h3 {
       #tag-reg #registration-wrap #signIn-form button:hover {
         background-color: #3A2E3C;
         color: #f0faf7; }
+
+#password-wrapper {
+  background-color: black; }
+  #password-wrapper input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f0faf7;
+    padding: 1%; }
+  #password-wrapper input::placeholder {
+    color: #bbbdc9; }
+  #password-wrapper input:hover {
+    background-color: #3A2E3C;
+    color: #f0faf7; }
+  #password-wrapper button {
+    padding: 3px 10px;
+    color: #fe0116;
+    background-color: #f0faf7;
+    border-radius: 4px;
+    width: auto;
+    margin: auto;
+    display: block;
+    font: bold 25px "Architects Daughter", cursive;
+    cursor: pointer; }
+  #password-wrapper button:hover {
+    background-color: #3A2E3C;
+    color: #f0faf7; }
 
 nav {
   display: flex;
@@ -1410,7 +1359,7 @@ nav {
     width: 40%; }
 
 #footer {
-  background-color: black;
+  background-color: #3A2E3C;
   width: 100%;
   display: block;
   bottom: 0;
@@ -1421,7 +1370,7 @@ nav {
     display: inline-block;
     position: absolute;
     text-align: right;
-    background-color: black; }
+    background-color: #3A2E3C; }
     #footer nav ul li {
       list-style-type: none;
       display: inline-block;
