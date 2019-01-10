@@ -7,9 +7,7 @@
 
 $(document).ready(function(){
 
-    $("#myShop").hide();
     $("#password-wrapper").hide();
-
 
 //registration
 
@@ -86,7 +84,8 @@ $(document).ready(function(){
         $("#selectFabric").on("click", function () {
             let fabric_path = "images/" + $(this).val() + ".jpg";
             let fabricImg = $("#fabric").attr("src", fabric_path);
-            fabric = $(this).val();
+//            fabric = $(this).val();
+            fabric = "silk";
 
             console.log(fabric);
         });
@@ -105,9 +104,7 @@ $(document).ready(function(){
             } else if ( print == null){
                 alert("Please select a fabric");
             } else {
-                $("#myShop").show();
-                $(".showProduct").show();
-                $("#buyButton").hide();
+
             }
 
         });

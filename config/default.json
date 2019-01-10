@@ -16,9 +16,10 @@
       "directory": "./db/seeds"
     }
   },
-"salt": "salt",
-"JustSayDAEmail": "test@test.com",
-"host": "https://boiling-fjord-67437.herokuapp.com/",
-"mailingkey": "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"
+    "salt": "20glupyiface18",
+    "JustSayDAEmail": "support@justsayda.com",
+    "host": "https://boiling-fjord-67437.herokuapp.com",
+    "mailingkey": "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"
 }
+
 

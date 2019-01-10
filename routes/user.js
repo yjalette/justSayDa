@@ -44,6 +44,15 @@ router.get('/about', (req, res) => {
     return res.render('about', resp);
 })
 
+router.get('/payment', (req, res) => {
+
+    let resp = { title: "payment"};
+    if (Number(req.session.userId)) {
+        resp.logout =true;
+    }
+    return res.render('payment', resp);
+})
+
 router.get('/users/:id', AuthController.confirmSignUp);
 
 router.get('/logout', function(req, res){
