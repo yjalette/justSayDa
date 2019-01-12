@@ -44,13 +44,13 @@ router.get('/about', (req, res) => {
     return res.render('about', resp);
 })
 
-router.get('/payment', (req, res) => {
+router.get('/contact', (req, res) => {
 
-    let resp = { title: "payment"};
+    let resp = { title: "contact"};
     if (Number(req.session.userId)) {
         resp.logout =true;
     }
-    return res.render('payment', resp);
+    return res.render('contact', resp);
 })
 
 router.get('/users/:id', AuthController.confirmSignUp);

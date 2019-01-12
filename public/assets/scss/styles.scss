@@ -38,7 +38,7 @@ $shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
 $font-graf: bold 60px 'Rock Salt', cursive;
 $font-main: bold 40px 'Rock Salt', cursive;
 $font-med: bold 25px 'Architects Daughter', cursive;
-$font-small: 20px 'Open Sans', sans-serif;
+$font-small: 17px 'Open Sans', sans-serif;
 
 
 
@@ -300,10 +300,7 @@ $smDev-width: 280px;
     @include smDev {
         font-size: 18px;
     }
-
 }
-
-
 #intro {
     @include flex;
     flex-flow: column!important;
@@ -331,19 +328,15 @@ $smDev-width: 280px;
                 height: 100%;
             }
         }
-
     }
-
     @-webkit-keyframes downarrow {
         0% { -webkit-transform: translateY(0); opacity: 0.8 }
         100% { -webkit-transform: translateY(7px); opacity: 1 }
     }
-
     @keyframes downarrow {
         0% { transform: translateY(0); opacity: 0.8 }
         100% {transform: translateY(7px); opacity: 1 }
     }
-
     #bold {
         @include flex;
         flex-direction: row!important;
@@ -351,8 +344,8 @@ $smDev-width: 280px;
         z-index: 2;
         @include smDev {
             position: relative;
+            background-color: black;
         }
-
         span {
             font: $font-main;
             color: $white;
@@ -364,38 +357,33 @@ $smDev-width: 280px;
                 padding: 4px;
             }
             @include smDev {
-                font-size: 12px!important;
-                padding: 2px;
-                color: $red;
+                font-size: 14px!important;
+                padding: 25px;
             }
         }
-
         #begin {
             transform: rotate(-90deg);
-
             .arrow {
                 @include arrow;
             }
-
             .down {
                 animation: downarrow 0.6s infinite alternate ease-in-out;
                 -webkit-animation: downarrow 0.6s infinite alternate ease-in-out;
                 border-top: 30px solid $red;
                 @include smDev {
-                    border-top: 30px solid $darkGray;
+                    border-top: 30px solid $white;
                 }
             }
         }
     }
-
     #img-repl {
         display: none;
         overflow: hidden;
         @include smDev {
             display: block;
-            width: 120%;
+            width: 100%;
             height: 80vh;
-            padding: 50px;
+            padding: 4px;
         }
         .mySlides {
             animation: intro-slider 2s infinite alternate ease-in-out;
@@ -404,19 +392,15 @@ $smDev-width: 280px;
                 width: 100%;
             }
             .text{
-
             }
         }
     }
-
 }
 
 @keyframes intro-slider{
     from {opacity: 0.3;}
     to {opacity: 1;}
 }
-
-
 // about us
 #da-span {
     @include phone {
@@ -426,17 +410,13 @@ $smDev-width: 280px;
         display: none;
     }
 }
-
-
 #aboutUs {
     @include flex;
     flex-direction: row!important;
     position: relative;
     background-color: black;
     padding: 50px;
-
     animation: about-bg 3s ease-in-out forwards;
-
     @include tablet {
         flex-direction: column!important;
         padding: 40px;
@@ -1025,234 +1005,7 @@ $smDev-width: 280px;
 
 }
 
-
-
-#steps-form {
-background-color: $lightGray;
-    #gallery-cities{
-        @include flex;
-        @include pick;
-
-        #RepYourCity {
-            @include exp;
-            h2{
-                @include h;
-                padding: 0px !important;
-                text-align: center;
-            }
-            h2::before{
-                content: "Step #1: ";
-                color: $purple;;
-                font-size: 50px;
-                @include phone {
-                    font-size: 40px;
-                }
-                @include smDev {
-                    font-size: 25px;
-                }
-
-            }
-            span {
-                @include pickSpan;
-                padding: 0px !important;
-                color: $purple;
-            }
-            span::before{
-                content: "Rep your City! ";
-                font: $font-med;
-                color: $red;
-                @include smDev {
-                    font-size: 18px;
-                }
-            }
-        }
-
-        .print-gal {
-            @include steps-image;
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-            select {
-                @include select;
-            }
-            img {
-                width: 100%;
-                border: 8px ridge $red;
-            }
-        }
-    }
-
-   #pickDesign {
-       background-color: $darkGray !important;
-       @include pick;
-       @include flex;
-        #designsExp{
-            @include steps-image;
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-            select {
-                @include select;
-
-            }
-            img {
-                width: 100%;
-                border: 8px ridge $red;
-            }
-        }
-        #designsText{
-            @include exp;
-            h2{
-                @include h;
-                text-align: center;
-            }
-            h2::before{
-                content: "Step #2: ";
-                font-size: 50px;
-                color: $white;
-                @include phone {
-                    font-size: 40px;
-                }
-                @include smDev {
-                    font-size: 25px;
-                }
-            }
-            span {
-                @include pickSpan;
-                color: $lightGray;
-            }
-            span::before{
-                content: "Rep your City! ";
-                font: $font-med;
-                color: $red;
-                @include smDev {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-
-
-    #pickFabric {
-        @include pick;
-        @include flex;
-        #fabricGal{
-            @include steps-image;
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-
-            select {
-                    @include select;
-             }
-
-            img {
-                width: 100%;
-//                border-radius: 100%;
-                border: 8px ridge $red;
-            }
-        }
-        #fabricText{
-            @include exp;
-            h2{
-                @include h;
-                text-align: center;
-            }
-            h2::before{
-                content: "Step #3: ";
-                color: $purple;
-                font-size: 50px;
-                @include phone {
-                    font-size: 40px;
-                }
-                @include smDev {
-                    font-size: 25px;
-                }
-
-            }
-            span {
-                @include pickSpan;
-                color: $purple;
-            }
-            span::before{
-                content: "Rep your City! ";
-                font: $font-med;
-                color: $red;
-                @include smDev {
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-}
-
-#buyButton {
-    background-color: $purple;
-    color: $white;
-    font: $font-med;
-    width: 100%;
-    padding: 10px;
-    @include smDev {
-        font-size: 18px;
-    }
-}
-
-#buyButton::after{
-    content: " click here";
-    color: $red;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-
-
-#myShop {
-
-    #shopWrapper {
-        @include flex;
-        @include pick;
-        background-color: $darkGray;
-        @include phone {
-            flex-direction: column!important;
-        }
-        @include smDev {
-            flex-direction: column!important;
-        }
-        #aboutProduct {
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-            .showProduct{
-                @include pickSpan;
-                color: $white;
-            }
-            a {
-                @include a;
-                button {
-                    @include button;
-
-                }
-            }
-
-        }
-        #product {
-            @include flex;
-            @include steps-image;
-            @include exp;
-            #productImg {
-                width: 100%;
-            }
-
-        }
-
-    }
-
-}
-
-
 // registration
-
 h3 {
     background-color: $purple;
     color: $white;
@@ -1260,7 +1013,6 @@ h3 {
     text-align: center;
     padding: 10px;
 }
-
  #tag-reg {
         @include flex;
         background-color: black;
@@ -1273,11 +1025,8 @@ h3 {
             width: 30%;
             @include smDev {
                 width: 1%;
-
             }
-
         }
-
         #registration-wrap {
                 width: 60%;
                 height: auto;
@@ -1299,9 +1048,7 @@ h3 {
                         padding: 20px;
                         font: $font-med;
                         cursor: pointer;
-
                     }
-
                     .active {
                         background-color: $white;
                         color: $red;
@@ -1312,7 +1059,6 @@ h3 {
                     }
                 }
                 #signUp-form {
-
                     input {
                         @include input;
                         background-color: $white;
@@ -1395,47 +1141,65 @@ h3 {
         color: $white;
     }
 }
-
+.tag-lines {
+    @include flex;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    @include smDev {
+        padding: 5px;
+    }
+    span {
+        color: $red;
+        font: $font-main;
+        @include tablet {
+            font-size: 30px!important;
+        }
+        @include phone {
+            font-size: 20px!important;
+        }
+        @include smDev {
+            font-size: 15px!important;
+        }
+    }
+}
 //nav pages
 
 nav {
- @include flex;
-  background-color: white;
-  height: auto;
-  position: relative;
-  width: 100%;
+    @include flex;
+    background-color: white;
+    height: auto;
+    position: relative;
+    width: 100%;
     @include phone {
         flex-direction: row!important;
     }
     @include smDev {
         flex-direction: row!important;
-        background-color: $darkGray;
     }
     .ent {
         @include flex;
+        flex-direction: row!important;
+        align-items: flex-start;
         justify-content: flex-start;
         width: 50%;
-        padding: 2px;
+        padding: 10px;
         span {
             font: $font-med;
+            color: $red;
             @include phone {
-                display: none;
-            }
-            @include smDev {
-                display: none;
+                color: $red;
             }
         }
         a {
             text-decoration: none;
-                img {
-                    width: 20%;
-                    @include phone {
-                        display: none;
-                    }
-                    @include smDev {
-                        display: none;
-                    }
+            img {
+                width: 20%;
+                @include smDev {
+                    width: 40%;
                 }
+            }
         }
 
     }
@@ -1476,35 +1240,227 @@ nav {
 
     }
 }
-
-.tag-lines {
-    @include flex;
-    background-color: $red;
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    @include smDev {
-        padding: 5px;
-    }
-    span {
-        color: $white;
-        font: $font-main;
-        @include tablet {
-            font-size: 30px!important;
+#steps-form {
+    background-color: $lightGray;
+    #pickFabric {
+        @include pick;
+        @include flex;
+        #fabricGal{
+            @include steps-image;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            select {
+                @include select;
+            }
+            img {
+                width: 100%;
+                border: 8px ridge $white;
+            }
         }
+        #fabricText{
+            @include exp;
+            h2{
+                @include h;
+                text-align: center;
+            }
+            h2::before{
+                content: "Step #1: ";
+                color: $purple;
+                font-size: 50px;
+                @include phone {
+                    font-size: 40px;
+                }
+                @include smDev {
+                    font-size: 25px;
+                }
+
+            }
+            span {
+                @include pickSpan;
+                color: $purple;
+            }
+            span::before{
+                content: "Rep your City! ";
+                font: $font-med;
+                color: $red;
+                @include smDev {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    #gallery-cities{
+        @include flex;
+        @include pick;
+
+        #RepYourCity {
+            @include exp;
+            h2{
+                @include h;
+                padding: 0px !important;
+                text-align: center;
+            }
+            h2::before{
+                content: "Step #3: ";
+                color: $purple;
+                font-size: 50px;
+                @include phone {
+                    font-size: 40px;
+                }
+                @include smDev {
+                    font-size: 25px;
+                }
+            }
+            span {
+                @include pickSpan;
+                padding: 0px !important;
+                color: $purple;
+            }
+            span::before{
+                content: "Rep your City! ";
+                font: $font-med;
+                color: $red;
+                @include smDev {
+                    font-size: 18px;
+                }
+            }
+        }
+        .print-gal {
+            @include steps-image;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            select {
+                @include select;
+            }
+            img {
+                width: 100%;
+                border: 8px ridge $white;
+            }
+        }
+    }
+    #pickDesign {
+        background-color: $darkGray !important;
+        @include pick;
+        @include flex;
+        #designsExp{
+            @include steps-image;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            select {
+                @include select;
+            }
+            img {
+                width: 100%;
+                border: 8px ridge $white;
+            }
+        }
+        #designsText{
+            @include exp;
+            h2{
+                @include h;
+                text-align: center;
+            }
+            h2::before{
+                content: "Step #2: ";
+                font-size: 50px;
+                color: $white;
+                @include phone {
+                    font-size: 40px;
+                }
+                @include smDev {
+                    font-size: 25px;
+                }
+            }
+            span {
+                @include pickSpan;
+                color: $lightGray;
+            }
+            span::before{
+                content: "Rep your City! ";
+                font: $font-med;
+                color: $red;
+                @include smDev {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}
+
+#buyButton {
+    background-color: $white;
+    color: black;
+    font: $font-med;
+    width: 100%;
+    padding: 10px;
+    @include smDev {
+        font-size: 18px;
+    }
+}
+
+#buyButton::after{
+    content: " click here";
+    color: $red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#myShop {
+    #shopWrapper {
+        width: 50%;
+        @include flex;
+        @include pick;
+        background-color: white;
         @include phone {
-            font-size: 20px!important;
+            flex-direction: column!important;
         }
         @include smDev {
-            font-size: 15px!important;
+            flex-direction: column!important;
         }
+        #aboutProduct {
+            width: 50%;
+            @include exp;
+            @include flex;
+            flex-direction: column!important;
+            background-color: black;
+            .showProduct{
+                text-align: left;
+                padding: 10px;
+                p {
+                    font: $font-small;
+                    color: $red;
+                    span {
+                        color: $white;
+                        font: $font-med;
+                        padding: 5px;
+                    }
+                }
+            }
+            .shop-btn{
+                padding: 20px;
+            }
+        }
+        #product {
+            @include flex;
+            @include steps-image;
+            @include exp;
+            #productImg {
+                width: 100%;
+            }
+
+        }
+
     }
+
 }
 
 //payment
 .row {
     padding: 50px;
-
     .col-25 {
         position: fixed;
         top: 70px;
@@ -1521,9 +1477,7 @@ nav {
         border-radius: 4px;
             a {
                 @include a;
-
             }
-
         .cart {
             p {
                 font-size: 20px;
@@ -1534,7 +1488,6 @@ nav {
             }
         }
     }
-
     .col-75 {
         width: 70%;
          #payment-form {
@@ -1564,17 +1517,20 @@ nav {
              }
            }
         }
-
 }
-
-
 // contact
 #contact {
     @include flex;
-    background-color: $lightGray;
+    background-color: white;
     #contact-form {
         @include flex;
         width: 60%;
+        @include phone {
+            width: 100%;
+        }
+        @include smDev {
+            width: 100%;
+        }
         fieldset {
             @include flex;
             flex-direction: column!important;
@@ -1583,22 +1539,43 @@ nav {
                 font: $font-med;
             }
             input{
+                padding: 2px;
                 width: 500px;
                 height: 30px;
-                color: $lightGray;
                 background-color: $purple;
-            }
-            input:placeholder{
-
+                @include phone {
+                    width: 400px;
+                    height: 20px;
+                }
+                @include smDev {
+                    width: 300px;
+                    height: 20px;
+                }
             }
             textarea {
+                padding: 2px;
                 width: 500px;
+                color: lightGray;
                 background-color: $purple;
-                color: $white;
+                @include phone {
+                    width: 400px;
+                }
+                @include smDev {
+                    width: 300px;
+                }
             }
             button {
+                border: 2px ridge $purple;
                 margin: 10px!important;
                 @include button;
+                @include phone {
+                    margin: 10px 0 10px 0 !important;
+                    width: 100%;
+                }
+                @include smDev {
+                    margin: 10px 0 10px 0 !important;
+                    width: 100%;
+                }
             }
 
             button:hover {
@@ -1610,6 +1587,12 @@ nav {
 
     img {
         width: 40%;
+        @include phone {
+            width: 100%;
+        }
+        @include smDev {
+            width: 100%;
+        }
     }
 }
 
@@ -1617,39 +1600,34 @@ nav {
 //footer
 
 #footer {
-    background-color: $purple;
+    background-color: black;
     width: 100%;
     display: block;
     bottom: 0;
     font: $font-med;
     padding: 10px;
-
     nav {
         width: 50%;
         display: inline-block;
         position: absolute;
         text-align: right;
-        background-color: $purple;
+        background-color: black;
         ul li {
             list-style-type: none;
             display: inline-block;
-            margin-right: 10px;
-
+            margin-right: 1px;
+            padding: 2px;
             &.last {
                 margin: 0;
             }
-
             a {
                 @include a;
                 border: none !important;
                 i {
                     font-size: 20px;
                     font-weight: bold;
-                    padding: 1px;
-                    color: $lightGray;
+                    color: $white;
                     @include smDev {
-                        color: $white;
-                        background-color: $darkGray;
                     }
                 }
             }
@@ -1662,10 +1640,10 @@ nav {
         width: 50%;
         display: inline-block;
         text-align: left;
-        color: $lightGray;
+        color: $red;
+        font-size: 18px;
         @include smDev {
-            font-size: 16px;
-
+            font-size: 15px;
         }
     }
 }
