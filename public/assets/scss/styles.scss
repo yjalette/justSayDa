@@ -1019,8 +1019,8 @@ h3 {
         position: relative;
         width: 100%;
         height: auto;
-        border-left: 4px solid $purple;
-        border-right: 4px solid $purple;
+        border-top: none;
+        border: 4px solid $purple;
         span{
             width: 30%;
             @include smDev {

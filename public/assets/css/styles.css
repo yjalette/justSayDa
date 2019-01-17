@@ -672,8 +672,8 @@ h3 {
   position: relative;
   width: 100%;
   height: auto;
-  border-left: 4px solid #3A2E3C;
-  border-right: 4px solid #3A2E3C; }
+  border-top: none;
+  border: 4px solid #3A2E3C; }
   @media (min-width: 481px) and (max-width: 767px) {
     #tag-reg {
       flex-direction: column; } }
