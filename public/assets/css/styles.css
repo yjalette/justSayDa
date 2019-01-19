@@ -837,6 +837,36 @@ h3 {
       .tag-lines span {
         font-size: 15px !important; } }
 
+#password-reset {
+  background-color: black; }
+  #password-reset input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f0faf7;
+    padding: 1%; }
+  #password-reset input::placeholder {
+    color: #bbbdc9; }
+  #password-reset input:hover {
+    background-color: #3A2E3C;
+    color: #f0faf7; }
+  #password-reset button {
+    padding: 3px 10px;
+    color: #fe0116;
+    background-color: #f0faf7;
+    border-radius: 4px;
+    width: auto;
+    margin: auto;
+    display: block;
+    font: bold 25px "Architects Daughter", cursive;
+    cursor: pointer; }
+  #password-reset button:hover {
+    background-color: #3A2E3C;
+    color: #f0faf7; }
+
 nav {
   display: flex;
   flex-direction: row;

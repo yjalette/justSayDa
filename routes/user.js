@@ -44,13 +44,40 @@ router.get('/about', (req, res) => {
     return res.render('about', resp);
 })
 
+router.get('/reset', (req, res) => {
+
+    let resp = { title: "reset"};
+    //    if (Number(req.session.userId)) {
+    //        resp.logout =true;
+    //    }
+    return res.render('reset', resp);
+})
+
+router.get('/success', (req, res) => {
+
+    let resp = { title: "success"};
+//    if (Number(req.session.userId)) {
+//        resp.logout =true;
+//    }
+    return res.render('success', resp);
+})
+
 router.get('/contact', (req, res) => {
 
     let resp = { title: "contact"};
-    if (Number(req.session.userId)) {
-        resp.logout =true;
-    }
+//    if (Number(req.session.userId)) {
+//        resp.logout =true;
+//    }
     return res.render('contact', resp);
+})
+
+router.get('/msg-was-sent', (req, res) => {
+
+    let resp = { title: "msg-was-sent"};
+    //    if (Number(req.session.userId)) {
+    //        resp.logout =true;
+    //    }
+    return res.render('msg-sent', resp);
 })
 
 router.get('/users/:id', AuthController.confirmSignUp);
