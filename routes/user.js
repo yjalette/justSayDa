@@ -9,7 +9,7 @@ const hbs = require('express-handlebars');
 const path = require('path');
 const expressValidator = require('express-validator');
 
-const {AuthController} = require('../controllers');
+const {AuthController, UserController} = require('../controllers');
 const {isAuth, isGuest} = require('../middlewares');
 const {ErrorFactory} = require('../factories');
 
@@ -44,14 +44,8 @@ router.get('/about', (req, res) => {
     return res.render('about', resp);
 })
 
-router.get('/contact', (req, res) => {
-
-    let resp = { title: "contact"};
-    if (Number(req.session.userId)) {
-        resp.logout =true;
-    }
-    return res.render('contact', resp);
-})
+router.get('/contact', UserController.contact);
+router.post('/contact', UserController.sendMessage);
 
 router.get('/users/:id', AuthController.confirmSignUp);
 

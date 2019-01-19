@@ -29,6 +29,15 @@ module.exports = class AuthController {
     }
 
     static async signUp (req, res, next) {
+
+
+        let userFantomPointer = new User({login: req.body.create_email});
+        try {
+            let user = await userFantomPointer.fetch({
+                require: true
+            });
+            return res.redirect('/registration?error=user-exist');
+        } catch (e) {}
         let userPointer = new User({
             login: req.body.create_email,
             name: req.body.create_name,
