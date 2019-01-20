@@ -1,0 +1,10 @@
+{{> nav}}
+<section id="password-reset">
+    <form action="confirm-password" name="confirmPasswordForm" method="post">
+        <section class="tag-lines"><span>please enter a new password</span></section>
+        <input placeholder="enter your new password" name="password_reset" required/>
+        <input placeholder="confirm your password" name="confirm_reset" required/>
+        <input type="hidden" name="uid" value="{{uid}}"/>
+        <button id="resetBtn">submit</button>
+    </form>
+</section>

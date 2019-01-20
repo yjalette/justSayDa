@@ -11,6 +11,8 @@ class Error {
                 return 'The User Name or Password entered is incorrect. Please try again or create a new account!';
             case 'cred-incorrect':
                 return 'The User Name or Password entered is incorrect. Please try again or create a new account!';
+            case 'password-changed':
+                return 'Please login using your new password!';
             default:
                 return 'Please create an account or log in!';
         }

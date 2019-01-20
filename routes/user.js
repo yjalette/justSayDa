@@ -46,27 +46,30 @@ router.get('/about', (req, res) => {
 
 router.get('/contact', UserController.contact);
 router.post('/contact', UserController.sendMessage);
+//////////////////////////////////////////////////////////////////
+router.post('/confirm-password', AuthController.confirmPassword);
+
+router.get('/reset', AuthController.reset);
+
+router.get('/success', (req, res) => {
+
+    let resp = { title: "success"};
+    return res.render('success', resp);
+});
+
+router.get('/msg-was-sent', (req, res) => {
+
+    let resp = { title: "msg-was-sent"};
+    return res.render('msg-sent', resp);
+});
 
 router.get('/users/:id', AuthController.confirmSignUp);
+router.post('/forgot-password', AuthController.forgotPass);
 
 router.get('/logout', function(req, res){
     req.logout();
     req.session.destroy();
     res.redirect('/');
 });
-
-const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: "us-cdbr-iron-east-01.cleardb.net",
-    user: "b0b228f5825a1c",
-    password: "7ae88a81",
-    port: 3306,
-    database: 'heroku_8da4bd6506e30bf',
-    multipleStatements: true
-})
-
-function getConnection() {
-    return pool
-}
 
 module.exports = router;

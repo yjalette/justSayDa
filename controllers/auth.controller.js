@@ -29,8 +29,6 @@ module.exports = class AuthController {
     }
 
     static async signUp (req, res, next) {
-
-
         let userFantomPointer = new User({login: req.body.create_email});
         try {
             let user = await userFantomPointer.fetch({
@@ -80,6 +78,66 @@ module.exports = class AuthController {
             user = await user.save({active: true});
             return res.redirect('/registration');
 
+        }catch (e) {
+            return res.redirect('/registration?error=user-not-exist');
+        }
+    }
+
+    static async forgotPass (req, res) {
+        let userPointer = new User({
+            login: req.body.password_email
+        });
+        try {
+            let user = await userPointer.fetch({
+                require: true
+            });
+            user = await user.save({active: false});
+
+            sgMail.setApiKey(config.get('mailingkey').trim());
+            const msg = {
+                to: req.body.password_email,
+                from: config.get('JustSayDAEmail'),
+                subject: 'Forgot password.',
+                text: 'Please',
+                html: 'Please click the  <a href="' + config.get('host') + '/reset?id=' + user.get('id') + '"> link </a> to set new password!',
+            };
+            sgMail.send(msg)
+                .then((w) => {
+                    console.log('sent');
+                })
+                .catch(error => {
+                    console.error(error.toString());
+                });
+
+            return res.redirect('/success');
+        } catch (e) {
+            console.log(e);
+            return res.redirect('/registration?error=user-not-exist');
+        }
+    }
+
+    static async reset (req, res) {
+        let resp = { title: "reset", uid: req.query.id};
+        return res.render('reset', resp);
+    }
+
+    static async confirmPassword (req, res) {
+        if (req.body.password_reset != req.body.confirm_reset) {
+            return res.redirect('/registration?error=user-not-exist');
+        }
+        let userPointer = new User({
+            id: req.body.uid,
+            active: false
+        });
+        try {
+            let user = await userPointer.fetch({
+                require: true
+            });
+            user = await user.save({
+                active: true,
+                password: cryptPassword(req.body.password_reset,  config.get('salt'))
+            });
+            return res.redirect('/registration?error=password-changed');
         }catch (e) {
             return res.redirect('/registration?error=user-not-exist');
         }

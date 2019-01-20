@@ -1164,8 +1164,32 @@ h3 {
         }
     }
 }
-//nav pages
+//reset
+#password-reset{
+    background-color: black;
+    input {
+        @include input;
+        background-color: $white;
+        padding: 1%;
+    }
+    input::placeholder{
+        color: $lightGray;
+    }
+    input:hover {
+        background-color: $purple;
+        color: $white;
+    }
+    button {
+        @include button;
+    }
 
+    button:hover {
+        background-color: $purple;
+        color: $white;
+    }
+}
+
+//nav pages
 nav {
     @include flex;
     background-color: white;

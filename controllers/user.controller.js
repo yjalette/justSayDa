@@ -10,7 +10,6 @@ module.exports = class UserController {
         return res.render('contact', resp);
     }
     static async sendMessage (req, res) {
-        console.log(req.body);
         sgMail.setApiKey(config.get('mailingkey').trim());
         const msg = {
             to: req.body.email,
@@ -26,6 +25,6 @@ module.exports = class UserController {
             .catch(error => {
                 console.error(error.toString());
             });
-        res.send('sdfgsdffg');
+        return res.redirect('/msg-was-sent');
     }
 }
