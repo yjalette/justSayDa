@@ -12,8 +12,8 @@ module.exports = class UserController {
     static async sendMessage (req, res) {
         sgMail.setApiKey(config.get('mailingkey').trim());
         const msg = {
-            to: req.body.email,
-            from: config.get('JustSayDAEmail'),
+            to: config.get('JustSayDAEmail'),
+            from: req.body.email,
             subject: 'You have new notification!.',
             text: req.body.message,
             html: req.body.message,
