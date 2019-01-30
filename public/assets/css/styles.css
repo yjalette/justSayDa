@@ -638,8 +638,7 @@
         overflow: visible;
         border-left-width: 0px;
         border-right-width: 0px;
-        border-top-color: #fe0116;
-        border-bottom-color: #bbbdc9;
+        border-color: #f0faf7;
         border-width: thick;
         border-style: solid; }
 @-webkit-keyframes bounce {
@@ -963,234 +962,7 @@ nav {
 
 #steps-form {
   background-color: #bbbdc9; }
-  #steps-form #pickFabric {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 10px 150px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      #steps-form #pickFabric {
-        padding: 60px 10px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #steps-form #pickFabric {
-        padding: 50px 5px; } }
-    @media (max-width: 480px) {
-      #steps-form #pickFabric {
-        padding: 40px 4px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #steps-form #pickFabric {
-        flex-direction: column; } }
-    @media (max-width: 480px) {
-      #steps-form #pickFabric {
-        flex-direction: column; } }
-    #steps-form #pickFabric #fabricGal {
-      padding: 100px;
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column !important; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickFabric #fabricGal {
-          padding: 20px; } }
-      @media (max-width: 480px) {
-        #steps-form #pickFabric #fabricGal {
-          padding: 10px; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickFabric #fabricGal {
-          width: 100%; } }
-      @media (max-width: 480px) {
-        #steps-form #pickFabric #fabricGal {
-          width: 100%; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickFabric #fabricGal {
-          flex-direction: column; } }
-      @media (max-width: 480px) {
-        #steps-form #pickFabric #fabricGal {
-          flex-direction: column; } }
-      #steps-form #pickFabric #fabricGal select {
-        font: bold 25px "Architects Daughter", cursive;
-        color: #3A2E3C;
-        background-color: #f0faf7;
-        margin: 20px; }
-        @media (max-width: 480px) {
-          #steps-form #pickFabric #fabricGal select {
-            font-size: 18px; } }
-      #steps-form #pickFabric #fabricGal img {
-        width: 100%;
-        border: 8px ridge #f0faf7; }
-    #steps-form #pickFabric #fabricText {
-      width: 50%; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #pickFabric #fabricText {
-          width: 100%; } }
-      @media (max-width: 480px) {
-        #steps-form #pickFabric #fabricText {
-          width: 100%; } }
-      #steps-form #pickFabric #fabricText h2 {
-        font: bold 25px "Architects Daughter", cursive;
-        font-size: 60px;
-        color: #fe0116;
-        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-        text-align: center; }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          #steps-form #pickFabric #fabricText h2 {
-            font-size: 50px;
-            padding: 30px; } }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #steps-form #pickFabric #fabricText h2 {
-            font-size: 30px;
-            padding: 20px; } }
-        @media (max-width: 480px) {
-          #steps-form #pickFabric #fabricText h2 {
-            font-size: 22px;
-            padding: 5px; } }
-      #steps-form #pickFabric #fabricText h2::before {
-        content: "Step #1: ";
-        color: #3A2E3C;
-        font-size: 50px; }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #steps-form #pickFabric #fabricText h2::before {
-            font-size: 40px; } }
-        @media (max-width: 480px) {
-          #steps-form #pickFabric #fabricText h2::before {
-            font-size: 25px; } }
-      #steps-form #pickFabric #fabricText span {
-        color: black;
-        padding: 5px;
-        color: #3A2E3C; }
-        @media (max-width: 480px) {
-          #steps-form #pickFabric #fabricText span {
-            font-size: 13px; } }
-      #steps-form #pickFabric #fabricText span::before {
-        content: "Rep your City! ";
-        font: bold 25px "Architects Daughter", cursive;
-        color: #fe0116; }
-        @media (max-width: 480px) {
-          #steps-form #pickFabric #fabricText span::before {
-            font-size: 18px; } }
-  #steps-form #gallery-cities {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 10px 150px;
-    text-align: center; }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #steps-form #gallery-cities {
-        flex-direction: column; } }
-    @media (max-width: 480px) {
-      #steps-form #gallery-cities {
-        flex-direction: column; } }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      #steps-form #gallery-cities {
-        padding: 60px 10px; } }
-    @media (min-width: 481px) and (max-width: 767px) {
-      #steps-form #gallery-cities {
-        padding: 50px 5px; } }
-    @media (max-width: 480px) {
-      #steps-form #gallery-cities {
-        padding: 40px 4px; } }
-    #steps-form #gallery-cities #RepYourCity {
-      width: 50%; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #gallery-cities #RepYourCity {
-          width: 100%; } }
-      @media (max-width: 480px) {
-        #steps-form #gallery-cities #RepYourCity {
-          width: 100%; } }
-      #steps-form #gallery-cities #RepYourCity h2 {
-        font: bold 25px "Architects Daughter", cursive;
-        font-size: 60px;
-        color: #fe0116;
-        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
-        padding: 0px !important;
-        text-align: center; }
-        @media (min-width: 768px) and (max-width: 1023px) {
-          #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 50px;
-            padding: 30px; } }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 30px;
-            padding: 20px; } }
-        @media (max-width: 480px) {
-          #steps-form #gallery-cities #RepYourCity h2 {
-            font-size: 22px;
-            padding: 5px; } }
-      #steps-form #gallery-cities #RepYourCity h2::before {
-        content: "Step #3: ";
-        color: #3A2E3C;
-        font-size: 50px; }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #steps-form #gallery-cities #RepYourCity h2::before {
-            font-size: 40px; } }
-        @media (max-width: 480px) {
-          #steps-form #gallery-cities #RepYourCity h2::before {
-            font-size: 25px; } }
-      #steps-form #gallery-cities #RepYourCity span {
-        color: black;
-        padding: 5px;
-        padding: 0px !important;
-        color: #3A2E3C; }
-        @media (max-width: 480px) {
-          #steps-form #gallery-cities #RepYourCity span {
-            font-size: 13px; } }
-      #steps-form #gallery-cities #RepYourCity span::before {
-        content: "Rep your City! ";
-        font: bold 25px "Architects Daughter", cursive;
-        color: #fe0116; }
-        @media (max-width: 480px) {
-          #steps-form #gallery-cities #RepYourCity span::before {
-            font-size: 18px; } }
-    #steps-form #gallery-cities .print-gal {
-      padding: 100px;
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column !important; }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #gallery-cities .print-gal {
-          padding: 20px; } }
-      @media (max-width: 480px) {
-        #steps-form #gallery-cities .print-gal {
-          padding: 10px; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #gallery-cities .print-gal {
-          width: 100%; } }
-      @media (max-width: 480px) {
-        #steps-form #gallery-cities .print-gal {
-          width: 100%; } }
-      @media (min-width: 481px) and (max-width: 767px) {
-        #steps-form #gallery-cities .print-gal {
-          flex-direction: column; } }
-      @media (max-width: 480px) {
-        #steps-form #gallery-cities .print-gal {
-          flex-direction: column; } }
-      #steps-form #gallery-cities .print-gal select {
-        font: bold 25px "Architects Daughter", cursive;
-        color: #3A2E3C;
-        background-color: #f0faf7;
-        margin: 20px; }
-        @media (max-width: 480px) {
-          #steps-form #gallery-cities .print-gal select {
-            font-size: 18px; } }
-      #steps-form #gallery-cities .print-gal img {
-        width: 100%;
-        border: 8px ridge #f0faf7; }
   #steps-form #pickDesign {
-    background-color: black !important;
     width: 100%;
     height: auto;
     position: relative;
@@ -1279,7 +1051,7 @@ nav {
             font-size: 22px;
             padding: 5px; } }
       #steps-form #pickDesign #designsText h2::before {
-        content: "Step #2: ";
+        content: "Step #1: ";
         font-size: 50px;
         color: #f0faf7; }
         @media (min-width: 481px) and (max-width: 767px) {
@@ -1290,18 +1062,242 @@ nav {
             font-size: 25px; } }
       #steps-form #pickDesign #designsText span {
         color: black;
-        padding: 5px;
-        color: #bbbdc9; }
+        color: #3A2E3C; }
         @media (max-width: 480px) {
           #steps-form #pickDesign #designsText span {
-            font-size: 13px; } }
+            font-size: 15px; } }
       #steps-form #pickDesign #designsText span::before {
-        content: "Rep your City! ";
+        content: "We are against fast fashion ";
         font: bold 25px "Architects Daughter", cursive;
         color: #fe0116; }
         @media (max-width: 480px) {
           #steps-form #pickDesign #designsText span::before {
             font-size: 18px; } }
+  #steps-form #pickFabric {
+    background-color: black !important;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #steps-form #pickFabric {
+        padding: 60px 10px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #pickFabric {
+        padding: 50px 5px; } }
+    @media (max-width: 480px) {
+      #steps-form #pickFabric {
+        padding: 40px 4px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #pickFabric {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #steps-form #pickFabric {
+        flex-direction: column; } }
+    #steps-form #pickFabric #fabricGal {
+      padding: 100px;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          padding: 10px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          width: 100%; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricGal {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricGal {
+          flex-direction: column; } }
+      #steps-form #pickFabric #fabricGal select {
+        font: bold 25px "Architects Daughter", cursive;
+        color: #3A2E3C;
+        background-color: #f0faf7;
+        margin: 20px; }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricGal select {
+            font-size: 18px; } }
+      #steps-form #pickFabric #fabricGal img {
+        width: 100%;
+        border: 8px ridge #f0faf7; }
+    #steps-form #pickFabric #fabricText {
+      width: 50%; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #pickFabric #fabricText {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #pickFabric #fabricText {
+          width: 100%; } }
+      #steps-form #pickFabric #fabricText h2 {
+        font: bold 25px "Architects Daughter", cursive;
+        font-size: 60px;
+        color: #fe0116;
+        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+        text-align: center; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #steps-form #pickFabric #fabricText h2 {
+            font-size: 50px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #pickFabric #fabricText h2 {
+            font-size: 30px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricText h2 {
+            font-size: 22px;
+            padding: 5px; } }
+      #steps-form #pickFabric #fabricText h2::before {
+        content: "Step #2: ";
+        color: #f0faf7;
+        font-size: 50px; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #pickFabric #fabricText h2::before {
+            font-size: 40px; } }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricText h2::before {
+            font-size: 25px; } }
+      #steps-form #pickFabric #fabricText span {
+        color: black;
+        color: #bbbdc9; }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricText span {
+            font-size: 15px; } }
+      #steps-form #pickFabric #fabricText span::before {
+        content: "Buy Quality! ";
+        font: bold 25px "Architects Daughter", cursive;
+        color: #fe0116; }
+        @media (max-width: 480px) {
+          #steps-form #pickFabric #fabricText span::before {
+            font-size: 18px; } }
+  #steps-form #gallery-cities {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 150px;
+    text-align: center; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #gallery-cities {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #steps-form #gallery-cities {
+        flex-direction: column; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #steps-form #gallery-cities {
+        padding: 60px 10px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #steps-form #gallery-cities {
+        padding: 50px 5px; } }
+    @media (max-width: 480px) {
+      #steps-form #gallery-cities {
+        padding: 40px 4px; } }
+    #steps-form #gallery-cities #RepYourCity {
+      width: 50%; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities #RepYourCity {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities #RepYourCity {
+          width: 100%; } }
+      #steps-form #gallery-cities #RepYourCity h2 {
+        font: bold 25px "Architects Daughter", cursive;
+        font-size: 60px;
+        color: #fe0116;
+        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+        padding: 0px !important;
+        text-align: center; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #steps-form #gallery-cities #RepYourCity h2 {
+            font-size: 50px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #gallery-cities #RepYourCity h2 {
+            font-size: 30px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities #RepYourCity h2 {
+            font-size: 22px;
+            padding: 5px; } }
+      #steps-form #gallery-cities #RepYourCity h2::before {
+        content: "Step #3: ";
+        color: #f0faf7;
+        font-size: 50px; }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #steps-form #gallery-cities #RepYourCity h2::before {
+            font-size: 40px; } }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities #RepYourCity h2::before {
+            font-size: 25px; } }
+      #steps-form #gallery-cities #RepYourCity span {
+        color: black;
+        padding: 0px !important;
+        color: #3A2E3C; }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities #RepYourCity span {
+            font-size: 15px; } }
+      #steps-form #gallery-cities #RepYourCity span::before {
+        content: "Rep your City! ";
+        font: bold 25px "Architects Daughter", cursive;
+        color: #fe0116; }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities #RepYourCity span::before {
+            font-size: 18px; } }
+    #steps-form #gallery-cities .print-gal {
+      padding: 100px;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column !important; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          padding: 20px; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          padding: 10px; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          width: 100%; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          width: 100%; } }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #steps-form #gallery-cities .print-gal {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #steps-form #gallery-cities .print-gal {
+          flex-direction: column; } }
+      #steps-form #gallery-cities .print-gal select {
+        font: bold 25px "Architects Daughter", cursive;
+        color: #3A2E3C;
+        background-color: #f0faf7;
+        margin: 20px; }
+        @media (max-width: 480px) {
+          #steps-form #gallery-cities .print-gal select {
+            font-size: 18px; } }
+      #steps-form #gallery-cities .print-gal img {
+        width: 100%;
+        border: 8px ridge #f0faf7; }
 
 #buyButton {
   background-color: #f0faf7;
