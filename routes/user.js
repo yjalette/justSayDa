@@ -20,10 +20,8 @@ router.post('/sign-up', AuthController.signUp);
 router.get('/shop', isAuth, (req, res) =>{
     return res.render('shop', {
         logout: true,
-        username: 'my email',
         title: "shop",
         registrationMessage: "Welcome "
-
     });
 });
 
@@ -58,7 +56,6 @@ router.get('/success', (req, res) => {
 });
 
 router.get('/msg-was-sent', (req, res) => {
-
     let resp = { title: "msg-was-sent"};
     return res.render('msg-sent', resp);
 });

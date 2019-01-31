@@ -1,35 +1,25 @@
 <section id="aboutWrapper">
     {{> nav}}
-
     <section class="tag-lines"><span>Registration</span></section>
-
     <h3>{{registrationMessage}}</h3>
-
     <section id="tag-reg" >
         <section id="registration-wrap">
             <div id="reg-tabs">
                 <span id="reg-tab" class="active">register</span>
                 <span id="log-tab">login</span>
             </div>
-
             <form action="sign-up" method="POST" id="signUp-form">
                 <input placeholder="username" name="create_name" id="create_name" required />
                  <input placeholder="email" type="email" name="create_email" id="create_email" required/>
                  <input placeholder="password" type="password" name="create_password" id="create_password" required/>
                  <button type="submit">submit</button>
             </form>
-
             <form action="sign-in" method="POST" id="signIn-form">
                  <input placeholder="email" type="email" name="login_email" required/>
                  <input placeholder="password" type="password" name="login_password" required/>
-                 <span><input type="checkbox" name="remember">remember me</span>
-                 <a href="#" name="forgotPassword" id="forgotPassword">forgot password</a>
+                 <a href="forgot-password" name="forgotPassword" id="forgotPassword">forgot password</a>
                  <button type="submit">submit</button>
             </form>
-
         </section>
     </section>
-
-    {{> forgotPassword}}
-
 </section>

@@ -14,7 +14,6 @@
     -webkit-padding-end: 0px;
 }
 
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
 @import url('https://fonts.googleapis.com/css?family=Hi+Melody');
@@ -36,12 +35,9 @@ $shadow: 0 0 1px #303634,2px 1px 1px hsla(160, 6%, 20%,.5);
 
 //fonts
 $font-graf: bold 60px 'Rock Salt', cursive;
-$font-main: bold 40px 'Rock Salt', cursive;
+$font-main: bold 30px 'Rock Salt', cursive;
 $font-med: bold 25px 'Architects Daughter', cursive;
 $font-small: 17px 'Open Sans', sans-serif;
-
-
-
 
 //media
 $desktop-width: 1024px;
@@ -195,41 +191,7 @@ $smDev-width: 280px;
     border-radius: 4px;
     cursor: pointer;
 }
-@mixin tag {
-    background-color: $red;
-    z-index: 2;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    @include tablet {
-        display: block;
-        height: auto;
-    }
-    @include phone {
-        display: block;
-        height: auto;
-    }
-    @include smDev {
-        display: block;
-        height: auto;
-    }
-}
-@mixin vert {
-    right: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-@mixin vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+
 @mixin transition {
     -moz-transition:    0.3s ease-in-out all;
     -o-transition:      0.3s ease-in-out all;
@@ -243,14 +205,18 @@ $smDev-width: 280px;
 }
 @mixin button {
     padding: 3px 10px;
-    color: $red;
-    background-color: $white;
+    color: $white;
+    background-color: $red;
     border-radius: 4px;
     width: auto;
     margin: auto;
     display: block;
     font: $font-med;
     cursor: pointer;
+    button:hover {
+        background-color: $white;
+        color: $red;
+    }
 }
 @mixin dropbtn {
     font: $font-med;
@@ -763,13 +729,13 @@ $smDev-width: 280px;
     .section {
         height: auto;
         .left, .middle, .right {
-            width:100%;
+            width: 100%;
             height: auto;
             display: block;
             color: $white;
             box-sizing: border-box;
             left: 0;
-            padding: 30px;
+            padding: 10px;
             text-align:center;
             overflow:hidden;
             position: absolute;
@@ -919,21 +885,23 @@ $smDev-width: 280px;
     }
 }
 // registration
+#aboutWrapper{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
 h3 {
-    background-color: $purple;
-    color: $white;
+    background-color: $white;
+    color: $red;
     font: $font-small;
     text-align: center;
     padding: 10px;
 }
  #tag-reg {
         @include flex;
-        background-color: black;
         position: relative;
         width: 100%;
         height: auto;
         border-top: none;
-        border: 4px solid $purple;
         span{
             width: 30%;
             @include smDev {
@@ -945,9 +913,10 @@ h3 {
                 height: auto;
                 padding: 40px;
                 margin: auto;
-                background-color: $lightGray;
+                background-color: black;
                 @include smDev {
-                width: 100%
+                width: 100%;
+                padding: 12px;
             }
                 #reg-tabs {
                     display: flex;
@@ -959,6 +928,7 @@ h3 {
                         width: 50%;
                         padding: 20px;
                         font: $font-med;
+                        border-radius: 4px;
                         cursor: pointer;
                     }
                     .active {
@@ -986,7 +956,7 @@ h3 {
                         @include button;
                     }
                     button:hover {
-                            background-color: $purple;
+                            background-color: black;
                             color: $white;
                         }
                 }
@@ -1003,51 +973,56 @@ h3 {
                         background-color: $purple;
                         color: $white;
                     }
-                    span {
-                        font-size: 12px;
-                        input {
-                            width: auto;
-                        }
-                    }
                     a {
-                        font-size: 12px;
+                        font-size: 14px;
                         color: $white;
+                        padding: 2px;
                     }
                     a:hover{
-                        color: $purple;
+                        color: $red;
                     }
                     button {
                         @include button;
                     }
                     button:hover {
-                        background-color: $purple;
+                        background-color: black;
                         color: $white;
                     }
             }
      }
 }
+}
 //forgot password
 #password-wrapper{
-    background-color: black;
-    input {
-        @include input;
-        background-color: $white;
-        padding: 1%;
-    }
-    input::placeholder{
-        color: $lightGray;
-    }
-    input:hover {
-        background-color: $purple;
-        color: $white;
-    }
-    button {
-        @include button;
-    }
-
-    button:hover {
-        background-color: $purple;
-        color: $white;
+    height: 100vh;
+    padding: 40px;
+    form {
+        width: 60%;
+        padding: 40px;
+        height: auto;
+        margin: auto;
+        background-color: black;
+        @include smDev {
+            width: 100%;
+        }
+        input {
+            @include input;
+            background-color: $white;
+        }
+        input::placeholder{
+            color: $lightGray;
+        }
+        input:hover {
+            background-color: $purple;
+            color: $white;
+        }
+        button {
+            @include button;
+        }
+        button:hover {
+            background-color: $purple;
+            color: $white;
+        }
     }
 }
 .tag-lines {
@@ -1060,10 +1035,12 @@ h3 {
         padding: 5px;
     }
     span {
-        color: $red;
+        color: $white;
         font: $font-main;
+        letter-spacing: 3px;
+        text-align: center;
         @include tablet {
-            font-size: 30px!important;
+            font-size: 25px!important;
         }
         @include phone {
             font-size: 20px!important;
@@ -1073,6 +1050,7 @@ h3 {
         }
     }
 }
+
 //reset
 #password-reset{
     background-color: black;
@@ -1091,7 +1069,6 @@ h3 {
     button {
         @include button;
     }
-
     button:hover {
         background-color: $purple;
         color: $white;
@@ -1177,8 +1154,10 @@ nav {
             @include exp;
             @include flex;
             flex-direction: column!important;
-            select {
-                @include select;
+            button {
+                @include button;
+                margin: 10px;
+                background-color: $purple;
             }
             img {
                 width: 100%;
@@ -1192,7 +1171,7 @@ nav {
                 text-align: center;
             }
             h2::before{
-                content: "Step #1: ";
+                content: "Step #3: ";
                 font-size: 50px;
                 color: $white;
                 @include phone {
@@ -1275,7 +1254,7 @@ nav {
                 text-align: center;
             }
             h2::before{
-                content: "Step #3: ";
+                content: "Step #1: ";
                 color: $white;
                 font-size: 50px;
                 @include phone {
@@ -1314,131 +1293,28 @@ nav {
         }
     }
 }
-#buyButton {
-    background-color: $white;
-    color: black;
-    font: $font-med;
-    width: 100%;
-    padding: 10px;
-    @include smDev {
-        font-size: 18px;
-    }
-}
-#buyButton::after{
-    content: " click here";
-    color: $red;
-    font-weight: bold;
-    text-decoration: underline;
-}
+
 #myShop {
-    #shopWrapper {
-        width: 50%;
-        @include flex;
-        @include pick;
-        background-color: white;
-        @include phone {
-            flex-direction: column!important;
-        }
-        @include smDev {
-            flex-direction: column!important;
-        }
-        #aboutProduct {
-            width: 50%;
-            @include exp;
-            @include flex;
-            flex-direction: column!important;
-            background-color: black;
-            .showProduct{
-                text-align: left;
-                padding: 10px;
-                p {
-                    font: $font-small;
-                    color: $red;
-                    span {
-                        color: $white;
-                        font: $font-med;
-                        padding: 5px;
-                    }
-                }
-            }
-            .shop-btn{
-                padding: 20px;
-            }
-        }
-        #product {
-            @include flex;
-            @include steps-image;
-            @include exp;
-            #productImg {
-                width: 100%;
-            }
-        }
-    }
-}
-//payment
-.row {
     padding: 50px;
-    .col-25 {
-        position: fixed;
-        top: 70px;
-        right: 30px;
-        z-index: 99;
-        padding: 10px;
-        font-size: 28px;
-        border: none;
-        outline: none;
-        background-color: $purple;
-        color: red;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
-            a {
-                @include a;
-            }
-        .cart {
-            p {
-                font-size: 20px;
-                color: $white;
-                a{
-                    @include a;
-                }
+    table {
+        padding: 50px;
+        tr {
+            td {
+                width: 5px;
             }
         }
+
     }
-    .col-75 {
-        width: 70%;
-         #payment-form {
-            .row {
-                @include flex;
-                flex-direction: column;
-                position: relative;
-                height: auto;
-                .col-50{
-                    @include flex;
-                    flex-direction: column;
-                    h3{
-                        @include h;
-                        width: 100%;
-                        color: $white;
-                    }
-                    input {
-                        @include input;
-                        width: 600px;
-                    }
-                  }
-              }
-             #pay-btn {
-                 @include button;
-                 background-color: $red;
-                 color: $white;
-             }
-           }
-        }
 }
+
 // contact
 #contact {
     @include flex;
     background-color: white;
+    height: 100vh;
+    @include smDev {
+        justify-content: flex-start;
+    }
     #contact-form {
         @include flex;
         width: 60%;
@@ -1447,6 +1323,7 @@ nav {
         }
         @include smDev {
             width: 100%;
+            padding-top: 10px;
         }
         fieldset {
             @include flex;
@@ -1459,7 +1336,8 @@ nav {
                 padding: 2px;
                 width: 500px;
                 height: 30px;
-                background-color: $purple;
+                background-color: black;
+                color: $white;
                 @include phone {
                     width: 400px;
                     height: 20px;
@@ -1472,8 +1350,8 @@ nav {
             textarea {
                 padding: 2px;
                 width: 500px;
-                color: lightGray;
-                background-color: $purple;
+                color: $white;
+                background-color: black;
                 @include phone {
                     width: 400px;
                 }
@@ -1482,7 +1360,6 @@ nav {
                 }
             }
             button {
-                border: 2px ridge $purple;
                 margin: 10px!important;
                 @include button;
                 @include phone {
@@ -1495,8 +1372,8 @@ nav {
                 }
             }
             button:hover {
-                background-color: $purple;
-                color: $white;
+                background-color: white;
+                color: $red;
             }
         }
     }
@@ -1506,7 +1383,7 @@ nav {
             width: 100%;
         }
         @include smDev {
-            width: 100%;
+            display: none;
         }
     }
 }
@@ -1518,6 +1395,8 @@ nav {
     bottom: 0;
     font: $font-med;
     padding: 10px;
+    border-top: 2px solid $red;
+
     nav {
         width: 50%;
         display: inline-block;
