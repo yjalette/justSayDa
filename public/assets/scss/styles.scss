@@ -93,7 +93,7 @@ $smDev-width: 280px;
     width: 100%;
     height: auto;
     position: relative;
-    padding: 10px 150px;
+    padding: 50px;
     text-align: center;
     @include tablet {
         padding: 60px 10px;
@@ -105,23 +105,21 @@ $smDev-width: 280px;
         padding: 40px 4px;
     }
 }
-@mixin steps-image {
-  padding: 100px;
-    @include phone {
-        padding: 20px;
-    }
-    @include smDev {
-        padding: 10px;
-    }
-}
+
 @mixin exp {
     width: 50%;
+    padding: 20px;
     @include phone {
         width: 100%;
+        padding: 10px;
     }
     @include smDev {
         width: 100%;
+        padding: 2px;
     }
+}
+@mixin border {
+    border: 5px ridge $white;
 }
 @mixin pickSpan {
     color: $darkGray;
@@ -157,7 +155,7 @@ $smDev-width: 280px;
     padding: 5px;
     word-wrap: break-word;
     @include smDev {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 @mixin translateY($e) {
@@ -242,6 +240,7 @@ $smDev-width: 280px;
     flex-flow: column!important;
     background-color: white;
     .container-video {
+        @include border;
         z-index: 1;
         width: 100%;
         height: auto;
@@ -279,8 +278,9 @@ $smDev-width: 280px;
         position: absolute;
         z-index: 2;
         @include smDev {
+            @include border;
             position: relative;
-            background-color: black;
+            background-color: $red;
         }
         span {
             font: $font-main;
@@ -289,12 +289,13 @@ $smDev-width: 280px;
                 font-size: 30px!important;
             }
             @include phone {
-                font-size: 20px!important;
+                font-size: 17px!important;
                 padding: 4px;
             }
             @include smDev {
-                font-size: 14px!important;
-                padding: 25px;
+                font-size: 16px!important;
+                padding: 15px;
+                text-align: center;
             }
         }
         #begin {
@@ -333,7 +334,7 @@ $smDev-width: 280px;
     }
 }
 @keyframes intro-slider{
-    from {opacity: 0.3;}
+    from {opacity: 0.6;}
     to {opacity: 1;}
 }
 // about us
@@ -347,7 +348,7 @@ $smDev-width: 280px;
 }
 #aboutUs {
     @include flex;
-    flex-direction: row!important;
+    flex-direction: row;
     position: relative;
     background-color: black;
     padding: 50px;
@@ -362,23 +363,36 @@ $smDev-width: 280px;
     }
     @include smDev {
         flex-direction: column!important;
-        padding: 10px;
+        padding: 40px 2px;
     }
     p {
+        @include border;
+        background-color: $purple;
         font: $font-small;
-        animation: about-us 3s ease-in-out forwards;
-        transition: 1s;
+        padding: 35px;
+        margin: 10px;
+        color: $white;
         @include smDev {
             font-size: 15px!important;
+            padding: 10px;
+              }
         }
+    p:before {
+        content: "Why do we use it?";
+        font: $font-med;
+        color: $red
     }
 }
 .slider-wrapper {
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 40px;
+    @include smDev {
+        padding: 0px;
+    }
     .rotatescroll {
         position: relative;
         height: 390px;
@@ -465,9 +479,10 @@ $smDev-width: 280px;
             width: 24px;
             height: 24px;
             z-index: 200;
-            background: $lightGray;
-            border: 2px solid $red;
+            background: $purple;
+            border: 2px solid;
             border-radius: 50%;
+            animation: thumb 2s infinite alternate;
         }
         .dot {
             left: inherit !important;
@@ -486,7 +501,7 @@ $smDev-width: 280px;
             position: absolute;
             top: 2px;
             left: 0;
-            border-left: 2px solid $red;
+            border-left: 2px solid $purple;
             height: 42px;
         }
         .text {
@@ -506,10 +521,10 @@ $smDev-width: 280px;
             color: $red;
             padding: 20px;
             height: 8px !important;
-            text-shadow: 0 0 0.3px $lightGray,0.7px 0.3px 0.3px hsla(160, 6%, 20%,.5);
+
         }
         .active h1 div.text:hover {
-            color: $white;
+            color: white;
             text-shadow: none;
         }
 
@@ -568,14 +583,24 @@ $smDev-width: 280px;
         z-index: 1;
     }
 }
-@keyframes about-us {
-    from { color: black;}
-    to { color: $lightGray;}
+
+@keyframes thumb {
+    25% { border-top-color: white; width: width + 2 px;}
+    50% { border-top-color: white; border-right-color:  white; width: width + 4 px;}
+    75% { border-top-color: white; border-right-color:  white; border-bottom-color:  white; width: width + 6 px;}
+    100% { border-color: white; width: width + 4px;}
 }
-@keyframes about-bg {
-    from { background-color: $white;}
-    to { background-color: black;}
+
+
+.bg{
+    @include flex;
+    height: 200px;
+    span {
+        font: $font-med;
+        color: $white;
+    }
 }
+
 #designs {
     position: relative;
     background-color: $lightGray;
@@ -615,27 +640,24 @@ $smDev-width: 280px;
         }
         .tile {
             img {
+                @include border;
                 width: 100%;
-                height: auto;
+                max-height: 1000px;
                 margin: 1px;
                 padding: 5px;
-                border: 3px double $purple;
                 z-index: 1;
                 transition: 2s;
-
                 @include phone {
                     padding: 3px;
-                    border-width: 2px;
                 }
                 @include smDev {
                     padding: 1px;
-                    border-width: 1px;
                 }
             }
             img:hover{
                 transform: scale(1.5);
                 overflow: visible;
-                z-index: 2;
+
             }
         }
         #showMore {
@@ -702,30 +724,70 @@ $smDev-width: 280px;
         text-decoration: none;
         color: $white;
     }
-
     .btn:focus {
         outline: none;
         border-color: var(--darken-2);
         box-shadow: 0 0 0 3px var(--darken-3);
     }
-
     ::-moz-focus-inner {
         border: 0;
         padding: 0;
     }
-
 }
 @keyframes designs-bg {
     from {background-color: $purple;}
     to {background-color: $lightGray;}
 }
 
-// shop
+//insta
 
+#insta {
+    @include flex;
+    width: 100%;
+    background-color: black;
+
+    @include phone {
+        flex-direction: column;
+    }
+    @include smDev {
+        flex-direction: column;
+    }
+    img {
+        @include border;
+        width: 25%;
+        height: 500px;
+        padding: 10px;
+        margin: auto;
+        @include phone {
+            width: 100%;
+            height: 100%;
+        }
+        @include smDev {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#insta-link{
+    @include a;
+    transition: 2s;
+}
+#insta-link:hover{
+    color: white;
+}
+
+.no{
+    @include smDev {
+        display: none;
+    }
+}
+// shop
 #shop-slider{
     width: 100%;
     position: relative;
     background-color: $purple;
+    overflow: hidden;
+    margin: 20px 0px;
     .section {
         height: auto;
         .left, .middle, .right {
@@ -735,17 +797,15 @@ $smDev-width: 280px;
             color: $white;
             box-sizing: border-box;
             left: 0;
-            padding: 10px;
+            padding: 5px;
             text-align:center;
             overflow:hidden;
             position: absolute;
             @include smDev {
                 z-index: 1;
-                overflow: visible;
             }
             @include phone {
                 z-index: 1;
-                overflow: visible;
             }
             @include transition;
 
@@ -823,6 +883,7 @@ $smDev-width: 280px;
                 font: $font-small;
                 color: $white;
             }
+            }
             .btn-primary {
                 color: $white;
                 background: $darkGray;
@@ -842,7 +903,7 @@ $smDev-width: 280px;
             display:none;
             float:none;
             img {
-                width:50%;
+                width:100%;
                 height:auto;
                 opacity: 0.5;
                 @include transition;
@@ -851,25 +912,42 @@ $smDev-width: 280px;
                     opacity:1;
                     @include filter(grayscale(0%));
                 }
+                @include phone {
+                    opacity: 1;
+                    filter: grayscale(50%);
+                    @include border;
+                }
+                @include smDev {
+                    opacity: 1;
+                    filter: grayscale(0%);
+                    @include border;
+                }
             }
-            @media (min-width: $md) {
-                display:block;
+            img:first-child{
+                @include phone{
+                    display: none;
+                }
+                @include smDev{
+                    display: none;
+                }
             }
+
         }
         .middle {
             z-index: 1;
             padding:0;
+            @include border;
+            border-top: none;
+            border-bottom: none;
             img {
                 width: 100%;
-                height: 50%;
+                height: 100%;
                 display:block;
                 position: relative;
-                overflow: visible;
-                border-left-width: 0px;
-                border-right-width: 0px;
-                border-color: $white;
-                border-width: thick;
-                border-style: solid;
+                overflow: hidden;
+                @media (max-width: $md) {
+                    display:none;
+                }
             }
         }
     }
@@ -883,7 +961,7 @@ $smDev-width: 280px;
         40% {transform: translateY(-20px);}
         60% {transform: translateY(-10px);}
     }
-}
+
 // registration
 #aboutWrapper{
     height: 100vh;
@@ -1027,10 +1105,12 @@ h3 {
 }
 .tag-lines {
     @include flex;
+    @include border;
     background-color: black;
     position: relative;
     width: 100%;
     padding: 20px;
+    margin: 20px 0px;
     @include smDev {
         padding: 5px;
     }
@@ -1146,11 +1226,11 @@ nav {
 }
 #steps-form {
     background-color: $lightGray;
+    @include border;
     #pickDesign {
         @include pick;
         @include flex;
         #designsExp{
-            @include steps-image;
             @include exp;
             @include flex;
             flex-direction: column!important;
@@ -1161,7 +1241,7 @@ nav {
             }
             img {
                 width: 100%;
-                border: 8px ridge $white;
+                @include border;
             }
         }
         #designsText{
@@ -1200,7 +1280,6 @@ nav {
         @include pick;
         @include flex;
         #fabricGal{
-            @include steps-image;
             @include exp;
             @include flex;
             flex-direction: column!important;
@@ -1209,7 +1288,7 @@ nav {
             }
             img {
                 width: 100%;
-                border: 8px ridge $white;
+                @include border;
             }
         }
         #fabricText{
@@ -1279,7 +1358,6 @@ nav {
             }
         }
         .print-gal {
-            @include steps-image;
             @include exp;
             @include flex;
             flex-direction: column!important;
@@ -1288,23 +1366,17 @@ nav {
             }
             img {
                 width: 100%;
-                border: 8px ridge $white;
+                @include border;
             }
         }
     }
 }
 
 #myShop {
-    padding: 50px;
-    table {
-        padding: 50px;
-        tr {
-            td {
-                width: 5px;
-            }
-        }
-
-    }
+    padding: 100px 5px;
+    background-color: $lightGray;
+    @include border;
+    margin: 20px 0px;
 }
 
 // contact
@@ -1395,7 +1467,7 @@ nav {
     bottom: 0;
     font: $font-med;
     padding: 10px;
-    border-top: 2px solid $red;
+    border-top: 2px ridge white;
 
     nav {
         width: 50%;

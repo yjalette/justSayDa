@@ -44,11 +44,11 @@
                             "quantity": false
                         },
                         "text": {
-                            "button": "BUY NOW"
+                            "button": "buy now"
                         },
                         "styles": {
                             "product": {
-                                "text-align": "right",
+                                "text-align": "left",
                                 "@media (min-width: 601px)": {
                                     "max-width": "100%",
                                     "margin-left": "0",
@@ -56,7 +56,7 @@
                                 }
                             },
                             "button": {
-                                "background-color": "#ee523f",
+                                "background-color": "#fe0116",
                                 "padding-left": "18px",
                                 "padding-right": "18px",
                                 ":hover": {
