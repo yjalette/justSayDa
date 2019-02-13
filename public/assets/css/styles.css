@@ -30,7 +30,6 @@
     #intro {
       flex-direction: column; } }
   #intro .container-video {
-    border: 5px ridge #f0faf7;
     z-index: 1;
     width: 100%;
     height: auto;
@@ -179,18 +178,20 @@
   @media (max-width: 480px) {
     #aboutUs {
       flex-direction: column !important;
-      padding: 40px 2px; } }
+      padding: 40px 2px;
+      border: none; } }
   #aboutUs p {
     border: 5px ridge #f0faf7;
     background-color: #3A2E3C;
     font: 17px "Open Sans", sans-serif;
     padding: 35px;
-    margin: 10px;
+    padding: 20px;
     color: #f0faf7; }
     @media (max-width: 480px) {
       #aboutUs p {
         font-size: 15px !important;
-        padding: 10px; } }
+        padding: 10px;
+        margin-bottom: 40px; } }
   #aboutUs p:before {
     content: "Why do we use it?";
     font: bold 25px "Architects Daughter", cursive;
@@ -568,8 +569,7 @@
   width: 100%;
   position: relative;
   background-color: #3A2E3C;
-  overflow: hidden;
-  margin: 20px 0px; }
+  overflow: hidden; }
   #shop-slider .section {
     height: auto; }
     #shop-slider .section .left, #shop-slider .section .middle, #shop-slider .section .right {
@@ -832,15 +832,21 @@
         background-color: #3A2E3C;
         color: #f0faf7; }
       #aboutWrapper #tag-reg #registration-wrap #signUp-form button {
-        padding: 3px 10px;
         color: #f0faf7;
         background-color: #fe0116;
-        border-radius: 4px;
-        width: auto;
-        margin: auto;
         display: block;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 10px 20px 10px 0;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+        transition: all 0.2s;
         font: bold 25px "Architects Daughter", cursive;
-        cursor: pointer; }
+        cursor: pointer;
+        box-shadow: 0px 5px 0px 0px lightgray; }
         #aboutWrapper #tag-reg #registration-wrap #signUp-form button button:hover {
           background-color: #f0faf7;
           color: #fe0116; }
@@ -869,15 +875,21 @@
         #aboutWrapper #tag-reg #registration-wrap #signIn-form a:hover {
           color: #fe0116; }
         #aboutWrapper #tag-reg #registration-wrap #signIn-form button {
-          padding: 3px 10px;
           color: #f0faf7;
           background-color: #fe0116;
-          border-radius: 4px;
-          width: auto;
-          margin: auto;
           display: block;
+          position: relative;
+          width: 100%;
+          padding: 0;
+          margin: 10px 20px 10px 0;
+          font-weight: 600;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 5px;
+          transition: all 0.2s;
           font: bold 25px "Architects Daughter", cursive;
-          cursor: pointer; }
+          cursor: pointer;
+          box-shadow: 0px 5px 0px 0px lightgray; }
           #aboutWrapper #tag-reg #registration-wrap #signIn-form button button:hover {
             background-color: #f0faf7;
             color: #fe0116; }
@@ -911,15 +923,21 @@
       background-color: #3A2E3C;
       color: #f0faf7; }
     #password-wrapper form button {
-      padding: 3px 10px;
       color: #f0faf7;
       background-color: #fe0116;
-      border-radius: 4px;
-      width: auto;
-      margin: auto;
       display: block;
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin: 10px 20px 10px 0;
+      font-weight: 600;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 5px;
+      transition: all 0.2s;
       font: bold 25px "Architects Daughter", cursive;
-      cursor: pointer; }
+      cursor: pointer;
+      box-shadow: 0px 5px 0px 0px lightgray; }
       #password-wrapper form button button:hover {
         background-color: #f0faf7;
         color: #fe0116; }
@@ -936,8 +954,7 @@
   background-color: black;
   position: relative;
   width: 100%;
-  padding: 20px;
-  margin: 20px 0px; }
+  padding: 20px; }
   @media (min-width: 481px) and (max-width: 767px) {
     .tag-lines {
       flex-direction: column; } }
@@ -962,6 +979,12 @@
       .tag-lines span {
         font-size: 15px !important; } }
 
+.pop {
+  background-color: #3A2E3C;
+  height: 300px; }
+  .pop span {
+    height: 400px; }
+
 #password-reset {
   background-color: black; }
   #password-reset input {
@@ -979,15 +1002,21 @@
     background-color: #3A2E3C;
     color: #f0faf7; }
   #password-reset button {
-    padding: 3px 10px;
     color: #f0faf7;
     background-color: #fe0116;
-    border-radius: 4px;
-    width: auto;
-    margin: auto;
     display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 10px 20px 10px 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    transition: all 0.2s;
     font: bold 25px "Architects Daughter", cursive;
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0px 5px 0px 0px lightgray; }
     #password-reset button button:hover {
       background-color: #f0faf7;
       color: #fe0116; }
@@ -1140,17 +1169,22 @@ nav {
         #steps-form #pickDesign #designsExp {
           flex-direction: column; } }
       #steps-form #pickDesign #designsExp button {
-        padding: 3px 10px;
         color: #f0faf7;
         background-color: #fe0116;
-        border-radius: 4px;
-        width: auto;
-        margin: auto;
         display: block;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 10px 20px 10px 0;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+        transition: all 0.2s;
         font: bold 25px "Architects Daughter", cursive;
         cursor: pointer;
-        margin: 10px;
-        background-color: #3A2E3C; }
+        box-shadow: 0px 5px 0px 0px lightgray;
+        width: 70%; }
         #steps-form #pickDesign #designsExp button button:hover {
           background-color: #f0faf7;
           color: #fe0116; }
@@ -1435,9 +1469,31 @@ nav {
 
 #myShop {
   padding: 100px 5px;
-  background-color: #bbbdc9;
+  background-color: black;
   border: 5px ridge #f0faf7;
-  margin: 20px 0px; }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #myShop {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #myShop {
+      flex-direction: column; } }
+  @media (max-width: 480px) {
+    #myShop {
+      padding: 0;
+      border: none; } }
+  #myShop #shop-wrapper {
+    border: 5px ridge #f0faf7;
+    width: 80%;
+    background-color: #bbbdc9;
+    padding: 50px; }
+    @media (max-width: 480px) {
+      #myShop #shop-wrapper {
+        width: 100%;
+        padding: 10px; } }
 
 #contact {
   display: flex;
@@ -1515,27 +1571,24 @@ nav {
           #contact #contact-form fieldset textarea {
             width: 300px; } }
       #contact #contact-form fieldset button {
-        margin: 10px !important;
-        padding: 3px 10px;
         color: #f0faf7;
         background-color: #fe0116;
-        border-radius: 4px;
-        width: auto;
-        margin: auto;
         display: block;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 10px 20px 10px 0;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 5px;
+        transition: all 0.2s;
         font: bold 25px "Architects Daughter", cursive;
-        cursor: pointer; }
+        cursor: pointer;
+        box-shadow: 0px 5px 0px 0px lightgray; }
         #contact #contact-form fieldset button button:hover {
           background-color: #f0faf7;
           color: #fe0116; }
-        @media (min-width: 481px) and (max-width: 767px) {
-          #contact #contact-form fieldset button {
-            margin: 10px 0 10px 0 !important;
-            width: 100%; } }
-        @media (max-width: 480px) {
-          #contact #contact-form fieldset button {
-            margin: 10px 0 10px 0 !important;
-            width: 100%; } }
       #contact #contact-form fieldset button:hover {
         background-color: white;
         color: #fe0116; }
@@ -1548,28 +1601,28 @@ nav {
       #contact img {
         display: none; } }
 
-#footer {
+.footer {
+  border: 5px ridge #f0faf7;
   background-color: black;
   width: 100%;
   display: block;
   bottom: 0;
   font: bold 25px "Architects Daughter", cursive;
-  padding: 10px;
-  border-top: 2px ridge white; }
-  #footer nav {
-    width: 50%;
+  padding: 10px; }
+  .footer ul {
+    width: 46%;
     display: inline-block;
     position: absolute;
     text-align: right;
     background-color: black; }
-    #footer nav ul li {
+    .footer ul li {
       list-style-type: none;
       display: inline-block;
       margin-right: 1px;
       padding: 2px; }
-      #footer nav ul li.last {
+      .footer ul li.last {
         margin: 0; }
-      #footer nav ul li a {
+      .footer ul li a {
         line-height: normal;
         cursor: pointer;
         text-decoration: none;
@@ -1580,22 +1633,22 @@ nav {
         word-wrap: break-word;
         border: none !important; }
         @media (max-width: 480px) {
-          #footer nav ul li a {
+          .footer ul li a {
             font-size: 14px; } }
-        #footer nav ul li a i {
+        .footer ul li a i {
           font-size: 20px;
           font-weight: bold;
           color: #f0faf7; }
-      #footer nav ul li:hover {
+      .footer ul li:hover {
         color: #3A2E3C; }
-  #footer p {
+  .footer p {
     width: 50%;
     display: inline-block;
     text-align: left;
     color: #fe0116;
     font-size: 18px; }
     @media (max-width: 480px) {
-      #footer p {
+      .footer p {
         font-size: 15px; } }
 
 /*# sourceMappingURL=styles.css.map */

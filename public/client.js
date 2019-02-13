@@ -144,9 +144,6 @@ $(function() {
     var selectedClass = "";
     $(".leather, .silk, .denim").hide();
     $(".snd").hide();
-
-
-
     $(".fil-cat").click(function(){
         $("#showMore").hide();
         selectedClass = $(this).attr("data-rel");

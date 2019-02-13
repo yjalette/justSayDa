@@ -6,7 +6,6 @@
 ![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/landpage.png)
 ![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/about.png)
 ![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/registration.png)
-![Screenshot](https://github.com/yjalette/justSayDa/blob/master/readme-images/shop.png)
 
 ## Initial UX
 User Stories
@@ -22,7 +21,6 @@ User Stories
 ![UI Flow draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-shop.jpg)
 * As a user, I want to view detailts about chosen product.
 ![UI Flow draft](https://github.com/yjalette/justSayDa/blob/master/public/images/wf-product.jpg)
-
 
 ## Working Prototype
 Find a working prototype with at https://boiling-fjord-67437.herokuapp.com/ .
@@ -51,15 +49,3 @@ DA was built as two separate parts.
 ### Security
 * User passwords are encrypted using bcrypt.js
 
-## API Documentation
-API endpoints for the back end include:
-* POST to '/users/create' for creating a new user
-* POST to '/signin' to sign in an existing user
-* POST to '/new/create' to add an order to a user's list of accomplishments
-* PUT to '/order/:id' to update an existing order
-* GET to '/user/:user' to access all of a user's existing order
-* GET to '/product/:id' to access a single order by ID
-* DELETE to '/delete/:id' to delete a single order by ID
-
-## DB config 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'test';

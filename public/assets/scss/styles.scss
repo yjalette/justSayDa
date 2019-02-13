@@ -202,15 +202,21 @@ $smDev-width: 280px;
     -o-filter: $filter;
 }
 @mixin button {
-    padding: 3px 10px;
     color: $white;
     background-color: $red;
-    border-radius: 4px;
-    width: auto;
-    margin: auto;
     display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 10px 20px 10px 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    transition: all 0.2s ;
     font: $font-med;
     cursor: pointer;
+    box-shadow: 0px 5px 0px 0px lightgray;
     button:hover {
         background-color: $white;
         color: $red;
@@ -240,7 +246,6 @@ $smDev-width: 280px;
     flex-flow: column!important;
     background-color: white;
     .container-video {
-        @include border;
         z-index: 1;
         width: 100%;
         height: auto;
@@ -364,17 +369,19 @@ $smDev-width: 280px;
     @include smDev {
         flex-direction: column!important;
         padding: 40px 2px;
+        border: none;
     }
     p {
         @include border;
         background-color: $purple;
         font: $font-small;
         padding: 35px;
-        margin: 10px;
+        padding: 20px;
         color: $white;
         @include smDev {
             font-size: 15px!important;
             padding: 10px;
+            margin-bottom: 40px;
               }
         }
     p:before {
@@ -787,7 +794,6 @@ $smDev-width: 280px;
     position: relative;
     background-color: $purple;
     overflow: hidden;
-    margin: 20px 0px;
     .section {
         height: auto;
         .left, .middle, .right {
@@ -1110,7 +1116,6 @@ h3 {
     position: relative;
     width: 100%;
     padding: 20px;
-    margin: 20px 0px;
     @include smDev {
         padding: 5px;
     }
@@ -1128,6 +1133,14 @@ h3 {
         @include smDev {
             font-size: 15px!important;
         }
+    }
+}
+
+.pop {
+   background-color: $purple;
+    height: 300px;
+    span {
+        height: 400px;
     }
 }
 
@@ -1236,8 +1249,7 @@ nav {
             flex-direction: column!important;
             button {
                 @include button;
-                margin: 10px;
-                background-color: $purple;
+                width: 70%;
             }
             img {
                 width: 100%;
@@ -1374,10 +1386,25 @@ nav {
 
 #myShop {
     padding: 100px 5px;
-    background-color: $lightGray;
+    background-color: black;
     @include border;
-    margin: 20px 0px;
+    @include flex;
+    @include smDev {
+        padding: 0;
+        border: none;
+    }
+    #shop-wrapper{
+        @include border;
+        width: 80%;
+        background-color: $lightGray;
+        padding: 50px;
+        @include smDev {
+            width: 100%;
+            padding: 10px;
+        }
+    }
 }
+// q-s
 
 // contact
 #contact {
@@ -1432,16 +1459,8 @@ nav {
                 }
             }
             button {
-                margin: 10px!important;
                 @include button;
-                @include phone {
-                    margin: 10px 0 10px 0 !important;
-                    width: 100%;
-                }
-                @include smDev {
-                    margin: 10px 0 10px 0 !important;
-                    width: 100%;
-                }
+
             }
             button:hover {
                 background-color: white;
@@ -1460,22 +1479,22 @@ nav {
     }
 }
 //footer
-#footer {
+.footer {
+    @include border;
     background-color: black;
     width: 100%;
     display: block;
     bottom: 0;
     font: $font-med;
     padding: 10px;
-    border-top: 2px ridge white;
-
-    nav {
-        width: 50%;
+//    border-top: 2px ridge white;
+    ul{
+        width: 46%;
         display: inline-block;
         position: absolute;
         text-align: right;
         background-color: black;
-        ul li {
+        li {
             list-style-type: none;
             display: inline-block;
             margin-right: 1px;
