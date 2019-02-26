@@ -119,17 +119,18 @@ $smDev-width: 280px;
     }
 }
 @mixin border {
-    border: 5px ridge $white;
+    border: 7px ridge $lightGray;
 }
-@mixin pickSpan {
-    color: $darkGray;
+@mixin p {
+    color: $lightGray;
+    font: $font-small;
     @include smDev {
         font-size: 15px;
     }
 }
 @mixin h {
     font: $font-med;
-    font-size: 60px;
+    font-size: 40px;
     color: $red;
     text-shadow: $shadow;
     @include tablet {
@@ -237,8 +238,24 @@ $smDev-width: 280px;
     color: $purple;
     background-color: $white;
     margin: 20px;
+    padding: 5px;
     @include smDev {
         font-size: 18px;
+    }
+}
+
+@mixin width {
+    @include tablet {
+        width: 100%;
+        height: fit-content;
+    }
+    @include phone {
+        width: 100%;
+        height: fit-content;
+    }
+    @include smDev {
+        width: 100%;
+        height: fit-content;
     }
 }
 #intro {
@@ -254,11 +271,9 @@ $smDev-width: 280px;
         @include smDev {
             display: none;
         }
-
         .video-foreground {
             position: relative;
             padding-bottom: 56.25%;
-
             #myVideo {
                 filter: brightness(25%);
                 position: absolute;
@@ -283,7 +298,6 @@ $smDev-width: 280px;
         position: absolute;
         z-index: 2;
         @include smDev {
-            @include border;
             position: relative;
             background-color: $red;
         }
@@ -351,6 +365,11 @@ $smDev-width: 280px;
         display: none;
     }
 }
+
+#aboutPage {
+    @include border;
+    box-shadow: 0 0 0 3px var(--darken-3);
+}
 #aboutUs {
     @include flex;
     flex-direction: row;
@@ -385,7 +404,7 @@ $smDev-width: 280px;
               }
         }
     p:before {
-        content: "Why do we use it?";
+        content: "Just Say DA";
         font: $font-med;
         color: $red
     }
@@ -1274,11 +1293,11 @@ nav {
                 }
             }
             span {
-                @include pickSpan;
+                @include p;
                 color: $purple;
             }
             span::before{
-                content: "We are against fast fashion ";
+                content: "We offer free domestic shipping and returns! ";
                 font: $font-med;
                 color: $red;
                 @include smDev {
@@ -1321,7 +1340,7 @@ nav {
                 }
             }
             span {
-                @include pickSpan;
+                @include p;
                 color: $lightGray;
             }
             span::before{
@@ -1356,7 +1375,7 @@ nav {
                 }
             }
             span {
-                @include pickSpan;
+                @include p;
                 padding: 0px !important;
                 color: $purple;
             }
@@ -1383,28 +1402,103 @@ nav {
         }
     }
 }
-
-#myShop {
-    padding: 100px 5px;
-    background-color: black;
-    @include border;
+// paypal
+#paypal{
     @include flex;
-    @include smDev {
-        padding: 0;
-        border: none;
+    @include pick;
+    @include border;
+    padding: 100px;
+    background-color: black;
+    @include tablet{
+        flex-direction: column;
     }
-    #shop-wrapper{
+    @include phone {
+        flex-direction: column;
+    }
+    @include smDev {
+        flex-direction: column;
+    }
+    #paypal-image-section{
+        @include exp;
+        @include flex;
+        @include width;
         @include border;
-        width: 80%;
-        background-color: $lightGray;
-        padding: 50px;
+        flex-direction: column;
+        height: 800px;
+        width: 50%;
+        background-color: white;
         @include smDev {
-            width: 100%;
-            padding: 10px;
+            padding: 5px;
+            border: none;
+        }
+        img {
+            width: 90%;
         }
     }
+    #description-section {
+        @include exp;
+        @include flex;
+        @include width;
+        @include border;
+        flex-direction: column;
+        background-color: $purple;
+        height: 800px;
+        width: 50%;
+        @include smDev {
+            padding: 5px;
+            border: none;
+        }
+        #item-description{
+        @include flex;
+        flex-direction: column;
+        padding: 20px;
+            h1, h2, h3 {
+                @include h;
+                font-size: 25px;
+            }
+            p, li {
+                color: $lightGray;
+                @include p;
+            }
+            li {
+                text-align: left;
+                @include p
+            }
+            h4 {
+                @include h;
+                 font-size: 25px;
+            }
+            .fabric-description {
+                display: none;
+            }
+           
+        }
+        #paypal-form{
+            @include flex;
+            @include border;
+            flex-direction: column;
+            padding: 50px;
+            margin: auto;
+            background-color: black;
+            @include smDev {
+                padding: 5px;
+            }
+            input {
+                padding: 30px;
+            }
+            select{
+                padding: 10px;
+                background-color: $white;
+                color: $lightGray;
+            }
+            td {
+                @include p;
+                position: relative;
+            }
+        }
+    }
+    
 }
-// q-s
 
 // contact
 #contact {
@@ -1480,7 +1574,6 @@ nav {
 }
 //footer
 .footer {
-    @include border;
     background-color: black;
     width: 100%;
     display: block;

@@ -82,6 +82,53 @@ $(document).ready(function(){
         });
     }
 
+
+// paypall
+    $("#changeFabric").on("change", function (){
+        changeFab = $(this).val();
+
+        if (changeFab === 'leather'){
+            $("#changePrint").on("change", function (){
+                $("#leather-description").show();
+                $("#denim-description").hide();
+                $("#silk-description").hide();
+                changePr = $(this).val();
+                let changeImg = "images/" + "jacket-" + "leather" + "-" + changePr + ".jpg";
+                console.log(changeImg)
+                changeImg = $("#changeImg").attr("src", changeImg);
+                console.log(changeImg)
+            })
+        }
+
+        else if (changeFab === 'denim'){
+            $("#changePrint").on("change", function (){
+                $("#denim-description").show();
+                $("#leather-description").hide();
+                $("#silk-description").hide();
+                changePr = $(this).val();
+                let changeImg = "images/" + "jacket-" + "denim" + "-" + changePr + ".jpg";
+                console.log(changeImg)
+                changeImg = $("#changeImg").attr("src", changeImg);
+                console.log(changeImg)
+            })
+        }
+
+        else if (changeFab === 'silk'){
+            $("#changePrint").on("change", function (){
+                $("#silk-description").show();
+                $("#leather-description").hide();
+                $("#denim-description").hide();
+                changePr = $(this).val();
+                let changeImg = "images/" + "jacket-" + "silk" + "-" + changePr + ".jpg";
+                console.log(changeImg)
+                changeImg = $("#changeImg").attr("src", changeImg);
+                console.log(changeImg)
+            })
+        }
+
+    })
+
+    
     //intro
     var $sm = 100;
     var $md = 700;

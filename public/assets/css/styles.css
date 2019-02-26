@@ -78,7 +78,6 @@
         flex-direction: column; } }
     @media (max-width: 480px) {
       #intro #bold {
-        border: 5px ridge #f0faf7;
         position: relative;
         background-color: #fe0116; } }
     #intro #bold span {
@@ -151,6 +150,10 @@
   #da-span {
     display: none; } }
 
+#aboutPage {
+  border: 7px ridge #bbbdc9;
+  box-shadow: 0 0 0 3px var(--darken-3); }
+
 #aboutUs {
   display: flex;
   flex-direction: row;
@@ -181,7 +184,7 @@
       padding: 40px 2px;
       border: none; } }
   #aboutUs p {
-    border: 5px ridge #f0faf7;
+    border: 7px ridge #bbbdc9;
     background-color: #3A2E3C;
     font: 17px "Open Sans", sans-serif;
     padding: 35px;
@@ -193,7 +196,7 @@
         padding: 10px;
         margin-bottom: 40px; } }
   #aboutUs p:before {
-    content: "Why do we use it?";
+    content: "Just Say DA";
     font: bold 25px "Architects Daughter", cursive;
     color: #fe0116; }
 
@@ -426,7 +429,7 @@
     #designs #portfolio .snd {
       display: none; }
     #designs #portfolio .tile img {
-      border: 5px ridge #f0faf7;
+      border: 7px ridge #bbbdc9;
       width: 100%;
       max-height: 1000px;
       margin: 1px;
@@ -530,7 +533,7 @@
     #insta {
       flex-direction: column; } }
   #insta img {
-    border: 5px ridge #f0faf7;
+    border: 7px ridge #bbbdc9;
     width: 25%;
     height: 500px;
     padding: 10px;
@@ -717,12 +720,12 @@
         #shop-slider .tiles img {
           opacity: 1;
           filter: grayscale(50%);
-          border: 5px ridge #f0faf7; } }
+          border: 7px ridge #bbbdc9; } }
       @media (max-width: 480px) {
         #shop-slider .tiles img {
           opacity: 1;
           filter: grayscale(0%);
-          border: 5px ridge #f0faf7; } }
+          border: 7px ridge #bbbdc9; } }
     @media (min-width: 481px) and (max-width: 767px) {
       #shop-slider .tiles img:first-child {
         display: none; } }
@@ -732,7 +735,7 @@
   #shop-slider .middle {
     z-index: 1;
     padding: 0;
-    border: 5px ridge #f0faf7;
+    border: 7px ridge #bbbdc9;
     border-top: none;
     border-bottom: none; }
     #shop-slider .middle img {
@@ -950,7 +953,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 5px ridge #f0faf7;
+  border: 7px ridge #bbbdc9;
   background-color: black;
   position: relative;
   width: 100%;
@@ -1120,7 +1123,7 @@ nav {
 
 #steps-form {
   background-color: #bbbdc9;
-  border: 5px ridge #f0faf7; }
+  border: 7px ridge #bbbdc9; }
   #steps-form #pickDesign {
     width: 100%;
     height: auto;
@@ -1190,7 +1193,7 @@ nav {
           color: #fe0116; }
       #steps-form #pickDesign #designsExp img {
         width: 100%;
-        border: 5px ridge #f0faf7; }
+        border: 7px ridge #bbbdc9; }
     #steps-form #pickDesign #designsText {
       width: 50%;
       padding: 20px; }
@@ -1204,7 +1207,7 @@ nav {
           padding: 2px; } }
       #steps-form #pickDesign #designsText h2 {
         font: bold 25px "Architects Daughter", cursive;
-        font-size: 60px;
+        font-size: 40px;
         color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         text-align: center; }
@@ -1231,13 +1234,14 @@ nav {
           #steps-form #pickDesign #designsText h2::before {
             font-size: 25px; } }
       #steps-form #pickDesign #designsText span {
-        color: black;
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif;
         color: #3A2E3C; }
         @media (max-width: 480px) {
           #steps-form #pickDesign #designsText span {
             font-size: 15px; } }
       #steps-form #pickDesign #designsText span::before {
-        content: "We are against fast fashion ";
+        content: "We offer free domestic shipping and returns! ";
         font: bold 25px "Architects Daughter", cursive;
         color: #fe0116; }
         @media (max-width: 480px) {
@@ -1295,13 +1299,14 @@ nav {
         font: bold 25px "Architects Daughter", cursive;
         color: #3A2E3C;
         background-color: #f0faf7;
-        margin: 20px; }
+        margin: 20px;
+        padding: 5px; }
         @media (max-width: 480px) {
           #steps-form #pickFabric #fabricGal select {
             font-size: 18px; } }
       #steps-form #pickFabric #fabricGal img {
         width: 100%;
-        border: 5px ridge #f0faf7; }
+        border: 7px ridge #bbbdc9; }
     #steps-form #pickFabric #fabricText {
       width: 50%;
       padding: 20px; }
@@ -1315,7 +1320,7 @@ nav {
           padding: 2px; } }
       #steps-form #pickFabric #fabricText h2 {
         font: bold 25px "Architects Daughter", cursive;
-        font-size: 60px;
+        font-size: 40px;
         color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         text-align: center; }
@@ -1342,7 +1347,8 @@ nav {
           #steps-form #pickFabric #fabricText h2::before {
             font-size: 25px; } }
       #steps-form #pickFabric #fabricText span {
-        color: black;
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif;
         color: #bbbdc9; }
         @media (max-width: 480px) {
           #steps-form #pickFabric #fabricText span {
@@ -1392,7 +1398,7 @@ nav {
           padding: 2px; } }
       #steps-form #gallery-cities #RepYourCity h2 {
         font: bold 25px "Architects Daughter", cursive;
-        font-size: 60px;
+        font-size: 40px;
         color: #fe0116;
         text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
         padding: 0px !important;
@@ -1420,7 +1426,8 @@ nav {
           #steps-form #gallery-cities #RepYourCity h2::before {
             font-size: 25px; } }
       #steps-form #gallery-cities #RepYourCity span {
-        color: black;
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif;
         padding: 0px !important;
         color: #3A2E3C; }
         @media (max-width: 480px) {
@@ -1459,41 +1466,235 @@ nav {
         font: bold 25px "Architects Daughter", cursive;
         color: #3A2E3C;
         background-color: #f0faf7;
-        margin: 20px; }
+        margin: 20px;
+        padding: 5px; }
         @media (max-width: 480px) {
           #steps-form #gallery-cities .print-gal select {
             font-size: 18px; } }
       #steps-form #gallery-cities .print-gal img {
         width: 100%;
-        border: 5px ridge #f0faf7; }
+        border: 7px ridge #bbbdc9; }
 
-#myShop {
-  padding: 100px 5px;
-  background-color: black;
-  border: 5px ridge #f0faf7;
+#paypal {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  border: 7px ridge #bbbdc9;
+  padding: 100px;
+  background-color: black; }
   @media (min-width: 481px) and (max-width: 767px) {
-    #myShop {
+    #paypal {
       flex-direction: column; } }
   @media (max-width: 480px) {
-    #myShop {
+    #paypal {
+      flex-direction: column; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #paypal {
+      padding: 60px 10px; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #paypal {
+      padding: 50px 5px; } }
+  @media (max-width: 480px) {
+    #paypal {
+      padding: 40px 4px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #paypal {
+      flex-direction: column; } }
+  @media (min-width: 481px) and (max-width: 767px) {
+    #paypal {
       flex-direction: column; } }
   @media (max-width: 480px) {
-    #myShop {
-      padding: 0;
-      border: none; } }
-  #myShop #shop-wrapper {
-    border: 5px ridge #f0faf7;
-    width: 80%;
-    background-color: #bbbdc9;
-    padding: 50px; }
-    @media (max-width: 480px) {
-      #myShop #shop-wrapper {
+    #paypal {
+      flex-direction: column; } }
+  #paypal #paypal-image-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 7px ridge #bbbdc9;
+    flex-direction: column;
+    height: 800px;
+    width: 50%;
+    background-color: white; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #paypal-image-section {
         width: 100%;
         padding: 10px; } }
+    @media (max-width: 480px) {
+      #paypal #paypal-image-section {
+        width: 100%;
+        padding: 2px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #paypal-image-section {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #paypal #paypal-image-section {
+        flex-direction: column; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #paypal #paypal-image-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #paypal-image-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (max-width: 480px) {
+      #paypal #paypal-image-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (max-width: 480px) {
+      #paypal #paypal-image-section {
+        padding: 5px;
+        border: none; } }
+    #paypal #paypal-image-section img {
+      width: 90%; }
+  #paypal #description-section {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 7px ridge #bbbdc9;
+    flex-direction: column;
+    background-color: #3A2E3C;
+    height: 800px;
+    width: 50%; }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #description-section {
+        width: 100%;
+        padding: 10px; } }
+    @media (max-width: 480px) {
+      #paypal #description-section {
+        width: 100%;
+        padding: 2px; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #description-section {
+        flex-direction: column; } }
+    @media (max-width: 480px) {
+      #paypal #description-section {
+        flex-direction: column; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #paypal #description-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (min-width: 481px) and (max-width: 767px) {
+      #paypal #description-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (max-width: 480px) {
+      #paypal #description-section {
+        width: 100%;
+        height: fit-content; } }
+    @media (max-width: 480px) {
+      #paypal #description-section {
+        padding: 5px;
+        border: none; } }
+    #paypal #description-section #item-description {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #paypal #description-section #item-description {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #paypal #description-section #item-description {
+          flex-direction: column; } }
+      #paypal #description-section #item-description h1, #paypal #description-section #item-description h2, #paypal #description-section #item-description h3 {
+        font: bold 25px "Architects Daughter", cursive;
+        font-size: 40px;
+        color: #fe0116;
+        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+        font-size: 25px; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #paypal #description-section #item-description h1, #paypal #description-section #item-description h2, #paypal #description-section #item-description h3 {
+            font-size: 50px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #paypal #description-section #item-description h1, #paypal #description-section #item-description h2, #paypal #description-section #item-description h3 {
+            font-size: 30px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #paypal #description-section #item-description h1, #paypal #description-section #item-description h2, #paypal #description-section #item-description h3 {
+            font-size: 22px;
+            padding: 5px; } }
+      #paypal #description-section #item-description p, #paypal #description-section #item-description li {
+        color: #bbbdc9;
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif; }
+        @media (max-width: 480px) {
+          #paypal #description-section #item-description p, #paypal #description-section #item-description li {
+            font-size: 15px; } }
+      #paypal #description-section #item-description li {
+        text-align: left;
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif; }
+        @media (max-width: 480px) {
+          #paypal #description-section #item-description li {
+            font-size: 15px; } }
+      #paypal #description-section #item-description h4 {
+        font: bold 25px "Architects Daughter", cursive;
+        font-size: 40px;
+        color: #fe0116;
+        text-shadow: 0 0 1px #303634, 2px 1px 1px rgba(48, 54, 52, 0.5);
+        font-size: 25px; }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          #paypal #description-section #item-description h4 {
+            font-size: 50px;
+            padding: 30px; } }
+        @media (min-width: 481px) and (max-width: 767px) {
+          #paypal #description-section #item-description h4 {
+            font-size: 30px;
+            padding: 20px; } }
+        @media (max-width: 480px) {
+          #paypal #description-section #item-description h4 {
+            font-size: 22px;
+            padding: 5px; } }
+      #paypal #description-section #item-description .fabric-description {
+        display: none; }
+    #paypal #description-section #paypal-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 7px ridge #bbbdc9;
+      flex-direction: column;
+      padding: 50px;
+      margin: auto;
+      background-color: black; }
+      @media (min-width: 481px) and (max-width: 767px) {
+        #paypal #description-section #paypal-form {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #paypal #description-section #paypal-form {
+          flex-direction: column; } }
+      @media (max-width: 480px) {
+        #paypal #description-section #paypal-form {
+          padding: 5px; } }
+      #paypal #description-section #paypal-form input {
+        padding: 30px; }
+      #paypal #description-section #paypal-form select {
+        padding: 10px;
+        background-color: #f0faf7;
+        color: #bbbdc9; }
+      #paypal #description-section #paypal-form td {
+        color: #bbbdc9;
+        font: 17px "Open Sans", sans-serif;
+        position: relative; }
+        @media (max-width: 480px) {
+          #paypal #description-section #paypal-form td {
+            font-size: 15px; } }
 
 #contact {
   display: flex;
@@ -1602,7 +1803,6 @@ nav {
         display: none; } }
 
 .footer {
-  border: 5px ridge #f0faf7;
   background-color: black;
   width: 100%;
   display: block;
