@@ -369,6 +369,12 @@ $smDev-width: 280px;
 #aboutPage {
     @include border;
     box-shadow: 0 0 0 3px var(--darken-3);
+    @include phone {
+        border: none;
+    }
+    @include smDev {
+        border: none;
+    }
 }
 #aboutUs {
     @include flex;
@@ -931,6 +937,7 @@ $smDev-width: 280px;
                 width:100%;
                 height:auto;
                 opacity: 0.5;
+                margin: 25px 0;
                 @include transition;
                 @include filter(grayscale(70%));
                 &:hover {
@@ -939,13 +946,10 @@ $smDev-width: 280px;
                 }
                 @include phone {
                     opacity: 1;
-                    filter: grayscale(50%);
-                    @include border;
                 }
                 @include smDev {
                     opacity: 1;
-                    filter: grayscale(0%);
-                    @include border;
+                    @include filter(grayscale(30%));
                 }
             }
             img:first-child{
@@ -986,6 +990,15 @@ $smDev-width: 280px;
         40% {transform: translateY(-20px);}
         60% {transform: translateY(-10px);}
     }
+
+.none {
+    @include phone(){
+        display: none;
+    }
+    @include smDev(){
+        display: none;
+    }
+}
 
 // registration
 #aboutWrapper{
